@@ -1,0 +1,30 @@
+[
+  {
+    "id": "entity-follow-up-monitoring",
+    "label": "Follow-up Monitoring"
+  },
+  {
+    "id": "entity-dose-titration",
+    "label": "Dose Titration"
+  },
+  {
+    "id": "entity-intake-requirements",
+    "label": "Intake Requirements"
+  },
+  {
+    "id": "entity-contraindication-screening",
+    "label": "Contraindication Screening"
+  },
+  {
+    "id": "entity-prior-authorization-requirements",
+    "label": "Prior Authorization Requirements"
+  },
+  {
+    "id": "entity-denial-routing",
+    "label": "Denial Routing"
+  },
+  {
+    "id": "entity-adverse-event-monitoring",
+    "label": "Adverse Event Monitoring"
+  }
+]

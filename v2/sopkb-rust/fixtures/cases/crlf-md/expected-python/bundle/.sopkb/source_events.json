@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-safety-crlf-<TS>",
+    "path": "<ABS>",
+    "source_id": "safety-crlf",
+    "source_version_id": "safety-crlf:v1",
+    "timestamp": "<TS>"
+  }
+]

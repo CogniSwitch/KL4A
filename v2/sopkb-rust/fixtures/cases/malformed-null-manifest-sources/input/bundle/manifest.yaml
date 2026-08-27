@@ -1,0 +1,11 @@
+id: malformed-base
+version: 0.1.0
+title: Malformed Base Bundle
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: '2026-01-01T00:00:00Z'
+updated_at: '2026-01-01T00:00:00Z'
+sources: null
+exports: []
+okf_version: '0.2'

@@ -1,0 +1,74 @@
+[
+  {
+    "heading": "Document",
+    "section_id": "section-follow-up-monitoring-procedure-e25874854706-001",
+    "semantic_role": "section",
+    "source_id": "follow-up-monitoring-procedure-e25874854706"
+  },
+  {
+    "heading": "Page 1",
+    "section_id": "section-follow-up-monitoring-procedure-e25874854706-002",
+    "semantic_role": "section",
+    "source_id": "follow-up-monitoring-procedure-e25874854706"
+  },
+  {
+    "heading": "Primary Care GLP-1 Prescribing SOP",
+    "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-001",
+    "semantic_role": "section",
+    "source_id": "primary-care-glp1-sop-c6cb3b4ec11d"
+  },
+  {
+    "heading": "Intake Requirements",
+    "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-002",
+    "semantic_role": "policy",
+    "source_id": "primary-care-glp1-sop-c6cb3b4ec11d"
+  },
+  {
+    "heading": "Contraindication Screening",
+    "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-003",
+    "semantic_role": "section",
+    "source_id": "primary-care-glp1-sop-c6cb3b4ec11d"
+  },
+  {
+    "heading": "Follow-up Monitoring",
+    "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-004",
+    "semantic_role": "section",
+    "source_id": "primary-care-glp1-sop-c6cb3b4ec11d"
+  },
+  {
+    "heading": "GLP-1 Prior Authorization Workflow",
+    "section_id": "section-prior-authorization-workflow-b5ce0527cf18-001",
+    "semantic_role": "procedure",
+    "source_id": "prior-authorization-workflow-b5ce0527cf18"
+  },
+  {
+    "heading": "Prior Authorization Requirements",
+    "section_id": "section-prior-authorization-workflow-b5ce0527cf18-002",
+    "semantic_role": "policy",
+    "source_id": "prior-authorization-workflow-b5ce0527cf18"
+  },
+  {
+    "heading": "Denial Routing",
+    "section_id": "section-prior-authorization-workflow-b5ce0527cf18-003",
+    "semantic_role": "section",
+    "source_id": "prior-authorization-workflow-b5ce0527cf18"
+  },
+  {
+    "heading": "GLP-1 Safety Policy",
+    "section_id": "section-safety-policy-01ff452b1d44-001",
+    "semantic_role": "policy",
+    "source_id": "safety-policy-01ff452b1d44"
+  },
+  {
+    "heading": "Contraindication Screening",
+    "section_id": "section-safety-policy-01ff452b1d44-002",
+    "semantic_role": "section",
+    "source_id": "safety-policy-01ff452b1d44"
+  },
+  {
+    "heading": "Adverse Event Monitoring",
+    "section_id": "section-safety-policy-01ff452b1d44-003",
+    "semantic_role": "section",
+    "source_id": "safety-policy-01ff452b1d44"
+  }
+]

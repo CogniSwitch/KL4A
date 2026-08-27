@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-delete-agent-chat"
+description = "Enables the delete_agent_chat command without any pre-configured scope."
+commands.allow = ["delete_agent_chat"]
+
+[[permission]]
+identifier = "deny-delete-agent-chat"
+description = "Denies the delete_agent_chat command without any pre-configured scope."
+commands.deny = ["delete_agent_chat"]

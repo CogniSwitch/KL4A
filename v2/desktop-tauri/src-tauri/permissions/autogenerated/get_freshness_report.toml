@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-freshness-report"
+description = "Enables the get_freshness_report command without any pre-configured scope."
+commands.allow = ["get_freshness_report"]
+
+[[permission]]
+identifier = "deny-get-freshness-report"
+description = "Denies the get_freshness_report command without any pre-configured scope."
+commands.deny = ["get_freshness_report"]

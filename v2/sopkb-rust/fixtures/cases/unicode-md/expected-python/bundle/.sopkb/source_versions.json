@@ -1,0 +1,26 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:c6d5360e9278614e88d9524974e4cf10524fb880125045a93c0d8ddbffe96854",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/caf-checklist__v1.md",
+      "original_path": "sources/originals/caf-checklist__v1.md",
+      "size_bytes": 186,
+      "source_id": "caf-checklist",
+      "source_version_id": "caf-checklist:v1",
+      "status": "active",
+      "version_number": 1
+    },
+    {
+      "checksum": "sha256:3923e691e0670b8e1eeed8f69a7eca51410b894c0c36ae9c888435a7b78e93b7",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/item__v1.md",
+      "original_path": "sources/originals/item__v1.md",
+      "size_bytes": 67,
+      "source_id": "item",
+      "source_version_id": "item:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

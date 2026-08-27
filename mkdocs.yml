@@ -1,0 +1,114 @@
+site_name: KL4A
+site_description: >-
+  KL4A (Knowledge Layer For Agents) — the local-first, open-source workbench
+  that turns SOPs, policies, and procedures into grounded, human-reviewed Knowledge Bundles.
+site_url: https://cogniswitch.github.io/KL4A/
+repo_name: CogniSwitch/KL4A
+repo_url: https://github.com/CogniSwitch/KL4A
+edit_uri: edit/main/docs/
+docs_dir: docs
+site_dir: site
+
+# docs/README.md is the GitHub-browsing index for this folder (predates this
+# mkdocs.yml) and would otherwise collide with docs/index.md, which is the
+# real MkDocs homepage — exclude it from the built site rather than the nav.
+exclude_docs: |
+  README.md
+  PARITY_CHECK_OPEN_GAPS.md
+  # Internal launch-process documents - legitimate as repo artifacts, not for
+  # the public docs site.
+  LAUNCH_CHECKLIST.md
+  SECURITY_SCAN_NOTES.md
+  # Internal engineering-planning documents (milestone/implementation schedules,
+  # release mechanics, post-launch maintainer playbook) - not product
+  # documentation, not meant for external users of the docs site.
+  KL4A_IMPLEMENTATION_PLAN.md
+  SOURCE_VERSIONING_IMPLEMENTATION_SCHEDULE.md
+  RELEASE_PROCESS.md
+  POST_LAUNCH_OPERATIONS.md
+  # Internal planning/design docs (PRD, engineering design rationale, an
+  # LLM-extraction scoping note written for people reading the mining code,
+  # and an MCP design preview) - not needed to use the product, not meant
+  # for external users of the docs site.
+  KL4A_REQUIREMENTS.md
+  KL4A_IMPLEMENTATION_DESIGN.md
+  SOURCE_VERSIONING_AND_BUNDLE_EVOLUTION_DESIGN.md
+  LLM_EXTRACTION_SCOPE.md
+  KL4A_MCP_PREVIEW.md
+
+validation:
+  links:
+    # Several pages intentionally link to root-level docs that live outside
+    # docs_dir (CONTRIBUTING.md, LICENSE, ...) — real files, real links, just
+    # not part of the site MkDocs builds. Downgrade below --strict-failing.
+    not_found: info
+
+# No plugins: key previously existed, which left MkDocs on its implicit
+# default (just "search") - listing plugins explicitly now means "search"
+# has to be named too, or it would silently drop out.
+plugins:
+  - search
+  - llms-source
+
+theme:
+  name: material
+  favicon: images/favicon.png
+  logo: images/kl4a-logo.svg
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+
+extra_css:
+  - stylesheets/brand.css
+
+extra_javascript:
+  - javascripts/mermaid-theme.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - fenced_code
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Why This Exists: WHY.md
+  - Quickstart: quickstart.md
+  - Guides:
+      - Desktop UI Guide: DESKTOP_UI_GUIDE.md
+      - MCP Server: MCP_SERVER.md
+      - Architecture Overview: ARCHITECTURE.md
+      - FAQ: FAQ.md
+  - Reference:
+      - OKF Bundle Spec: OKF_BUNDLE_SPEC.md
+      - Bundle Compatibility Policy: BUNDLE_COMPATIBILITY_POLICY.md
+  - Release Notes:
+      - v0.0.1: releases/v0.0.1.md

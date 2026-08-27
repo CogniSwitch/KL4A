@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-pick-workbench-folder"
+description = "Enables the pick_workbench_folder command without any pre-configured scope."
+commands.allow = ["pick_workbench_folder"]
+
+[[permission]]
+identifier = "deny-pick-workbench-folder"
+description = "Denies the pick_workbench_folder command without any pre-configured scope."
+commands.deny = ["pick_workbench_folder"]

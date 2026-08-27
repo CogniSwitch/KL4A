@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-acme-intake-policy-<TS>",
+    "path": "<ABS>",
+    "source_id": "acme-intake-policy",
+    "source_version_id": "acme-intake-policy:v1",
+    "timestamp": "<TS>"
+  }
+]

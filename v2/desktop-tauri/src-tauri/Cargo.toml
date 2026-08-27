@@ -1,0 +1,68 @@
+[package]
+name = "sopkb-desktop-tauri"
+version = "0.1.0"
+description = "Tauri desktop shell for the SOP Knowledge Workbench"
+authors = ["CogniSwitch"]
+license = "Apache-2.0"
+edition = "2021"
+rust-version = "1.77"
+
+# `staticlib` for iOS static linking into the Xcode shell, `cdylib` for Android's
+# JNI `.so` loading, `rlib` so `main.rs` keeps depending on it like an ordinary
+# Rust lib on desktop. The `_lib` suffix avoids a name collision between this lib
+# target and the `sopkb-desktop-tauri` binary target, matching Tauri's own
+# `create-tauri-app` mobile-ready scaffolding convention.
+[lib]
+name = "sopkb_desktop_tauri_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+# No extra `image-*` features needed: the window icon goes through
+# `tauri::include_image!`, which decodes the PNG at compile time.
+# `devtools` is normally implicit in debug builds and absent from release ones;
+# enabled explicitly here (release included) so right-click > Inspect works in
+# a distributed build too -- a blank/hung screen with no way to see the JS
+# console or error is a dead end otherwise (see docs/port/CATCHUP_PLAN.md).
+tauri = { version = "2", features = ["devtools"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# Task #38 diagnostics export -- same version sopkb-core's `docx` feature already
+# pulls in transitively, declared directly here since ZipWriter is used directly
+# (a transitive dependency's types aren't otherwise nameable from this crate).
+zip = { version = "8.6.0", default-features = false, features = ["deflate"] }
+
+# The Rust port of tools/sopkb -- this crate is a thin Tauri command layer over
+# sopkb-workbench (the orchestration join point) and, where PORT_PLAN.md §4 calls
+# for it directly, its sibling library crates. Paths go up to `v2/` then into
+# `sopkb-rust/crates/...` -- `desktop-tauri` and `sopkb-rust` are siblings
+# under `v2/`, not nested inside one another.
+sopkb-workbench = { path = "../../sopkb-rust/crates/sopkb-workbench" }
+sopkb-core = { path = "../../sopkb-rust/crates/sopkb-core", features = ["docx", "pdf"] }
+sopkb-derive = { path = "../../sopkb-rust/crates/sopkb-derive" }
+sopkb-review = { path = "../../sopkb-rust/crates/sopkb-review" }
+sopkb-export = { path = "../../sopkb-rust/crates/sopkb-export" }
+sopkb-config = { path = "../../sopkb-rust/crates/sopkb-config" }
+sopkb-agent = { path = "../../sopkb-rust/crates/sopkb-agent" }
+sopkb-mining = { path = "../../sopkb-rust/crates/sopkb-mining" }
+sopkb-llm = { path = "../../sopkb-rust/crates/sopkb-llm" }
+
+[dev-dependencies]
+tempfile = "3"
+serial_test = "3"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
+# Tauri's own size-optimization guidance recommends this, and it is what the
+# 4.5 MB release binary was measured with. Tradeoff worth knowing: with `abort`,
+# a panic inside a command takes the whole app down instead of unwinding that one
+# task, which for an app people edit knowledge bundles in means losing whatever
+# was on screen. Drop this line if that matters more than the size saving.
+panic = "abort"

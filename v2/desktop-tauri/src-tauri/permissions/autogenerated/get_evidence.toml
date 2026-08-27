@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-evidence"
+description = "Enables the get_evidence command without any pre-configured scope."
+commands.allow = ["get_evidence"]
+
+[[permission]]
+identifier = "deny-get-evidence"
+description = "Denies the get_evidence command without any pre-configured scope."
+commands.deny = ["get_evidence"]

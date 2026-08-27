@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-init-bundle"
+description = "Enables the init_bundle command without any pre-configured scope."
+commands.allow = ["init_bundle"]
+
+[[permission]]
+identifier = "deny-init-bundle"
+description = "Denies the init_bundle command without any pre-configured scope."
+commands.deny = ["init_bundle"]

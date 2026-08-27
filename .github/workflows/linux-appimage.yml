@@ -1,0 +1,89 @@
+name: Linux AppImage (v2 desktop)
+
+# On-demand build only (workflow_dispatch), mirroring macos-dmg.yml and
+# windows-installer.yml -- this repo's always-on CI (ci.yml, lint.yml) only
+# exercises the v2/sopkb-rust library workspace, not v2/desktop-tauri or
+# v2/frontend, so nothing else verifies this app actually builds on Linux.
+# This job does: build frontend + backend fresh from the checked-out ref,
+# package an AppImage, upload it as a run artifact. Trigger manually from the
+# Actions tab (pick the branch/ref to build). Also the cheapest of the three
+# per-OS build-check workflows to run (no macOS 10x runner-minute multiplier,
+# no Windows-only toolchain quirks), so it's the one worth reaching for first
+# when just sanity-checking that a change didn't break the desktop build.
+#
+# No code signing is relevant here -- AppImage has no OS-level Gatekeeper/
+# SmartScreen equivalent to work around; it just needs its executable bit set
+# (`chmod +x`) after download, same as any other Linux binary.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build-linux:
+    name: Build Linux AppImage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Tauri v2's Linux build needs the webkit2gtk stack present to even
+      # compile, not just to bundle -- same package list release.yml's own
+      # ubuntu-latest matrix entry already uses.
+      - name: Install Linux build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf \
+            libxdo-dev \
+            libssl-dev \
+            build-essential
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust build artifacts
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: v2/desktop-tauri/src-tauri -> target
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: v2/frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: v2/frontend
+        run: npm ci
+
+      # Writes into v2/desktop-tauri/dist -- vite.config.ts's `build.outDir` --
+      # which `tauri.conf.json`'s `build.frontendDist: "../dist"` then embeds
+      # into the app. Rebuilt fresh here rather than relying on whatever's
+      # currently committed, so this workflow always reflects the checked-out
+      # ref's actual frontend source -- skipping this step would silently
+      # package a stale UI against a freshly-built backend.
+      - name: Build frontend
+        working-directory: v2/frontend
+        run: npm run build
+
+      # `tauri.conf.json`'s `bundle.targets` includes "appimage" alongside the
+      # Windows/macOS-only targets ("nsis", "app", "dmg") -- the Tauri CLI only
+      # builds the ones valid for the host platform, so this produces just the
+      # AppImage here, no target flag needed.
+      - name: Build AppImage
+        working-directory: v2/desktop-tauri
+        run: npx --yes @tauri-apps/cli@^2 build
+
+      - name: Upload AppImage
+        uses: actions/upload-artifact@v4
+        with:
+          name: kl4a-workbench-linux-appimage
+          path: v2/desktop-tauri/src-tauri/target/release/bundle/appimage/*.AppImage
+          if-no-files-found: error

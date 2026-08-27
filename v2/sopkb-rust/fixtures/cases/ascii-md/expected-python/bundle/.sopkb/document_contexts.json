@@ -1,0 +1,26 @@
+[
+  {
+    "heading": "GLP-1 Intake SOP",
+    "section_id": "section-glp1-intake-001",
+    "semantic_role": "section",
+    "source_id": "glp1-intake"
+  },
+  {
+    "heading": "Purpose",
+    "section_id": "section-glp1-intake-002",
+    "semantic_role": "section",
+    "source_id": "glp1-intake"
+  },
+  {
+    "heading": "Eligibility Requirements",
+    "section_id": "section-glp1-intake-003",
+    "semantic_role": "policy",
+    "source_id": "glp1-intake"
+  },
+  {
+    "heading": "Procedure",
+    "section_id": "section-glp1-intake-004",
+    "semantic_role": "procedure",
+    "source_id": "glp1-intake"
+  }
+]

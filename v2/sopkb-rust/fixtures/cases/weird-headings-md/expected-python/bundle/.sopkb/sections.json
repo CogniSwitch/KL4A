@@ -1,0 +1,42 @@
+[
+  {
+    "end_pos": 351,
+    "heading": "Lone Hash Adopts This Line As Heading Text",
+    "id": "section-weird-headings-001",
+    "normalized_path": "sources/normalized/weird-headings__v1.md",
+    "semantic_role": "section",
+    "source_id": "weird-headings",
+    "source_version_id": "weird-headings:v1",
+    "start_pos": 305
+  },
+  {
+    "end_pos": 432,
+    "heading": "Purpose ##",
+    "id": "section-weird-headings-002",
+    "normalized_path": "sources/normalized/weird-headings__v1.md",
+    "semantic_role": "section",
+    "source_id": "weird-headings",
+    "source_version_id": "weird-headings:v1",
+    "start_pos": 351
+  },
+  {
+    "end_pos": 526,
+    "heading": "not a real heading, inside a fence",
+    "id": "section-weird-headings-003",
+    "normalized_path": "sources/normalized/weird-headings__v1.md",
+    "semantic_role": "section",
+    "source_id": "weird-headings",
+    "source_version_id": "weird-headings:v1",
+    "start_pos": 432
+  },
+  {
+    "end_pos": 606,
+    "heading": "Procedure",
+    "id": "section-weird-headings-004",
+    "normalized_path": "sources/normalized/weird-headings__v1.md",
+    "semantic_role": "procedure",
+    "source_id": "weird-headings",
+    "source_version_id": "weird-headings:v1",
+    "start_pos": 526
+  }
+]

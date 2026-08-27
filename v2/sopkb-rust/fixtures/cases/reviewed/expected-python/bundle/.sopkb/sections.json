@@ -1,0 +1,72 @@
+[
+  {
+    "end_pos": 22,
+    "heading": "Escalation Runbook",
+    "id": "section-escalation-runbook-001",
+    "normalized_path": "sources/normalized/escalation-runbook__v1.md",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook",
+    "source_version_id": "escalation-runbook:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 115,
+    "heading": "Initial Notification",
+    "id": "section-escalation-runbook-002",
+    "normalized_path": "sources/normalized/escalation-runbook__v1.md",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook",
+    "source_version_id": "escalation-runbook:v1",
+    "start_pos": 22
+  },
+  {
+    "end_pos": 216,
+    "heading": "Secondary Contact",
+    "id": "section-escalation-runbook-003",
+    "normalized_path": "sources/normalized/escalation-runbook__v1.md",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook",
+    "source_version_id": "escalation-runbook:v1",
+    "start_pos": 115
+  },
+  {
+    "end_pos": 308,
+    "heading": "Vendor Escalation",
+    "id": "section-escalation-runbook-004",
+    "normalized_path": "sources/normalized/escalation-runbook__v1.md",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook",
+    "source_version_id": "escalation-runbook:v1",
+    "start_pos": 216
+  },
+  {
+    "end_pos": 403,
+    "heading": "Legal Notification",
+    "id": "section-escalation-runbook-005",
+    "normalized_path": "sources/normalized/escalation-runbook__v1.md",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook",
+    "source_version_id": "escalation-runbook:v1",
+    "start_pos": 308
+  },
+  {
+    "end_pos": 507,
+    "heading": "Patient Communication",
+    "id": "section-escalation-runbook-006",
+    "normalized_path": "sources/normalized/escalation-runbook__v1.md",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook",
+    "source_version_id": "escalation-runbook:v1",
+    "start_pos": 403
+  },
+  {
+    "end_pos": 603,
+    "heading": "Post-Incident Review",
+    "id": "section-escalation-runbook-007",
+    "normalized_path": "sources/normalized/escalation-runbook__v1.md",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook",
+    "source_version_id": "escalation-runbook:v1",
+    "start_pos": 507
+  }
+]

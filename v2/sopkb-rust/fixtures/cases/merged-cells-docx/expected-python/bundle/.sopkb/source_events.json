@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-coverage-matrix-<TS>",
+    "path": "<ABS>",
+    "source_id": "coverage-matrix",
+    "source_version_id": "coverage-matrix:v1",
+    "timestamp": "<TS>"
+  }
+]

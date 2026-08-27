@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:b5881f2be2da07ca74f67242e83008b51ba87ae2a34550eb8d93789f07d48fe5",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/report__v1.md",
+      "original_path": "sources/originals/report__v1.md",
+      "size_bytes": 64,
+      "source_id": "report",
+      "source_version_id": "report:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

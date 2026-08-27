@@ -1,0 +1,23 @@
+[package]
+name = "sopkb-workbench"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+sopkb-core = { path = "../sopkb-core" }
+sopkb-config = { path = "../sopkb-config" }
+sopkb-derive = { path = "../sopkb-derive" }
+sopkb-mining = { path = "../sopkb-mining" }
+sopkb-export = { path = "../sopkb-export" }
+sopkb-review = { path = "../sopkb-review" }
+sopkb-agent = { path = "../sopkb-agent" }
+sopkb-fmt = { path = "../sopkb-fmt" }
+sopkb-llm = { path = "../sopkb-llm" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = "1"
+
+[dev-dependencies]
+tempfile = "3"
+serial_test = "3"

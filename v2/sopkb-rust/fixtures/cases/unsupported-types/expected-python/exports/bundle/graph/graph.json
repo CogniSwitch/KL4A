@@ -1,0 +1,116 @@
+{
+  "edges": [
+    {
+      "source": "policy",
+      "target": "section-policy-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-policy-001",
+      "target": "concept-access-policy",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "policy",
+      "target": "section-policy-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-policy-002",
+      "target": "concept-controls",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-policy-002",
+      "target": "ki-policy-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-policy-v1-000001",
+      "target": "evidence-ki-policy-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-policy-v1-000001",
+      "target": "kr-ki-policy-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-controls",
+      "target": "kr-ki-policy-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-policy-v1-000001",
+      "target": "evidence-ki-policy-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-policy-v1-000001",
+      "target": "rule-ki-policy-v1-000001-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-policy-v1-000001",
+      "target": "rule-ki-policy-v1-000001-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-policy-v1-000001-requires",
+      "target": "evidence-ki-policy-v1-000001",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "policy",
+      "label": "policy",
+      "source_version_id": "policy:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-policy-001",
+      "label": "Access Policy",
+      "source_version_id": "policy:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-access-policy",
+      "label": "Access Policy",
+      "type": "concept"
+    },
+    {
+      "id": "section-policy-002",
+      "label": "Controls",
+      "source_version_id": "policy:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-controls",
+      "label": "Controls",
+      "type": "concept"
+    },
+    {
+      "id": "ki-policy-v1-000001",
+      "label": "Controls",
+      "lifecycle_status": "active",
+      "source_version_id": "policy:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-policy-v1-000001",
+      "label": "Staff must confirm badge access before entering the restricted area.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-policy-v1-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-policy-v1-000001-requires",
+      "label": "Controls",
+      "type": "decision_rule"
+    }
+  ]
+}

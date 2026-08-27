@@ -1,0 +1,114 @@
+[
+  {
+    "id": "triple-ki-follow-up-monitoring-procedure-v1-000001",
+    "knowledge_item_id": "ki-follow-up-monitoring-procedure-v1-000001",
+    "object": "Patients should receive follow-up contact within 14 days after GLP-1 therapy initiation.",
+    "predicate": "should",
+    "subject": "Follow-up Monitoring"
+  },
+  {
+    "id": "triple-ki-follow-up-monitoring-procedure-v1-000002",
+    "knowledge_item_id": "ki-follow-up-monitoring-procedure-v1-000002",
+    "object": "Staff must record dose tolerance and adverse event symptoms during follow-up.",
+    "predicate": "records",
+    "subject": "Follow-up Monitoring"
+  },
+  {
+    "id": "triple-ki-follow-up-monitoring-procedure-v1-000003",
+    "knowledge_item_id": "ki-follow-up-monitoring-procedure-v1-000003",
+    "object": "Clinicians must confirm patient tolerance before dose escalation.",
+    "predicate": "requires",
+    "subject": "Dose Titration"
+  },
+  {
+    "id": "triple-ki-follow-up-monitoring-procedure-v1-000004",
+    "knowledge_item_id": "ki-follow-up-monitoring-procedure-v1-000004",
+    "object": "Clinicians should defer dose escalation when severe gastrointestinal symptoms are reported.",
+    "predicate": "should",
+    "subject": "Dose Titration"
+  },
+  {
+    "id": "triple-ki-primary-care-glp1-sop-v1-000005",
+    "knowledge_item_id": "ki-primary-care-glp1-sop-v1-000005",
+    "object": "Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility.",
+    "predicate": "requires",
+    "subject": "Intake Requirements"
+  },
+  {
+    "id": "triple-ki-primary-care-glp1-sop-v1-000006",
+    "knowledge_item_id": "ki-primary-care-glp1-sop-v1-000006",
+    "object": "Clinicians must document current medications, diabetes history, weight history, and relevant comorbidities.",
+    "predicate": "requires",
+    "subject": "Intake Requirements"
+  },
+  {
+    "id": "triple-ki-primary-care-glp1-sop-v1-000007",
+    "knowledge_item_id": "ki-primary-care-glp1-sop-v1-000007",
+    "object": "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid carcinoma history, and multiple endocrine neoplasia type 2 history.",
+    "predicate": "requires",
+    "subject": "Contraindication Screening"
+  },
+  {
+    "id": "triple-ki-primary-care-glp1-sop-v1-000008",
+    "knowledge_item_id": "ki-primary-care-glp1-sop-v1-000008",
+    "object": "Patients with uncertain contraindication history should be routed for clinical review before therapy is prescribed.",
+    "predicate": "should",
+    "subject": "Contraindication Screening"
+  },
+  {
+    "id": "triple-ki-primary-care-glp1-sop-v1-000009",
+    "knowledge_item_id": "ki-primary-care-glp1-sop-v1-000009",
+    "object": "Patients should receive follow-up contact within 30 days after GLP-1 therapy initiation.",
+    "predicate": "should",
+    "subject": "Follow-up Monitoring"
+  },
+  {
+    "id": "triple-ki-prior-authorization-workflow-v1-000010",
+    "knowledge_item_id": "ki-prior-authorization-workflow-v1-000010",
+    "object": "Staff must record payer requirements before submitting a GLP-1 prior authorization request.",
+    "predicate": "records",
+    "subject": "Prior Authorization Requirements"
+  },
+  {
+    "id": "triple-ki-prior-authorization-workflow-v1-000011",
+    "knowledge_item_id": "ki-prior-authorization-workflow-v1-000011",
+    "object": "Staff must attach diagnosis evidence and prior therapy documentation when required by the payer.",
+    "predicate": "requires",
+    "subject": "Prior Authorization Requirements"
+  },
+  {
+    "id": "triple-ki-prior-authorization-workflow-v1-000012",
+    "knowledge_item_id": "ki-prior-authorization-workflow-v1-000012",
+    "object": "Staff should route prior authorization denials to the prescribing clinician for clinical review.",
+    "predicate": "should",
+    "subject": "Denial Routing"
+  },
+  {
+    "id": "triple-ki-prior-authorization-workflow-v1-000013",
+    "knowledge_item_id": "ki-prior-authorization-workflow-v1-000013",
+    "object": "Staff must record appeal deadlines in the case note.",
+    "predicate": "records",
+    "subject": "Denial Routing"
+  },
+  {
+    "id": "triple-ki-safety-policy-v1-000014",
+    "knowledge_item_id": "ki-safety-policy-v1-000014",
+    "object": "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy.",
+    "predicate": "requires",
+    "subject": "Contraindication Screening"
+  },
+  {
+    "id": "triple-ki-safety-policy-v1-000015",
+    "knowledge_item_id": "ki-safety-policy-v1-000015",
+    "object": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review.",
+    "predicate": "requires",
+    "subject": "Contraindication Screening"
+  },
+  {
+    "id": "triple-ki-safety-policy-v1-000016",
+    "knowledge_item_id": "ki-safety-policy-v1-000016",
+    "object": "Clinicians should record severe gastrointestinal symptoms, dehydration risk, and suspected pancreatitis symptoms.",
+    "predicate": "should",
+    "subject": "Adverse Event Monitoring"
+  }
+]

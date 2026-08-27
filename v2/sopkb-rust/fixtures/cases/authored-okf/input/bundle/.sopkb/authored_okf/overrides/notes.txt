@@ -1,0 +1,2 @@
+Internal reviewer notes, not part of the OKF surface. This file must NOT appear
+under bundle/authored/ after sync, because copy_authored_okf_docs only copies *.md files.

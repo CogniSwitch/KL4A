@@ -1,0 +1,233 @@
+{
+  "agent_chat_json_on_disk": [
+    {
+      "allow_proposed": true,
+      "answer": "## Context Ready\n\nThe OKF task context was assembled for agent use. Select the Azure LLM provider to evaluate the scenario.\n\n```json\n{\n  \"allow_proposed\": true,\n  \"concepts\": [\n    {\n      \"id\": \"concept-contraindication-screening\",\n      \"label\": \"Contraindication Screening\",\n      \"match_reasons\": [\n        \"linked knowledge terms: must\",\n        \"linked knowledge terms: before, therapy\",\n        \"linked knowledge terms: before, confirm, glp, must, therapy\",\n        \"linked knowledge terms: glp, must, therapy\"\n      ],\n      \"score\": 11.0\n    },\n    {\n      \"id\": \"concept-intake-requirements\",\n      \"label\": \"Intake Requirements\",\n      \"match_reasons\": [\n        \"linked knowledge terms: before, confirm, glp, identity, must, therapy\",\n        \"linked knowledge terms: must\"\n      ],\n      \"score\": 7.0\n    },\n    {\n      \"id\": \"concept-prior-authorization-requirements\",\n      \"label\": \"Prior Authorization Requirements\",\n      \"match_reasons\": [\n        \"linked knowledge terms: before, glp, must, staff\",\n        \"linked knowledge terms: must, staff, therapy\"\n      ],\n      \"score\": 7.0\n    },\n    {\n      \"id\": \"concept-follow-up-monitoring\",\n      \"label\": \"Follow-up Monitoring\",\n      \"match_reasons\": [\n        \"linked knowledge terms: glp, therapy\",\n        \"linked knowledge terms: must, staff\"\n      ],\n      \"score\": 6.0\n    },\n    {\n      \"id\": \"concept-denial-routing\",\n      \"label\": \"Denial Routing\",\n      \"match_reasons\": [\n        \"linked knowledge terms: staff\",\n        \"linked knowledge terms: must, staff\"\n      ],\n      \"score\": 3.0\n    },\n    {\n      \"id\": \"concept-dose-titration\",\n      \"label\": \"Dose Titration\",\n      \"match_reasons\": [\n        \"linked knowledge terms: before, confirm, must\"\n      ],\n      \"score\": 3.0\n    }\n  ],\n  \"decision_rule_count\": 14,\n  \"evidence_count\": 14,\n  \"relation_count\": 14,\n  \"retrieval_mode\": \"scenario-concepts\",\n  \"scenario\": \"A patient calls asking whether they are eligible for GLP-1 therapy and staff must confirm identity before proceeding.\",\n  \"task\": {\n    \"description\": \"Use scenario-detected concepts to retrieve related SOP knowledge, evidence, rules, and relations.\",\n    \"id\": \"scenario-analysis\",\n    \"query_terms\": [],\n    \"title\": \"Scenario Analysis\"\n  },\n  \"usable_knowledge_count\": 14\n}\n```",
+      "context_summary": {
+        "concept_count": 6,
+        "decision_rule_count": 14,
+        "detected_concept_count": 6,
+        "evidence_count": 14,
+        "excluded_knowledge_count": 0,
+        "relation_count": 14,
+        "usable_knowledge_count": 14
+      },
+      "created_at": "2026-01-01T00:00:00Z",
+      "detected_concepts": [
+        {
+          "id": "concept-contraindication-screening",
+          "label": "Contraindication Screening",
+          "match_reasons": [
+            "linked knowledge terms: must",
+            "linked knowledge terms: before, therapy",
+            "linked knowledge terms: before, confirm, glp, must, therapy",
+            "linked knowledge terms: glp, must, therapy"
+          ],
+          "score": 11.0
+        },
+        {
+          "id": "concept-intake-requirements",
+          "label": "Intake Requirements",
+          "match_reasons": [
+            "linked knowledge terms: before, confirm, glp, identity, must, therapy",
+            "linked knowledge terms: must"
+          ],
+          "score": 7.0
+        },
+        {
+          "id": "concept-prior-authorization-requirements",
+          "label": "Prior Authorization Requirements",
+          "match_reasons": [
+            "linked knowledge terms: before, glp, must, staff",
+            "linked knowledge terms: must, staff, therapy"
+          ],
+          "score": 7.0
+        },
+        {
+          "id": "concept-follow-up-monitoring",
+          "label": "Follow-up Monitoring",
+          "match_reasons": [
+            "linked knowledge terms: glp, therapy",
+            "linked knowledge terms: must, staff"
+          ],
+          "score": 6.0
+        },
+        {
+          "id": "concept-denial-routing",
+          "label": "Denial Routing",
+          "match_reasons": [
+            "linked knowledge terms: staff",
+            "linked knowledge terms: must, staff"
+          ],
+          "score": 3.0
+        },
+        {
+          "id": "concept-dose-titration",
+          "label": "Dose Titration",
+          "match_reasons": [
+            "linked knowledge terms: before, confirm, must"
+          ],
+          "score": 3.0
+        }
+      ],
+      "profile_id": null,
+      "provider": "context",
+      "scenario": "A patient calls asking whether they are eligible for GLP-1 therapy and staff must confirm identity before proceeding.",
+      "task_id": "auto",
+      "task_title": "Scenario Analysis"
+    }
+  ],
+  "handle_agent_form_entry": {
+    "allow_proposed": true,
+    "answer": "## Context Ready\n\nThe OKF task context was assembled for agent use. Select the Azure LLM provider to evaluate the scenario.\n\n```json\n{\n  \"allow_proposed\": true,\n  \"concepts\": [\n    {\n      \"id\": \"concept-contraindication-screening\",\n      \"label\": \"Contraindication Screening\",\n      \"match_reasons\": [\n        \"linked knowledge terms: must\",\n        \"linked knowledge terms: before, therapy\",\n        \"linked knowledge terms: before, confirm, glp, must, therapy\",\n        \"linked knowledge terms: glp, must, therapy\"\n      ],\n      \"score\": 11.0\n    },\n    {\n      \"id\": \"concept-intake-requirements\",\n      \"label\": \"Intake Requirements\",\n      \"match_reasons\": [\n        \"linked knowledge terms: before, confirm, glp, identity, must, therapy\",\n        \"linked knowledge terms: must\"\n      ],\n      \"score\": 7.0\n    },\n    {\n      \"id\": \"concept-prior-authorization-requirements\",\n      \"label\": \"Prior Authorization Requirements\",\n      \"match_reasons\": [\n        \"linked knowledge terms: before, glp, must, staff\",\n        \"linked knowledge terms: must, staff, therapy\"\n      ],\n      \"score\": 7.0\n    },\n    {\n      \"id\": \"concept-follow-up-monitoring\",\n      \"label\": \"Follow-up Monitoring\",\n      \"match_reasons\": [\n        \"linked knowledge terms: glp, therapy\",\n        \"linked knowledge terms: must, staff\"\n      ],\n      \"score\": 6.0\n    },\n    {\n      \"id\": \"concept-denial-routing\",\n      \"label\": \"Denial Routing\",\n      \"match_reasons\": [\n        \"linked knowledge terms: staff\",\n        \"linked knowledge terms: must, staff\"\n      ],\n      \"score\": 3.0\n    },\n    {\n      \"id\": \"concept-dose-titration\",\n      \"label\": \"Dose Titration\",\n      \"match_reasons\": [\n        \"linked knowledge terms: before, confirm, must\"\n      ],\n      \"score\": 3.0\n    }\n  ],\n  \"decision_rule_count\": 14,\n  \"evidence_count\": 14,\n  \"relation_count\": 14,\n  \"retrieval_mode\": \"scenario-concepts\",\n  \"scenario\": \"A patient calls asking whether they are eligible for GLP-1 therapy and staff must confirm identity before proceeding.\",\n  \"task\": {\n    \"description\": \"Use scenario-detected concepts to retrieve related SOP knowledge, evidence, rules, and relations.\",\n    \"id\": \"scenario-analysis\",\n    \"query_terms\": [],\n    \"title\": \"Scenario Analysis\"\n  },\n  \"usable_knowledge_count\": 14\n}\n```",
+    "context_summary": {
+      "concept_count": 6,
+      "decision_rule_count": 14,
+      "detected_concept_count": 6,
+      "evidence_count": 14,
+      "excluded_knowledge_count": 0,
+      "relation_count": 14,
+      "usable_knowledge_count": 14
+    },
+    "created_at": "2026-01-01T00:00:00Z",
+    "detected_concepts": [
+      {
+        "id": "concept-contraindication-screening",
+        "label": "Contraindication Screening",
+        "match_reasons": [
+          "linked knowledge terms: must",
+          "linked knowledge terms: before, therapy",
+          "linked knowledge terms: before, confirm, glp, must, therapy",
+          "linked knowledge terms: glp, must, therapy"
+        ],
+        "score": 11.0
+      },
+      {
+        "id": "concept-intake-requirements",
+        "label": "Intake Requirements",
+        "match_reasons": [
+          "linked knowledge terms: before, confirm, glp, identity, must, therapy",
+          "linked knowledge terms: must"
+        ],
+        "score": 7.0
+      },
+      {
+        "id": "concept-prior-authorization-requirements",
+        "label": "Prior Authorization Requirements",
+        "match_reasons": [
+          "linked knowledge terms: before, glp, must, staff",
+          "linked knowledge terms: must, staff, therapy"
+        ],
+        "score": 7.0
+      },
+      {
+        "id": "concept-follow-up-monitoring",
+        "label": "Follow-up Monitoring",
+        "match_reasons": [
+          "linked knowledge terms: glp, therapy",
+          "linked knowledge terms: must, staff"
+        ],
+        "score": 6.0
+      },
+      {
+        "id": "concept-denial-routing",
+        "label": "Denial Routing",
+        "match_reasons": [
+          "linked knowledge terms: staff",
+          "linked knowledge terms: must, staff"
+        ],
+        "score": 3.0
+      },
+      {
+        "id": "concept-dose-titration",
+        "label": "Dose Titration",
+        "match_reasons": [
+          "linked knowledge terms: before, confirm, must"
+        ],
+        "score": 3.0
+      }
+    ],
+    "profile_id": null,
+    "provider": "context",
+    "scenario": "A patient calls asking whether they are eligible for GLP-1 therapy and staff must confirm identity before proceeding.",
+    "task_id": "auto",
+    "task_title": "Scenario Analysis"
+  },
+  "run_agent_chat_context": {
+    "allow_proposed": true,
+    "answer": "## Context Ready\n\nThe OKF task context was assembled for agent use. Select the Azure LLM provider to evaluate the scenario.\n\n```json\n{\n  \"allow_proposed\": true,\n  \"concepts\": [\n    {\n      \"id\": \"concept-contraindication-screening\",\n      \"label\": \"Contraindication Screening\",\n      \"match_reasons\": [\n        \"linked knowledge terms: must\",\n        \"linked knowledge terms: before, therapy\",\n        \"linked knowledge terms: before, confirm, glp, must, therapy\",\n        \"linked knowledge terms: glp, must, therapy\"\n      ],\n      \"score\": 11.0\n    },\n    {\n      \"id\": \"concept-intake-requirements\",\n      \"label\": \"Intake Requirements\",\n      \"match_reasons\": [\n        \"linked knowledge terms: before, confirm, glp, identity, must, therapy\",\n        \"linked knowledge terms: must\"\n      ],\n      \"score\": 7.0\n    },\n    {\n      \"id\": \"concept-prior-authorization-requirements\",\n      \"label\": \"Prior Authorization Requirements\",\n      \"match_reasons\": [\n        \"linked knowledge terms: before, glp, must, staff\",\n        \"linked knowledge terms: must, staff, therapy\"\n      ],\n      \"score\": 7.0\n    },\n    {\n      \"id\": \"concept-follow-up-monitoring\",\n      \"label\": \"Follow-up Monitoring\",\n      \"match_reasons\": [\n        \"linked knowledge terms: glp, therapy\",\n        \"linked knowledge terms: must, staff\"\n      ],\n      \"score\": 6.0\n    },\n    {\n      \"id\": \"concept-denial-routing\",\n      \"label\": \"Denial Routing\",\n      \"match_reasons\": [\n        \"linked knowledge terms: staff\",\n        \"linked knowledge terms: must, staff\"\n      ],\n      \"score\": 3.0\n    },\n    {\n      \"id\": \"concept-dose-titration\",\n      \"label\": \"Dose Titration\",\n      \"match_reasons\": [\n        \"linked knowledge terms: before, confirm, must\"\n      ],\n      \"score\": 3.0\n    }\n  ],\n  \"decision_rule_count\": 14,\n  \"evidence_count\": 14,\n  \"relation_count\": 14,\n  \"retrieval_mode\": \"scenario-concepts\",\n  \"scenario\": \"A patient calls asking whether they are eligible for GLP-1 therapy and staff must confirm identity before proceeding.\",\n  \"task\": {\n    \"description\": \"Use scenario-detected concepts to retrieve related SOP knowledge, evidence, rules, and relations.\",\n    \"id\": \"scenario-analysis\",\n    \"query_terms\": [],\n    \"title\": \"Scenario Analysis\"\n  },\n  \"usable_knowledge_count\": 14\n}\n```",
+    "context_summary": {
+      "concept_count": 6,
+      "decision_rule_count": 14,
+      "detected_concept_count": 6,
+      "evidence_count": 14,
+      "excluded_knowledge_count": 0,
+      "relation_count": 14,
+      "usable_knowledge_count": 14
+    },
+    "detected_concepts": [
+      {
+        "id": "concept-contraindication-screening",
+        "label": "Contraindication Screening",
+        "match_reasons": [
+          "linked knowledge terms: must",
+          "linked knowledge terms: before, therapy",
+          "linked knowledge terms: before, confirm, glp, must, therapy",
+          "linked knowledge terms: glp, must, therapy"
+        ],
+        "score": 11.0
+      },
+      {
+        "id": "concept-intake-requirements",
+        "label": "Intake Requirements",
+        "match_reasons": [
+          "linked knowledge terms: before, confirm, glp, identity, must, therapy",
+          "linked knowledge terms: must"
+        ],
+        "score": 7.0
+      },
+      {
+        "id": "concept-prior-authorization-requirements",
+        "label": "Prior Authorization Requirements",
+        "match_reasons": [
+          "linked knowledge terms: before, glp, must, staff",
+          "linked knowledge terms: must, staff, therapy"
+        ],
+        "score": 7.0
+      },
+      {
+        "id": "concept-follow-up-monitoring",
+        "label": "Follow-up Monitoring",
+        "match_reasons": [
+          "linked knowledge terms: glp, therapy",
+          "linked knowledge terms: must, staff"
+        ],
+        "score": 6.0
+      },
+      {
+        "id": "concept-denial-routing",
+        "label": "Denial Routing",
+        "match_reasons": [
+          "linked knowledge terms: staff",
+          "linked knowledge terms: must, staff"
+        ],
+        "score": 3.0
+      },
+      {
+        "id": "concept-dose-titration",
+        "label": "Dose Titration",
+        "match_reasons": [
+          "linked knowledge terms: before, confirm, must"
+        ],
+        "score": 3.0
+      }
+    ],
+    "profile_id": null,
+    "provider": "context",
+    "scenario": "A patient calls asking whether they are eligible for GLP-1 therapy and staff must confirm identity before proceeding.",
+    "task_id": "auto",
+    "task_title": "Scenario Analysis"
+  },
+  "scenario": "A patient calls asking whether they are eligible for GLP-1 therapy and staff must confirm identity before proceeding.",
+  "task_id": "auto"
+}

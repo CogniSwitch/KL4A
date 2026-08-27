@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-clear-staged-sources"
+description = "Enables the clear_staged_sources command without any pre-configured scope."
+commands.allow = ["clear_staged_sources"]
+
+[[permission]]
+identifier = "deny-clear-staged-sources"
+description = "Denies the clear_staged_sources command without any pre-configured scope."
+commands.deny = ["clear_staged_sources"]

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-authored-draft"
+description = "Enables the get_authored_draft command without any pre-configured scope."
+commands.allow = ["get_authored_draft"]
+
+[[permission]]
+identifier = "deny-get-authored-draft"
+description = "Denies the get_authored_draft command without any pre-configured scope."
+commands.deny = ["get_authored_draft"]

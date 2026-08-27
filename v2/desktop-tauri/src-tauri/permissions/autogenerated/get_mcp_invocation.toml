@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-mcp-invocation"
+description = "Enables the get_mcp_invocation command without any pre-configured scope."
+commands.allow = ["get_mcp_invocation"]
+
+[[permission]]
+identifier = "deny-get-mcp-invocation"
+description = "Denies the get_mcp_invocation command without any pre-configured scope."
+commands.deny = ["get_mcp_invocation"]

@@ -1,0 +1,31 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_eligibility_requirements a sopkb:Concept ;
+  rdfs:label "Eligibility Requirements" .
+
+sopkb:object_a_vendor_must_hold_a_valid_tax_identification_number a sopkb:RelationObject ;
+  rdfs:label "A vendor must hold a valid tax identification number" ;
+  sopkb:objectText "A vendor must hold a valid tax identification number and a signed NDA on file." .
+
+sopkb:kr_ki_vendor_onboarding_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_eligibility_requirements ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_a_vendor_must_hold_a_valid_tax_identification_number ;
+  sopkb:knowledgePiece sopkb:ki_vendor_onboarding_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_vendor_onboarding_v1_000001 ;
+  dcterms:source "vendor-onboarding" ;
+  sopkb:sourceVersion "vendor-onboarding:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_eligibility_requirements sopkb:predicate_requires sopkb:object_a_vendor_must_hold_a_valid_tax_identification_number .
+
+sopkb:rule_ki_vendor_onboarding_v1_000001_requires a sopkb:DecisionRule ;
+  rdfs:label "Eligibility Requirements" ;
+  sopkb:knowledgePiece sopkb:ki_vendor_onboarding_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_vendor_onboarding_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_vendor_onboarding_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_eligibility_requirements" ;
+  sopkb:otherwiseActionRequired "true" .

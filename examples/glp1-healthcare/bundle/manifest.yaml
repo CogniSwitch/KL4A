@@ -1,0 +1,27 @@
+id: bundle
+version: 0.1.0
+title: GLP-1 Healthcare SOP Reference Bundle
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: '2026-08-01T06:41:01Z'
+updated_at: '2026-08-10T13:02:49Z'
+sources:
+- id: follow-up-monitoring-procedure-38ef67176baf
+  type: markdown
+  path: sources/originals/follow-up-monitoring-procedure-38ef67176baf.md
+- id: primary-care-glp1-sop-a3cca5c9520a
+  type: markdown
+  path: sources/originals/primary-care-glp1-sop-a3cca5c9520a.md
+- id: prior-authorization-workflow-d2229b5da05c
+  type: markdown
+  path: sources/originals/prior-authorization-workflow-d2229b5da05c.md
+- id: safety-policy-60f764ab3c8d
+  type: markdown
+  path: sources/originals/safety-policy-60f764ab3c8d.md
+exports:
+- type: graph_json
+  path: ../exports/bundle/graph/graph.json
+- type: rdf
+  path: ../exports/bundle/graph/triples.ttl
+okf_version: '0.2'

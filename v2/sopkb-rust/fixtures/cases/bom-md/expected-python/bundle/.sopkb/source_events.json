@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-bom-doc-<TS>",
+    "path": "<ABS>",
+    "source_id": "bom-doc",
+    "source_version_id": "bom-doc:v1",
+    "timestamp": "<TS>"
+  }
+]

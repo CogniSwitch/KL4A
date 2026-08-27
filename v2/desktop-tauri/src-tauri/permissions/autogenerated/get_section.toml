@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-section"
+description = "Enables the get_section command without any pre-configured scope."
+commands.allow = ["get_section"]
+
+[[permission]]
+identifier = "deny-get-section"
+description = "Denies the get_section command without any pre-configured scope."
+commands.deny = ["get_section"]

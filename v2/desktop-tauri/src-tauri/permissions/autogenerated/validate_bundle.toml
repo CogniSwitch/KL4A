@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-validate-bundle"
+description = "Enables the validate_bundle command without any pre-configured scope."
+commands.allow = ["validate_bundle"]
+
+[[permission]]
+identifier = "deny-validate-bundle"
+description = "Denies the validate_bundle command without any pre-configured scope."
+commands.deny = ["validate_bundle"]

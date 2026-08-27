@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-staged-sources"
+description = "Enables the get_staged_sources command without any pre-configured scope."
+commands.allow = ["get_staged_sources"]
+
+[[permission]]
+identifier = "deny-get-staged-sources"
+description = "Denies the get_staged_sources command without any pre-configured scope."
+commands.deny = ["get_staged_sources"]

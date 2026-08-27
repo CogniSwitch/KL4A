@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "id": "escalation-policy-legacy01",
+      "title": "Escalation Policy",
+      "type": "markdown",
+      "original_path": "sources/originals/escalation-policy-legacy01.md",
+      "normalized_path": "sources/normalized/escalation-policy-legacy01.md",
+      "checksum": "sha256:1111111111111111111111111111111111111111111111111111111111aa",
+      "size": 99,
+      "modified_time": "2026-01-01T00:00:00Z",
+      "parse_status": "normalized",
+      "warnings": [],
+      "metadata": { "source_filename": "escalation-policy-legacy01.md" }
+    }
+  ],
+  "warnings": []
+}

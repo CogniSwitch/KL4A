@@ -1,0 +1,83 @@
+name: docs
+
+# Builds + verifies the MkDocs site (docs/**) with `mkdocs build --strict`
+# (fails on broken links/nav), then publishes it to GitHub Pages on push
+# to `main` via the Actions-based flow (upload-pages-artifact +
+# deploy-pages) rather than a gh-pages branch or GitHub's Jekyll pipeline.
+#
+# NOTE: the deploy job publishes the built site PUBLICLY. Pages sites are
+# world-readable on the Free/Pro tiers even when the repository itself is
+# private -- restricting access to org members needs GitHub Enterprise
+# Cloud. Pull requests only build-and-verify; nothing is published from a
+# PR.
+#
+# ONE-TIME MANUAL SETUP required before the deploy job can succeed: in the
+# repo's Settings -> Pages, set "Source" to "GitHub Actions" (it defaults
+# to "Deploy from a branch", which this workflow does not use).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build + verify docs site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-docs.txt
+
+      - name: Install docs tooling
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-docs.txt
+
+      - name: Build site (strict — fails on broken links/nav)
+        run: mkdocs build --strict
+
+      # main's docs.yml also runs scripts/verify_docs_samples.py (checks
+      # documented CLI output samples against a live run) and
+      # scripts/audit_docs_site.py (guards against bundle-internal paths
+      # leaking into the built site). Both scripts are Python-CLI-specific
+      # and don't exist on this branch -- porting them to check against
+      # sopkb-cli instead of Python's sopkb is real, separate work, not
+      # done here. Flagging the gap rather than silently dropping it.
+
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

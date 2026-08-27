@@ -1,0 +1,44 @@
+[
+  {
+    "id": "triple-ki-escalation-runbook-v1-000001",
+    "knowledge_item_id": "ki-escalation-runbook-v1-000001",
+    "object": "On-call staff must confirm receipt of the alert within 15 minutes.",
+    "predicate": "requires",
+    "subject": "Initial Notification"
+  },
+  {
+    "id": "triple-ki-escalation-runbook-v1-000002",
+    "knowledge_item_id": "ki-escalation-runbook-v1-000002",
+    "object": "Clinicians should route unresolved alerts to the secondary on-call physician.",
+    "predicate": "should",
+    "subject": "Secondary Contact"
+  },
+  {
+    "id": "triple-ki-escalation-runbook-v1-000003",
+    "knowledge_item_id": "ki-escalation-runbook-v1-000003",
+    "object": "The vendor liaison must record every escalation in the incident log.",
+    "predicate": "records",
+    "subject": "Vendor Escalation"
+  },
+  {
+    "id": "triple-ki-escalation-runbook-v1-000004",
+    "knowledge_item_id": "ki-escalation-runbook-v1-000004",
+    "object": "Staff should confirm legal has been notified for any reportable event.",
+    "predicate": "should",
+    "subject": "Legal Notification"
+  },
+  {
+    "id": "triple-ki-escalation-runbook-v1-000005",
+    "knowledge_item_id": "ki-escalation-runbook-v1-000005",
+    "object": "Care coordinators must confirm the patient has been informed of the outcome.",
+    "predicate": "requires",
+    "subject": "Patient Communication"
+  },
+  {
+    "id": "triple-ki-escalation-runbook-v1-000006",
+    "knowledge_item_id": "ki-escalation-runbook-v1-000006",
+    "object": "The safety committee should record findings within five business days.",
+    "predicate": "should",
+    "subject": "Post-Incident Review"
+  }
+]

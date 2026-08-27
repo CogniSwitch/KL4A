@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-mine-knowledge"
+description = "Enables the mine_knowledge command without any pre-configured scope."
+commands.allow = ["mine_knowledge"]
+
+[[permission]]
+identifier = "deny-mine-knowledge"
+description = "Denies the mine_knowledge command without any pre-configured scope."
+commands.deny = ["mine_knowledge"]

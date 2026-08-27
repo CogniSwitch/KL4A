@@ -1,0 +1,8 @@
+=== step 1: validate {bundle} ===
+argv: validate <WORKDIR>\bundle
+exit: 1
+--- stdout ---
+
+--- stderr ---
+error: 'list' object has no attribute 'get'
+

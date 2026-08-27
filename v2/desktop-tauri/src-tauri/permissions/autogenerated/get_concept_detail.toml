@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-concept-detail"
+description = "Enables the get_concept_detail command without any pre-configured scope."
+commands.allow = ["get_concept_detail"]
+
+[[permission]]
+identifier = "deny-get-concept-detail"
+description = "Denies the get_concept_detail command without any pre-configured scope."
+commands.deny = ["get_concept_detail"]

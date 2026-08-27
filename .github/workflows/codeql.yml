@@ -1,0 +1,56 @@
+# Standard GitHub CodeQL starter workflow, per
+# https://github.com/github/codeql-action — free for public repositories.
+# rust-only: this branch has no Python package at all (unlike main, which
+# carries a python entry for tools/sopkb) -- the only real code here is
+# the v2/sopkb-rust workspace.
+#
+# `build-mode: none` is the ONLY mode CodeQL's Rust extractor supports --
+# verified the hard way: a first attempt used `manual` (plus a Rust
+# toolchain setup and an explicit `cargo build` step) on the assumption
+# that autobuild couldn't drive a multi-crate Cargo workspace. The real
+# run failed with "Rust does not support the manual build mode. Please
+# try using one of the following build modes instead: none." The Rust
+# extractor analyses source directly, so no toolchain, no cache, and no
+# build step are needed here at all.
+name: "CodeQL"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '32 7 * * 3'
+  workflow_dispatch: {}
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: rust
+            build-mode: none
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"

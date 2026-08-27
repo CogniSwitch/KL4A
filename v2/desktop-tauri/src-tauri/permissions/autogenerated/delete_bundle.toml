@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-delete-bundle"
+description = "Enables the delete_bundle command without any pre-configured scope."
+commands.allow = ["delete_bundle"]
+
+[[permission]]
+identifier = "deny-delete-bundle"
+description = "Denies the delete_bundle command without any pre-configured scope."
+commands.deny = ["delete_bundle"]

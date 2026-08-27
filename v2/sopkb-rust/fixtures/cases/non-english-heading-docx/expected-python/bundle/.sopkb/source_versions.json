@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:c8f9e0cbf05477835466a2db2a8f7d997143817009980253287546b494ffe3b7",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/politique__v1.md",
+      "original_path": "sources/originals/politique__v1.docx",
+      "size_bytes": 35426,
+      "source_id": "politique",
+      "source_version_id": "politique:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

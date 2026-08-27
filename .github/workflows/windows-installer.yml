@@ -1,0 +1,88 @@
+name: Windows installer (v2 desktop)
+
+# On-demand build only (workflow_dispatch), mirroring macos-dmg.yml -- this repo's
+# always-on CI (ci.yml, lint.yml) only exercises the v2/sopkb-rust library
+# workspace, not v2/desktop-tauri or v2/frontend, so nothing else verifies this
+# app actually builds on Windows. This job does: build frontend + backend fresh
+# from the checked-out ref, package both an NSIS installer and a portable
+# single-file exe, upload both as run artifacts. Trigger manually from the
+# Actions tab (pick the branch/ref to build).
+#
+# No code signing is configured (would need an Authenticode certificate as a repo
+# secret, which this repo doesn't have). The resulting .exe/installer are
+# unsigned: Windows SmartScreen/Smart App Control may warn or block on first run
+# ("Windows protected your PC" -- click "More info" then "Run anyway", or use the
+# installer's own bypass if Smart App Control blocks it outright). This mirrors
+# the macOS DMG workflow's own "no signing configured yet" scope.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    name: Build Windows installer + portable exe
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust build artifacts
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: v2/desktop-tauri/src-tauri -> target
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: v2/frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: v2/frontend
+        run: npm ci
+
+      # Writes into v2/desktop-tauri/dist -- vite.config.ts's `build.outDir` --
+      # which `tauri.conf.json`'s `build.frontendDist: "../dist"` then embeds
+      # into the app. Rebuilt fresh here rather than relying on whatever's
+      # currently committed, so this workflow always reflects the checked-out
+      # ref's actual frontend source -- skipping this step would silently
+      # package a stale UI against a freshly-built backend.
+      - name: Build frontend
+        working-directory: v2/frontend
+        run: npm run build
+
+      # `tauri.conf.json`'s `bundle.targets` includes "nsis" alongside the
+      # macOS/Linux-only targets ("app", "dmg", "appimage") -- the Tauri CLI
+      # only builds the ones valid for the host platform, so this produces just
+      # the NSIS installer here, no target flag needed (unlike the macOS
+      # workflow's `--target universal-apple-darwin`, Windows has no
+      # multi-arch-lipo equivalent to ask for).
+      - name: Build NSIS installer
+        working-directory: v2/desktop-tauri
+        run: npx --yes @tauri-apps/cli@^2 build
+
+      - name: Upload NSIS installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: kl4a-workbench-windows-installer
+          path: v2/desktop-tauri/src-tauri/target/release/bundle/nsis/*.exe
+          if-no-files-found: error
+
+      # A portable, no-install-required single-file exe (see v2/README.md's
+      # "Producing a portable build") -- `tauri build` above already produced a
+      # plain `cargo build --release` binary as a side effect (the installer
+      # bundles it), so this just locates and re-uploads that same exe under a
+      # clearer artifact name rather than rebuilding it a second time.
+      - name: Upload portable exe
+        uses: actions/upload-artifact@v4
+        with:
+          name: kl4a-workbench-windows-portable
+          path: v2/desktop-tauri/src-tauri/target/release/sopkb-desktop-tauri.exe
+          if-no-files-found: error

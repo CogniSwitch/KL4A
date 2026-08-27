@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-normalized-text"
+description = "Enables the get_normalized_text command without any pre-configured scope."
+commands.allow = ["get_normalized_text"]
+
+[[permission]]
+identifier = "deny-get-normalized-text"
+description = "Denies the get_normalized_text command without any pre-configured scope."
+commands.deny = ["get_normalized_text"]

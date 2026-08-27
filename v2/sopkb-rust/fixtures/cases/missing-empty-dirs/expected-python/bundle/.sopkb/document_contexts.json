@@ -1,0 +1,14 @@
+[
+  {
+    "heading": "Missing Dirs SOP",
+    "section_id": "section-missing-dirs-001",
+    "semantic_role": "section",
+    "source_id": "missing-dirs"
+  },
+  {
+    "heading": "Requirements",
+    "section_id": "section-missing-dirs-002",
+    "semantic_role": "policy",
+    "source_id": "missing-dirs"
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "acme-intake-policy:v1",
+      "checksum": "sha256:f4014b43c2552ac97ce8645ca8a4d3232552896a8f9c05e25394525ad3efe917",
+      "id": "acme-intake-policy",
+      "metadata": {
+        "source_filename": "acme_intake_policy.pdf"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/acme-intake-policy__v1.md",
+      "original_path": "sources/originals/acme-intake-policy__v1.pdf",
+      "parse_status": "normalized",
+      "size": 833,
+      "source_version_id": "acme-intake-policy:v1",
+      "status": "active",
+      "title": "acme intake policy",
+      "type": "pdf",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:f4014b43c2552ac97ce8645ca8a4d3232552896a8f9c05e25394525ad3efe917",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/acme-intake-policy__v1.md",
+          "original_path": "sources/originals/acme-intake-policy__v1.pdf",
+          "size_bytes": 833,
+          "source_id": "acme-intake-policy",
+          "source_version_id": "acme-intake-policy:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

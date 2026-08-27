@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "escalation-runbook:v1",
+      "checksum": "sha256:096d9a2e502e9a9e51c9a1fb22c434299623828263d448a22d03948ac35c6f83",
+      "id": "escalation-runbook",
+      "metadata": {
+        "source_filename": "escalation-runbook.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/escalation-runbook__v1.md",
+      "original_path": "sources/originals/escalation-runbook__v1.md",
+      "parse_status": "normalized",
+      "size": 603,
+      "source_version_id": "escalation-runbook:v1",
+      "status": "active",
+      "title": "escalation runbook",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:096d9a2e502e9a9e51c9a1fb22c434299623828263d448a22d03948ac35c6f83",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/escalation-runbook__v1.md",
+          "original_path": "sources/originals/escalation-runbook__v1.md",
+          "size_bytes": 603,
+          "source_id": "escalation-runbook",
+          "source_version_id": "escalation-runbook:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

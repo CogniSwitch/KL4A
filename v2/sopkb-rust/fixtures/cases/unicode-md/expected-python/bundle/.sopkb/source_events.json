@@ -1,0 +1,20 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-caf-checklist-<TS>",
+    "path": "<ABS>",
+    "source_id": "caf-checklist",
+    "source_version_id": "caf-checklist:v1",
+    "timestamp": "<TS>"
+  },
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-item-<TS>",
+    "path": "<ABS>",
+    "source_id": "item",
+    "source_version_id": "item:v1",
+    "timestamp": "<TS>"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "triple-ki-report-v1-000001",
+    "knowledge_item_id": "ki-report-v1-000001",
+    "object": "Staff must confirm the report contents before filing.",
+    "predicate": "requires",
+    "subject": "Report"
+  }
+]

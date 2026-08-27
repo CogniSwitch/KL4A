@@ -1,0 +1,116 @@
+{
+  "edges": [
+    {
+      "source": "missing-dirs",
+      "target": "section-missing-dirs-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-missing-dirs-001",
+      "target": "concept-missing-dirs-sop",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "missing-dirs",
+      "target": "section-missing-dirs-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-missing-dirs-002",
+      "target": "concept-requirements",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-missing-dirs-002",
+      "target": "ki-missing-dirs-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-missing-dirs-v1-000001",
+      "target": "evidence-ki-missing-dirs-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-missing-dirs-v1-000001",
+      "target": "kr-ki-missing-dirs-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-requirements",
+      "target": "kr-ki-missing-dirs-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-missing-dirs-v1-000001",
+      "target": "evidence-ki-missing-dirs-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-missing-dirs-v1-000001",
+      "target": "rule-ki-missing-dirs-v1-000001-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-missing-dirs-v1-000001",
+      "target": "rule-ki-missing-dirs-v1-000001-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-missing-dirs-v1-000001-requires",
+      "target": "evidence-ki-missing-dirs-v1-000001",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "missing-dirs",
+      "label": "missing dirs",
+      "source_version_id": "missing-dirs:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-missing-dirs-001",
+      "label": "Missing Dirs SOP",
+      "source_version_id": "missing-dirs:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-missing-dirs-sop",
+      "label": "Missing Dirs SOP",
+      "type": "concept"
+    },
+    {
+      "id": "section-missing-dirs-002",
+      "label": "Requirements",
+      "source_version_id": "missing-dirs:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-requirements",
+      "label": "Requirements",
+      "type": "concept"
+    },
+    {
+      "id": "ki-missing-dirs-v1-000001",
+      "label": "Requirements",
+      "lifecycle_status": "active",
+      "source_version_id": "missing-dirs:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-missing-dirs-v1-000001",
+      "label": "Staff must confirm the checklist before closing the case.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-missing-dirs-v1-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-missing-dirs-v1-000001-requires",
+      "label": "Requirements",
+      "type": "decision_rule"
+    }
+  ]
+}

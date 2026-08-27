@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-reviewer-name"
+description = "Enables the set_reviewer_name command without any pre-configured scope."
+commands.allow = ["set_reviewer_name"]
+
+[[permission]]
+identifier = "deny-set-reviewer-name"
+description = "Denies the set_reviewer_name command without any pre-configured scope."
+commands.deny = ["set_reviewer_name"]

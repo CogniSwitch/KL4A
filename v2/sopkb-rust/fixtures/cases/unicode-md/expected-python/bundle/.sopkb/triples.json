@@ -1,0 +1,23 @@
+[
+  {
+    "id": "triple-ki-caf-checklist-v1-000001",
+    "knowledge_item_id": "ki-caf-checklist-v1-000001",
+    "object": "Le clinicien doit confirmer l'identit\u00e9 du patient.",
+    "predicate": "requires",
+    "subject": "\u00c9ligibilit\u00e9"
+  },
+  {
+    "id": "triple-ki-caf-checklist-v1-000002",
+    "knowledge_item_id": "ki-caf-checklist-v1-000002",
+    "object": "Le personnel doit record les contre-indications et route les cas incertains.",
+    "predicate": "routes",
+    "subject": "Proc\u00e9dure"
+  },
+  {
+    "id": "triple-ki-item-v1-000003",
+    "knowledge_item_id": "ki-item-v1-000003",
+    "object": "Staff must confirm patient identity.",
+    "predicate": "requires",
+    "subject": "\u6982\u8ff0"
+  }
+]

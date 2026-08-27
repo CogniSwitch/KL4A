@@ -1,0 +1,33 @@
+{
+  "edges": [
+    {
+      "source": "benefits-handbook",
+      "target": "section-benefits-handbook-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-benefits-handbook-001",
+      "target": "concept-eligibility-requirements",
+      "type": "mentions_concept"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "benefits-handbook",
+      "label": "benefits handbook",
+      "source_version_id": "benefits-handbook:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-benefits-handbook-001",
+      "label": "Eligibility Requirements",
+      "source_version_id": "benefits-handbook:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-eligibility-requirements",
+      "label": "Eligibility Requirements",
+      "type": "concept"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "_fixture_note": "Hand-authored stand-in for a real Azure OpenAI Responses API `output_text` payload, NOT a captured live response (no Azure credentials are available in this port's development environment). Schema-valid per okf_author.AUTHOR_SYSTEM_PROMPT's documented `{documents, knowledge_items}` contract. Used by crates/sopkb-mining/src/okf_author.rs's and tests/llm_response_frontmatter_order.rs's MockTransport-based tests to exercise request-building, response-parsing, and OKF-document-writing end-to-end without a live LLM call. The `frontmatter` object below deliberately uses a non-alphabetical key order (title before type, sources before sopkb) to prove that order survives into the emitted YAML file unchanged (see docs/port/port-mapping-b-mining-settings.md's `OrderedJson`/frontmatter-key-order landmine).",
+  "documents": [
+    {
+      "concept_id": "rules/route-uncertain-case",
+      "frontmatter": {
+        "title": "Route uncertain cases for clinical review",
+        "type": "SOP Decision Rule",
+        "sources": [
+          { "id": "source", "title": "Primary care GLP-1 SOP", "resource": "sources/originals/glp1-intake-497fafac4587.md" }
+        ],
+        "sopkb": {
+          "rule": {
+            "id": "rule-authored-route-uncertain-case",
+            "condition": { "fact": "case_uncertainty", "operator": "is_true", "label": "Case is uncertain" },
+            "obligation": { "fact": "route_clinical_review", "action": "route", "label": "Route case for clinical review" },
+            "otherwise": { "action_required": false, "label": "Clinical review route is not required for certain cases." }
+          }
+        }
+      },
+      "body": "# Route uncertain cases for clinical review\n\nWhen a case is uncertain, route it for clinical review.\n"
+    }
+  ],
+  "knowledge_items": [
+    {
+      "subject": "Procedure",
+      "predicate": "should",
+      "object": "Staff should record contraindications and route uncertain cases for clinical review.",
+      "source_text": "Staff should record contraindications and route uncertain cases for clinical review.",
+      "review_status": "proposed",
+      "decision_rules": [
+        {
+          "id": "rule-authored-route-uncertain-case",
+          "title": "Route uncertain cases for clinical review",
+          "condition": { "fact": "case_uncertainty", "operator": "is_true", "label": "Case is uncertain" },
+          "obligation": { "fact": "route_clinical_review", "action": "route", "label": "Route case for clinical review" },
+          "otherwise": { "action_required": false, "label": "Clinical review route is not required for certain cases." }
+        }
+      ]
+    }
+  ]
+}

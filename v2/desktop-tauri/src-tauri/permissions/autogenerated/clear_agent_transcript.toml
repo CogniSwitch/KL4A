@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-clear-agent-transcript"
+description = "Enables the clear_agent_transcript command without any pre-configured scope."
+commands.allow = ["clear_agent_transcript"]
+
+[[permission]]
+identifier = "deny-clear-agent-transcript"
+description = "Denies the clear_agent_transcript command without any pre-configured scope."
+commands.deny = ["clear_agent_transcript"]

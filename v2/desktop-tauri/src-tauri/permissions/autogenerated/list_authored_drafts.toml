@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-list-authored-drafts"
+description = "Enables the list_authored_drafts command without any pre-configured scope."
+commands.allow = ["list_authored_drafts"]
+
+[[permission]]
+identifier = "deny-list-authored-drafts"
+description = "Denies the list_authored_drafts command without any pre-configured scope."
+commands.deny = ["list_authored_drafts"]

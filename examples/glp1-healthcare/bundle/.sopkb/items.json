@@ -1,0 +1,306 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 169,
+    "id": "ki-follow-up-monitoring-procedure-e25874854706-000001",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Patients should receive follow-up contact within 14 days after GLP-1 therapy initiation.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-follow-up-monitoring-procedure-e25874854706-002",
+    "source_id": "follow-up-monitoring-procedure-e25874854706",
+    "source_text": "Patients should receive follow-up contact within 14 days after GLP-1 therapy initiation.",
+    "span_status": "exact",
+    "start_pos": 81,
+    "subject": "Page 1"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 247,
+    "id": "ki-follow-up-monitoring-procedure-e25874854706-000002",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must record dose tolerance, adverse event symptoms, and patient-reported adherence during follow-up.",
+    "predicate": "records",
+    "review_status": "edited",
+    "section_id": "section-follow-up-monitoring-procedure-e25874854706-002",
+    "source_id": "follow-up-monitoring-procedure-e25874854706",
+    "source_text": "Staff must record dose tolerance and adverse event symptoms during follow-up.",
+    "span_status": "exact",
+    "start_pos": 170,
+    "subject": "Page 1"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 328,
+    "id": "ki-follow-up-monitoring-procedure-e25874854706-000003",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians must confirm patient tolerance before dose escalation.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-follow-up-monitoring-procedure-e25874854706-002",
+    "source_id": "follow-up-monitoring-procedure-e25874854706",
+    "source_text": "Clinicians must confirm patient tolerance before dose escalation.",
+    "span_status": "exact",
+    "start_pos": 263,
+    "subject": "Page 1"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 420,
+    "id": "ki-follow-up-monitoring-procedure-e25874854706-000004",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians should defer dose escalation when severe gastrointestinal symptoms are reported.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-follow-up-monitoring-procedure-e25874854706-002",
+    "source_id": "follow-up-monitoring-procedure-e25874854706",
+    "source_text": "Clinicians should defer dose escalation when severe gastrointestinal symptoms are reported.",
+    "span_status": "exact",
+    "start_pos": 329,
+    "subject": "Page 1"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 146,
+    "id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility.",
+    "predicate": "requires",
+    "review_status": "approved",
+    "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-002",
+    "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+    "source_text": "Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility.",
+    "span_status": "exact",
+    "start_pos": 62,
+    "subject": "Intake Requirements"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 255,
+    "id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000006",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians must document current medications, diabetes history, weight history, and relevant comorbidities.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-002",
+    "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+    "source_text": "Clinicians must document current medications, diabetes history, weight history, and relevant comorbidities.",
+    "span_status": "exact",
+    "start_pos": 148,
+    "subject": "Intake Requirements"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 433,
+    "id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid carcinoma history, and multiple endocrine neoplasia type 2 history.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-003",
+    "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+    "source_text": "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid carcinoma history, and multiple endocrine neoplasia type 2 history.",
+    "span_status": "exact",
+    "start_pos": 288,
+    "subject": "Contraindication Screening"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 550,
+    "id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Patients with uncertain contraindication history should be routed for clinical review before therapy is prescribed.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-003",
+    "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+    "source_text": "Patients with uncertain contraindication history should be routed for clinical review before therapy is prescribed.",
+    "span_status": "exact",
+    "start_pos": 435,
+    "subject": "Contraindication Screening"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 665,
+    "id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000009",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Patients should receive follow-up contact within 30 days after GLP-1 therapy initiation.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-004",
+    "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+    "source_text": "Patients should receive follow-up contact within 30 days after GLP-1 therapy initiation.",
+    "span_status": "exact",
+    "start_pos": 577,
+    "subject": "Follow-up Monitoring"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 166,
+    "id": "ki-prior-authorization-workflow-b5ce0527cf18-000010",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must record payer requirements before submitting a GLP-1 prior authorization request.",
+    "predicate": "records",
+    "review_status": "proposed",
+    "section_id": "section-prior-authorization-workflow-b5ce0527cf18-002",
+    "source_id": "prior-authorization-workflow-b5ce0527cf18",
+    "source_text": "Staff must record payer requirements before submitting a GLP-1 prior authorization request.",
+    "span_status": "exact",
+    "start_pos": 75,
+    "subject": "Prior Authorization Requirements"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 264,
+    "id": "ki-prior-authorization-workflow-b5ce0527cf18-000011",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must attach diagnosis evidence and prior therapy documentation when required by the payer.",
+    "predicate": "requires",
+    "review_status": "rejected",
+    "section_id": "section-prior-authorization-workflow-b5ce0527cf18-002",
+    "source_id": "prior-authorization-workflow-b5ce0527cf18",
+    "source_text": "Staff must attach diagnosis evidence and prior therapy documentation when required by the payer.",
+    "span_status": "exact",
+    "start_pos": 168,
+    "subject": "Prior Authorization Requirements"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 381,
+    "id": "ki-prior-authorization-workflow-b5ce0527cf18-000012",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff should route prior authorization denials to the prescribing clinician for clinical review.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-prior-authorization-workflow-b5ce0527cf18-003",
+    "source_id": "prior-authorization-workflow-b5ce0527cf18",
+    "source_text": "Staff should route prior authorization denials to the prescribing clinician for clinical review.",
+    "span_status": "exact",
+    "start_pos": 285,
+    "subject": "Denial Routing"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 435,
+    "id": "ki-prior-authorization-workflow-b5ce0527cf18-000013",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must record appeal deadlines in the case note.",
+    "predicate": "records",
+    "review_status": "proposed",
+    "section_id": "section-prior-authorization-workflow-b5ce0527cf18-003",
+    "source_id": "prior-authorization-workflow-b5ce0527cf18",
+    "source_text": "Staff must record appeal deadlines in the case note.",
+    "span_status": "exact",
+    "start_pos": 383,
+    "subject": "Denial Routing"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 138,
+    "id": "ki-safety-policy-01ff452b1d44-000014",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-safety-policy-01ff452b1d44-002",
+    "source_id": "safety-policy-01ff452b1d44",
+    "source_text": "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy.",
+    "span_status": "exact",
+    "start_pos": 54,
+    "subject": "Contraindication Screening"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 237,
+    "id": "ki-safety-policy-01ff452b1d44-000015",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review.",
+    "predicate": "requires",
+    "review_status": "deferred",
+    "section_id": "section-safety-policy-01ff452b1d44-002",
+    "source_id": "safety-policy-01ff452b1d44",
+    "source_text": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review.",
+    "span_status": "exact",
+    "start_pos": 140,
+    "subject": "Contraindication Screening"
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 381,
+    "id": "ki-safety-policy-01ff452b1d44-000016",
+    "item_type": "claim",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians should record severe gastrointestinal symptoms, dehydration risk, and suspected pancreatitis symptoms.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-safety-policy-01ff452b1d44-003",
+    "source_id": "safety-policy-01ff452b1d44",
+    "source_text": "Clinicians should record severe gastrointestinal symptoms, dehydration risk, and suspected pancreatitis symptoms.",
+    "span_status": "exact",
+    "start_pos": 268,
+    "subject": "Adverse Event Monitoring"
+  }
+]

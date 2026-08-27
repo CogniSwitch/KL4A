@@ -1,0 +1,87 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_purpose a sopkb:Concept ;
+  rdfs:label "Purpose ##" .
+
+sopkb:object_staff_must_confirm_the_escalation_procedure_described_below a sopkb:RelationObject ;
+  rdfs:label "Staff must confirm the escalation procedure described below." ;
+  sopkb:objectText "Staff must confirm the escalation procedure described below." .
+
+sopkb:kr_ki_weird_headings_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_purpose ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_staff_must_confirm_the_escalation_procedure_described_below ;
+  sopkb:knowledgePiece sopkb:ki_weird_headings_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_weird_headings_v1_000001 ;
+  dcterms:source "weird-headings" ;
+  sopkb:sourceVersion "weird-headings:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_purpose sopkb:predicate_requires sopkb:object_staff_must_confirm_the_escalation_procedure_described_below .
+
+sopkb:rule_ki_weird_headings_v1_000001_requires a sopkb:DecisionRule ;
+  rdfs:label "Purpose ##" ;
+  sopkb:knowledgePiece sopkb:ki_weird_headings_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_weird_headings_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_weird_headings_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_purpose" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_not_a_real_heading_inside_a_fence a sopkb:Concept ;
+  rdfs:label "not a real heading, inside a fence" .
+
+sopkb:object_clinicians_should_route_uncertain_cases_for_review a sopkb:RelationObject ;
+  rdfs:label "Clinicians should route uncertain cases for review." ;
+  sopkb:objectText "Clinicians should route uncertain cases for review." .
+
+sopkb:kr_ki_weird_headings_v1_000002 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_not_a_real_heading_inside_a_fence ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_clinicians_should_route_uncertain_cases_for_review ;
+  sopkb:knowledgePiece sopkb:ki_weird_headings_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_weird_headings_v1_000002 ;
+  dcterms:source "weird-headings" ;
+  sopkb:sourceVersion "weird-headings:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_not_a_real_heading_inside_a_fence sopkb:predicate_should sopkb:object_clinicians_should_route_uncertain_cases_for_review .
+
+sopkb:rule_ki_weird_headings_v1_000002_should a sopkb:DecisionRule ;
+  rdfs:label "not a real heading, inside a fence" ;
+  sopkb:knowledgePiece sopkb:ki_weird_headings_v1_000002 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_weird_headings_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_weird_headings_v1_000002 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_not_a_real_heading_inside_a_fence" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_procedure a sopkb:Concept ;
+  rdfs:label "Procedure" .
+
+sopkb:object_staff_should_record_contraindications_and_route_cases_per_policy a sopkb:RelationObject ;
+  rdfs:label "Staff should record contraindications and route cases per policy." ;
+  sopkb:objectText "Staff should record contraindications and route cases per policy." .
+
+sopkb:kr_ki_weird_headings_v1_000003 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_procedure ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_staff_should_record_contraindications_and_route_cases_per_policy ;
+  sopkb:knowledgePiece sopkb:ki_weird_headings_v1_000003 ;
+  sopkb:evidence sopkb:evidence_ki_weird_headings_v1_000003 ;
+  dcterms:source "weird-headings" ;
+  sopkb:sourceVersion "weird-headings:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_procedure sopkb:predicate_should sopkb:object_staff_should_record_contraindications_and_route_cases_per_policy .
+
+sopkb:rule_ki_weird_headings_v1_000003_record_contraindications a sopkb:DecisionRule ;
+  rdfs:label "Record contraindications" ;
+  sopkb:knowledgePiece sopkb:ki_weird_headings_v1_000003 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_weird_headings_v1_000003 ;
+  sopkb:evidence sopkb:evidence_ki_weird_headings_v1_000003 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "contraindications_recorded" ;
+  sopkb:otherwiseActionRequired "true" .

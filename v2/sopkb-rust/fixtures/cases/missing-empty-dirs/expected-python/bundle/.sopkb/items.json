@@ -1,0 +1,25 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 94,
+    "id": "ki-missing-dirs-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must confirm the checklist before closing the case.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-missing-dirs-002",
+    "source_id": "missing-dirs",
+    "source_text": "Staff must confirm the checklist before closing the case.",
+    "source_version_id": "missing-dirs:v1",
+    "span_status": "exact",
+    "start_pos": 37,
+    "subject": "Requirements",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

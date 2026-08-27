@@ -1,0 +1,7 @@
+init {bundle} --title "Missing Empty Dirs Case"
+scan {sources} --bundle {bundle}
+normalize {bundle}
+mine {bundle} --provider fixture
+@rmdir {bundle}/.sopkb/cache
+validate {bundle}
+export {bundle} --format graph-json,rdf

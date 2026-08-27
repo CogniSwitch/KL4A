@@ -1,0 +1,71 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 86,
+    "id": "ki-caf-checklist-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Le clinicien doit confirmer l'identit\u00e9 du patient.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-caf-checklist-002",
+    "source_id": "caf-checklist",
+    "source_text": "Le clinicien doit confirmer l'identit\u00e9 du patient.",
+    "source_version_id": "caf-checklist:v1",
+    "span_status": "exact",
+    "start_pos": 36,
+    "subject": "\u00c9ligibilit\u00e9",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 178,
+    "id": "ki-caf-checklist-v1-000002",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Le personnel doit record les contre-indications et route les cas incertains.",
+    "predicate": "routes",
+    "review_status": "proposed",
+    "section_id": "section-caf-checklist-003",
+    "source_id": "caf-checklist",
+    "source_text": "Le personnel doit record les contre-indications et route les cas incertains.",
+    "source_version_id": "caf-checklist:v1",
+    "span_status": "exact",
+    "start_pos": 102,
+    "subject": "Proc\u00e9dure",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 52,
+    "id": "ki-item-v1-000003",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must confirm patient identity.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-item-002",
+    "source_id": "item",
+    "source_text": "Staff must confirm patient identity.",
+    "source_version_id": "item:v1",
+    "span_status": "exact",
+    "start_pos": 16,
+    "subject": "\u6982\u8ff0",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

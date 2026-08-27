@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:d62b1451fd7fbb9b1e4f4e42309acbd1e8d0b03f316097f8f9167327133befed",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/weird-headings__v1.md",
+      "original_path": "sources/originals/weird-headings__v1.md",
+      "size_bytes": 608,
+      "source_id": "weird-headings",
+      "source_version_id": "weird-headings:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

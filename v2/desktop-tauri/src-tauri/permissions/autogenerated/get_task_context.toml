@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-task-context"
+description = "Enables the get_task_context command without any pre-configured scope."
+commands.allow = ["get_task_context"]
+
+[[permission]]
+identifier = "deny-get-task-context"
+description = "Denies the get_task_context command without any pre-configured scope."
+commands.deny = ["get_task_context"]

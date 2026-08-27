@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-escalation-runbook-<TS>",
+    "path": "<ABS>",
+    "source_id": "escalation-runbook",
+    "source_version_id": "escalation-runbook:v1",
+    "timestamp": "<TS>"
+  }
+]

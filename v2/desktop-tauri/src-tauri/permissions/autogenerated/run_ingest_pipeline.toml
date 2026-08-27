@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-run-ingest-pipeline"
+description = "Enables the run_ingest_pipeline command without any pre-configured scope."
+commands.allow = ["run_ingest_pipeline"]
+
+[[permission]]
+identifier = "deny-run-ingest-pipeline"
+description = "Denies the run_ingest_pipeline command without any pre-configured scope."
+commands.deny = ["run_ingest_pipeline"]

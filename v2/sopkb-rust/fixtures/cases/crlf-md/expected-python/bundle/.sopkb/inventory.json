@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "safety-crlf:v1",
+      "checksum": "sha256:808a186739dc92bc25219d22490488fc722e1b2ebec5a4ec8636db39f4a4f26d",
+      "id": "safety-crlf",
+      "metadata": {
+        "source_filename": "safety-crlf.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/safety-crlf__v1.md",
+      "original_path": "sources/originals/safety-crlf__v1.md",
+      "parse_status": "normalized",
+      "size": 208,
+      "source_version_id": "safety-crlf:v1",
+      "status": "active",
+      "title": "safety crlf",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:808a186739dc92bc25219d22490488fc722e1b2ebec5a4ec8636db39f4a4f26d",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/safety-crlf__v1.md",
+          "original_path": "sources/originals/safety-crlf__v1.md",
+          "size_bytes": 208,
+          "source_id": "safety-crlf",
+          "source_version_id": "safety-crlf:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

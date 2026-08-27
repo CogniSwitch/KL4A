@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-workbench-context"
+description = "Enables the get_workbench_context command without any pre-configured scope."
+commands.allow = ["get_workbench_context"]
+
+[[permission]]
+identifier = "deny-get-workbench-context"
+description = "Denies the get_workbench_context command without any pre-configured scope."
+commands.deny = ["get_workbench_context"]

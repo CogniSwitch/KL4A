@@ -1,0 +1,48 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 97,
+    "id": "ki-safety-crlf-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must record all adverse events within 24 hours.",
+    "predicate": "records",
+    "review_status": "proposed",
+    "section_id": "section-safety-crlf-002",
+    "source_id": "safety-crlf",
+    "source_text": "Staff must record all adverse events within 24 hours.",
+    "source_version_id": "safety-crlf:v1",
+    "span_status": "exact",
+    "start_pos": 44,
+    "subject": "Reporting Requirements",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 198,
+    "id": "ki-safety-crlf-v1-000002",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians should route urgent cases to the on-call physician immediately.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-safety-crlf-003",
+    "source_id": "safety-crlf",
+    "source_text": "Clinicians should route urgent cases to the on-call physician immediately.",
+    "source_version_id": "safety-crlf:v1",
+    "span_status": "exact",
+    "start_pos": 124,
+    "subject": "Escalation Procedure",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

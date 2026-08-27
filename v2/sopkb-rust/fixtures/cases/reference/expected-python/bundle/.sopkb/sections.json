@@ -1,0 +1,132 @@
+[
+  {
+    "end_pos": 40,
+    "heading": "GLP-1 Follow-up Monitoring Procedure",
+    "id": "section-follow-up-monitoring-procedure-001",
+    "normalized_path": "sources/normalized/follow-up-monitoring-procedure__v1.md",
+    "semantic_role": "procedure",
+    "source_id": "follow-up-monitoring-procedure",
+    "source_version_id": "follow-up-monitoring-procedure:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 234,
+    "heading": "Follow-up Monitoring",
+    "id": "section-follow-up-monitoring-procedure-002",
+    "normalized_path": "sources/normalized/follow-up-monitoring-procedure__v1.md",
+    "semantic_role": "section",
+    "source_id": "follow-up-monitoring-procedure",
+    "source_version_id": "follow-up-monitoring-procedure:v1",
+    "start_pos": 40
+  },
+  {
+    "end_pos": 412,
+    "heading": "Dose Titration",
+    "id": "section-follow-up-monitoring-procedure-003",
+    "normalized_path": "sources/normalized/follow-up-monitoring-procedure__v1.md",
+    "semantic_role": "section",
+    "source_id": "follow-up-monitoring-procedure",
+    "source_version_id": "follow-up-monitoring-procedure:v1",
+    "start_pos": 234
+  },
+  {
+    "end_pos": 38,
+    "heading": "Primary Care GLP-1 Prescribing SOP",
+    "id": "section-primary-care-glp1-sop-001",
+    "normalized_path": "sources/normalized/primary-care-glp1-sop__v1.md",
+    "semantic_role": "section",
+    "source_id": "primary-care-glp1-sop",
+    "source_version_id": "primary-care-glp1-sop:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 257,
+    "heading": "Intake Requirements",
+    "id": "section-primary-care-glp1-sop-002",
+    "normalized_path": "sources/normalized/primary-care-glp1-sop__v1.md",
+    "semantic_role": "policy",
+    "source_id": "primary-care-glp1-sop",
+    "source_version_id": "primary-care-glp1-sop:v1",
+    "start_pos": 38
+  },
+  {
+    "end_pos": 552,
+    "heading": "Contraindication Screening",
+    "id": "section-primary-care-glp1-sop-003",
+    "normalized_path": "sources/normalized/primary-care-glp1-sop__v1.md",
+    "semantic_role": "section",
+    "source_id": "primary-care-glp1-sop",
+    "source_version_id": "primary-care-glp1-sop:v1",
+    "start_pos": 257
+  },
+  {
+    "end_pos": 666,
+    "heading": "Follow-up Monitoring",
+    "id": "section-primary-care-glp1-sop-004",
+    "normalized_path": "sources/normalized/primary-care-glp1-sop__v1.md",
+    "semantic_role": "section",
+    "source_id": "primary-care-glp1-sop",
+    "source_version_id": "primary-care-glp1-sop:v1",
+    "start_pos": 552
+  },
+  {
+    "end_pos": 38,
+    "heading": "GLP-1 Prior Authorization Workflow",
+    "id": "section-prior-authorization-workflow-001",
+    "normalized_path": "sources/normalized/prior-authorization-workflow__v1.md",
+    "semantic_role": "procedure",
+    "source_id": "prior-authorization-workflow",
+    "source_version_id": "prior-authorization-workflow:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 266,
+    "heading": "Prior Authorization Requirements",
+    "id": "section-prior-authorization-workflow-002",
+    "normalized_path": "sources/normalized/prior-authorization-workflow__v1.md",
+    "semantic_role": "policy",
+    "source_id": "prior-authorization-workflow",
+    "source_version_id": "prior-authorization-workflow:v1",
+    "start_pos": 38
+  },
+  {
+    "end_pos": 436,
+    "heading": "Denial Routing",
+    "id": "section-prior-authorization-workflow-003",
+    "normalized_path": "sources/normalized/prior-authorization-workflow__v1.md",
+    "semantic_role": "section",
+    "source_id": "prior-authorization-workflow",
+    "source_version_id": "prior-authorization-workflow:v1",
+    "start_pos": 266
+  },
+  {
+    "end_pos": 23,
+    "heading": "GLP-1 Safety Policy",
+    "id": "section-safety-policy-001",
+    "normalized_path": "sources/normalized/safety-policy__v1.md",
+    "semantic_role": "policy",
+    "source_id": "safety-policy",
+    "source_version_id": "safety-policy:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 239,
+    "heading": "Contraindication Screening",
+    "id": "section-safety-policy-002",
+    "normalized_path": "sources/normalized/safety-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "safety-policy",
+    "source_version_id": "safety-policy:v1",
+    "start_pos": 23
+  },
+  {
+    "end_pos": 382,
+    "heading": "Adverse Event Monitoring",
+    "id": "section-safety-policy-003",
+    "normalized_path": "sources/normalized/safety-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "safety-policy",
+    "source_version_id": "safety-policy:v1",
+    "start_pos": 239
+  }
+]

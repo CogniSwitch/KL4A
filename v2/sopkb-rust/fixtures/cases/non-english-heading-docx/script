@@ -1,0 +1,6 @@
+init {bundle} --title "DOCX Non-English Heading Case"
+scan {sources} --bundle {bundle}
+normalize {bundle}
+mine {bundle} --provider fixture
+validate {bundle}
+export {bundle} --format graph-json,rdf

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-list-sections"
+description = "Enables the list_sections command without any pre-configured scope."
+commands.allow = ["list_sections"]
+
+[[permission]]
+identifier = "deny-list-sections"
+description = "Denies the list_sections command without any pre-configured scope."
+commands.deny = ["list_sections"]

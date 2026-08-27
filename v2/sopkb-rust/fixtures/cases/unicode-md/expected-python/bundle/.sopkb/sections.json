@@ -1,0 +1,52 @@
+[
+  {
+    "end_pos": 20,
+    "heading": "Caf\u00e9 Checklist \u2615",
+    "id": "section-caf-checklist-001",
+    "normalized_path": "sources/normalized/caf-checklist__v1.md",
+    "semantic_role": "section",
+    "source_id": "caf-checklist",
+    "source_version_id": "caf-checklist:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 88,
+    "heading": "\u00c9ligibilit\u00e9",
+    "id": "section-caf-checklist-002",
+    "normalized_path": "sources/normalized/caf-checklist__v1.md",
+    "semantic_role": "section",
+    "source_id": "caf-checklist",
+    "source_version_id": "caf-checklist:v1",
+    "start_pos": 20
+  },
+  {
+    "end_pos": 179,
+    "heading": "Proc\u00e9dure",
+    "id": "section-caf-checklist-003",
+    "normalized_path": "sources/normalized/caf-checklist__v1.md",
+    "semantic_role": "section",
+    "source_id": "caf-checklist",
+    "source_version_id": "caf-checklist:v1",
+    "start_pos": 88
+  },
+  {
+    "end_pos": 9,
+    "heading": "\u5317\u4eac\u4e8b\u52a1\u6240",
+    "id": "section-item-001",
+    "normalized_path": "sources/normalized/item__v1.md",
+    "semantic_role": "section",
+    "source_id": "item",
+    "source_version_id": "item:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 53,
+    "heading": "\u6982\u8ff0",
+    "id": "section-item-002",
+    "normalized_path": "sources/normalized/item__v1.md",
+    "semantic_role": "section",
+    "source_id": "item",
+    "source_version_id": "item:v1",
+    "start_pos": 9
+  }
+]

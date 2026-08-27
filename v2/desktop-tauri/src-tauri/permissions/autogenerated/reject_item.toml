@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-reject-item"
+description = "Enables the reject_item command without any pre-configured scope."
+commands.allow = ["reject_item"]
+
+[[permission]]
+identifier = "deny-reject-item"
+description = "Denies the reject_item command without any pre-configured scope."
+commands.deny = ["reject_item"]

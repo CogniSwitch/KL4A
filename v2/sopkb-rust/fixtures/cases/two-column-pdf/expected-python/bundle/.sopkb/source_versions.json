@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:ce4b7035301b30108e48e3e64369f9d4e33d80a12c5f44263d32cbd621e5c2a7",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/two-column-notice__v1.md",
+      "original_path": "sources/originals/two-column-notice__v1.pdf",
+      "size_bytes": 913,
+      "source_id": "two-column-notice",
+      "source_version_id": "two-column-notice:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

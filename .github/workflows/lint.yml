@@ -1,0 +1,51 @@
+name: Lint
+
+# Rust-adapted lint job for this branch's v2/sopkb-rust workspace, replacing
+# main's ruff/mypy job (there is no Python package on this branch to lint).
+#
+# NON-BLOCKING for now (continue-on-error, same pattern main uses for its
+# informational mypy job): verified locally before writing this --
+# `cargo fmt --all -- --check` already fails against the current tree (real
+# pre-existing formatting differences -- this workspace has never been
+# rustfmt'd in CI before), while `cargo clippy --workspace --all-targets`
+# only turned up 10 warnings workspace-wide (a small, plausibly one-sitting
+# fix). Grouped into one non-blocking job for now since fmt is the blocker;
+# flip back to blocking (and split clippy out separately once fmt is clean)
+# once someone does a one-time `cargo fmt --all` pass across the workspace.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  clippy-fmt:
+    name: clippy + rustfmt (informational)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Cache Rust build artifacts
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: v2/sopkb-rust -> target
+
+      - name: cargo fmt --check
+        working-directory: v2/sopkb-rust
+        run: cargo fmt --all -- --check
+
+      - name: cargo clippy
+        working-directory: v2/sopkb-rust
+        run: cargo clippy --workspace --all-targets -- -D warnings

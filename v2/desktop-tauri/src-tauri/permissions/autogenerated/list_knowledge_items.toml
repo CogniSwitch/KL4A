@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-list-knowledge-items"
+description = "Enables the list_knowledge_items command without any pre-configured scope."
+commands.allow = ["list_knowledge_items"]
+
+[[permission]]
+identifier = "deny-list-knowledge-items"
+description = "Denies the list_knowledge_items command without any pre-configured scope."
+commands.deny = ["list_knowledge_items"]

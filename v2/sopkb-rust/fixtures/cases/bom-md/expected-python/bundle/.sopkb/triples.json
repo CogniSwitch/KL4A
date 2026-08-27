@@ -1,0 +1,9 @@
+[
+  {
+    "id": "triple-ki-bom-doc-v1-000001",
+    "knowledge_item_id": "ki-bom-doc-v1-000001",
+    "object": "Staff must confirm patient identity before proceeding.",
+    "predicate": "requires",
+    "subject": "Document"
+  }
+]

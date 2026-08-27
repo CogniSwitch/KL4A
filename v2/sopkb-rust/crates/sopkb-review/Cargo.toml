@@ -1,0 +1,21 @@
+[package]
+name = "sopkb-review"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+sopkb-core = { path = "../sopkb-core" }
+sopkb-export = { path = "../sopkb-export" }
+sopkb-fmt = { path = "../sopkb-fmt" }
+serde_json = "1"
+
+[dev-dependencies]
+tempfile = "3"
+regex = "1"
+# Test-only: `source_lifecycle`'s retire tests need a REAL ingested bundle (scanned,
+# normalized, mined) to retire, and the deterministic "fixture" miner is the only way
+# to get one without a network. Dev-only, so the production dependency direction
+# (sopkb-review -> sopkb-export -> sopkb-core) is unchanged, and sopkb-mining does not
+# depend on sopkb-review, so there is no cycle even for the test build.
+sopkb-mining = { path = "../sopkb-mining" }

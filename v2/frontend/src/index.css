@@ -1,0 +1,242 @@
+@import 'tailwindcss';
+/* latin + latin-ext subsets only -- fontsource's default import pulls every
+   script (Cyrillic, Greek, Vietnamese, ...), bloating a desktop bundle that
+   only ever renders English/Western-European text. Self-hosted via
+   @fontsource rather than a live Google Fonts CDN import (which the
+   "Anchor Stitch" brand package's own palette.md suggests) -- this is an
+   offline-capable desktop app, and the existing Inter/JetBrains Mono choice
+   already established the "never depend on a CDN at runtime" convention
+   this follows. */
+@import '@fontsource/archivo/latin-400.css';
+@import '@fontsource/archivo/latin-500.css';
+@import '@fontsource/archivo/latin-600.css';
+@import '@fontsource/archivo/latin-700.css';
+@import '@fontsource/archivo/latin-ext-400.css';
+@import '@fontsource/archivo/latin-ext-500.css';
+@import '@fontsource/archivo/latin-ext-600.css';
+@import '@fontsource/archivo/latin-ext-700.css';
+@import '@fontsource/lora/latin-500.css';
+@import '@fontsource/lora/latin-600.css';
+@import '@fontsource/lora/latin-700.css';
+@import '@fontsource/lora/latin-ext-500.css';
+@import '@fontsource/lora/latin-ext-600.css';
+@import '@fontsource/lora/latin-ext-700.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
+@import '@fontsource/ibm-plex-mono/latin-500.css';
+@import '@fontsource/ibm-plex-mono/latin-600.css';
+@import '@fontsource/ibm-plex-mono/latin-ext-400.css';
+@import '@fontsource/ibm-plex-mono/latin-ext-500.css';
+@import '@fontsource/ibm-plex-mono/latin-ext-600.css';
+
+/*
+ * Palette blends two references: CogniSwitch's brand identity (ink, accent
+ * blue, fonts — from site/index.html) with the sopkb-web-redesign branch's
+ * structural system for dense data UI (cool app background, semantic
+ * ok/warn/bad status colors, dark navy sidebar, dark-mode scale). Dark mode
+ * works by redefining these same custom properties under
+ * prefers-color-scheme — every `bg-accent`/`text-ink`/etc utility below
+ * resolves through var(), so no screen needs a `dark:` class.
+ *
+ * Typography (Archivo/Lora/IBM Plex Mono) follows the "Anchor Stitch" brand
+ * package's own type spec instead of the original Inter/JetBrains Mono pair
+ * -- Archivo for general UI/body text, Lora reserved for the sidebar
+ * wordmark/heading-scale display contexts via --font-display, IBM Plex Mono
+ * for code/mono contexts (unchanged role, just a different mono face).
+ */
+@theme {
+  --font-sans: 'Archivo', system-ui, 'Segoe UI', sans-serif;
+  --font-display: 'Lora', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-bg: #f4f6fb;
+  --color-panel: #ffffff;
+  --color-panel-muted: #f1f4fa;
+  --color-ink: #272048;
+  --color-muted: #64748b;
+  --color-muted-soft: #94a3b8;
+  --color-line: #e2e8f0;
+  --color-line-soft: #eef1f6;
+
+  --color-accent: #0808ba;
+  --color-accent-hover: #060690;
+  --color-accent-soft: #e3e2fb;
+
+  --color-ok: #059669;
+  --color-ok-soft: #d1fae5;
+  --color-warn: #b45309;
+  --color-warn-soft: #fef3c7;
+  --color-bad: #be123c;
+  --color-bad-soft: #ffe4e6;
+
+  --color-sidebar: #0b1120;
+  --color-sidebar-ink: #e6e9f0;
+  --color-sidebar-muted: #8892ab;
+
+  /*
+   * Semantic per-OKF-entity-type colors: one fixed hue per entity kind,
+   * reused everywhere that entity appears (table pills, badges -- graph
+   * nodes are a separate, parallel workstream, not redefined here). Ported
+   * as a *pattern* (not code) from `origin/ui/sopkb-web-redesign`'s
+   * `tools/sopkb/sopkb/web_app.py` `:root` custom properties (`--source`/
+   * `--section`/`--knowledge`/`--review`/`--evidence`, ~L657-658) -- see
+   * docs/port/CATCHUP_PLAN.md, "ui/sopkb-web-redesign branch scan", idea #2
+   * (~L384-386). Values below are that branch's hexes, kept as-is where
+   * they don't collide with an existing token and consolidated onto an
+   * existing token where they do:
+   *   - `review` and `decision-rule` alias `--color-warn` -- the redesign
+   *     branch's own review/rule graph-node hex (#b45309 / #fbbf24 dark) is
+   *     an exact match for jt-dev's pre-existing warn token in both modes,
+   *     and for `GraphScreen.tsx`'s ad hoc `decision_rule`/`rule` node
+   *     colors (`#b45309`) -- three independent choices landing on the same
+   *     color, aliased instead of redefined.
+   *   - `relation` aliases `--color-section` -- again an exact match for
+   *     `GraphScreen.tsx`'s ad hoc `relation: '#7c3aed'`.
+   *   - `concept` aliases `--color-accent`, matching the redesign branch's
+   *     own `graph_svg` palette (`"concept": "var(--accent)"`) rather than
+   *     `GraphScreen.tsx`'s ad hoc near-black `#0f172a`, which reads as
+   *     "no color" against this app's mostly light/dark-navy panels.
+   *   - `source`, `section`, and `knowledge` are new tokens (no prior fixed
+   *     color existed for these entity kinds outside the graph); `evidence`
+   *     is likewise new. `GraphScreen.tsx`'s ad hoc `knowledge_item: '#0369a1'`
+   *     is NOT reused here because it collides with the redesign branch's
+   *     `source` hex -- reusing it would make two different entity types
+   *     share one color, defeating the point of a fixed-per-type scheme.
+   *     Reconciling `GraphScreen.tsx` itself onto these tokens is a
+   *     separate, parallel workstream (graph node coloring), not done here.
+   */
+  --color-source: #0369a1;
+  --color-source-soft: #e0f2fe;
+  --color-section: #7c3aed;
+  --color-section-soft: #ede9fe;
+  --color-knowledge: #0f766e;
+  --color-knowledge-soft: #ccfbf1;
+  --color-evidence: #475569;
+  --color-evidence-soft: #e2e8f0;
+  --color-concept: var(--color-accent);
+  --color-concept-soft: var(--color-accent-soft);
+  --color-review: var(--color-warn);
+  --color-review-soft: var(--color-warn-soft);
+  --color-decision-rule: var(--color-warn);
+  --color-decision-rule-soft: var(--color-warn-soft);
+  --color-relation: var(--color-section);
+  --color-relation-soft: var(--color-section-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0b1120;
+    --color-panel: #131b2c;
+    --color-panel-muted: #182238;
+    --color-ink: #e6e9f0;
+    --color-muted: #94a3b8;
+    --color-muted-soft: #64748b;
+    --color-line: #263349;
+    --color-line-soft: #1a2438;
+
+    --color-accent: #8482f5;
+    --color-accent-hover: #a5a3f8;
+    --color-accent-soft: #262a52;
+
+    --color-ok: #34d399;
+    --color-ok-soft: #0f2e22;
+    --color-warn: #fbbf24;
+    --color-warn-soft: #34240a;
+    --color-bad: #fb7185;
+    --color-bad-soft: #3a1420;
+
+    /* Dark-mode entity hexes, again taken from the redesign branch's own
+       dark :root block (~L669) where it defines one (source/section/
+       knowledge/review/evidence); soft backgrounds follow this file's
+       existing dark "-soft" pattern (dark, low-chroma, hue-tinted). Review/
+       decision-rule/relation/concept need no dark override -- they alias
+       warn/section/accent, which already redefine themselves above. */
+    --color-source: #38bdf8;
+    --color-source-soft: #0c2a3d;
+    --color-section: #c4b5fd;
+    --color-section-soft: #241a3d;
+    --color-knowledge: #5eead4;
+    --color-knowledge-soft: #0f2b28;
+    --color-evidence: #94a3b8;
+    --color-evidence-soft: #1e2635;
+  }
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Rendered Markdown reports (ReportsScreen.tsx) -- these are real .md files
+   (sopkb-export::reports), previously shown as raw text with literal #/-/`
+   characters. Uses the same --color-*/--font-* tokens as everything else so
+   dark mode needs no separate override here. */
+.report-markdown {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--color-ink) 90%, transparent);
+}
+.report-markdown > :first-child { margin-top: 0; }
+.report-markdown > :last-child { margin-bottom: 0; }
+.report-markdown h1, .report-markdown h2, .report-markdown h3, .report-markdown h4 {
+  color: var(--color-ink);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 1.25em 0 0.5em;
+}
+.report-markdown h1 { font-size: 1.25rem; }
+.report-markdown h2 { font-size: 1.1rem; }
+.report-markdown h3, .report-markdown h4 { font-size: 1rem; }
+.report-markdown p { margin: 0.6em 0; }
+.report-markdown ul, .report-markdown ol {
+  margin: 0.6em 0;
+  padding-left: 1.4em;
+}
+.report-markdown li { margin: 0.2em 0; }
+.report-markdown li + li { margin-top: 0.2em; }
+.report-markdown code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--color-panel-muted);
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+.report-markdown pre {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--color-panel-muted);
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  padding: 0.75em 0.9em;
+  overflow-x: auto;
+}
+.report-markdown pre code { background: none; border: none; padding: 0; }
+.report-markdown table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  font-size: 0.85em;
+}
+.report-markdown th, .report-markdown td {
+  border: 1px solid var(--color-line);
+  padding: 0.35em 0.6em;
+  text-align: left;
+}
+.report-markdown th { background: var(--color-panel-muted); font-weight: 600; }
+.report-markdown blockquote {
+  margin: 0.6em 0;
+  padding-left: 0.9em;
+  border-left: 3px solid var(--color-line);
+  color: var(--color-muted);
+}
+.report-markdown hr { border: none; border-top: 1px solid var(--color-line); margin: 1em 0; }
+.report-markdown a { color: var(--color-accent); }

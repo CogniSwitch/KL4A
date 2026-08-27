@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-two-column-notice-<TS>",
+    "path": "<ABS>",
+    "source_id": "two-column-notice",
+    "source_version_id": "two-column-notice:v1",
+    "timestamp": "<TS>"
+  }
+]

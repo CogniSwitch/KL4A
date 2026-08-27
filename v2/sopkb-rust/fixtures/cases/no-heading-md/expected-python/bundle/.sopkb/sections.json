@@ -1,0 +1,12 @@
+[
+  {
+    "end_pos": 120,
+    "heading": "Document",
+    "id": "section-no-heading-001",
+    "normalized_path": "sources/normalized/no-heading__v1.md",
+    "semantic_role": "section",
+    "source_id": "no-heading",
+    "source_version_id": "no-heading:v1",
+    "start_pos": 0
+  }
+]

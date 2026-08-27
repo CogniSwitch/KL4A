@@ -1,0 +1,58 @@
+[
+  {
+    "action": "approved",
+    "id": "review-000001",
+    "knowledge_item_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+    "new_value": {
+      "review_status": "approved"
+    },
+    "previous_value": {
+      "review_status": "proposed"
+    },
+    "rationale": "Evidence directly supports identity confirmation requirement.",
+    "reviewer": "example:policy-owner",
+    "timestamp": "2026-08-01T06:41:02Z"
+  },
+  {
+    "action": "rejected",
+    "id": "review-000002",
+    "knowledge_item_id": "ki-prior-authorization-workflow-b5ce0527cf18-000011",
+    "new_value": {
+      "review_status": "rejected"
+    },
+    "previous_value": {
+      "review_status": "proposed"
+    },
+    "rationale": "Synthetic payer documentation item is intentionally rejected for review-state coverage.",
+    "reviewer": "example:policy-owner",
+    "timestamp": "2026-08-01T06:41:02Z"
+  },
+  {
+    "action": "deferred",
+    "id": "review-000003",
+    "knowledge_item_id": "ki-safety-policy-01ff452b1d44-000015",
+    "new_value": {
+      "review_status": "deferred"
+    },
+    "previous_value": {
+      "review_status": "proposed"
+    },
+    "rationale": "Specialist escalation wording needs SME confirmation.",
+    "reviewer": "example:clinical-reviewer",
+    "timestamp": "2026-08-01T06:41:02Z"
+  },
+  {
+    "action": "edited",
+    "id": "review-000004",
+    "knowledge_item_id": "ki-follow-up-monitoring-procedure-e25874854706-000002",
+    "new_value": {
+      "object": "Staff must record dose tolerance, adverse event symptoms, and patient-reported adherence during follow-up."
+    },
+    "previous_value": {
+      "object": "Staff must record dose tolerance and adverse event symptoms during follow-up."
+    },
+    "rationale": "Expanded follow-up documentation wording for demo coverage.",
+    "reviewer": "example:clinical-reviewer",
+    "timestamp": "2026-08-01T06:41:02Z"
+  }
+]

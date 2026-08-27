@@ -1,0 +1,93 @@
+name: macOS DMG (v2 desktop)
+
+# On-demand build only (workflow_dispatch) -- not on every push. macOS
+# runner minutes are billed at a 10x multiplier vs. Linux, and this repo's
+# other workflows (ci.yml, lint.yml) are Linux/Windows-only, so there's no
+# existing macOS job to piggyback on. Trigger manually from the Actions
+# tab whenever a Mac build is actually needed to test.
+#
+# No code signing / notarization is configured (would need an Apple
+# Developer ID cert + notarization credentials as repo secrets, which this
+# repo doesn't have). The resulting .dmg is unsigned: on first launch,
+# Gatekeeper will block it as "from an unidentified developer" -- right-click
+# the app in Finder and choose "Open" (or `xattr -cr` it from Terminal) once
+# to bypass that.
+#
+# Ported from jt-dev's real implementation (main only carries a
+# registration-only stub of this workflow) -- paths verified against this
+# branch's actual v2/desktop-tauri + v2/frontend layout before porting.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build-dmg:
+    name: Build universal macOS DMG
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Rust (arm64 + x86_64 targets, for a universal binary)
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin,x86_64-apple-darwin
+
+      - name: Cache Rust build artifacts
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: v2/desktop-tauri/src-tauri -> target
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: v2/frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: v2/frontend
+        run: npm ci
+
+      # Writes into v2/desktop-tauri/dist -- vite.config.ts's `build.outDir`
+      # -- which `tauri.conf.json`'s `build.frontendDist: "../dist"` then
+      # embeds into the app bundle. Rebuilt fresh here rather than relying
+      # on whatever's currently committed, so this workflow always reflects
+      # the checked-out ref's actual frontend source.
+      - name: Build frontend
+        working-directory: v2/frontend
+        run: npm run build
+
+      # `--target universal-apple-darwin` builds both arm64 and x86_64 and
+      # lipo's them into one binary, so the same .dmg runs on Apple Silicon
+      # and Intel Macs without knowing which one the tester has.
+      - name: Build app bundle + DMG
+        working-directory: v2/desktop-tauri
+        run: npx --yes @tauri-apps/cli@^2 build --target universal-apple-darwin
+
+      - name: Upload DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: kl4a-workbench-macos-dmg
+          path: v2/desktop-tauri/src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg
+          if-no-files-found: error
+
+      # The DMG already contains this .app (a DMG is just a disk image you
+      # mount and drag the .app out of) -- this is purely a convenience for
+      # drag-installing or debugging without mounting anything. `ditto` (not
+      # a plain zip) is Apple's own recommended way to archive a .app
+      # bundle: a generic zip can silently drop the resource fork / exec
+      # bits that make macOS treat it as a proper app bundle on unzip.
+      - name: Zip the .app bundle
+        working-directory: v2/desktop-tauri/src-tauri/target/universal-apple-darwin/release/bundle/macos
+        run: ditto -c -k --sequesterRsrc --keepParent "KL4A Workbench.app" "KL4A-Workbench-macos-universal.zip"
+
+      - name: Upload .app bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: kl4a-workbench-macos-app
+          path: v2/desktop-tauri/src-tauri/target/universal-apple-darwin/release/bundle/macos/KL4A-Workbench-macos-universal.zip
+          if-no-files-found: error

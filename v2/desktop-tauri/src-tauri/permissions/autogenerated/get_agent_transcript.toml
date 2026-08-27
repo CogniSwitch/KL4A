@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-agent-transcript"
+description = "Enables the get_agent_transcript command without any pre-configured scope."
+commands.allow = ["get_agent_transcript"]
+
+[[permission]]
+identifier = "deny-get-agent-transcript"
+description = "Denies the get_agent_transcript command without any pre-configured scope."
+commands.deny = ["get_agent_transcript"]

@@ -1,0 +1,25 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 98,
+    "id": "ki-escalation-policy-legacy01-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "On-call staff must confirm receipt of every critical alert within 15 minutes.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-escalation-policy-legacy01-001",
+    "source_id": "escalation-policy-legacy01",
+    "source_text": "On-call staff must confirm receipt of every critical alert within 15 minutes.",
+    "source_version_id": "escalation-policy-legacy01:v1",
+    "span_status": "exact",
+    "start_pos": 21,
+    "subject": "Escalation Policy",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

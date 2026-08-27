@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-ingest-pipeline"
+description = "Enables the preview_ingest_pipeline command without any pre-configured scope."
+commands.allow = ["preview_ingest_pipeline"]
+
+[[permission]]
+identifier = "deny-preview-ingest-pipeline"
+description = "Denies the preview_ingest_pipeline command without any pre-configured scope."
+commands.deny = ["preview_ingest_pipeline"]

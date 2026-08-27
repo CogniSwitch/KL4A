@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-preamble-<TS>",
+    "path": "<ABS>",
+    "source_id": "preamble",
+    "source_version_id": "preamble:v1",
+    "timestamp": "<TS>"
+  }
+]

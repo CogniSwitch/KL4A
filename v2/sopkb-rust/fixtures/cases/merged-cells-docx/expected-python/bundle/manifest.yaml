@@ -1,0 +1,20 @@
+id: bundle
+version: 0.1.0
+title: DOCX Merged Cells Case
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: <TS>
+updated_at: <TS>
+sources:
+- id: coverage-matrix
+  type: docx
+  path: sources/originals/coverage-matrix__v1.docx
+  source_version_id: coverage-matrix:v1
+  status: active
+exports:
+- type: graph_json
+  path: ../exports/bundle/graph/graph.json
+- type: rdf
+  path: ../exports/bundle/graph/triples.ttl
+okf_version: '0.2'

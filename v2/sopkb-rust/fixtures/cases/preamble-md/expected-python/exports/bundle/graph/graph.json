@@ -1,0 +1,95 @@
+{
+  "edges": [
+    {
+      "source": "preamble",
+      "target": "section-preamble-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-preamble-001",
+      "target": "concept-eligibility-requirements",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-preamble-001",
+      "target": "ki-preamble-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-preamble-v1-000001",
+      "target": "evidence-ki-preamble-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-preamble-v1-000001",
+      "target": "kr-ki-preamble-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-eligibility-requirements",
+      "target": "kr-ki-preamble-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-preamble-v1-000001",
+      "target": "evidence-ki-preamble-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-preamble-v1-000001",
+      "target": "rule-ki-preamble-v1-000001-confirm-patient-identity",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-preamble-v1-000001",
+      "target": "rule-ki-preamble-v1-000001-confirm-patient-identity",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-preamble-v1-000001-confirm-patient-identity",
+      "target": "evidence-ki-preamble-v1-000001",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "preamble",
+      "label": "preamble",
+      "source_version_id": "preamble:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-preamble-001",
+      "label": "Eligibility Requirements",
+      "source_version_id": "preamble:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-eligibility-requirements",
+      "label": "Eligibility Requirements",
+      "type": "concept"
+    },
+    {
+      "id": "ki-preamble-v1-000001",
+      "label": "Eligibility Requirements",
+      "lifecycle_status": "active",
+      "source_version_id": "preamble:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-preamble-v1-000001",
+      "label": "Clinicians must confirm patient identity before reviewing therapy eligibility.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-preamble-v1-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-preamble-v1-000001-confirm-patient-identity",
+      "label": "Confirm patient identity",
+      "type": "decision_rule"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-source-stats"
+description = "Enables the get_source_stats command without any pre-configured scope."
+commands.allow = ["get_source_stats"]
+
+[[permission]]
+identifier = "deny-get-source-stats"
+description = "Denies the get_source_stats command without any pre-configured scope."
+commands.deny = ["get_source_stats"]

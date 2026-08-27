@@ -1,0 +1,147 @@
+name: Release
+
+# Builds the KL4A Workbench desktop app for Windows, macOS, and Linux, and
+# publishes the installers to a GitHub Release.
+#
+# Deliberately workflow_dispatch-only, not tag-push-triggered: these binaries
+# are unsigned (see below), so publishing a release only ever happens as an
+# explicit action in the Actions tab -- with the tag name typed in at trigger
+# time -- never as a side effect of routine git tagging (`git push --tags`, a
+# rebase, etc.). Run it with `prerelease: false` once you're actually ready to
+# call something a real release; it defaults to true.
+#
+# This replaces main's release.yml entirely: that one builds a Python
+# sdist/wheel and publishes to PyPI via trusted publishing. There is no
+# Python package on this branch, so there is nothing to publish to PyPI --
+# the shippable artifact here is the desktop app.
+#
+# The build steps deliberately mirror macos-dmg.yml / windows-installer.yml /
+# linux-appimage.yml, which are verified-working workflows on this repo,
+# rather than introducing tauri-action: v2/desktop-tauri has no package.json
+# (only src-tauri/ is tracked), so the toolchain is driven through
+# `npx @tauri-apps/cli` exactly as those workflows do. Those three stay
+# separate on-demand build-check workflows (cheap, run often, produce plain
+# run artifacts) rather than being folded into this one -- this workflow is
+# specifically for the rarer, deliberate "publish to the world" action.
+#
+# NOT code-signed or notarized on any platform -- that needs an Apple
+# Developer ID cert + notarization credentials and a Windows signing cert
+# as repo secrets, which this repo doesn't have. Expect Gatekeeper
+# ("unidentified developer") friction on macOS and a SmartScreen/Smart App
+# Control warning on Windows until those exist.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to create or update (e.g. v0.0.1)"
+        required: true
+      prerelease:
+        description: "Mark this release as a pre-release"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write # required to create the Release and upload assets
+
+jobs:
+  build:
+    name: Build (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            rust_targets: ""
+            tauri_args: ""
+            bundle_glob: "v2/desktop-tauri/src-tauri/target/release/bundle/nsis/*"
+          # Universal binary so one .dmg covers Apple Silicon and Intel,
+          # same as macos-dmg.yml.
+          - os: macos-latest
+            rust_targets: "aarch64-apple-darwin,x86_64-apple-darwin"
+            tauri_args: "--target universal-apple-darwin"
+            bundle_glob: "v2/desktop-tauri/src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg"
+          - os: ubuntu-latest
+            rust_targets: ""
+            tauri_args: ""
+            bundle_glob: "v2/desktop-tauri/src-tauri/target/release/bundle/appimage/*.AppImage"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Tauri v2's Linux build needs the webkit2gtk stack present; the
+      # macOS and Windows runners already ship their webviews.
+      - name: Install Linux build dependencies
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf \
+            libxdo-dev \
+            libssl-dev \
+            build-essential
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust_targets }}
+
+      - name: Cache Rust build artifacts
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: v2/desktop-tauri/src-tauri -> target
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: v2/frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: v2/frontend
+        run: npm ci
+
+      # Writes into v2/desktop-tauri/dist -- vite.config.ts's build.outDir --
+      # which tauri.conf.json's build.frontendDist ("../dist") embeds into
+      # the app bundle. Built fresh here rather than trusting whatever is
+      # checked in, so a release always reflects the tagged frontend source.
+      - name: Build frontend
+        working-directory: v2/frontend
+        run: npm run build
+
+      - name: Build desktop app
+        working-directory: v2/desktop-tauri
+        run: npx --yes @tauri-apps/cli@^2 build ${{ matrix.tauri_args }}
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kl4a-workbench-${{ matrix.os }}
+          path: ${{ matrix.bundle_glob }}
+          if-no-files-found: error
+
+  release:
+    name: Publish GitHub Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag }}
+          prerelease: ${{ inputs.prerelease }}
+          files: artifacts/**/*
+          draft: true
+          generate_release_notes: true
+          fail_on_unmatched_files: true

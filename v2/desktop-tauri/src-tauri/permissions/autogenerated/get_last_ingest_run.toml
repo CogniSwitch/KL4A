@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-last-ingest-run"
+description = "Enables the get_last_ingest_run command without any pre-configured scope."
+commands.allow = ["get_last_ingest_run"]
+
+[[permission]]
+identifier = "deny-get-last-ingest-run"
+description = "Denies the get_last_ingest_run command without any pre-configured scope."
+commands.deny = ["get_last_ingest_run"]

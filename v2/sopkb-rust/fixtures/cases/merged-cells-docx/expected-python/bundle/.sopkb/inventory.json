@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "coverage-matrix:v1",
+      "checksum": "sha256:0d7549c176d7c8a9184b36ad4042ca0217b8b58e112513ffb0efe986c918f2eb",
+      "id": "coverage-matrix",
+      "metadata": {
+        "source_filename": "coverage-matrix.docx"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/coverage-matrix__v1.md",
+      "original_path": "sources/originals/coverage-matrix__v1.docx",
+      "parse_status": "normalized",
+      "size": 35485,
+      "source_version_id": "coverage-matrix:v1",
+      "status": "active",
+      "title": "coverage matrix",
+      "type": "docx",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:0d7549c176d7c8a9184b36ad4042ca0217b8b58e112513ffb0efe986c918f2eb",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/coverage-matrix__v1.md",
+          "original_path": "sources/originals/coverage-matrix__v1.docx",
+          "size_bytes": 35485,
+          "source_id": "coverage-matrix",
+          "source_version_id": "coverage-matrix:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

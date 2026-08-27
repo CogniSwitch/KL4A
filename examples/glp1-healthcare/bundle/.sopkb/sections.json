@@ -1,0 +1,119 @@
+[
+  {
+    "end_pos": 40,
+    "heading": "GLP-1 Follow-up Monitoring Procedure",
+    "id": "section-follow-up-monitoring-procedure-38ef67176baf-001",
+    "normalized_path": "sources/normalized/follow-up-monitoring-procedure-38ef67176baf.md",
+    "semantic_role": "procedure",
+    "source_id": "follow-up-monitoring-procedure-38ef67176baf",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 234,
+    "heading": "Follow-up Monitoring",
+    "id": "section-follow-up-monitoring-procedure-38ef67176baf-002",
+    "normalized_path": "sources/normalized/follow-up-monitoring-procedure-38ef67176baf.md",
+    "semantic_role": "section",
+    "source_id": "follow-up-monitoring-procedure-38ef67176baf",
+    "start_pos": 40
+  },
+  {
+    "end_pos": 412,
+    "heading": "Dose Titration",
+    "id": "section-follow-up-monitoring-procedure-38ef67176baf-003",
+    "normalized_path": "sources/normalized/follow-up-monitoring-procedure-38ef67176baf.md",
+    "semantic_role": "section",
+    "source_id": "follow-up-monitoring-procedure-38ef67176baf",
+    "start_pos": 234
+  },
+  {
+    "end_pos": 38,
+    "heading": "Primary Care GLP-1 Prescribing SOP",
+    "id": "section-primary-care-glp1-sop-a3cca5c9520a-001",
+    "normalized_path": "sources/normalized/primary-care-glp1-sop-a3cca5c9520a.md",
+    "semantic_role": "section",
+    "source_id": "primary-care-glp1-sop-a3cca5c9520a",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 257,
+    "heading": "Intake Requirements",
+    "id": "section-primary-care-glp1-sop-a3cca5c9520a-002",
+    "normalized_path": "sources/normalized/primary-care-glp1-sop-a3cca5c9520a.md",
+    "semantic_role": "policy",
+    "source_id": "primary-care-glp1-sop-a3cca5c9520a",
+    "start_pos": 38
+  },
+  {
+    "end_pos": 552,
+    "heading": "Contraindication Screening",
+    "id": "section-primary-care-glp1-sop-a3cca5c9520a-003",
+    "normalized_path": "sources/normalized/primary-care-glp1-sop-a3cca5c9520a.md",
+    "semantic_role": "section",
+    "source_id": "primary-care-glp1-sop-a3cca5c9520a",
+    "start_pos": 257
+  },
+  {
+    "end_pos": 666,
+    "heading": "Follow-up Monitoring",
+    "id": "section-primary-care-glp1-sop-a3cca5c9520a-004",
+    "normalized_path": "sources/normalized/primary-care-glp1-sop-a3cca5c9520a.md",
+    "semantic_role": "section",
+    "source_id": "primary-care-glp1-sop-a3cca5c9520a",
+    "start_pos": 552
+  },
+  {
+    "end_pos": 38,
+    "heading": "GLP-1 Prior Authorization Workflow",
+    "id": "section-prior-authorization-workflow-d2229b5da05c-001",
+    "normalized_path": "sources/normalized/prior-authorization-workflow-d2229b5da05c.md",
+    "semantic_role": "procedure",
+    "source_id": "prior-authorization-workflow-d2229b5da05c",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 266,
+    "heading": "Prior Authorization Requirements",
+    "id": "section-prior-authorization-workflow-d2229b5da05c-002",
+    "normalized_path": "sources/normalized/prior-authorization-workflow-d2229b5da05c.md",
+    "semantic_role": "policy",
+    "source_id": "prior-authorization-workflow-d2229b5da05c",
+    "start_pos": 38
+  },
+  {
+    "end_pos": 436,
+    "heading": "Denial Routing",
+    "id": "section-prior-authorization-workflow-d2229b5da05c-003",
+    "normalized_path": "sources/normalized/prior-authorization-workflow-d2229b5da05c.md",
+    "semantic_role": "section",
+    "source_id": "prior-authorization-workflow-d2229b5da05c",
+    "start_pos": 266
+  },
+  {
+    "end_pos": 23,
+    "heading": "GLP-1 Safety Policy",
+    "id": "section-safety-policy-60f764ab3c8d-001",
+    "normalized_path": "sources/normalized/safety-policy-60f764ab3c8d.md",
+    "semantic_role": "policy",
+    "source_id": "safety-policy-60f764ab3c8d",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 239,
+    "heading": "Contraindication Screening",
+    "id": "section-safety-policy-60f764ab3c8d-002",
+    "normalized_path": "sources/normalized/safety-policy-60f764ab3c8d.md",
+    "semantic_role": "section",
+    "source_id": "safety-policy-60f764ab3c8d",
+    "start_pos": 23
+  },
+  {
+    "end_pos": 382,
+    "heading": "Adverse Event Monitoring",
+    "id": "section-safety-policy-60f764ab3c8d-003",
+    "normalized_path": "sources/normalized/safety-policy-60f764ab3c8d.md",
+    "semantic_role": "section",
+    "source_id": "safety-policy-60f764ab3c8d",
+    "start_pos": 239
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-report-<TS>",
+    "path": "<ABS>",
+    "source_id": "report",
+    "source_version_id": "report:v1",
+    "timestamp": "<TS>"
+  },
+  {
+    "action": "source_unchanged",
+    "actor": "sopkb/inventory",
+    "id": "source_unchanged-report-<TS>",
+    "path": "<ABS>",
+    "source_id": "report",
+    "source_version_id": "report:v1",
+    "timestamp": "<TS>"
+  }
+]

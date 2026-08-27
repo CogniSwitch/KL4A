@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-scan-sources"
+description = "Enables the scan_sources command without any pre-configured scope."
+commands.allow = ["scan_sources"]
+
+[[permission]]
+identifier = "deny-scan-sources"
+description = "Denies the scan_sources command without any pre-configured scope."
+commands.deny = ["scan_sources"]

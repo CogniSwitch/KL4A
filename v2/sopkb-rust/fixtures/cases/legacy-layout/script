@@ -1,0 +1,2 @@
+validate {bundle}
+export {bundle} --format graph-json,rdf

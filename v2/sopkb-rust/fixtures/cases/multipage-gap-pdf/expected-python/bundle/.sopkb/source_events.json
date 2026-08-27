@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-benefits-handbook-<TS>",
+    "path": "<ABS>",
+    "source_id": "benefits-handbook",
+    "source_version_id": "benefits-handbook:v1",
+    "timestamp": "<TS>"
+  }
+]

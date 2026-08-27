@@ -1,0 +1,59 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_reporting_requirements a sopkb:Concept ;
+  rdfs:label "Reporting Requirements" .
+
+sopkb:object_staff_must_record_all_adverse_events_within_24_hours a sopkb:RelationObject ;
+  rdfs:label "Staff must record all adverse events within 24 hours." ;
+  sopkb:objectText "Staff must record all adverse events within 24 hours." .
+
+sopkb:kr_ki_safety_crlf_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_reporting_requirements ;
+  sopkb:predicate sopkb:predicate_records ;
+  sopkb:object sopkb:object_staff_must_record_all_adverse_events_within_24_hours ;
+  sopkb:knowledgePiece sopkb:ki_safety_crlf_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_safety_crlf_v1_000001 ;
+  dcterms:source "safety-crlf" ;
+  sopkb:sourceVersion "safety-crlf:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_reporting_requirements sopkb:predicate_records sopkb:object_staff_must_record_all_adverse_events_within_24_hours .
+
+sopkb:rule_ki_safety_crlf_v1_000001_records a sopkb:DecisionRule ;
+  rdfs:label "Reporting Requirements" ;
+  sopkb:knowledgePiece sopkb:ki_safety_crlf_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_safety_crlf_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_safety_crlf_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_reporting_requirements" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_escalation_procedure a sopkb:Concept ;
+  rdfs:label "Escalation Procedure" .
+
+sopkb:object_clinicians_should_route_urgent_cases_to_the_on_call_physician a sopkb:RelationObject ;
+  rdfs:label "Clinicians should route urgent cases to the on-call physician" ;
+  sopkb:objectText "Clinicians should route urgent cases to the on-call physician immediately." .
+
+sopkb:kr_ki_safety_crlf_v1_000002 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_escalation_procedure ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_clinicians_should_route_urgent_cases_to_the_on_call_physician ;
+  sopkb:knowledgePiece sopkb:ki_safety_crlf_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_safety_crlf_v1_000002 ;
+  dcterms:source "safety-crlf" ;
+  sopkb:sourceVersion "safety-crlf:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_escalation_procedure sopkb:predicate_should sopkb:object_clinicians_should_route_urgent_cases_to_the_on_call_physician .
+
+sopkb:rule_ki_safety_crlf_v1_000002_should a sopkb:DecisionRule ;
+  rdfs:label "Escalation Procedure" ;
+  sopkb:knowledgePiece sopkb:ki_safety_crlf_v1_000002 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_safety_crlf_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_safety_crlf_v1_000002 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_escalation_procedure" ;
+  sopkb:otherwiseActionRequired "true" .

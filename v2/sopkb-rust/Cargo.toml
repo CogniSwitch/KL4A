@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/sopkb-fmt",
+    "crates/sopkb-core",
+    "crates/sopkb-config",
+    "crates/sopkb-llm",
+    "crates/sopkb-derive",
+    "crates/sopkb-mining",
+    "crates/sopkb-export",
+    "crates/sopkb-review",
+    "crates/sopkb-agent",
+    "crates/sopkb-workbench",
+    "bin/sopkb-cli",
+    "bin/sopkb-mcp",
+    "bin/sopkb-server",
+]
+# `v2/desktop-tauri/src-tauri` depends on several crates above via path deps
+# but is deliberately kept out of this workspace: it has always been a
+# standalone Cargo project (its own Cargo.lock, its own `[profile.release]`
+# tuned for a small desktop binary -- codegen-units = 1, lto, panic = "abort"
+# -- which a shared workspace profile would silently override for every
+# member here). It lives as a sibling directory under `v2/`, outside this
+# tree entirely, so no `exclude` entry is needed for it.
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"

@@ -1,0 +1,25 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 266,
+    "id": "ki-quarterly-review-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "This paragraph appears after the table in the visual document, but the table must be relocated to the very end of the normalized output, after this paragraph.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-quarterly-review-002",
+    "source_id": "quarterly-review",
+    "source_text": "This paragraph appears after the table in the visual document, but the table must be relocated to the very end of the normalized output, after this paragraph.",
+    "source_version_id": "quarterly-review:v1",
+    "span_status": "exact",
+    "start_pos": 108,
+    "subject": "Closing Notes",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

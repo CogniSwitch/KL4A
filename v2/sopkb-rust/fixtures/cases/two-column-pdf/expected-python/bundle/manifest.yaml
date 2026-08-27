@@ -1,0 +1,20 @@
+id: bundle
+version: 0.1.0
+title: Two Column PDF Case
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: <TS>
+updated_at: <TS>
+sources:
+- id: two-column-notice
+  type: pdf
+  path: sources/originals/two-column-notice__v1.pdf
+  source_version_id: two-column-notice:v1
+  status: active
+exports:
+- type: graph_json
+  path: ../exports/bundle/graph/graph.json
+- type: rdf
+  path: ../exports/bundle/graph/triples.ttl
+okf_version: '0.2'

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "entity-initial-notification",
+    "label": "Initial Notification"
+  },
+  {
+    "id": "entity-secondary-contact",
+    "label": "Secondary Contact"
+  },
+  {
+    "id": "entity-vendor-escalation",
+    "label": "Vendor Escalation"
+  },
+  {
+    "id": "entity-legal-notification",
+    "label": "Legal Notification"
+  },
+  {
+    "id": "entity-patient-communication",
+    "label": "Patient Communication"
+  },
+  {
+    "id": "entity-post-incident-review",
+    "label": "Post-Incident Review"
+  }
+]

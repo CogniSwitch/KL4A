@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-approve-item"
+description = "Enables the approve_item command without any pre-configured scope."
+commands.allow = ["approve_item"]
+
+[[permission]]
+identifier = "deny-approve-item"
+description = "Denies the approve_item command without any pre-configured scope."
+commands.deny = ["approve_item"]

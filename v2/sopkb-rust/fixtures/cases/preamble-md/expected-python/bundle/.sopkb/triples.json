@@ -1,0 +1,9 @@
+[
+  {
+    "id": "triple-ki-preamble-v1-000001",
+    "knowledge_item_id": "ki-preamble-v1-000001",
+    "object": "Clinicians must confirm patient identity before reviewing therapy eligibility.",
+    "predicate": "requires",
+    "subject": "Eligibility Requirements"
+  }
+]

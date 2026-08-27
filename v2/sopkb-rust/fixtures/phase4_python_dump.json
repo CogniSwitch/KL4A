@@ -1,0 +1,630 @@
+{
+  "agent_context_eligibility_check": {
+    "agent_rules": [
+      "Use only usable_knowledge items as task rules.",
+      "Treat rejected knowledge as excluded unless include_rejected is true.",
+      "Resolve evidence before making a claim to a downstream user or system.",
+      "Use Knowledge Relations for graph traversal and RDF-compatible assertions.",
+      "Use decision_rules for conditional task handling; do not infer conditions from prose when structured rules exist.",
+      "Check freshness and conflict reports before finalizing a decision."
+    ],
+    "concepts": [
+      {
+        "id": "concept-contraindication-screening",
+        "label": "Contraindication Screening",
+        "links": {
+          "knowledge_piece_id": "ki-safety-policy-01ff452b1d44-000015",
+          "relation_id": "kr-ki-safety-policy-01ff452b1d44-000015",
+          "section_id": "section-safety-policy-01ff452b1d44-002"
+        },
+        "okf_path": "concepts/concept-contraindication-screening.md",
+        "text": "Contraindication Screening"
+      },
+      {
+        "id": "concept-denial-routing",
+        "label": "Denial Routing",
+        "links": {
+          "knowledge_piece_id": "ki-prior-authorization-workflow-b5ce0527cf18-000012",
+          "relation_id": "kr-ki-prior-authorization-workflow-b5ce0527cf18-000012",
+          "section_id": "section-prior-authorization-workflow-b5ce0527cf18-003"
+        },
+        "okf_path": "concepts/concept-denial-routing.md",
+        "text": "Denial Routing"
+      },
+      {
+        "id": "concept-intake-requirements",
+        "label": "Intake Requirements",
+        "links": {
+          "knowledge_piece_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+          "relation_id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+          "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-002"
+        },
+        "okf_path": "concepts/concept-intake-requirements.md",
+        "text": "Intake Requirements"
+      }
+    ],
+    "decision_rules": [
+      {
+        "condition": null,
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "id": "rule-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005-confirm-patient-identity",
+        "knowledge_item_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "obligation": {
+          "action": "confirm",
+          "fact": "patient_identity_confirmed",
+          "label": "Patient identity confirmed"
+        },
+        "okf_path": "rules/rule-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005-confirm-patient-identity.md",
+        "relation_id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "review_status": "approved",
+        "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-002",
+        "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+        "title": "Confirm patient identity",
+        "type": "SOP Decision Rule"
+      },
+      {
+        "condition": null,
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "id": "rule-ki-primary-care-glp1-sop-c6cb3b4ec11d-000007-requires",
+        "knowledge_item_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "obligation": {
+          "action": "requires",
+          "fact": "scenario_mentions_contraindication_screening",
+          "label": "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid carcinoma history, and multiple endocrine neoplasia type 2 history."
+        },
+        "okf_path": "rules/rule-ki-primary-care-glp1-sop-c6cb3b4ec11d-000007-requires.md",
+        "relation_id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "review_status": "proposed",
+        "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-003",
+        "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+        "title": "Contraindication Screening",
+        "type": "SOP Decision Rule"
+      },
+      {
+        "condition": {
+          "fact": "case_uncertainty",
+          "label": "Case is uncertain",
+          "operator": "is_true"
+        },
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "id": "rule-ki-primary-care-glp1-sop-c6cb3b4ec11d-000008-route-uncertain-case",
+        "knowledge_item_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "obligation": {
+          "action": "route",
+          "fact": "route_clinical_review",
+          "label": "Route case for clinical review"
+        },
+        "okf_path": "rules/rule-ki-primary-care-glp1-sop-c6cb3b4ec11d-000008-route-uncertain-case.md",
+        "otherwise": {
+          "action_required": false,
+          "label": "Clinical review route is not required by this rule when the case is not uncertain."
+        },
+        "relation_id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "review_status": "proposed",
+        "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-003",
+        "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+        "title": "Route uncertain cases for clinical review",
+        "type": "SOP Decision Rule"
+      },
+      {
+        "condition": null,
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "id": "rule-ki-prior-authorization-workflow-b5ce0527cf18-000012-should",
+        "knowledge_item_id": "ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "obligation": {
+          "action": "should",
+          "fact": "scenario_mentions_denial_routing",
+          "label": "Staff should route prior authorization denials to the prescribing clinician for clinical review."
+        },
+        "okf_path": "rules/rule-ki-prior-authorization-workflow-b5ce0527cf18-000012-should.md",
+        "relation_id": "kr-ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "review_status": "proposed",
+        "section_id": "section-prior-authorization-workflow-b5ce0527cf18-003",
+        "source_id": "prior-authorization-workflow-b5ce0527cf18",
+        "title": "Denial Routing",
+        "type": "SOP Decision Rule"
+      },
+      {
+        "condition": null,
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-safety-policy-01ff452b1d44-000014",
+        "id": "rule-ki-safety-policy-01ff452b1d44-000014-requires",
+        "knowledge_item_id": "ki-safety-policy-01ff452b1d44-000014",
+        "obligation": {
+          "action": "requires",
+          "fact": "scenario_mentions_contraindication_screening",
+          "label": "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy."
+        },
+        "okf_path": "rules/rule-ki-safety-policy-01ff452b1d44-000014-requires.md",
+        "relation_id": "kr-ki-safety-policy-01ff452b1d44-000014",
+        "review_status": "proposed",
+        "section_id": "section-safety-policy-01ff452b1d44-002",
+        "source_id": "safety-policy-01ff452b1d44",
+        "title": "Contraindication Screening",
+        "type": "SOP Decision Rule"
+      },
+      {
+        "condition": null,
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-safety-policy-01ff452b1d44-000015",
+        "id": "rule-ki-safety-policy-01ff452b1d44-000015-requires",
+        "knowledge_item_id": "ki-safety-policy-01ff452b1d44-000015",
+        "obligation": {
+          "action": "requires",
+          "fact": "scenario_mentions_contraindication_screening",
+          "label": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review."
+        },
+        "okf_path": "rules/rule-ki-safety-policy-01ff452b1d44-000015-requires.md",
+        "relation_id": "kr-ki-safety-policy-01ff452b1d44-000015",
+        "review_status": "deferred",
+        "section_id": "section-safety-policy-01ff452b1d44-002",
+        "source_id": "safety-policy-01ff452b1d44",
+        "title": "Contraindication Screening",
+        "type": "SOP Decision Rule"
+      }
+    ],
+    "evidence": [
+      {
+        "end_pos": 146,
+        "knowledge_item_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-002",
+        "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+        "source_text": "Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility.",
+        "span_status": "exact",
+        "start_pos": 62
+      },
+      {
+        "end_pos": 433,
+        "knowledge_item_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-003",
+        "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+        "source_text": "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid carcinoma history, and multiple endocrine neoplasia type 2 history.",
+        "span_status": "exact",
+        "start_pos": 288
+      },
+      {
+        "end_pos": 550,
+        "knowledge_item_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-003",
+        "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+        "source_text": "Patients with uncertain contraindication history should be routed for clinical review before therapy is prescribed.",
+        "span_status": "exact",
+        "start_pos": 435
+      },
+      {
+        "end_pos": 381,
+        "knowledge_item_id": "ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "section_id": "section-prior-authorization-workflow-b5ce0527cf18-003",
+        "source_id": "prior-authorization-workflow-b5ce0527cf18",
+        "source_text": "Staff should route prior authorization denials to the prescribing clinician for clinical review.",
+        "span_status": "exact",
+        "start_pos": 285
+      },
+      {
+        "end_pos": 138,
+        "knowledge_item_id": "ki-safety-policy-01ff452b1d44-000014",
+        "section_id": "section-safety-policy-01ff452b1d44-002",
+        "source_id": "safety-policy-01ff452b1d44",
+        "source_text": "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy.",
+        "span_status": "exact",
+        "start_pos": 54
+      },
+      {
+        "end_pos": 237,
+        "knowledge_item_id": "ki-safety-policy-01ff452b1d44-000015",
+        "section_id": "section-safety-policy-01ff452b1d44-002",
+        "source_id": "safety-policy-01ff452b1d44",
+        "source_text": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review.",
+        "span_status": "exact",
+        "start_pos": 140
+      }
+    ],
+    "excluded_knowledge_count": 0,
+    "knowledge_relations": [
+      {
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "knowledge_piece_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "object": {
+          "id": "object-clinicians-must-confirm-patient-identity-before-reviewing-glp-1-",
+          "label": "Clinicians must confirm patient identity before reviewing GLP-1 therapy",
+          "text": "Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility."
+        },
+        "predicate": {
+          "id": "predicate-requires",
+          "text": "requires"
+        },
+        "rdf_compatible": true,
+        "review_status": "approved",
+        "subject": {
+          "id": "concept-intake-requirements",
+          "label": "Intake Requirements",
+          "okf_path": "concepts/concept-intake-requirements.md",
+          "text": "Intake Requirements"
+        },
+        "type": "Knowledge Relation"
+      },
+      {
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "knowledge_piece_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "object": {
+          "id": "object-clinicians-must-screen-for-pregnancy-pancreatitis-history-medull",
+          "label": "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid",
+          "text": "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid carcinoma history, and multiple endocrine neoplasia type 2 history."
+        },
+        "predicate": {
+          "id": "predicate-requires",
+          "text": "requires"
+        },
+        "rdf_compatible": true,
+        "review_status": "proposed",
+        "subject": {
+          "id": "concept-contraindication-screening",
+          "label": "Contraindication Screening",
+          "okf_path": "concepts/concept-contraindication-screening.md",
+          "text": "Contraindication Screening"
+        },
+        "type": "Knowledge Relation"
+      },
+      {
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "knowledge_piece_id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "object": {
+          "id": "object-patients-with-uncertain-contraindication-history-should-be-route",
+          "label": "Patients with uncertain contraindication history should be routed for",
+          "text": "Patients with uncertain contraindication history should be routed for clinical review before therapy is prescribed."
+        },
+        "predicate": {
+          "id": "predicate-should",
+          "text": "should"
+        },
+        "rdf_compatible": true,
+        "review_status": "proposed",
+        "subject": {
+          "id": "concept-contraindication-screening",
+          "label": "Contraindication Screening",
+          "okf_path": "concepts/concept-contraindication-screening.md",
+          "text": "Contraindication Screening"
+        },
+        "type": "Knowledge Relation"
+      },
+      {
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "id": "kr-ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "knowledge_piece_id": "ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "object": {
+          "id": "object-staff-should-route-prior-authorization-denials-to-the-prescribin",
+          "label": "Staff should route prior authorization denials to the prescribing",
+          "text": "Staff should route prior authorization denials to the prescribing clinician for clinical review."
+        },
+        "predicate": {
+          "id": "predicate-should",
+          "text": "should"
+        },
+        "rdf_compatible": true,
+        "review_status": "proposed",
+        "subject": {
+          "id": "concept-denial-routing",
+          "label": "Denial Routing",
+          "okf_path": "concepts/concept-denial-routing.md",
+          "text": "Denial Routing"
+        },
+        "type": "Knowledge Relation"
+      },
+      {
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-safety-policy-01ff452b1d44-000014",
+        "id": "kr-ki-safety-policy-01ff452b1d44-000014",
+        "knowledge_piece_id": "ki-safety-policy-01ff452b1d44-000014",
+        "object": {
+          "id": "object-clinicians-must-confirm-contraindication-screening-before-prescr",
+          "label": "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy.",
+          "text": "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy."
+        },
+        "predicate": {
+          "id": "predicate-requires",
+          "text": "requires"
+        },
+        "rdf_compatible": true,
+        "review_status": "proposed",
+        "subject": {
+          "id": "concept-contraindication-screening",
+          "label": "Contraindication Screening",
+          "okf_path": "concepts/concept-contraindication-screening.md",
+          "text": "Contraindication Screening"
+        },
+        "type": "Knowledge Relation"
+      },
+      {
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-safety-policy-01ff452b1d44-000015",
+        "id": "kr-ki-safety-policy-01ff452b1d44-000015",
+        "knowledge_piece_id": "ki-safety-policy-01ff452b1d44-000015",
+        "object": {
+          "id": "object-patients-with-confirmed-contraindications-must-not-start-glp-1-t",
+          "label": "Patients with confirmed contraindications must not start GLP-1 therapy",
+          "text": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review."
+        },
+        "predicate": {
+          "id": "predicate-requires",
+          "text": "requires"
+        },
+        "rdf_compatible": true,
+        "review_status": "deferred",
+        "subject": {
+          "id": "concept-contraindication-screening",
+          "label": "Contraindication Screening",
+          "okf_path": "concepts/concept-contraindication-screening.md",
+          "text": "Contraindication Screening"
+        },
+        "type": "Knowledge Relation"
+      }
+    ],
+    "reports": {
+      "conflicts": "# Conflict Report\n\n- Candidate conflict for `Page 1` / `should` involving `ki-follow-up-monitoring-procedure-e25874854706-000004`\n- Candidate conflict for `Intake Requirements` / `requires` involving `ki-primary-care-glp1-sop-c6cb3b4ec11d-000006`\n- Candidate conflict for `Contraindication Screening` / `requires` involving `ki-safety-policy-01ff452b1d44-000014`\n- Candidate conflict for `Contraindication Screening` / `requires` involving `ki-safety-policy-01ff452b1d44-000015`\n",
+      "freshness": "# Freshness Report\n\nSources with freshness metadata: 1\nKnowledge items with freshness metadata: 0\n"
+    },
+    "task": {
+      "description": "Use SOP requirements to decide what eligibility facts must be gathered or verified.",
+      "id": "eligibility-check",
+      "query_terms": [
+        "eligibility",
+        "identity",
+        "contraindication",
+        "clinical review"
+      ],
+      "title": "Eligibility Check"
+    },
+    "usable_knowledge": [
+      {
+        "concept_ids": [
+          "concept-intake-requirements"
+        ],
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "object": "Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility.",
+        "okf_path": "knowledge/ki-primary-care-glp1-sop-c6cb3b4ec11d-000005.md",
+        "predicate": "requires",
+        "relation_id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "review_status": "approved",
+        "rule_ids": [
+          "rule-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005-confirm-patient-identity"
+        ],
+        "section_heading": null,
+        "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-002",
+        "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+        "source_title": null,
+        "subject": "Intake Requirements"
+      },
+      {
+        "concept_ids": [
+          "concept-contraindication-screening"
+        ],
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "object": "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid carcinoma history, and multiple endocrine neoplasia type 2 history.",
+        "okf_path": "knowledge/ki-primary-care-glp1-sop-c6cb3b4ec11d-000007.md",
+        "predicate": "requires",
+        "relation_id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "review_status": "proposed",
+        "rule_ids": [
+          "rule-ki-primary-care-glp1-sop-c6cb3b4ec11d-000007-requires"
+        ],
+        "section_heading": null,
+        "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-003",
+        "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+        "source_title": null,
+        "subject": "Contraindication Screening"
+      },
+      {
+        "concept_ids": [
+          "concept-contraindication-screening"
+        ],
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "object": "Patients with uncertain contraindication history should be routed for clinical review before therapy is prescribed.",
+        "okf_path": "knowledge/ki-primary-care-glp1-sop-c6cb3b4ec11d-000008.md",
+        "predicate": "should",
+        "relation_id": "kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "review_status": "proposed",
+        "rule_ids": [
+          "rule-ki-primary-care-glp1-sop-c6cb3b4ec11d-000008-route-uncertain-case"
+        ],
+        "section_heading": null,
+        "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-003",
+        "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+        "source_title": null,
+        "subject": "Contraindication Screening"
+      },
+      {
+        "concept_ids": [
+          "concept-denial-routing"
+        ],
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "id": "ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "object": "Staff should route prior authorization denials to the prescribing clinician for clinical review.",
+        "okf_path": "knowledge/ki-prior-authorization-workflow-b5ce0527cf18-000012.md",
+        "predicate": "should",
+        "relation_id": "kr-ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "review_status": "proposed",
+        "rule_ids": [
+          "rule-ki-prior-authorization-workflow-b5ce0527cf18-000012-should"
+        ],
+        "section_heading": null,
+        "section_id": "section-prior-authorization-workflow-b5ce0527cf18-003",
+        "source_id": "prior-authorization-workflow-b5ce0527cf18",
+        "source_title": null,
+        "subject": "Denial Routing"
+      },
+      {
+        "concept_ids": [
+          "concept-contraindication-screening"
+        ],
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-safety-policy-01ff452b1d44-000014",
+        "id": "ki-safety-policy-01ff452b1d44-000014",
+        "object": "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy.",
+        "okf_path": "knowledge/ki-safety-policy-01ff452b1d44-000014.md",
+        "predicate": "requires",
+        "relation_id": "kr-ki-safety-policy-01ff452b1d44-000014",
+        "review_status": "proposed",
+        "rule_ids": [
+          "rule-ki-safety-policy-01ff452b1d44-000014-requires"
+        ],
+        "section_heading": null,
+        "section_id": "section-safety-policy-01ff452b1d44-002",
+        "source_id": "safety-policy-01ff452b1d44",
+        "source_title": null,
+        "subject": "Contraindication Screening"
+      },
+      {
+        "concept_ids": [
+          "concept-contraindication-screening"
+        ],
+        "confidence": 0.82,
+        "evidence_id": "evidence-ki-safety-policy-01ff452b1d44-000015",
+        "id": "ki-safety-policy-01ff452b1d44-000015",
+        "object": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review.",
+        "okf_path": "knowledge/ki-safety-policy-01ff452b1d44-000015.md",
+        "predicate": "requires",
+        "relation_id": "kr-ki-safety-policy-01ff452b1d44-000015",
+        "review_status": "deferred",
+        "rule_ids": [
+          "rule-ki-safety-policy-01ff452b1d44-000015-requires"
+        ],
+        "section_heading": null,
+        "section_id": "section-safety-policy-01ff452b1d44-002",
+        "source_id": "safety-policy-01ff452b1d44",
+        "source_title": null,
+        "subject": "Contraindication Screening"
+      }
+    ]
+  },
+  "agent_guide": "---\ntype: SOP Agent Guide\ntitle: SOP KB Agent Guide\ndescription: How agents should consume this OKF bundle.\nresource: references/agent-guide.md\ntags:\n- agent-guide\n- reference\nstatus: stable\ngenerated:\n  actor: sopkb/0.1.0\n  date: '2026-08-10'\n---\n# SOP KB Agent Guide\n\nUse this bundle as a read-only task context unless a human review workflow explicitly enables writes.\n\n## Consumption Flow\n\n1. Read [Agent Task Contexts](../tasks/index.md) and choose the closest task.\n2. Retrieve `agent.context` through CLI or MCP for usable knowledge, evidence, reports, concepts, and Knowledge Relations.\n3. Follow links from knowledge pieces to evidence before making a claim.\n4. Treat Knowledge Relations as RDF-compatible assertions connected to the supporting knowledge piece.\n5. Check freshness and conflict reports before operational use.\n\n## Safety Rules\n\n- Do not use rejected knowledge unless explicitly asked to audit rejected material.\n- Do not infer approval from generated knowledge. Human review is represented by `verified` metadata.\n- Preserve unknown OKF frontmatter fields when updating documents.\n",
+  "agent_tasks": [
+    {
+      "description": "Use SOP requirements to decide what eligibility facts must be gathered or verified.",
+      "id": "eligibility-check",
+      "matching_knowledge_count": 6,
+      "title": "Eligibility Check"
+    },
+    {
+      "description": "Use SOP requirements to assemble payer, diagnosis, and documentation evidence.",
+      "id": "prior-authorization",
+      "matching_knowledge_count": 3,
+      "title": "Prior Authorization Packet"
+    },
+    {
+      "description": "Use SOP requirements to identify follow-up observations and review triggers.",
+      "id": "follow-up-monitoring",
+      "matching_knowledge_count": 6,
+      "title": "Follow-Up Monitoring"
+    }
+  ],
+  "bundle_describe": {
+    "id": "bundle",
+    "knowledge_item_count": 16,
+    "profile": "sop-knowledge-bundle",
+    "source_count": 4,
+    "status": "draft",
+    "title": "GLP-1 Healthcare SOP Reference Bundle"
+  },
+  "detected_concepts": [
+    {
+      "id": "concept-contraindication-screening",
+      "label": "Contraindication Screening",
+      "match_reasons": [
+        "linked knowledge terms: must",
+        "linked knowledge terms: before, therapy",
+        "linked knowledge terms: before, confirm, glp, must, therapy",
+        "linked knowledge terms: glp, must, therapy"
+      ],
+      "matched_knowledge_item_ids": [
+        "ki-primary-care-glp1-sop-c6cb3b4ec11d-000007",
+        "ki-primary-care-glp1-sop-c6cb3b4ec11d-000008",
+        "ki-safety-policy-01ff452b1d44-000014",
+        "ki-safety-policy-01ff452b1d44-000015"
+      ],
+      "score": 11.0
+    },
+    {
+      "id": "concept-intake-requirements",
+      "label": "Intake Requirements",
+      "match_reasons": [
+        "linked knowledge terms: before, confirm, glp, identity, must, therapy",
+        "linked knowledge terms: must"
+      ],
+      "matched_knowledge_item_ids": [
+        "ki-primary-care-glp1-sop-c6cb3b4ec11d-000005",
+        "ki-primary-care-glp1-sop-c6cb3b4ec11d-000006"
+      ],
+      "score": 7.0
+    },
+    {
+      "id": "concept-page-1",
+      "label": "Page 1",
+      "match_reasons": [
+        "linked knowledge terms: glp, therapy",
+        "linked knowledge terms: must, staff",
+        "linked knowledge terms: before, confirm, must"
+      ],
+      "matched_knowledge_item_ids": [
+        "ki-follow-up-monitoring-procedure-e25874854706-000001",
+        "ki-follow-up-monitoring-procedure-e25874854706-000002",
+        "ki-follow-up-monitoring-procedure-e25874854706-000003"
+      ],
+      "score": 7.0
+    },
+    {
+      "id": "concept-prior-authorization-requirements",
+      "label": "Prior Authorization Requirements",
+      "match_reasons": [
+        "linked knowledge terms: before, glp, must, staff",
+        "linked knowledge terms: must, staff, therapy"
+      ],
+      "matched_knowledge_item_ids": [
+        "ki-prior-authorization-workflow-b5ce0527cf18-000010",
+        "ki-prior-authorization-workflow-b5ce0527cf18-000011"
+      ],
+      "score": 7.0
+    },
+    {
+      "id": "concept-denial-routing",
+      "label": "Denial Routing",
+      "match_reasons": [
+        "linked knowledge terms: staff",
+        "linked knowledge terms: must, staff"
+      ],
+      "matched_knowledge_item_ids": [
+        "ki-prior-authorization-workflow-b5ce0527cf18-000012",
+        "ki-prior-authorization-workflow-b5ce0527cf18-000013"
+      ],
+      "score": 3.0
+    },
+    {
+      "id": "concept-follow-up-monitoring",
+      "label": "Follow-up Monitoring",
+      "match_reasons": [
+        "linked knowledge terms: glp, therapy"
+      ],
+      "matched_knowledge_item_ids": [
+        "ki-primary-care-glp1-sop-c6cb3b4ec11d-000009"
+      ],
+      "score": 2.0
+    }
+  ]
+}

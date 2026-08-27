@@ -1,0 +1,78 @@
+{
+  "contraindications": [
+    {
+      "evidence": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review.",
+      "id": "ki-safety-policy-01ff452b1d44-000015",
+      "object": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review.",
+      "predicate": "requires",
+      "review_status": "deferred",
+      "section_id": "section-safety-policy-01ff452b1d44-002",
+      "source_id": "safety-policy-01ff452b1d44",
+      "subject": "Contraindication Screening"
+    }
+  ],
+  "follow-up": [
+    {
+      "evidence": "Patients should receive follow-up contact within 14 days after GLP-1 therapy initiation.",
+      "id": "ki-follow-up-monitoring-procedure-e25874854706-000001",
+      "object": "Patients should receive follow-up contact within 14 days after GLP-1 therapy initiation.",
+      "predicate": "should",
+      "review_status": "proposed",
+      "section_id": "section-follow-up-monitoring-procedure-e25874854706-002",
+      "source_id": "follow-up-monitoring-procedure-e25874854706",
+      "subject": "Page 1"
+    },
+    {
+      "evidence": "Staff must record dose tolerance and adverse event symptoms during follow-up.",
+      "id": "ki-follow-up-monitoring-procedure-e25874854706-000002",
+      "object": "Staff must record dose tolerance, adverse event symptoms, and patient-reported adherence during follow-up.",
+      "predicate": "records",
+      "review_status": "edited",
+      "section_id": "section-follow-up-monitoring-procedure-e25874854706-002",
+      "source_id": "follow-up-monitoring-procedure-e25874854706",
+      "subject": "Page 1"
+    },
+    {
+      "evidence": "Patients should receive follow-up contact within 30 days after GLP-1 therapy initiation.",
+      "id": "ki-primary-care-glp1-sop-c6cb3b4ec11d-000009",
+      "object": "Patients should receive follow-up contact within 30 days after GLP-1 therapy initiation.",
+      "predicate": "should",
+      "review_status": "proposed",
+      "section_id": "section-primary-care-glp1-sop-c6cb3b4ec11d-004",
+      "source_id": "primary-care-glp1-sop-c6cb3b4ec11d",
+      "subject": "Follow-up Monitoring"
+    }
+  ],
+  "prior authorization": [
+    {
+      "evidence": "Staff must record payer requirements before submitting a GLP-1 prior authorization request.",
+      "id": "ki-prior-authorization-workflow-b5ce0527cf18-000010",
+      "object": "Staff must record payer requirements before submitting a GLP-1 prior authorization request.",
+      "predicate": "records",
+      "review_status": "proposed",
+      "section_id": "section-prior-authorization-workflow-b5ce0527cf18-002",
+      "source_id": "prior-authorization-workflow-b5ce0527cf18",
+      "subject": "Prior Authorization Requirements"
+    },
+    {
+      "evidence": "Staff must attach diagnosis evidence and prior therapy documentation when required by the payer.",
+      "id": "ki-prior-authorization-workflow-b5ce0527cf18-000011",
+      "object": "Staff must attach diagnosis evidence and prior therapy documentation when required by the payer.",
+      "predicate": "requires",
+      "review_status": "rejected",
+      "section_id": "section-prior-authorization-workflow-b5ce0527cf18-002",
+      "source_id": "prior-authorization-workflow-b5ce0527cf18",
+      "subject": "Prior Authorization Requirements"
+    },
+    {
+      "evidence": "Staff should route prior authorization denials to the prescribing clinician for clinical review.",
+      "id": "ki-prior-authorization-workflow-b5ce0527cf18-000012",
+      "object": "Staff should route prior authorization denials to the prescribing clinician for clinical review.",
+      "predicate": "should",
+      "review_status": "proposed",
+      "section_id": "section-prior-authorization-workflow-b5ce0527cf18-003",
+      "source_id": "prior-authorization-workflow-b5ce0527cf18",
+      "subject": "Denial Routing"
+    }
+  ]
+}

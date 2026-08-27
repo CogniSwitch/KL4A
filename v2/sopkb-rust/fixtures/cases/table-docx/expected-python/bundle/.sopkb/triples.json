@@ -1,0 +1,9 @@
+[
+  {
+    "id": "triple-ki-quarterly-review-v1-000001",
+    "knowledge_item_id": "ki-quarterly-review-v1-000001",
+    "object": "This paragraph appears after the table in the visual document, but the table must be relocated to the very end of the normalized output, after this paragraph.",
+    "predicate": "requires",
+    "subject": "Closing Notes"
+  }
+]

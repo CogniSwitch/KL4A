@@ -1,0 +1,451 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_follow_up_monitoring a sopkb:Concept ;
+  rdfs:label "Follow-up Monitoring" .
+
+sopkb:object_patients_should_receive_follow_up_contact_within_14_days_after a sopkb:RelationObject ;
+  rdfs:label "Patients should receive follow-up contact within 14 days after" ;
+  sopkb:objectText "Patients should receive follow-up contact within 14 days after GLP-1 therapy initiation." .
+
+sopkb:kr_ki_follow_up_monitoring_procedure_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_follow_up_monitoring ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_patients_should_receive_follow_up_contact_within_14_days_after ;
+  sopkb:knowledgePiece sopkb:ki_follow_up_monitoring_procedure_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_follow_up_monitoring_procedure_v1_000001 ;
+  dcterms:source "follow-up-monitoring-procedure" ;
+  sopkb:sourceVersion "follow-up-monitoring-procedure:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_follow_up_monitoring sopkb:predicate_should sopkb:object_patients_should_receive_follow_up_contact_within_14_days_after .
+
+sopkb:rule_ki_follow_up_monitoring_procedure_v1_000001_should a sopkb:DecisionRule ;
+  rdfs:label "Follow-up Monitoring" ;
+  sopkb:knowledgePiece sopkb:ki_follow_up_monitoring_procedure_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_follow_up_monitoring_procedure_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_follow_up_monitoring_procedure_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_follow_up_monitoring" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_follow_up_monitoring a sopkb:Concept ;
+  rdfs:label "Follow-up Monitoring" .
+
+sopkb:object_staff_must_record_dose_tolerance_and_adverse_event_symptoms a sopkb:RelationObject ;
+  rdfs:label "Staff must record dose tolerance and adverse event symptoms" ;
+  sopkb:objectText "Staff must record dose tolerance and adverse event symptoms during follow-up." .
+
+sopkb:kr_ki_follow_up_monitoring_procedure_v1_000002 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_follow_up_monitoring ;
+  sopkb:predicate sopkb:predicate_records ;
+  sopkb:object sopkb:object_staff_must_record_dose_tolerance_and_adverse_event_symptoms ;
+  sopkb:knowledgePiece sopkb:ki_follow_up_monitoring_procedure_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_follow_up_monitoring_procedure_v1_000002 ;
+  dcterms:source "follow-up-monitoring-procedure" ;
+  sopkb:sourceVersion "follow-up-monitoring-procedure:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_follow_up_monitoring sopkb:predicate_records sopkb:object_staff_must_record_dose_tolerance_and_adverse_event_symptoms .
+
+sopkb:rule_ki_follow_up_monitoring_procedure_v1_000002_records a sopkb:DecisionRule ;
+  rdfs:label "Follow-up Monitoring" ;
+  sopkb:knowledgePiece sopkb:ki_follow_up_monitoring_procedure_v1_000002 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_follow_up_monitoring_procedure_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_follow_up_monitoring_procedure_v1_000002 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_follow_up_monitoring" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_dose_titration a sopkb:Concept ;
+  rdfs:label "Dose Titration" .
+
+sopkb:object_clinicians_must_confirm_patient_tolerance_before_dose_escalation a sopkb:RelationObject ;
+  rdfs:label "Clinicians must confirm patient tolerance before dose escalation." ;
+  sopkb:objectText "Clinicians must confirm patient tolerance before dose escalation." .
+
+sopkb:kr_ki_follow_up_monitoring_procedure_v1_000003 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_dose_titration ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_clinicians_must_confirm_patient_tolerance_before_dose_escalation ;
+  sopkb:knowledgePiece sopkb:ki_follow_up_monitoring_procedure_v1_000003 ;
+  sopkb:evidence sopkb:evidence_ki_follow_up_monitoring_procedure_v1_000003 ;
+  dcterms:source "follow-up-monitoring-procedure" ;
+  sopkb:sourceVersion "follow-up-monitoring-procedure:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_dose_titration sopkb:predicate_requires sopkb:object_clinicians_must_confirm_patient_tolerance_before_dose_escalation .
+
+sopkb:rule_ki_follow_up_monitoring_procedure_v1_000003_requires a sopkb:DecisionRule ;
+  rdfs:label "Dose Titration" ;
+  sopkb:knowledgePiece sopkb:ki_follow_up_monitoring_procedure_v1_000003 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_follow_up_monitoring_procedure_v1_000003 ;
+  sopkb:evidence sopkb:evidence_ki_follow_up_monitoring_procedure_v1_000003 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_dose_titration" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_dose_titration a sopkb:Concept ;
+  rdfs:label "Dose Titration" .
+
+sopkb:object_clinicians_should_defer_dose_escalation_when_severe_gastrointest a sopkb:RelationObject ;
+  rdfs:label "Clinicians should defer dose escalation when severe gastrointestinal symptoms" ;
+  sopkb:objectText "Clinicians should defer dose escalation when severe gastrointestinal symptoms are reported." .
+
+sopkb:kr_ki_follow_up_monitoring_procedure_v1_000004 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_dose_titration ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_clinicians_should_defer_dose_escalation_when_severe_gastrointest ;
+  sopkb:knowledgePiece sopkb:ki_follow_up_monitoring_procedure_v1_000004 ;
+  sopkb:evidence sopkb:evidence_ki_follow_up_monitoring_procedure_v1_000004 ;
+  dcterms:source "follow-up-monitoring-procedure" ;
+  sopkb:sourceVersion "follow-up-monitoring-procedure:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_dose_titration sopkb:predicate_should sopkb:object_clinicians_should_defer_dose_escalation_when_severe_gastrointest .
+
+sopkb:rule_ki_follow_up_monitoring_procedure_v1_000004_should a sopkb:DecisionRule ;
+  rdfs:label "Dose Titration" ;
+  sopkb:knowledgePiece sopkb:ki_follow_up_monitoring_procedure_v1_000004 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_follow_up_monitoring_procedure_v1_000004 ;
+  sopkb:evidence sopkb:evidence_ki_follow_up_monitoring_procedure_v1_000004 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_dose_titration" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_intake_requirements a sopkb:Concept ;
+  rdfs:label "Intake Requirements" .
+
+sopkb:object_clinicians_must_confirm_patient_identity_before_reviewing_glp_1 a sopkb:RelationObject ;
+  rdfs:label "Clinicians must confirm patient identity before reviewing GLP-1 therapy" ;
+  sopkb:objectText "Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility." .
+
+sopkb:kr_ki_primary_care_glp1_sop_v1_000005 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_intake_requirements ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_clinicians_must_confirm_patient_identity_before_reviewing_glp_1 ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000005 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000005 ;
+  dcterms:source "primary-care-glp1-sop" ;
+  sopkb:sourceVersion "primary-care-glp1-sop:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_intake_requirements sopkb:predicate_requires sopkb:object_clinicians_must_confirm_patient_identity_before_reviewing_glp_1 .
+
+sopkb:rule_ki_primary_care_glp1_sop_v1_000005_confirm_patient_identity a sopkb:DecisionRule ;
+  rdfs:label "Confirm patient identity" ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000005 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_primary_care_glp1_sop_v1_000005 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000005 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "patient_identity_confirmed" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_intake_requirements a sopkb:Concept ;
+  rdfs:label "Intake Requirements" .
+
+sopkb:object_clinicians_must_document_current_medications_diabetes_history_we a sopkb:RelationObject ;
+  rdfs:label "Clinicians must document current medications, diabetes history, weight history" ;
+  sopkb:objectText "Clinicians must document current medications, diabetes history, weight history, and relevant comorbidities." .
+
+sopkb:kr_ki_primary_care_glp1_sop_v1_000006 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_intake_requirements ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_clinicians_must_document_current_medications_diabetes_history_we ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000006 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000006 ;
+  dcterms:source "primary-care-glp1-sop" ;
+  sopkb:sourceVersion "primary-care-glp1-sop:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_intake_requirements sopkb:predicate_requires sopkb:object_clinicians_must_document_current_medications_diabetes_history_we .
+
+sopkb:rule_ki_primary_care_glp1_sop_v1_000006_requires a sopkb:DecisionRule ;
+  rdfs:label "Intake Requirements" ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000006 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_primary_care_glp1_sop_v1_000006 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000006 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_intake_requirements" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_contraindication_screening a sopkb:Concept ;
+  rdfs:label "Contraindication Screening" .
+
+sopkb:object_clinicians_must_screen_for_pregnancy_pancreatitis_history_medull a sopkb:RelationObject ;
+  rdfs:label "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid" ;
+  sopkb:objectText "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid carcinoma history, and multiple endocrine neoplasia type 2 history." .
+
+sopkb:kr_ki_primary_care_glp1_sop_v1_000007 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_contraindication_screening ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_clinicians_must_screen_for_pregnancy_pancreatitis_history_medull ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000007 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000007 ;
+  dcterms:source "primary-care-glp1-sop" ;
+  sopkb:sourceVersion "primary-care-glp1-sop:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_contraindication_screening sopkb:predicate_requires sopkb:object_clinicians_must_screen_for_pregnancy_pancreatitis_history_medull .
+
+sopkb:rule_ki_primary_care_glp1_sop_v1_000007_requires a sopkb:DecisionRule ;
+  rdfs:label "Contraindication Screening" ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000007 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_primary_care_glp1_sop_v1_000007 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000007 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_contraindication_screening" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_contraindication_screening a sopkb:Concept ;
+  rdfs:label "Contraindication Screening" .
+
+sopkb:object_patients_with_uncertain_contraindication_history_should_be_route a sopkb:RelationObject ;
+  rdfs:label "Patients with uncertain contraindication history should be routed for" ;
+  sopkb:objectText "Patients with uncertain contraindication history should be routed for clinical review before therapy is prescribed." .
+
+sopkb:kr_ki_primary_care_glp1_sop_v1_000008 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_contraindication_screening ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_patients_with_uncertain_contraindication_history_should_be_route ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000008 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000008 ;
+  dcterms:source "primary-care-glp1-sop" ;
+  sopkb:sourceVersion "primary-care-glp1-sop:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_contraindication_screening sopkb:predicate_should sopkb:object_patients_with_uncertain_contraindication_history_should_be_route .
+
+sopkb:rule_ki_primary_care_glp1_sop_v1_000008_route_uncertain_case a sopkb:DecisionRule ;
+  rdfs:label "Route uncertain cases for clinical review" ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000008 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_primary_care_glp1_sop_v1_000008 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000008 ;
+  sopkb:conditionFact "case_uncertainty" ;
+  sopkb:obligationFact "route_clinical_review" ;
+  sopkb:otherwiseActionRequired "false" .
+
+sopkb:concept_follow_up_monitoring a sopkb:Concept ;
+  rdfs:label "Follow-up Monitoring" .
+
+sopkb:object_patients_should_receive_follow_up_contact_within_30_days_after a sopkb:RelationObject ;
+  rdfs:label "Patients should receive follow-up contact within 30 days after" ;
+  sopkb:objectText "Patients should receive follow-up contact within 30 days after GLP-1 therapy initiation." .
+
+sopkb:kr_ki_primary_care_glp1_sop_v1_000009 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_follow_up_monitoring ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_patients_should_receive_follow_up_contact_within_30_days_after ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000009 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000009 ;
+  dcterms:source "primary-care-glp1-sop" ;
+  sopkb:sourceVersion "primary-care-glp1-sop:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_follow_up_monitoring sopkb:predicate_should sopkb:object_patients_should_receive_follow_up_contact_within_30_days_after .
+
+sopkb:rule_ki_primary_care_glp1_sop_v1_000009_should a sopkb:DecisionRule ;
+  rdfs:label "Follow-up Monitoring" ;
+  sopkb:knowledgePiece sopkb:ki_primary_care_glp1_sop_v1_000009 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_primary_care_glp1_sop_v1_000009 ;
+  sopkb:evidence sopkb:evidence_ki_primary_care_glp1_sop_v1_000009 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_follow_up_monitoring" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_prior_authorization_requirements a sopkb:Concept ;
+  rdfs:label "Prior Authorization Requirements" .
+
+sopkb:object_staff_must_record_payer_requirements_before_submitting_a_glp_1 a sopkb:RelationObject ;
+  rdfs:label "Staff must record payer requirements before submitting a GLP-1" ;
+  sopkb:objectText "Staff must record payer requirements before submitting a GLP-1 prior authorization request." .
+
+sopkb:kr_ki_prior_authorization_workflow_v1_000010 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_prior_authorization_requirements ;
+  sopkb:predicate sopkb:predicate_records ;
+  sopkb:object sopkb:object_staff_must_record_payer_requirements_before_submitting_a_glp_1 ;
+  sopkb:knowledgePiece sopkb:ki_prior_authorization_workflow_v1_000010 ;
+  sopkb:evidence sopkb:evidence_ki_prior_authorization_workflow_v1_000010 ;
+  dcterms:source "prior-authorization-workflow" ;
+  sopkb:sourceVersion "prior-authorization-workflow:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_prior_authorization_requirements sopkb:predicate_records sopkb:object_staff_must_record_payer_requirements_before_submitting_a_glp_1 .
+
+sopkb:rule_ki_prior_authorization_workflow_v1_000010_records a sopkb:DecisionRule ;
+  rdfs:label "Prior Authorization Requirements" ;
+  sopkb:knowledgePiece sopkb:ki_prior_authorization_workflow_v1_000010 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_prior_authorization_workflow_v1_000010 ;
+  sopkb:evidence sopkb:evidence_ki_prior_authorization_workflow_v1_000010 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_prior_authorization_requirements" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_prior_authorization_requirements a sopkb:Concept ;
+  rdfs:label "Prior Authorization Requirements" .
+
+sopkb:object_staff_must_attach_diagnosis_evidence_and_prior_therapy_documenta a sopkb:RelationObject ;
+  rdfs:label "Staff must attach diagnosis evidence and prior therapy documentation" ;
+  sopkb:objectText "Staff must attach diagnosis evidence and prior therapy documentation when required by the payer." .
+
+sopkb:kr_ki_prior_authorization_workflow_v1_000011 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_prior_authorization_requirements ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_staff_must_attach_diagnosis_evidence_and_prior_therapy_documenta ;
+  sopkb:knowledgePiece sopkb:ki_prior_authorization_workflow_v1_000011 ;
+  sopkb:evidence sopkb:evidence_ki_prior_authorization_workflow_v1_000011 ;
+  dcterms:source "prior-authorization-workflow" ;
+  sopkb:sourceVersion "prior-authorization-workflow:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_prior_authorization_requirements sopkb:predicate_requires sopkb:object_staff_must_attach_diagnosis_evidence_and_prior_therapy_documenta .
+
+sopkb:rule_ki_prior_authorization_workflow_v1_000011_requires a sopkb:DecisionRule ;
+  rdfs:label "Prior Authorization Requirements" ;
+  sopkb:knowledgePiece sopkb:ki_prior_authorization_workflow_v1_000011 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_prior_authorization_workflow_v1_000011 ;
+  sopkb:evidence sopkb:evidence_ki_prior_authorization_workflow_v1_000011 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_prior_authorization_requirements" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_denial_routing a sopkb:Concept ;
+  rdfs:label "Denial Routing" .
+
+sopkb:object_staff_should_route_prior_authorization_denials_to_the_prescribin a sopkb:RelationObject ;
+  rdfs:label "Staff should route prior authorization denials to the prescribing" ;
+  sopkb:objectText "Staff should route prior authorization denials to the prescribing clinician for clinical review." .
+
+sopkb:kr_ki_prior_authorization_workflow_v1_000012 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_denial_routing ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_staff_should_route_prior_authorization_denials_to_the_prescribin ;
+  sopkb:knowledgePiece sopkb:ki_prior_authorization_workflow_v1_000012 ;
+  sopkb:evidence sopkb:evidence_ki_prior_authorization_workflow_v1_000012 ;
+  dcterms:source "prior-authorization-workflow" ;
+  sopkb:sourceVersion "prior-authorization-workflow:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_denial_routing sopkb:predicate_should sopkb:object_staff_should_route_prior_authorization_denials_to_the_prescribin .
+
+sopkb:rule_ki_prior_authorization_workflow_v1_000012_should a sopkb:DecisionRule ;
+  rdfs:label "Denial Routing" ;
+  sopkb:knowledgePiece sopkb:ki_prior_authorization_workflow_v1_000012 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_prior_authorization_workflow_v1_000012 ;
+  sopkb:evidence sopkb:evidence_ki_prior_authorization_workflow_v1_000012 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_denial_routing" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_denial_routing a sopkb:Concept ;
+  rdfs:label "Denial Routing" .
+
+sopkb:object_staff_must_record_appeal_deadlines_in_the_case_note a sopkb:RelationObject ;
+  rdfs:label "Staff must record appeal deadlines in the case note." ;
+  sopkb:objectText "Staff must record appeal deadlines in the case note." .
+
+sopkb:kr_ki_prior_authorization_workflow_v1_000013 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_denial_routing ;
+  sopkb:predicate sopkb:predicate_records ;
+  sopkb:object sopkb:object_staff_must_record_appeal_deadlines_in_the_case_note ;
+  sopkb:knowledgePiece sopkb:ki_prior_authorization_workflow_v1_000013 ;
+  sopkb:evidence sopkb:evidence_ki_prior_authorization_workflow_v1_000013 ;
+  dcterms:source "prior-authorization-workflow" ;
+  sopkb:sourceVersion "prior-authorization-workflow:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_denial_routing sopkb:predicate_records sopkb:object_staff_must_record_appeal_deadlines_in_the_case_note .
+
+sopkb:rule_ki_prior_authorization_workflow_v1_000013_records a sopkb:DecisionRule ;
+  rdfs:label "Denial Routing" ;
+  sopkb:knowledgePiece sopkb:ki_prior_authorization_workflow_v1_000013 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_prior_authorization_workflow_v1_000013 ;
+  sopkb:evidence sopkb:evidence_ki_prior_authorization_workflow_v1_000013 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_denial_routing" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_contraindication_screening a sopkb:Concept ;
+  rdfs:label "Contraindication Screening" .
+
+sopkb:object_clinicians_must_confirm_contraindication_screening_before_prescr a sopkb:RelationObject ;
+  rdfs:label "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy." ;
+  sopkb:objectText "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy." .
+
+sopkb:kr_ki_safety_policy_v1_000014 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_contraindication_screening ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_clinicians_must_confirm_contraindication_screening_before_prescr ;
+  sopkb:knowledgePiece sopkb:ki_safety_policy_v1_000014 ;
+  sopkb:evidence sopkb:evidence_ki_safety_policy_v1_000014 ;
+  dcterms:source "safety-policy" ;
+  sopkb:sourceVersion "safety-policy:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_contraindication_screening sopkb:predicate_requires sopkb:object_clinicians_must_confirm_contraindication_screening_before_prescr .
+
+sopkb:rule_ki_safety_policy_v1_000014_requires a sopkb:DecisionRule ;
+  rdfs:label "Contraindication Screening" ;
+  sopkb:knowledgePiece sopkb:ki_safety_policy_v1_000014 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_safety_policy_v1_000014 ;
+  sopkb:evidence sopkb:evidence_ki_safety_policy_v1_000014 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_contraindication_screening" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_contraindication_screening a sopkb:Concept ;
+  rdfs:label "Contraindication Screening" .
+
+sopkb:object_patients_with_confirmed_contraindications_must_not_start_glp_1_t a sopkb:RelationObject ;
+  rdfs:label "Patients with confirmed contraindications must not start GLP-1 therapy" ;
+  sopkb:objectText "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review." .
+
+sopkb:kr_ki_safety_policy_v1_000015 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_contraindication_screening ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_patients_with_confirmed_contraindications_must_not_start_glp_1_t ;
+  sopkb:knowledgePiece sopkb:ki_safety_policy_v1_000015 ;
+  sopkb:evidence sopkb:evidence_ki_safety_policy_v1_000015 ;
+  dcterms:source "safety-policy" ;
+  sopkb:sourceVersion "safety-policy:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_contraindication_screening sopkb:predicate_requires sopkb:object_patients_with_confirmed_contraindications_must_not_start_glp_1_t .
+
+sopkb:rule_ki_safety_policy_v1_000015_requires a sopkb:DecisionRule ;
+  rdfs:label "Contraindication Screening" ;
+  sopkb:knowledgePiece sopkb:ki_safety_policy_v1_000015 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_safety_policy_v1_000015 ;
+  sopkb:evidence sopkb:evidence_ki_safety_policy_v1_000015 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_contraindication_screening" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_adverse_event_monitoring a sopkb:Concept ;
+  rdfs:label "Adverse Event Monitoring" .
+
+sopkb:object_clinicians_should_record_severe_gastrointestinal_symptoms_dehydr a sopkb:RelationObject ;
+  rdfs:label "Clinicians should record severe gastrointestinal symptoms, dehydration risk, and" ;
+  sopkb:objectText "Clinicians should record severe gastrointestinal symptoms, dehydration risk, and suspected pancreatitis symptoms." .
+
+sopkb:kr_ki_safety_policy_v1_000016 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_adverse_event_monitoring ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_clinicians_should_record_severe_gastrointestinal_symptoms_dehydr ;
+  sopkb:knowledgePiece sopkb:ki_safety_policy_v1_000016 ;
+  sopkb:evidence sopkb:evidence_ki_safety_policy_v1_000016 ;
+  dcterms:source "safety-policy" ;
+  sopkb:sourceVersion "safety-policy:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_adverse_event_monitoring sopkb:predicate_should sopkb:object_clinicians_should_record_severe_gastrointestinal_symptoms_dehydr .
+
+sopkb:rule_ki_safety_policy_v1_000016_should a sopkb:DecisionRule ;
+  rdfs:label "Adverse Event Monitoring" ;
+  sopkb:knowledgePiece sopkb:ki_safety_policy_v1_000016 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_safety_policy_v1_000016 ;
+  sopkb:evidence sopkb:evidence_ki_safety_policy_v1_000016 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_adverse_event_monitoring" ;
+  sopkb:otherwiseActionRequired "true" .

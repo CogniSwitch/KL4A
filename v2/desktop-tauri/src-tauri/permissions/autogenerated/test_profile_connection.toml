@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-test-profile-connection"
+description = "Enables the test_profile_connection command without any pre-configured scope."
+commands.allow = ["test_profile_connection"]
+
+[[permission]]
+identifier = "deny-test-profile-connection"
+description = "Denies the test_profile_connection command without any pre-configured scope."
+commands.deny = ["test_profile_connection"]

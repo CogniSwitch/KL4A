@@ -1,0 +1,304 @@
+{
+  "edges": [
+    {
+      "source": "caf-checklist",
+      "target": "section-caf-checklist-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-caf-checklist-001",
+      "target": "concept-caf-checklist",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "caf-checklist",
+      "target": "section-caf-checklist-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-caf-checklist-002",
+      "target": "concept-ligibilit",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "caf-checklist",
+      "target": "section-caf-checklist-003",
+      "type": "has_section"
+    },
+    {
+      "source": "section-caf-checklist-003",
+      "target": "concept-proc-dure",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "item",
+      "target": "section-item-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-item-001",
+      "target": "concept-item",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "item",
+      "target": "section-item-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-item-002",
+      "target": "concept-item",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-caf-checklist-002",
+      "target": "ki-caf-checklist-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-caf-checklist-v1-000001",
+      "target": "evidence-ki-caf-checklist-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-caf-checklist-v1-000001",
+      "target": "kr-ki-caf-checklist-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-ligibilit",
+      "target": "kr-ki-caf-checklist-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-caf-checklist-v1-000001",
+      "target": "evidence-ki-caf-checklist-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-caf-checklist-v1-000001",
+      "target": "rule-ki-caf-checklist-v1-000001-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-caf-checklist-v1-000001",
+      "target": "rule-ki-caf-checklist-v1-000001-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-caf-checklist-v1-000001-requires",
+      "target": "evidence-ki-caf-checklist-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-caf-checklist-003",
+      "target": "ki-caf-checklist-v1-000002",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-caf-checklist-v1-000002",
+      "target": "evidence-ki-caf-checklist-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-caf-checklist-v1-000002",
+      "target": "kr-ki-caf-checklist-v1-000002",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-proc-dure",
+      "target": "kr-ki-caf-checklist-v1-000002",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-caf-checklist-v1-000002",
+      "target": "evidence-ki-caf-checklist-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-caf-checklist-v1-000002",
+      "target": "rule-ki-caf-checklist-v1-000002-routes",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-caf-checklist-v1-000002",
+      "target": "rule-ki-caf-checklist-v1-000002-routes",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-caf-checklist-v1-000002-routes",
+      "target": "evidence-ki-caf-checklist-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-item-002",
+      "target": "ki-item-v1-000003",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-item-v1-000003",
+      "target": "evidence-ki-item-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-item-v1-000003",
+      "target": "kr-ki-item-v1-000003",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-item",
+      "target": "kr-ki-item-v1-000003",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-item-v1-000003",
+      "target": "evidence-ki-item-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-item-v1-000003",
+      "target": "rule-ki-item-v1-000003-confirm-patient-identity",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-item-v1-000003",
+      "target": "rule-ki-item-v1-000003-confirm-patient-identity",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-item-v1-000003-confirm-patient-identity",
+      "target": "evidence-ki-item-v1-000003",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "caf-checklist",
+      "label": "caf\u00e9 checklist",
+      "source_version_id": "caf-checklist:v1",
+      "type": "source"
+    },
+    {
+      "id": "item",
+      "label": "\u5317\u4eac",
+      "source_version_id": "item:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-caf-checklist-001",
+      "label": "Caf\u00e9 Checklist \u2615",
+      "source_version_id": "caf-checklist:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-caf-checklist",
+      "label": "Caf\u00e9 Checklist \u2615",
+      "type": "concept"
+    },
+    {
+      "id": "section-caf-checklist-002",
+      "label": "\u00c9ligibilit\u00e9",
+      "source_version_id": "caf-checklist:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-ligibilit",
+      "label": "\u00c9ligibilit\u00e9",
+      "type": "concept"
+    },
+    {
+      "id": "section-caf-checklist-003",
+      "label": "Proc\u00e9dure",
+      "source_version_id": "caf-checklist:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-proc-dure",
+      "label": "Proc\u00e9dure",
+      "type": "concept"
+    },
+    {
+      "id": "section-item-001",
+      "label": "\u5317\u4eac\u4e8b\u52a1\u6240",
+      "source_version_id": "item:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-item",
+      "label": "\u6982\u8ff0",
+      "type": "concept"
+    },
+    {
+      "id": "section-item-002",
+      "label": "\u6982\u8ff0",
+      "source_version_id": "item:v1",
+      "type": "section"
+    },
+    {
+      "id": "ki-caf-checklist-v1-000001",
+      "label": "\u00c9ligibilit\u00e9",
+      "lifecycle_status": "active",
+      "source_version_id": "caf-checklist:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-caf-checklist-v1-000001",
+      "label": "Le clinicien doit confirmer l'identit\u00e9 du patient.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-caf-checklist-v1-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-caf-checklist-v1-000001-requires",
+      "label": "\u00c9ligibilit\u00e9",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-caf-checklist-v1-000002",
+      "label": "Proc\u00e9dure",
+      "lifecycle_status": "active",
+      "source_version_id": "caf-checklist:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-caf-checklist-v1-000002",
+      "label": "Le personnel doit record les contre-indications et route les cas incertains.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-caf-checklist-v1-000002",
+      "label": "routes",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-caf-checklist-v1-000002-routes",
+      "label": "Proc\u00e9dure",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-item-v1-000003",
+      "label": "\u6982\u8ff0",
+      "lifecycle_status": "active",
+      "source_version_id": "item:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-item-v1-000003",
+      "label": "Staff must confirm patient identity.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-item-v1-000003",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-item-v1-000003-confirm-patient-identity",
+      "label": "Confirm patient identity",
+      "type": "decision_rule"
+    }
+  ]
+}

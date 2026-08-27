@@ -1,0 +1,17 @@
+=== step 1: validate {bundle} ===
+argv: validate <WORKDIR>\bundle
+exit: 0
+--- stdout ---
+Validation completed with 0 error(s), 0 warning(s)
+
+--- stderr ---
+
+
+=== step 2: export {bundle} --format graph-json,rdf ===
+argv: export <WORKDIR>\bundle --format graph-json,rdf
+exit: 0
+--- stdout ---
+Generated 2 export(s)
+
+--- stderr ---
+

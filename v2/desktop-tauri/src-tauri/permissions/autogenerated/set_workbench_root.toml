@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-workbench-root"
+description = "Enables the set_workbench_root command without any pre-configured scope."
+commands.allow = ["set_workbench_root"]
+
+[[permission]]
+identifier = "deny-set-workbench-root"
+description = "Denies the set_workbench_root command without any pre-configured scope."
+commands.deny = ["set_workbench_root"]

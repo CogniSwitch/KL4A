@@ -1,0 +1,71 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 426,
+    "id": "ki-weird-headings-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must confirm the escalation procedure described below.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-weird-headings-002",
+    "source_id": "weird-headings",
+    "source_text": "Staff must confirm the escalation procedure described below.",
+    "source_version_id": "weird-headings:v1",
+    "span_status": "exact",
+    "start_pos": 366,
+    "subject": "Purpose ##",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 520,
+    "id": "ki-weird-headings-v1-000002",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians should route uncertain cases for review.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-weird-headings-003",
+    "source_id": "weird-headings",
+    "source_text": "Clinicians should route uncertain cases for review.",
+    "source_version_id": "weird-headings:v1",
+    "span_status": "exact",
+    "start_pos": 469,
+    "subject": "not a real heading, inside a fence",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 605,
+    "id": "ki-weird-headings-v1-000003",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff should record contraindications and route cases per policy.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-weird-headings-004",
+    "source_id": "weird-headings",
+    "source_text": "Staff should record contraindications and route cases per policy.",
+    "source_version_id": "weird-headings:v1",
+    "span_status": "exact",
+    "start_pos": 540,
+    "subject": "Procedure",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

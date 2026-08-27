@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "benefits-handbook:v1",
+      "checksum": "sha256:39cc8a0068b57222ff54e0733b2d413e6029971c6219565bbed57b187069b3fc",
+      "id": "benefits-handbook",
+      "metadata": {
+        "source_filename": "benefits_handbook.pdf"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/benefits-handbook__v1.md",
+      "original_path": "sources/originals/benefits-handbook__v1.pdf",
+      "parse_status": "normalized",
+      "size": 1260,
+      "source_version_id": "benefits-handbook:v1",
+      "status": "active",
+      "title": "benefits handbook",
+      "type": "pdf",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:39cc8a0068b57222ff54e0733b2d413e6029971c6219565bbed57b187069b3fc",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/benefits-handbook__v1.md",
+          "original_path": "sources/originals/benefits-handbook__v1.pdf",
+          "size_bytes": 1260,
+          "source_id": "benefits-handbook",
+          "source_version_id": "benefits-handbook:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

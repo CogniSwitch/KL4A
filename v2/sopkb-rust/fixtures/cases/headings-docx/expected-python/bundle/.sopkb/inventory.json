@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "vendor-onboarding:v1",
+      "checksum": "sha256:4e719d7acae27542f444e8ea14541793647b9a791c355443ffd7d8be0e42e147",
+      "id": "vendor-onboarding",
+      "metadata": {
+        "source_filename": "vendor-onboarding.docx"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/vendor-onboarding__v1.md",
+      "original_path": "sources/originals/vendor-onboarding__v1.docx",
+      "parse_status": "normalized",
+      "size": 35550,
+      "source_version_id": "vendor-onboarding:v1",
+      "status": "active",
+      "title": "vendor onboarding",
+      "type": "docx",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:4e719d7acae27542f444e8ea14541793647b9a791c355443ffd7d8be0e42e147",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/vendor-onboarding__v1.md",
+          "original_path": "sources/originals/vendor-onboarding__v1.docx",
+          "size_bytes": 35550,
+          "source_id": "vendor-onboarding",
+          "source_version_id": "vendor-onboarding:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

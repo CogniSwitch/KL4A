@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-max-parallel-workers"
+description = "Enables the set_max_parallel_workers command without any pre-configured scope."
+commands.allow = ["set_max_parallel_workers"]
+
+[[permission]]
+identifier = "deny-set-max-parallel-workers"
+description = "Denies the set_max_parallel_workers command without any pre-configured scope."
+commands.deny = ["set_max_parallel_workers"]

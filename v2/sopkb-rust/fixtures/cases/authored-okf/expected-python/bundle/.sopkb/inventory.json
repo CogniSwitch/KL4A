@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "authored-okf-source:v1",
+      "checksum": "sha256:9025cb66ecf8eaf86240619f575feb19b5fe46ea1641ba2dd247a7689a8e8368",
+      "id": "authored-okf-source",
+      "metadata": {
+        "source_filename": "authored-okf-source.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/authored-okf-source__v1.md",
+      "original_path": "sources/originals/authored-okf-source__v1.md",
+      "parse_status": "normalized",
+      "size": 124,
+      "source_version_id": "authored-okf-source:v1",
+      "status": "active",
+      "title": "authored okf source",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:9025cb66ecf8eaf86240619f575feb19b5fe46ea1641ba2dd247a7689a8e8368",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/authored-okf-source__v1.md",
+          "original_path": "sources/originals/authored-okf-source__v1.md",
+          "size_bytes": 124,
+          "source_id": "authored-okf-source",
+          "source_version_id": "authored-okf-source:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

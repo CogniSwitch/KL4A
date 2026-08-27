@@ -1,0 +1,282 @@
+{
+  "edges": [
+    {
+      "source": "weird-headings",
+      "target": "section-weird-headings-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-weird-headings-001",
+      "target": "concept-lone-hash-adopts-this-line-as-heading-text",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "weird-headings",
+      "target": "section-weird-headings-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-weird-headings-002",
+      "target": "concept-purpose",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "weird-headings",
+      "target": "section-weird-headings-003",
+      "type": "has_section"
+    },
+    {
+      "source": "section-weird-headings-003",
+      "target": "concept-not-a-real-heading-inside-a-fence",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "weird-headings",
+      "target": "section-weird-headings-004",
+      "type": "has_section"
+    },
+    {
+      "source": "section-weird-headings-004",
+      "target": "concept-procedure",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-weird-headings-002",
+      "target": "ki-weird-headings-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-weird-headings-v1-000001",
+      "target": "evidence-ki-weird-headings-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-weird-headings-v1-000001",
+      "target": "kr-ki-weird-headings-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-purpose",
+      "target": "kr-ki-weird-headings-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-weird-headings-v1-000001",
+      "target": "evidence-ki-weird-headings-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-weird-headings-v1-000001",
+      "target": "rule-ki-weird-headings-v1-000001-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-weird-headings-v1-000001",
+      "target": "rule-ki-weird-headings-v1-000001-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-weird-headings-v1-000001-requires",
+      "target": "evidence-ki-weird-headings-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-weird-headings-003",
+      "target": "ki-weird-headings-v1-000002",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-weird-headings-v1-000002",
+      "target": "evidence-ki-weird-headings-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-weird-headings-v1-000002",
+      "target": "kr-ki-weird-headings-v1-000002",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-not-a-real-heading-inside-a-fence",
+      "target": "kr-ki-weird-headings-v1-000002",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-weird-headings-v1-000002",
+      "target": "evidence-ki-weird-headings-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-weird-headings-v1-000002",
+      "target": "rule-ki-weird-headings-v1-000002-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-weird-headings-v1-000002",
+      "target": "rule-ki-weird-headings-v1-000002-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-weird-headings-v1-000002-should",
+      "target": "evidence-ki-weird-headings-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-weird-headings-004",
+      "target": "ki-weird-headings-v1-000003",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-weird-headings-v1-000003",
+      "target": "evidence-ki-weird-headings-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-weird-headings-v1-000003",
+      "target": "kr-ki-weird-headings-v1-000003",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-procedure",
+      "target": "kr-ki-weird-headings-v1-000003",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-weird-headings-v1-000003",
+      "target": "evidence-ki-weird-headings-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-weird-headings-v1-000003",
+      "target": "rule-ki-weird-headings-v1-000003-record-contraindications",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-weird-headings-v1-000003",
+      "target": "rule-ki-weird-headings-v1-000003-record-contraindications",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-weird-headings-v1-000003-record-contraindications",
+      "target": "evidence-ki-weird-headings-v1-000003",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "weird-headings",
+      "label": "weird headings",
+      "source_version_id": "weird-headings:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-weird-headings-001",
+      "label": "Lone Hash Adopts This Line As Heading Text",
+      "source_version_id": "weird-headings:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-lone-hash-adopts-this-line-as-heading-text",
+      "label": "Lone Hash Adopts This Line As Heading Text",
+      "type": "concept"
+    },
+    {
+      "id": "section-weird-headings-002",
+      "label": "Purpose ##",
+      "source_version_id": "weird-headings:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-purpose",
+      "label": "Purpose ##",
+      "type": "concept"
+    },
+    {
+      "id": "section-weird-headings-003",
+      "label": "not a real heading, inside a fence",
+      "source_version_id": "weird-headings:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-not-a-real-heading-inside-a-fence",
+      "label": "not a real heading, inside a fence",
+      "type": "concept"
+    },
+    {
+      "id": "section-weird-headings-004",
+      "label": "Procedure",
+      "source_version_id": "weird-headings:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-procedure",
+      "label": "Procedure",
+      "type": "concept"
+    },
+    {
+      "id": "ki-weird-headings-v1-000001",
+      "label": "Purpose ##",
+      "lifecycle_status": "active",
+      "source_version_id": "weird-headings:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-weird-headings-v1-000001",
+      "label": "Staff must confirm the escalation procedure described below.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-weird-headings-v1-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-weird-headings-v1-000001-requires",
+      "label": "Purpose ##",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-weird-headings-v1-000002",
+      "label": "not a real heading, inside a fence",
+      "lifecycle_status": "active",
+      "source_version_id": "weird-headings:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-weird-headings-v1-000002",
+      "label": "Clinicians should route uncertain cases for review.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-weird-headings-v1-000002",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-weird-headings-v1-000002-should",
+      "label": "not a real heading, inside a fence",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-weird-headings-v1-000003",
+      "label": "Procedure",
+      "lifecycle_status": "active",
+      "source_version_id": "weird-headings:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-weird-headings-v1-000003",
+      "label": "Staff should record contraindications and route cases per policy.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-weird-headings-v1-000003",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-weird-headings-v1-000003-record-contraindications",
+      "label": "Record contraindications",
+      "type": "decision_rule"
+    }
+  ]
+}

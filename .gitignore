@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+dist-ssr/
+dist-web/
+!v2/desktop-tauri/dist/
+!v2/desktop-tauri/dist/**

@@ -1,0 +1,56 @@
+=== step 1: init {bundle} --title "GLP-1 Healthcare Reference" ===
+argv: init <WORKDIR>\bundle --title GLP-1 Healthcare Reference
+exit: 0
+--- stdout ---
+Initialized bundle bundle
+
+--- stderr ---
+
+
+=== step 2: scan {sources} --bundle {bundle} ===
+argv: scan <WORKDIR>\sources --bundle <WORKDIR>\bundle
+exit: 0
+--- stdout ---
+Scanned 4 source(s)
+
+--- stderr ---
+
+
+=== step 3: normalize {bundle} ===
+argv: normalize <WORKDIR>\bundle
+exit: 0
+--- stdout ---
+Normalized 13 section(s)
+
+--- stderr ---
+
+
+=== step 4: mine {bundle} --provider fixture ===
+argv: mine <WORKDIR>\bundle --provider fixture
+exit: 0
+--- stdout ---
+Mined 16 proposed knowledge item(s)
+
+--- stderr ---
+[sopkb.ingest] mine_bundle called: provider='fixture' bundle=<WORKDIR>\bundle
+[sopkb.ingest] dispatching to mine_fixture_bundle - regex-based, offline, no network calls
+[sopkb.ingest] mine_fixture_bundle finished: 16 item(s) mined via fixture
+
+
+=== step 5: validate {bundle} ===
+argv: validate <WORKDIR>\bundle
+exit: 0
+--- stdout ---
+Validation completed with 0 error(s), 0 warning(s)
+
+--- stderr ---
+
+
+=== step 6: export {bundle} --format graph-json,rdf ===
+argv: export <WORKDIR>\bundle --format graph-json,rdf
+exit: 0
+--- stdout ---
+Generated 2 export(s)
+
+--- stderr ---
+

@@ -1,0 +1,32 @@
+[
+  {
+    "heading": "Caf\u00e9 Checklist \u2615",
+    "section_id": "section-caf-checklist-001",
+    "semantic_role": "section",
+    "source_id": "caf-checklist"
+  },
+  {
+    "heading": "\u00c9ligibilit\u00e9",
+    "section_id": "section-caf-checklist-002",
+    "semantic_role": "section",
+    "source_id": "caf-checklist"
+  },
+  {
+    "heading": "Proc\u00e9dure",
+    "section_id": "section-caf-checklist-003",
+    "semantic_role": "section",
+    "source_id": "caf-checklist"
+  },
+  {
+    "heading": "\u5317\u4eac\u4e8b\u52a1\u6240",
+    "section_id": "section-item-001",
+    "semantic_role": "section",
+    "source_id": "item"
+  },
+  {
+    "heading": "\u6982\u8ff0",
+    "section_id": "section-item-002",
+    "semantic_role": "section",
+    "source_id": "item"
+  }
+]

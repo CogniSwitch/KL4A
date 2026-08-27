@@ -1,0 +1,44 @@
+[
+  {
+    "heading": "Escalation Runbook",
+    "section_id": "section-escalation-runbook-001",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook"
+  },
+  {
+    "heading": "Initial Notification",
+    "section_id": "section-escalation-runbook-002",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook"
+  },
+  {
+    "heading": "Secondary Contact",
+    "section_id": "section-escalation-runbook-003",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook"
+  },
+  {
+    "heading": "Vendor Escalation",
+    "section_id": "section-escalation-runbook-004",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook"
+  },
+  {
+    "heading": "Legal Notification",
+    "section_id": "section-escalation-runbook-005",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook"
+  },
+  {
+    "heading": "Patient Communication",
+    "section_id": "section-escalation-runbook-006",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook"
+  },
+  {
+    "heading": "Post-Incident Review",
+    "section_id": "section-escalation-runbook-007",
+    "semantic_role": "section",
+    "source_id": "escalation-runbook"
+  }
+]

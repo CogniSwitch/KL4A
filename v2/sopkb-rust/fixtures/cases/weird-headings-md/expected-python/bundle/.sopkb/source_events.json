@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-weird-headings-<TS>",
+    "path": "<ABS>",
+    "source_id": "weird-headings",
+    "source_version_id": "weird-headings:v1",
+    "timestamp": "<TS>"
+  }
+]

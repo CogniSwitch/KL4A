@@ -1,0 +1,95 @@
+{
+  "edges": [
+    {
+      "source": "bom-doc",
+      "target": "section-bom-doc-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-bom-doc-001",
+      "target": "concept-document",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-bom-doc-001",
+      "target": "ki-bom-doc-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-bom-doc-v1-000001",
+      "target": "evidence-ki-bom-doc-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-bom-doc-v1-000001",
+      "target": "kr-ki-bom-doc-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-document",
+      "target": "kr-ki-bom-doc-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-bom-doc-v1-000001",
+      "target": "evidence-ki-bom-doc-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-bom-doc-v1-000001",
+      "target": "rule-ki-bom-doc-v1-000001-confirm-patient-identity",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-bom-doc-v1-000001",
+      "target": "rule-ki-bom-doc-v1-000001-confirm-patient-identity",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-bom-doc-v1-000001-confirm-patient-identity",
+      "target": "evidence-ki-bom-doc-v1-000001",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "bom-doc",
+      "label": "bom doc",
+      "source_version_id": "bom-doc:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-bom-doc-001",
+      "label": "Document",
+      "source_version_id": "bom-doc:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-document",
+      "label": "Document",
+      "type": "concept"
+    },
+    {
+      "id": "ki-bom-doc-v1-000001",
+      "label": "Document",
+      "lifecycle_status": "active",
+      "source_version_id": "bom-doc:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-bom-doc-v1-000001",
+      "label": "Staff must confirm patient identity before proceeding.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-bom-doc-v1-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-bom-doc-v1-000001-confirm-patient-identity",
+      "label": "Confirm patient identity",
+      "type": "decision_rule"
+    }
+  ]
+}

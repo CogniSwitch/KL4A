@@ -1,0 +1,22 @@
+[
+  {
+    "end_pos": 90,
+    "heading": "Quarterly Review",
+    "id": "section-quarterly-review-001",
+    "normalized_path": "sources/normalized/quarterly-review__v1.md",
+    "semantic_role": "section",
+    "source_id": "quarterly-review",
+    "source_version_id": "quarterly-review:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 339,
+    "heading": "Closing Notes",
+    "id": "section-quarterly-review-002",
+    "normalized_path": "sources/normalized/quarterly-review__v1.md",
+    "semantic_role": "section",
+    "source_id": "quarterly-review",
+    "source_version_id": "quarterly-review:v1",
+    "start_pos": 90
+  }
+]

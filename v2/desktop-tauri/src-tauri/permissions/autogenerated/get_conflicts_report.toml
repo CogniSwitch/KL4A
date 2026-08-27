@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-conflicts-report"
+description = "Enables the get_conflicts_report command without any pre-configured scope."
+commands.allow = ["get_conflicts_report"]
+
+[[permission]]
+identifier = "deny-get-conflicts-report"
+description = "Denies the get_conflicts_report command without any pre-configured scope."
+commands.deny = ["get_conflicts_report"]

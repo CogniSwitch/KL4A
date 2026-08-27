@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-export-diagnostics-bundle"
+description = "Enables the export_diagnostics_bundle command without any pre-configured scope."
+commands.allow = ["export_diagnostics_bundle"]
+
+[[permission]]
+identifier = "deny-export-diagnostics-bundle"
+description = "Denies the export_diagnostics_bundle command without any pre-configured scope."
+commands.deny = ["export_diagnostics_bundle"]

@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:497fafac4587a744cb12d78c070736513bd3319852fa7470655840e53bbbc7f0",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/glp1-intake__v1.md",
+      "original_path": "sources/originals/glp1-intake__v1.md",
+      "size_bytes": 315,
+      "source_id": "glp1-intake",
+      "source_version_id": "glp1-intake:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

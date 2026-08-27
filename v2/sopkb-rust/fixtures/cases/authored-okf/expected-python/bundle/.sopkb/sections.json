@@ -1,0 +1,22 @@
+[
+  {
+    "end_pos": 21,
+    "heading": "Authored OKF Demo",
+    "id": "section-authored-okf-source-001",
+    "normalized_path": "sources/normalized/authored-okf-source__v1.md",
+    "semantic_role": "section",
+    "source_id": "authored-okf-source",
+    "source_version_id": "authored-okf-source:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 124,
+    "heading": "Requirements",
+    "id": "section-authored-okf-source-002",
+    "normalized_path": "sources/normalized/authored-okf-source__v1.md",
+    "semantic_role": "policy",
+    "source_id": "authored-okf-source",
+    "source_version_id": "authored-okf-source:v1",
+    "start_pos": 21
+  }
+]

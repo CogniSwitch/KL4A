@@ -1,0 +1,65 @@
+{
+  "sources": [
+    {
+      "checksum": "sha256:38ef67176baff96361fc84c36e57e10269e0bbfe1048d191866d13c612b31a9c",
+      "id": "follow-up-monitoring-procedure-38ef67176baf",
+      "metadata": {
+        "source_filename": "follow_up_monitoring_procedure.md"
+      },
+      "modified_time": "2026-08-10T11:18:29Z",
+      "normalized_path": "sources/normalized/follow-up-monitoring-procedure-38ef67176baf.md",
+      "original_path": "sources/originals/follow-up-monitoring-procedure-38ef67176baf.md",
+      "parse_status": "normalized",
+      "size": 427,
+      "title": "follow up monitoring procedure",
+      "type": "markdown",
+      "warnings": []
+    },
+    {
+      "checksum": "sha256:a3cca5c9520a14fefb7daa776d51ec18363f0f76278b0182586887f72fafa5d5",
+      "id": "primary-care-glp1-sop-a3cca5c9520a",
+      "metadata": {
+        "source_filename": "primary_care_glp1_sop.md"
+      },
+      "modified_time": "2026-08-10T11:18:29Z",
+      "normalized_path": "sources/normalized/primary-care-glp1-sop-a3cca5c9520a.md",
+      "original_path": "sources/originals/primary-care-glp1-sop-a3cca5c9520a.md",
+      "parse_status": "normalized",
+      "size": 685,
+      "title": "primary care glp1 sop",
+      "type": "markdown",
+      "warnings": []
+    },
+    {
+      "checksum": "sha256:d2229b5da05c2a08b2b5d3155179be119a5cb9994185a3a24c7687bc0b61a28c",
+      "id": "prior-authorization-workflow-d2229b5da05c",
+      "metadata": {
+        "source_filename": "prior_authorization_workflow.md"
+      },
+      "modified_time": "2026-08-10T11:18:29Z",
+      "normalized_path": "sources/normalized/prior-authorization-workflow-d2229b5da05c.md",
+      "original_path": "sources/originals/prior-authorization-workflow-d2229b5da05c.md",
+      "parse_status": "normalized",
+      "size": 451,
+      "title": "prior authorization workflow",
+      "type": "markdown",
+      "warnings": []
+    },
+    {
+      "checksum": "sha256:60f764ab3c8def954e6cd0e389c6195572f7ab024efa7a9ea755ac72ffbdf93c",
+      "id": "safety-policy-60f764ab3c8d",
+      "metadata": {
+        "source_filename": "safety_policy.md"
+      },
+      "modified_time": "2026-08-10T11:18:29Z",
+      "normalized_path": "sources/normalized/safety-policy-60f764ab3c8d.md",
+      "original_path": "sources/originals/safety-policy-60f764ab3c8d.md",
+      "parse_status": "normalized",
+      "size": 395,
+      "title": "safety policy",
+      "type": "markdown",
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

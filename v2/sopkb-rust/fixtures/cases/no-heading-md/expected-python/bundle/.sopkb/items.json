@@ -1,0 +1,25 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 65,
+    "id": "ki-no-heading-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must confirm patient identity before dispensing medication.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-no-heading-001",
+    "source_id": "no-heading",
+    "source_text": "Staff must confirm patient identity before dispensing medication.",
+    "source_version_id": "no-heading:v1",
+    "span_status": "exact",
+    "start_pos": 0,
+    "subject": "Document",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

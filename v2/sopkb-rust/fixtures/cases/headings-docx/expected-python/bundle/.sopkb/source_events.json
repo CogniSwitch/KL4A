@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-vendor-onboarding-<TS>",
+    "path": "<ABS>",
+    "source_id": "vendor-onboarding",
+    "source_version_id": "vendor-onboarding:v1",
+    "timestamp": "<TS>"
+  }
+]

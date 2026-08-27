@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-bundle-prompt-overrides"
+description = "Enables the set_bundle_prompt_overrides command without any pre-configured scope."
+commands.allow = ["set_bundle_prompt_overrides"]
+
+[[permission]]
+identifier = "deny-set-bundle-prompt-overrides"
+description = "Denies the set_bundle_prompt_overrides command without any pre-configured scope."
+commands.deny = ["set_bundle_prompt_overrides"]

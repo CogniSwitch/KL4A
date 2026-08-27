@@ -1,0 +1,20 @@
+id: bundle
+version: 0.1.0
+title: No Heading Case
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: <TS>
+updated_at: <TS>
+sources:
+- id: no-heading
+  type: markdown
+  path: sources/originals/no-heading__v1.md
+  source_version_id: no-heading:v1
+  status: active
+exports:
+- type: graph_json
+  path: ../exports/bundle/graph/graph.json
+- type: rdf
+  path: ../exports/bundle/graph/triples.ttl
+okf_version: '0.2'
