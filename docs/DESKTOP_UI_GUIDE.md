@@ -6,7 +6,7 @@ title: Desktop UI Guide
 
 This guide walks through every screen of the KL4A Workbench desktop app. It's a Tauri v2
 native shell: a React single-page app talks directly, in-process, to a Rust command layer —
-no HTTP server, no sidecar process, no Python involved at runtime. See the
+no HTTP server, no sidecar process, no separate runtime to install. See the
 [Quickstart](quickstart.md) for how to get the app.
 
 !!! note "About the images below"

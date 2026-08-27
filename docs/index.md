@@ -48,9 +48,9 @@ engineer in the room:
 
 ## Reference bundle
 
-A synthetic, fully worked GLP-1 healthcare example lives at [`examples/glp1-healthcare`](../examples/glp1-healthcare). It includes:
+A synthetic, fully worked GLP-1 healthcare example lives at [`examples/glp1-healthcare`](https://github.com/CogniSwitch/KL4A/tree/main/examples/glp1-healthcare). It includes:
 
-- Multiple SOP-like sources, with DOCX/PDF ingestion
+- Multiple SOP-like sources
 - Evidence-backed proposed knowledge
 - Persisted human-in-the-loop review states
 - Conflict and freshness reports
@@ -67,8 +67,8 @@ A synthetic, fully worked GLP-1 healthcare example lives at [`examples/glp1-heal
     concern — a downstream layer this project doesn't try to be. KL4A is a tool for the
     layer where ontology projects actually fail — this is how your SOPs get ready for
     that layer, whether or not you ever adopt anything downstream of it.
-    See `GOVERNANCE.md` for exactly where that line sits, why, and who
-    maintains this project.
+    See [Governance](GOVERNANCE.md) for exactly where that line sits, why,
+    and who maintains this project.
 
 ## Guides
 
@@ -80,12 +80,11 @@ A synthetic, fully worked GLP-1 healthcare example lives at [`examples/glp1-heal
 
 ## Project
 
-- **[Contributing](../CONTRIBUTING.md)** — dev setup, tests, PR process, DCO sign-off.
-- **[Governance](../GOVERNANCE.md)** — project governance and the open-source/enterprise boundary.
-- **[Roadmap](../ROADMAP.md)** — where the project is headed.
-- **[License](../LICENSE)** — Apache-2.0.
+- **[Contributing](CONTRIBUTING.md)** — dev setup, tests, PR process, DCO sign-off.
+- **[Governance](GOVERNANCE.md)** — project governance and the open-source/enterprise boundary.
+- **[License](https://github.com/CogniSwitch/KL4A/blob/main/LICENSE)** — Apache-2.0.
 - **[GitHub repository](https://github.com/CogniSwitch/KL4A)**
 
 ---
 
-*KL4A · Apache-2.0 · maintainers & boundary: see `GOVERNANCE.md`*
+*KL4A · Apache-2.0 · maintainers & boundary: see [Governance](GOVERNANCE.md)*

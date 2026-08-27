@@ -37,15 +37,15 @@ See the [Desktop UI Guide](DESKTOP_UI_GUIDE.md) for a full screen-by-screen tour
 
 ## A richer example
 
-Once you're comfortable with the app, point it at the included **GLP-1 Healthcare
-SOP** reference bundle — it exercises Markdown, DOCX, and PDF ingestion together,
-plus conflict/freshness reporting and full export:
+Once you're comfortable with the app, open the included **GLP-1 Healthcare
+SOP** reference bundle — a finished, evidence-linked bundle with persisted review
+states, conflict/freshness reporting, and full OKF/graph/RDF export:
 
-→ **[examples/glp1-healthcare/README.md](../examples/glp1-healthcare/README.md)**
+→ **[examples/glp1-healthcare](https://github.com/CogniSwitch/KL4A/tree/main/examples/glp1-healthcare)**
 
 ## Next steps
 
 - [Desktop UI Guide](DESKTOP_UI_GUIDE.md) — the desktop app, screen by screen.
 - [MCP Server](MCP_SERVER.md) — connecting an agent to a bundle you've built.
 - [FAQ.md](FAQ.md) — common setup and ingestion problems.
-- [CONTRIBUTING.md](../CONTRIBUTING.md) — if you want to work on KL4A itself.
+- [Contributing](CONTRIBUTING.md) — if you want to work on KL4A itself.

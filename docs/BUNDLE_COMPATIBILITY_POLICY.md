@@ -93,7 +93,7 @@ both may need to be read together when reasoning about compatibility.
     - A required `sopkb` frontmatter field for an existing document type is
       removed, renamed, or given a different meaning.
     - A previously valid document would fail bundle validation
-      (`sopkb validate`) under the new spec without modification.
+      (`sopkb-cli validate`) under the new spec without modification.
     - The semantics of an existing field change such that old and new bundles
       disagree on meaning for the same field name (e.g. a status enum value is
       redefined rather than extended).
@@ -119,7 +119,7 @@ that document should be updated accordingly in the same change.
         - what changed
         - why
         - which bundles are affected (by prior bundle-format version)
-        - the concrete steps (manual or via a `sopkb migrate`-style tool, once one exists) to bring an existing bundle up to the new format version
+        - the concrete steps (manual or via a `sopkb-cli migrate`-style tool, once one exists) to bring an existing bundle up to the new format version
     - The migration note should live alongside the bundle-format history (for
       example under a `docs/bundle-migrations/` directory, added when the first
       breaking change actually happens) and should be linked from the updated

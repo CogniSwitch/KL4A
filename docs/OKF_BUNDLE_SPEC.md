@@ -149,7 +149,7 @@ workbench/
 ## 4. Export Semantics
 
 !!! note "Export is not what makes a bundle OKF"
-    `sopkb export` MUST NOT be required to create an OKF bundle. The bundle is already OKF.
+    `sopkb-cli export` MUST NOT be required to create an OKF bundle. The bundle is already OKF.
 
 `sopkb-cli export` is reserved for derivative or packaged representations. Implemented today:
 
@@ -649,7 +649,7 @@ Implementation rules:
 3. Keep `sources/originals/` and `sources/normalized/` as provenance assets.
 4. Make CLI, web, MCP, and agent APIs read canonical OKF documents or `.sopkb` indexes derived from them.
 5. Keep derived JSON indexes as caches that can be rebuilt from OKF.
-6. Reserve `sopkb export` for `graph-json`, `rdf`, archive/package, and downstream-specific formats.
+6. Reserve `sopkb-cli export` for `graph-json`, `rdf`, archive/package, and downstream-specific formats.
 
 ## 20. Implementation Mapping
 
@@ -661,4 +661,4 @@ Target implementation entry points:
 | OKF document writer | `v2/sopkb-rust/crates/sopkb-export/src/sync.rs` | `sync_okf_bundle()` writes the canonical OKF tree directly at the bundle root (`export_dir = bundle_dir`) — this is done, not pending. |
 | Agent consumption layer | `v2/sopkb-rust/crates/sopkb-derive/src/context.rs` | |
 | MCP read-only layer | `v2/sopkb-rust/bin/sopkb-mcp/src/` (`jsonrpc.rs`, `tools.rs`) | |
-| Structural tests | `v2/sopkb-rust/crates/sopkb-export/tests/phase5_v1_diff.rs`, `.../sopkb-derive/tests/phase4_v1_diff.rs` | Byte-level differential tests against the Python reference implementation's real output. |
+| Structural tests | `v2/sopkb-rust/crates/sopkb-export/tests/phase5_v1_diff.rs`, `.../sopkb-derive/tests/phase4_v1_diff.rs` | Byte-level differential tests against the frozen reference output checked into the fixtures tree. |

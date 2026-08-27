@@ -7,7 +7,6 @@ This example is intended for demos, tests, and local development.
 It demonstrates:
 
 - multiple SOP-like source documents,
-- generated DOCX and PDF input sources,
 - SOP vs policy vs workflow differences,
 - markdown source normalization,
 - evidence-backed proposed knowledge,
@@ -16,23 +15,27 @@ It demonstrates:
 - OKF, graph JSON, and RDF/TTL exports,
 - local agent query examples.
 
-Rebuild from the repository root:
+The bundle under `bundle/` is checked in already built — there's nothing to
+generate before you can use it. Its markdown authoring sources live in
+`sources/`.
 
-```powershell
-python examples\glp1-healthcare\rebuild_reference_bundle.py
+## Opening it
+
+The simplest way in is the desktop app: launch **KL4A Workbench** and, on the
+bundle picker, point it at `examples/glp1-healthcare/bundle`. See the
+[Quickstart](../../docs/quickstart.md) for install links.
+
+To query it from the command line instead, see
+[`agent_queries.md`](agent_queries.md).
+
+To serve the same UI in a browser, run the `sopkb-server` binary — it prints a
+bearer token and a pre-filled URL on startup:
+
+```bash
+sopkb-server --bundle-dir examples/glp1-healthcare/bundle
 ```
 
-The rebuild script creates `generated_sources/` from the markdown authoring sources so the bundle demonstrates markdown, DOCX, and PDF ingestion without requiring hand-maintained binary source files.
+It binds `127.0.0.1:4173` by default; override with `--bind`.
 
-Then launch the local workbench:
-
-```powershell
-cd tools\sopkb
-python -m sopkb.cli serve ..\..\examples\glp1-healthcare\bundle --port 8765
-```
-
-Open:
-
-```text
-http://127.0.0.1:8765
-```
+To point an agent at the bundle over MCP, see
+[`docs/MCP_SERVER.md`](../../docs/MCP_SERVER.md).

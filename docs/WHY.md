@@ -50,7 +50,7 @@ what an agent is being told. A claim about provenance that you cannot verify
 yourself is not much of a claim.
 
 Keeping bundle creation and review open also keeps us honest about where the
-commercial line sits — see `GOVERNANCE.md` for exactly where that boundary is
+commercial line sits — see [Governance](GOVERNANCE.md) for exactly where that boundary is
 drawn and why.
 
 ---

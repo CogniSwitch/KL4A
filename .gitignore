@@ -6,3 +6,6 @@ dist-ssr/
 dist-web/
 !v2/desktop-tauri/dist/
 !v2/desktop-tauri/dist/**
+
+# MkDocs build output (mkdocs.yml site_dir)
+site/

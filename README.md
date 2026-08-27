@@ -12,7 +12,7 @@ The result is a plain-file artifact: Markdown and YAML frontmatter, readable in 
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-A native desktop app (Windows/macOS/Linux, built on Tauri) — one application to install, not a server to stand up or a package to `pip install`.
+A native desktop app (Windows/macOS/Linux, built on Tauri) — one application to install, not a server to stand up or a runtime to provision.
 
 ## Why KL4A exists
 
