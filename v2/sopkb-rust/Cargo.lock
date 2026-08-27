@@ -1606,7 +1606,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-agent"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "serde_json",
  "serial_test",
@@ -1620,7 +1620,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-cli"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "clap",
  "serde_json",
@@ -1639,7 +1639,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-config"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "serde_json",
  "serial_test",
@@ -1650,7 +1650,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-core"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "chrono",
  "lopdf",
@@ -1666,7 +1666,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-derive"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "serde_json",
  "sopkb-core",
@@ -1676,7 +1676,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-export"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "regex",
  "serde_json",
@@ -1688,7 +1688,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-fmt"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "once_cell",
  "regex",
@@ -1697,7 +1697,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-llm"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "serde_json",
  "serial_test",
@@ -1710,7 +1710,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-mcp"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "serde_json",
  "sopkb-core",
@@ -1722,7 +1722,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-mining"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "once_cell",
  "regex",
@@ -1737,7 +1737,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-review"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "regex",
  "serde_json",
@@ -1750,7 +1750,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-server"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "axum",
  "futures-util",
@@ -1776,7 +1776,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-workbench"
-version = "0.1.0"
+version = "0.0.1-alpha"
 dependencies = [
  "regex",
  "serde",

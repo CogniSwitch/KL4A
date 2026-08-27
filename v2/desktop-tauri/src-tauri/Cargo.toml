@@ -1,6 +1,6 @@
 [package]
 name = "sopkb-desktop-tauri"
-version = "0.1.0"
+version = "0.0.1-alpha"
 description = "Tauri desktop shell for the SOP Knowledge Workbench"
 authors = ["CogniSwitch"]
 license = "Apache-2.0"

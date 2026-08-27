@@ -24,6 +24,6 @@ members = [
 # tree entirely, so no `exclude` entry is needed for it.
 
 [workspace.package]
-version = "0.1.0"
+version = "0.0.1-alpha"
 edition = "2021"
-license = "MIT"
+license = "Apache-2.0"
