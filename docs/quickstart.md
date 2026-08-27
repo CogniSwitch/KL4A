@@ -10,14 +10,11 @@ happens inside the app itself. There's no CLI you need to touch to get started.
 
 ## Get the app
 
-<!-- TODO: replace the three placeholder hrefs below with the real release
-     asset URLs once the first release is published. -->
-
 | Platform | Download |
 |---|---|
-| **Windows** | [⬇ Installer (`.exe`)](../KL4A-WB-windows) |
-| **macOS** | [⬇ Disk image (`.dmg`)](../KL4A-WB-macos) — universal, runs on Apple Silicon and Intel |
-| **Linux** | [⬇ AppImage](../KL4A-WB-linux) |
+| **Windows** | [⬇ Installer (`.exe`)](https://github.com/CogniSwitch/KL4A/releases/download/0.0.1-alpha/KL4A.Workbench_0.1.0_x64-setup.exe) |
+| **macOS** | [⬇ Disk image (`.dmg`)](https://github.com/CogniSwitch/KL4A/releases/download/0.0.1-alpha/KL4A.Workbench_0.1.0_universal.dmg) — universal, runs on Apple Silicon and Intel |
+| **Linux** | [⬇ AppImage](https://github.com/CogniSwitch/KL4A/releases/download/0.0.1-alpha/KL4A.Workbench_0.1.0_amd64.AppImage) |
 
 !!! warning "The builds aren't code-signed yet"
     No Apple Developer ID or Windows signing certificate is set up for this project
