@@ -4,9 +4,22 @@
 
 **Create OKF-compliant knowledge bundles from your SOP docs, and enable your agents to use them.** Every claim carries the exact source span it came from, and nothing is marked `verified` until a human approves it.
 
-Feed it a PDF, a DOCX, or a plain-text SOP — real, unstructured prose, not a website's DOM or a codebase's AST. It normalizes the document, extracts obligation-shaped claims (`must`, `shall`, `should record`, ...), and attaches each one to the exact byte range of the source sentence it came from. Every approve/reject/edit is recorded as its own event, with a reviewer, a rationale, and a before/after diff, directly in the bundle. Once approved, the claim's OKF v0.2 trust fields (`provenance`, `verified`, `lifecycle_status`) are populated with who verified it and when — not left blank for someone downstream to fill in by hand.
+Feed it a PDF, a DOCX, or a plain-text SOP — real, unstructured prose, not a
+website's DOM or a codebase's AST. It then:
 
-The result is a plain-file artifact: Markdown and YAML frontmatter, readable in a text editor, diffable with `git`, queryable by an agent over MCP or the CLI without a database or a server standing between them and the source of truth.
+- Normalizes the document into clean Markdown.
+- Extracts obligation-shaped claims (`must`, `shall`, `should record`, ...) and
+  attaches each one to the exact byte range of the source sentence it came from.
+- Records every approve, reject, and edit as its own event, with a reviewer, a
+  rationale, and a before/after diff, directly in the bundle.
+- Populates the claim's OKF v0.2 trust fields (`provenance`, `verified`,
+  `lifecycle_status`) on approval with who verified it and when, rather than
+  leaving them blank for someone downstream to fill in by hand.
+
+**The result is a plain-file artifact.** Markdown with YAML frontmatter:
+readable in a text editor, diffable with `git`, and queryable by an agent over
+MCP or the CLI — with no database, and no server standing between them and the
+source of truth.
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
