@@ -1,8 +1,8 @@
 <img src="docs/images/kl4a-logo-light.svg" alt="KL4A" width="96">
 
-# KL4A
+# Knowledge Layer For Agents (KL4A)
 
-*Knowledge Layer For Agents — an independent open-source project.*
+*An independent open-source project.*
 
 **Create OKF-compliant knowledge bundles from your SOP docs, and enable your agents to use them.** Every claim carries the exact source span it came from, and nothing is marked `verified` until a human approves it.
 
