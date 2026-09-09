@@ -5,6 +5,7 @@ edition.workspace = true
 license.workspace = true
 
 [features]
+default = ["pdf", "docx"]
 docx = ["dep:zip", "dep:quick-xml"]
 # PDF normalization. Per CATCHUP_PLAN.md D2 this deliberately uses `lopdf` for
 # low-level PDF structure only -- character positioning and all line/word
