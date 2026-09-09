@@ -1,4 +1,4 @@
 # Extraction Summary
 
-Sections: 12
+Sections: 13
 Knowledge items: 16

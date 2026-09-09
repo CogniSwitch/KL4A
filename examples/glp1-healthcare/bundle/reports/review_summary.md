@@ -1,8 +1,7 @@
 # Review Summary
 
-- approved: 1
+- approved: 2
 - deferred: 1
-- edited: 1
 - proposed: 12
 - rejected: 1
 

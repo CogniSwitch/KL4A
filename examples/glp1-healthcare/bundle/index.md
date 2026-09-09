@@ -20,6 +20,6 @@ This OKF bundle exposes source material, normalized sections, reviewed knowledge
 
 ## Bundle Summary
 
-- Sources: 21
-- Sections: 519
+- Sources: 4
+- Sections: 13
 - Knowledge pieces: 16

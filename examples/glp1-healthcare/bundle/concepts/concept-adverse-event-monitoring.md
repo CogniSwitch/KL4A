@@ -8,7 +8,7 @@ tags:
 status: stable
 generated:
   actor: sopkb/0.1.0
-  date: '2026-08-10'
+  date: '2026-09-09'
 sopkb:
   concept_id: concept-adverse-event-monitoring
 ---
@@ -16,12 +16,12 @@ sopkb:
 
 ## Knowledge Pieces
 
-- [Clinicians should record severe gastrointestinal symptoms, dehydration risk, and suspected pancreatitis symptoms.](../knowledge/ki-safety-policy-01ff452b1d44-000016.md)
+- [Clinicians should record severe gastrointestinal symptoms, dehydration risk, and suspected pancreatitis symptoms.](../knowledge/ki-safety-policy-v1-000016.md)
 
 ## Knowledge Relations
 
-- [kr-ki-safety-policy-01ff452b1d44-000016](../relations/kr-ki-safety-policy-01ff452b1d44-000016.md)
+- [kr-ki-safety-policy-v1-000016](../relations/kr-ki-safety-policy-v1-000016.md)
 
 ## Source Sections
 
-- No normalized sections.
+- [safety policy](../sections/safety-policy/section-safety-policy-003.md)

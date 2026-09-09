@@ -4,21 +4,29 @@ title: GLP-1 Healthcare SOP Reference Bundle
 profile: sop-knowledge-bundle
 profile_version: 0.2.0
 status: draft
-created_at: '2026-08-01T06:41:01Z'
-updated_at: '2026-08-10T13:02:49Z'
+created_at: '2026-09-08T08:03:13Z'
+updated_at: '2026-09-09T05:27:04Z'
 sources:
-- id: follow-up-monitoring-procedure-38ef67176baf
+- id: follow-up-monitoring-procedure
   type: markdown
-  path: sources/originals/follow-up-monitoring-procedure-38ef67176baf.md
-- id: primary-care-glp1-sop-a3cca5c9520a
+  path: sources/originals/follow-up-monitoring-procedure__v1.md
+  source_version_id: follow-up-monitoring-procedure:v1
+  status: active
+- id: primary-care-glp1-sop
   type: markdown
-  path: sources/originals/primary-care-glp1-sop-a3cca5c9520a.md
-- id: prior-authorization-workflow-d2229b5da05c
+  path: sources/originals/primary-care-glp1-sop__v1.md
+  source_version_id: primary-care-glp1-sop:v1
+  status: active
+- id: prior-authorization-workflow
   type: markdown
-  path: sources/originals/prior-authorization-workflow-d2229b5da05c.md
-- id: safety-policy-60f764ab3c8d
+  path: sources/originals/prior-authorization-workflow__v1.md
+  source_version_id: prior-authorization-workflow:v1
+  status: active
+- id: safety-policy
   type: markdown
-  path: sources/originals/safety-policy-60f764ab3c8d.md
+  path: sources/originals/safety-policy__v1.md
+  source_version_id: safety-policy:v1
+  status: active
 exports:
 - type: graph_json
   path: ../exports/bundle/graph/graph.json
