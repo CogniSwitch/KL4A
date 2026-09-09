@@ -8,7 +8,7 @@ tags:
 status: stable
 generated:
   actor: sopkb/0.1.0
-  date: '2026-08-10'
+  date: '2026-09-09'
 sopkb:
   concept_id: concept-intake-requirements
 ---
@@ -16,14 +16,14 @@ sopkb:
 
 ## Knowledge Pieces
 
-- [Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility.](../knowledge/ki-primary-care-glp1-sop-c6cb3b4ec11d-000005.md)
-- [Clinicians must document current medications, diabetes history, weight history, and relevant comorbidities.](../knowledge/ki-primary-care-glp1-sop-c6cb3b4ec11d-000006.md)
+- [Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility.](../knowledge/ki-primary-care-glp1-sop-v1-000005.md)
+- [Clinicians must document current medications, diabetes history, weight history, and relevant comorbidities.](../knowledge/ki-primary-care-glp1-sop-v1-000006.md)
 
 ## Knowledge Relations
 
-- [kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005](../relations/kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000005.md)
-- [kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000006](../relations/kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000006.md)
+- [kr-ki-primary-care-glp1-sop-v1-000005](../relations/kr-ki-primary-care-glp1-sop-v1-000005.md)
+- [kr-ki-primary-care-glp1-sop-v1-000006](../relations/kr-ki-primary-care-glp1-sop-v1-000006.md)
 
 ## Source Sections
 
-- No normalized sections.
+- [primary care glp1 sop](../sections/primary-care-glp1-sop/section-primary-care-glp1-sop-002.md)

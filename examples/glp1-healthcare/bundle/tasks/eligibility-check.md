@@ -10,7 +10,7 @@ tags:
 status: stable
 generated:
   actor: sopkb/0.1.0
-  date: '2026-08-10'
+  date: '2026-09-09'
 sopkb:
   task_id: eligibility-check
   query_terms:

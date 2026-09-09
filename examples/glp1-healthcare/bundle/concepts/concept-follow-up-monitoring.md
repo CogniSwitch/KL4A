@@ -1,14 +1,14 @@
 ---
 type: SOP Concept
 title: Follow-up Monitoring
-description: Concept connected to 1 knowledge piece(s).
+description: Concept connected to 3 knowledge piece(s).
 resource: concepts/concept-follow-up-monitoring.md
 tags:
 - concept
 status: stable
 generated:
   actor: sopkb/0.1.0
-  date: '2026-08-10'
+  date: '2026-09-09'
 sopkb:
   concept_id: concept-follow-up-monitoring
 ---
@@ -16,12 +16,16 @@ sopkb:
 
 ## Knowledge Pieces
 
-- [Patients should receive follow-up contact within 30 days after GLP-1 therapy initiation.](../knowledge/ki-primary-care-glp1-sop-c6cb3b4ec11d-000009.md)
+- [Patients should receive follow-up contact within 14 days after GLP-1 therapy initiation.](../knowledge/ki-follow-up-monitoring-procedure-v1-000001.md)
+- [Staff must record dose tolerance and adverse event symptoms during follow-up.](../knowledge/ki-follow-up-monitoring-procedure-v1-000002.md)
+- [Patients should receive follow-up contact within 30 days after GLP-1 therapy initiation.](../knowledge/ki-primary-care-glp1-sop-v1-000009.md)
 
 ## Knowledge Relations
 
-- [kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000009](../relations/kr-ki-primary-care-glp1-sop-c6cb3b4ec11d-000009.md)
+- [kr-ki-follow-up-monitoring-procedure-v1-000001](../relations/kr-ki-follow-up-monitoring-procedure-v1-000001.md)
+- [kr-ki-follow-up-monitoring-procedure-v1-000002](../relations/kr-ki-follow-up-monitoring-procedure-v1-000002.md)
+- [kr-ki-primary-care-glp1-sop-v1-000009](../relations/kr-ki-primary-care-glp1-sop-v1-000009.md)
 
 ## Source Sections
 
-- No normalized sections.
+- [primary care glp1 sop](../sections/primary-care-glp1-sop/section-primary-care-glp1-sop-004.md)

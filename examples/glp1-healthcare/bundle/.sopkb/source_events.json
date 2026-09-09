@@ -1,0 +1,38 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-follow-up-monitoring-procedure-20260908080314",
+    "path": "E:/Office_Work/CogniSwitch/SOP-Knowledge-Workbench/KL4A-Public/KL4A/examples/glp1-healthcare/sources\\follow_up_monitoring_procedure.md",
+    "source_id": "follow-up-monitoring-procedure",
+    "source_version_id": "follow-up-monitoring-procedure:v1",
+    "timestamp": "2026-09-08T08:03:14Z"
+  },
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-primary-care-glp1-sop-20260908080314",
+    "path": "E:/Office_Work/CogniSwitch/SOP-Knowledge-Workbench/KL4A-Public/KL4A/examples/glp1-healthcare/sources\\primary_care_glp1_sop.md",
+    "source_id": "primary-care-glp1-sop",
+    "source_version_id": "primary-care-glp1-sop:v1",
+    "timestamp": "2026-09-08T08:03:14Z"
+  },
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-prior-authorization-workflow-20260908080314",
+    "path": "E:/Office_Work/CogniSwitch/SOP-Knowledge-Workbench/KL4A-Public/KL4A/examples/glp1-healthcare/sources\\prior_authorization_workflow.md",
+    "source_id": "prior-authorization-workflow",
+    "source_version_id": "prior-authorization-workflow:v1",
+    "timestamp": "2026-09-08T08:03:14Z"
+  },
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-safety-policy-20260908080314",
+    "path": "E:/Office_Work/CogniSwitch/SOP-Knowledge-Workbench/KL4A-Public/KL4A/examples/glp1-healthcare/sources\\safety_policy.md",
+    "source_id": "safety-policy",
+    "source_version_id": "safety-policy:v1",
+    "timestamp": "2026-09-08T08:03:14Z"
+  }
+]

@@ -1,7 +1,11 @@
 [
   {
-    "id": "entity-page-1",
-    "label": "Page 1"
+    "id": "entity-follow-up-monitoring",
+    "label": "Follow-up Monitoring"
+  },
+  {
+    "id": "entity-dose-titration",
+    "label": "Dose Titration"
   },
   {
     "id": "entity-intake-requirements",
@@ -10,10 +14,6 @@
   {
     "id": "entity-contraindication-screening",
     "label": "Contraindication Screening"
-  },
-  {
-    "id": "entity-follow-up-monitoring",
-    "label": "Follow-up Monitoring"
   },
   {
     "id": "entity-prior-authorization-requirements",
