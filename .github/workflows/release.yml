@@ -12,8 +12,12 @@ name: Release
 #
 # This replaces main's release.yml entirely: that one builds a Python
 # sdist/wheel and publishes to PyPI via trusted publishing. There is no
-# Python package on this branch, so there is nothing to publish to PyPI --
-# the shippable artifact here is the desktop app.
+# Python package on this branch, so there is nothing to publish to PyPI.
+# What ships here is the desktop app plus the two standalone binaries --
+# sopkb-cli and sopkb-mcp. Nothing is published to crates.io: the Rust
+# manifest is a virtual workspace and the library crates carry no
+# `description`, both of which a crates.io publish requires, so that is a
+# separate piece of work rather than a step in this workflow.
 #
 # The build steps deliberately mirror macos-dmg.yml / windows-installer.yml /
 # linux-appimage.yml, which are verified-working workflows on this repo,
@@ -45,20 +49,6 @@ permissions:
   contents: write # required to create the Release and upload assets
 
 jobs:
-  publish: 
-    name: Publish to crates.io
-    runs-on: ubuntu-latest
-    environment: release  # Optional: for enhanced security
-    permissions:
-      id-token: write     # Required for OIDC token exchange
-    steps:
-    - uses: actions/checkout@v6
-    - uses: rust-lang/crates-io-auth-action@v1
-      id: auth
-    - run: cargo publish --manifest-path v2/sopkb-rust/Cargo.toml
-      env:
-        CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}  
-  
   build:
     name: Build (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
@@ -140,9 +130,96 @@ jobs:
           path: ${{ matrix.bundle_glob }}
           if-no-files-found: error
 
+  # sopkb-cli and sopkb-mcp have never been published anywhere, so the README's
+  # `claude mcp add kl4a -- sopkb-mcp <bundle>` could only be run by someone who
+  # had already built from source -- which is what the clone-to-download ratio
+  # shows people doing. Both are pure Rust with no system dependencies (only
+  # sopkb-server pulls reqwest, and that isn't shipped here), so unlike the
+  # desktop build above this needs no apt packages on Linux.
+  binaries:
+    name: CLI + MCP binaries (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            rust_targets: ""
+            asset_suffix: windows-x86_64
+          # Universal, so one download covers Apple Silicon and Intel -- same
+          # reasoning as the .dmg above, but done with lipo since these are
+          # plain binaries rather than an app bundle.
+          - os: macos-latest
+            rust_targets: "aarch64-apple-darwin,x86_64-apple-darwin"
+            asset_suffix: macos-universal
+          - os: ubuntu-latest
+            rust_targets: ""
+            asset_suffix: linux-x86_64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust_targets }}
+
+      - name: Cache Rust build artifacts
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: v2/sopkb-rust -> target
+
+      - name: Build release binaries
+        if: matrix.os != 'macos-latest'
+        working-directory: v2/sopkb-rust
+        run: cargo build --release -p sopkb-cli -p sopkb-mcp
+
+      - name: Build universal release binaries
+        if: matrix.os == 'macos-latest'
+        working-directory: v2/sopkb-rust
+        run: |
+          cargo build --release -p sopkb-cli -p sopkb-mcp --target aarch64-apple-darwin
+          cargo build --release -p sopkb-cli -p sopkb-mcp --target x86_64-apple-darwin
+          mkdir -p target/universal-release
+          for b in sopkb-cli sopkb-mcp; do
+            lipo -create -output "target/universal-release/$b" \
+              "target/aarch64-apple-darwin/release/$b" \
+              "target/x86_64-apple-darwin/release/$b"
+            lipo -info "target/universal-release/$b"
+          done
+
+      # Platform-suffixed names so the three uploads can coexist as release
+      # assets, and so a downloaded file still says what it runs on.
+      - name: Stage assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p staged
+          if [ "${{ matrix.os }}" = "macos-latest" ]; then
+            src="v2/sopkb-rust/target/universal-release"
+          else
+            src="v2/sopkb-rust/target/release"
+          fi
+          for b in sopkb-cli sopkb-mcp; do
+            if [ -f "$src/$b.exe" ]; then
+              cp "$src/$b.exe" "staged/$b-${{ matrix.asset_suffix }}.exe"
+            else
+              cp "$src/$b" "staged/$b-${{ matrix.asset_suffix }}"
+            fi
+          done
+          ls -l staged
+
+      - name: Upload binaries artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kl4a-binaries-${{ matrix.os }}
+          path: staged/*
+          if-no-files-found: error
+
   release:
     name: Publish GitHub Release
-    needs: build
+    needs: [build, binaries]
     runs-on: ubuntu-latest
     steps:
       - name: Download all build artifacts
