@@ -31,7 +31,16 @@ This command doesn't open a network port — it's a stdio server: it reads one J
 }
 ```
 
-Use an absolute path for the bundle — the client launches the process from its own working directory, not the bundle's. `"command": "sopkb-mcp"` only resolves if `sopkb-mcp` is on the `PATH` the client's subprocess inherits, which isn't guaranteed for a build-from-source checkout; if it can't be found, point `command` at the built binary directly instead (e.g. `v2/sopkb-rust/target/debug/sopkb-mcp.exe` on Windows, `v2/sopkb-rust/target/debug/sopkb-mcp` on macOS/Linux).
+Use an absolute path for the bundle - the client launches the process from its own working directory, not the bundle's.
+
+`"command": "sopkb-mcp"` only resolves if `sopkb-mcp` is on the `PATH` the client's subprocess inherits. A prebuilt binary ships with every [release](https://github.com/CogniSwitch/KL4A/releases/latest) - [Windows](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-windows-x86_64.exe), [macOS](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-macos-universal) (universal), [Linux](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-linux-x86_64) - so the usual fix is to download it, `chmod +x` it on macOS or Linux, and move it somewhere on your `PATH`:
+
+```bash
+chmod +x sopkb-mcp-linux-x86_64
+sudo mv sopkb-mcp-linux-x86_64 /usr/local/bin/sopkb-mcp
+```
+
+If you would rather not put it on the `PATH`, or you are working from a source checkout, point `command` at the binary directly instead - the downloaded file wherever you put it, or `v2/sopkb-rust/target/release/sopkb-mcp.exe` on Windows and `v2/sopkb-rust/target/release/sopkb-mcp` on macOS/Linux after a `cargo build --release -p sopkb-mcp`.
 
 In Claude Code, the equivalent one-liner is:
 
