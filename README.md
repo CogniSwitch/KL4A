@@ -33,15 +33,38 @@ KL4A's job is to turn that prose into small, sourced, checkable claims *before* 
 
 ## Quickstart
 
+### Download Desktop
+
 | Platform | Download |
 |---|---|
-| **Windows** | [⬇ Installer (`.exe`)](https://github.com/CogniSwitch/KL4A/releases/download/0.0.1-alpha/KL4A.Workbench_0.0.1-alpha_x64-setup.exe) |
-| **macOS** | [⬇ Disk image (`.dmg`)](https://github.com/CogniSwitch/KL4A/releases/download/0.0.1-alpha/KL4A.Workbench_0.0.1-alpha_universal.dmg) — universal, runs on Apple Silicon and Intel |
-| **Linux** | [⬇ AppImage](https://github.com/CogniSwitch/KL4A/releases/download/0.0.1-alpha/KL4A.Workbench_0.0.1-alpha_amd64.AppImage) |
+| **Windows** | [⬇ Installer (`.exe`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.1-alpha_x64-setup.exe) |
+| **macOS** | [⬇ Disk image (`.dmg`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.1-alpha_universal.dmg) - universal, runs on Apple Silicon and Intel |
+| **Linux** | [⬇ AppImage](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.1-alpha_amd64.AppImage) |
 
-The builds aren't code-signed yet, so your OS will warn you on first launch: on macOS right-click → **Open** to get past Gatekeeper, on Windows click **More info** → **Run anyway**, and on Linux `chmod +x` the AppImage first.
+The builds aren't code-signed yet, so your OS will warn you on first launch: on macOS right-click then **Open** to get past Gatekeeper, on Windows click **More info** then **Run anyway**, and on Linux `chmod +x` the AppImage first.
 
-Install it, open it, and everything else — creating a bundle, ingesting sources, reviewing mined knowledge, exporting, talking to the agent — happens inside the app. There's no CLI to touch to get started; see [docs/quickstart.md](docs/quickstart.md) and the [Desktop UI Guide](docs/DESKTOP_UI_GUIDE.md) for the full walkthrough.
+Install it, open it, and everything else - creating a bundle, ingesting sources, reviewing mined knowledge, exporting, talking to the agent - happens inside the app. See [docs/quickstart.md](docs/quickstart.md) and the [Desktop UI Guide](docs/DESKTOP_UI_GUIDE.md) for the full walkthrough.
+
+### Download CLI and MCP server
+
+If you'd rather not install the desktop app, or you want an agent to read a bundle, both binaries ship with every release. No toolchain, no build.
+
+| Platform | `sopkb-cli` | `sopkb-mcp` |
+|---|---|---|
+| **Windows** | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-windows-x86_64.exe) |
+| **macOS** | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-macos-universal) |
+| **Linux** | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-linux-x86_64) |
+
+`sopkb-cli` runs the whole pipeline: `scan`, `normalize`, `mine`, `review`, `validate`, `export`. `sopkb-mcp` is a read-only stdio MCP server that serves a finished bundle to any MCP-capable agent.
+
+On macOS and Linux, make the file executable and put it somewhere on your `PATH` so a client can resolve it by name:
+
+```bash
+chmod +x sopkb-mcp-linux-x86_64
+sudo mv sopkb-mcp-linux-x86_64 /usr/local/bin/sopkb-mcp
+```
+
+The macOS binaries are universal, so one file covers Apple Silicon and Intel.
 
 ## An empty result is not a bug
 
