@@ -80,8 +80,8 @@ A `.sopkb/` subdirectory holds implementation state (JSON indexes, upload stagin
 
 | Provider | Default | Implementation | Dependencies / network | Behavior |
 |---|---|---|---|---|
-| `fixture` | Opt-in on the CLI (`--provider fixture`); in the desktop app's Ingest sources screen it's what the dropdown falls back to when no LLM profile is configured. | `kl4a-rs/sopkb-rust/crates/sopkb-mining/src/mine_fixture.rs` | Zero dependencies, deterministic, offline | Regex-based obligation-sentence detection |
-| `azure-llm` | Yes on the CLI (`sopkb-cli mine`'s `--provider` default), and in the desktop app's Ingest sources screen once an LLM profile is configured on the Settings screen. | `kl4a-rs/sopkb-rust/crates/sopkb-mining/src/okf_author.rs` | Azure OpenAI's Responses API | LLM-authored path that also emits full OKF documents (concepts, decision rules) alongside knowledge items |
+| `fixture` | Opt-in on the CLI (`--provider fixture`); in the desktop app's Ingest sources screen it's what the dropdown falls back to when no LLM profile is configured. | `v2/kl4a-rs/sopkb-rust/crates/sopkb-mining/src/mine_fixture.rs` | Zero dependencies, deterministic, offline | Regex-based obligation-sentence detection |
+| `azure-llm` | Yes on the CLI (`sopkb-cli mine`'s `--provider` default), and in the desktop app's Ingest sources screen once an LLM profile is configured on the Settings screen. | `v2/kl4a-rs/sopkb-rust/crates/sopkb-mining/src/okf_author.rs` | Azure OpenAI's Responses API | LLM-authored path that also emits full OKF documents (concepts, decision rules) alongside knowledge items |
 
 Both write the same underlying `KnowledgeItem` shape, so downstream review, export, and agent consumption are provider-agnostic.
 
@@ -89,21 +89,21 @@ This mining-provider axis is unrelated to how the desktop app's **Agent** screen
 
 ## Review
 
-Human-in-the-loop review (`sopkb-cli review`, or the Review panel on the desktop app's Knowledge screen) is first-class, not a preview feature: approve, reject, defer, comment, and edit actions are all persisted as review events with reviewer identity and rationale (`kl4a-rs/sopkb-rust/crates/sopkb-review/src/review.rs`). Approved and rejected are terminal states. Review state flows directly into validation reports and into `has_review` edges in graph exports — there's no separate publish step.
+Human-in-the-loop review (`sopkb-cli review`, or the Review panel on the desktop app's Knowledge screen) is first-class, not a preview feature: approve, reject, defer, comment, and edit actions are all persisted as review events with reviewer identity and rationale (`v2/kl4a-rs/sopkb-rust/crates/sopkb-review/src/review.rs`). Approved and rejected are terminal states. Review state flows directly into validation reports and into `has_review` edges in graph exports — there's no separate publish step.
 
 ## Export
 
-`sopkb-cli export` re-syncs the canonical OKF bundle and additionally writes derivative formats — Graph JSON and RDF/Turtle — under a sibling `exports/` directory (`kl4a-rs/sopkb-rust/crates/sopkb-export/src/bundle_export.rs`, with `graph.rs` and `rdf.rs` for the derivative formats). The OKF bundle itself never requires "exporting" to be useful; these are additional representations for graph tooling and the enterprise import path.
+`sopkb-cli export` re-syncs the canonical OKF bundle and additionally writes derivative formats — Graph JSON and RDF/Turtle — under a sibling `exports/` directory (`v2/kl4a-rs/sopkb-rust/crates/sopkb-export/src/bundle_export.rs`, with `graph.rs` and `rdf.rs` for the derivative formats). The OKF bundle itself never requires "exporting" to be useful; these are additional representations for graph tooling and the enterprise import path.
 
 ## Web server and MCP server
 
-The desktop app is the primary UI and calls these crates directly through Tauri commands — no HTTP, no sidecar process. For a browser-based deployment there's `sopkb-server` (`kl4a-rs/sopkb-rust/bin/sopkb-server`), an axum app that serves the same frontend plus the full pipeline, review, and agent chat over HTTP — bound to `127.0.0.1:4173` by default and gated behind a generated token. `sopkb-mcp` (`kl4a-rs/sopkb-rust/bin/sopkb-mcp`) — a standalone binary, not a `sopkb-cli` subcommand — exposes a read-only-by-default Model Context Protocol tool surface (bundle/sources/sections/knowledge/evidence/conflicts/freshness/citations/agent/relations) over JSON-RPC/stdio, with an explicit `--enable-review-notes` opt-in for the one mutating tool.
+The desktop app is the primary UI and calls these crates directly through Tauri commands — no HTTP, no sidecar process. For a browser-based deployment there's `sopkb-server` (`v2/kl4a-rs/sopkb-rust/bin/sopkb-server`), an axum app that serves the same frontend plus the full pipeline, review, and agent chat over HTTP — bound to `127.0.0.1:4173` by default and gated behind a generated token. `sopkb-mcp` (`v2/kl4a-rs/sopkb-rust/bin/sopkb-mcp`) — a standalone binary, not a `sopkb-cli` subcommand — exposes a read-only-by-default Model Context Protocol tool surface (bundle/sources/sections/knowledge/evidence/conflicts/freshness/citations/agent/relations) over JSON-RPC/stdio, with an explicit `--enable-review-notes` opt-in for the one mutating tool.
 
 → Desktop app screens: [`DESKTOP_UI_GUIDE.md`](DESKTOP_UI_GUIDE.md). → MCP server: [`MCP_SERVER.md`](MCP_SERVER.md).
 
 ## Agent consumption
 
-The `sopkb-agent` crate (`kl4a-rs/sopkb-rust/crates/sopkb-agent`) provides task-scoped context retrieval (`agent.context`, `agent.tasks`, `agent.guide`) and RDF-compatible relation traversal (`relations.search`, `relations.neighborhood`), usable identically from the CLI, the desktop app's Agent screen, or MCP. So an agent gets the same evidence-grounded, review-aware context regardless of integration surface.
+The `sopkb-agent` crate (`v2/kl4a-rs/sopkb-rust/crates/sopkb-agent`) provides task-scoped context retrieval (`agent.context`, `agent.tasks`, `agent.guide`) and RDF-compatible relation traversal (`relations.search`, `relations.neighborhood`), usable identically from the CLI, the desktop app's Agent screen, or MCP. So an agent gets the same evidence-grounded, review-aware context regardless of integration surface.
 
 ## Where this stops
 

@@ -205,7 +205,7 @@ the claim traced to the exact line that raises it. See
 ## 8. Try it yourself
 
 ```bash
-cd kl4a-rs && cargo build -p kl4a
+cd v2/kl4a-rs && cargo build -p kl4a
 
 ./target/debug/kl4a --use sopkb init demo-bundle --title "Customer Refund Policy"
 ./target/debug/kl4a --use sopkb scan --bundle demo-bundle ../examples/customer-refund-policy/sources

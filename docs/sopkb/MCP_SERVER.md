@@ -40,10 +40,10 @@ chmod +x sopkb-mcp-linux-x86_64
 sudo mv sopkb-mcp-linux-x86_64 /usr/local/bin/sopkb-mcp
 ```
 
-If you would rather not put it on the `PATH`, or you are working from a source checkout, point `command` at the binary directly instead - the downloaded file wherever you put it, or `kl4a-rs/sopkb-rust/target/release/sopkb-mcp.exe` on Windows and `kl4a-rs/sopkb-rust/target/release/sopkb-mcp` on macOS/Linux after a `cargo build --release -p sopkb-mcp`.
+If you would rather not put it on the `PATH`, or you are working from a source checkout, point `command` at the binary directly instead - the downloaded file wherever you put it, or `v2/kl4a-rs/sopkb-rust/target/release/sopkb-mcp.exe` on Windows and `v2/kl4a-rs/sopkb-rust/target/release/sopkb-mcp` on macOS/Linux after a `cargo build --release -p sopkb-mcp`.
 
 !!! note "This repository's `kl4a` dispatcher"
-    From a `kl4a-rs/` source checkout, `kl4a --use sopkb mcp serve <bundle_dir>` is
+    From a `v2/kl4a-rs/` source checkout, `kl4a --use sopkb mcp serve <bundle_dir>` is
     equivalent to calling `sopkb-mcp <bundle_dir>` directly — the dispatcher spawns
     `sopkb-mcp` as a sibling process for this one command (see
     [kl4a — Unified CLI and Library](../kl4a.md#experimental-a-rust-implementation-exists-too)

@@ -41,15 +41,15 @@ zip = { version = "8.6.0", default-features = false, features = ["deflate"] }
 # for it directly, its sibling library crates. Paths go up to `v2/` then into
 # `sopkb-rust/crates/...` -- `desktop-tauri` and `sopkb-rust` are siblings
 # under `v2/`, not nested inside one another.
-sopkb-workbench = { path = "../../sopkb-rust/crates/sopkb-workbench" }
-sopkb-core = { path = "../../sopkb-rust/crates/sopkb-core", features = ["docx", "pdf"] }
-sopkb-derive = { path = "../../sopkb-rust/crates/sopkb-derive" }
-sopkb-review = { path = "../../sopkb-rust/crates/sopkb-review" }
-sopkb-export = { path = "../../sopkb-rust/crates/sopkb-export" }
-sopkb-config = { path = "../../sopkb-rust/crates/sopkb-config" }
-sopkb-agent = { path = "../../sopkb-rust/crates/sopkb-agent" }
-sopkb-mining = { path = "../../sopkb-rust/crates/sopkb-mining" }
-sopkb-llm = { path = "../../sopkb-rust/crates/sopkb-llm" }
+sopkb-workbench = { path = "../../kl4a-rs/sopkb-rust/crates/sopkb-workbench" }
+sopkb-core = { path = "../../kl4a-rs/sopkb-rust/crates/sopkb-core", features = ["docx", "pdf"] }
+sopkb-derive = { path = "../../kl4a-rs/sopkb-rust/crates/sopkb-derive" }
+sopkb-review = { path = "../../kl4a-rs/sopkb-rust/crates/sopkb-review" }
+sopkb-export = { path = "../../kl4a-rs/sopkb-rust/crates/sopkb-export" }
+sopkb-config = { path = "../../kl4a-rs/sopkb-rust/crates/sopkb-config" }
+sopkb-agent = { path = "../../kl4a-rs/sopkb-rust/crates/sopkb-agent" }
+sopkb-mining = { path = "../../kl4a-rs/sopkb-rust/crates/sopkb-mining" }
+sopkb-llm = { path = "../../kl4a-rs/sopkb-rust/crates/sopkb-llm" }
 
 [dev-dependencies]
 tempfile = "3"

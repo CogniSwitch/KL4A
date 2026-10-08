@@ -1,3 +1,0 @@
-# Concepts
-
-- No entries.

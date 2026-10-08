@@ -2,7 +2,7 @@
 # https://github.com/github/codeql-action — free for public repositories.
 # rust-only: this branch has no Python package at all (unlike main, which
 # carries a python entry for tools/sopkb) -- the only real code here is
-# the v2/sopkb-rust workspace.
+# the v2/kl4a-rs/sopkb-rust workspace.
 #
 # `build-mode: none` is the ONLY mode CodeQL's Rust extractor supports --
 # verified the hard way: a first attempt used `manual` (plus a Rust

@@ -129,12 +129,12 @@ the same one `pip install kl4a`.
 !!! info "Not the published package — a separate, experimental effort"
     Everything above describes the officially released `kl4a` you get from
     `pip install kl4a`. This section is about something else entirely: an
-    experimental, from-scratch Rust reimplementation living at `kl4a-rs/` in
+    experimental, from-scratch Rust reimplementation living at `v2/kl4a-rs/` in
     this repository, not yet published anywhere.
 
-`kl4a-rs/` contains a Rust port of `codekb` (with a shared `kl4a-core` crate),
+`v2/kl4a-rs/` contains a Rust port of `codekb` (with a shared `kl4a-core` crate),
 plus a separately-developed, more mature Rust port of
-`sopkb` (`kl4a-rs/sopkb-rust/`), and a `kl4a` dispatcher binary tying both
+`sopkb` (`v2/kl4a-rs/sopkb-rust/`), and a `kl4a` dispatcher binary tying both
 together with the **same `--use TOOL` command style** described above —
 but built the Rust way, not a copy of this page's Python mechanics: true
 in-process calls into each tool's own CLI entry point (`codekb::cli::main`,

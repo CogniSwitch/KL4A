@@ -4,6 +4,9 @@ node_modules/
 dist/
 dist-ssr/
 dist-web/
+
+# Cargo build output
+target/
 !v2/desktop-tauri/dist/
 !v2/desktop-tauri/dist/**
 

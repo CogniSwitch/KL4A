@@ -30,7 +30,7 @@ happens inside the app itself. There's no CLI you need to touch to get started.
 
 !!! note "Specific to this repository's source checkout"
     The rest of this page describes the standalone desktop app releases. If
-    you're working from this repository's `kl4a-rs/` source tree instead of
+    you're working from this repository's `v2/kl4a-rs/` source tree instead of
     a downloaded installer, the same `sopkb` functionality is reachable
     through the CLI — either the `sopkb-cli`/`sopkb-mcp`/`sopkb-server`
     binaries directly, or through the unified `kl4a --use sopkb <command>`

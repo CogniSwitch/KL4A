@@ -1,3 +1,0 @@
-# SOP Evidence
-
-- No entries.

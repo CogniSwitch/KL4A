@@ -21,7 +21,7 @@ learn more.
   and execution flow for repositories already indexed by the `codekb` tool,
   instead of today's
   CLI/MCP-only access. The prerequisite step — assessing whether an
-  experimental from-scratch Rust reimplementation (`kl4a-rs/`) can serve
+  experimental from-scratch Rust reimplementation (`v2/kl4a-rs/`) can serve
   as this UI's backend instead of the existing implementation — is
   substantially complete: a parity audit (see
   [Rust Port Parity](codekb/rust-port-parity.md)) found the Rust port now

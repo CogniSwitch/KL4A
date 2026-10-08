@@ -1,3 +1,0 @@
-# Knowledge Pieces
-
-- No entries.

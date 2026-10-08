@@ -1,5 +1,5 @@
 /**
- * Web-mode backend: talks to `sopkb-server` (`v2/sopkb-rust/bin/sopkb-server`)
+ * Web-mode backend: talks to `sopkb-server` (`v2/kl4a-rs/sopkb-rust/bin/sopkb-server`)
  * over `fetch()`/SSE instead of Tauri IPC. Only active when
  * `src/lib/runtime.ts`'s `USE_HTTP_BACKEND` is true (the `npm run build:web`
  * build, not the desktop app and not `vite dev`/`vitest run`).

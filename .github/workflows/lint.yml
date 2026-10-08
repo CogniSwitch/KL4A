@@ -1,6 +1,6 @@
 name: Lint
 
-# Rust-adapted lint job for this branch's v2/sopkb-rust workspace, replacing
+# Rust-adapted lint job for this branch's v2/kl4a-rs/sopkb-rust workspace, replacing
 # main's ruff/mypy job (there is no Python package on this branch to lint).
 #
 # NON-BLOCKING for now (continue-on-error, same pattern main uses for its
@@ -40,12 +40,12 @@ jobs:
       - name: Cache Rust build artifacts
         uses: Swatinem/rust-cache@v2
         with:
-          workspaces: v2/sopkb-rust -> target
+          workspaces: v2/kl4a-rs/sopkb-rust -> target
 
       - name: cargo fmt --check
-        working-directory: v2/sopkb-rust
+        working-directory: v2/kl4a-rs/sopkb-rust
         run: cargo fmt --all -- --check
 
       - name: cargo clippy
-        working-directory: v2/sopkb-rust
+        working-directory: v2/kl4a-rs/sopkb-rust
         run: cargo clippy --workspace --all-targets -- -D warnings

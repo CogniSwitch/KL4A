@@ -440,13 +440,13 @@ The full scripts and raw results are at
 
 ??? note "Reproducing the comparison in Rust (technical detail)"
     A Rust equivalent lives at
-    [`benchmarks/rag-vs-kl4a-rs`](../../benchmarks/rag-vs-kl4a-rs):
+    [`benchmarks/rag-vs-v2/kl4a-rs`](../../benchmarks/rag-vs-v2/kl4a-rs):
 
     ```bash
-    cd benchmarks/rag-vs-kl4a-rs
+    cd benchmarks/rag-vs-v2/kl4a-rs
     cargo build --release
-    ./target/release/rag-vs-kl4a-rs case1   # Case 1: customer-refund-policy
-    ./target/release/rag-vs-kl4a-rs case2   # Case 2: customer-support-policy
+    ./target/release/rag-vs-v2/kl4a-rs case1   # Case 1: customer-refund-policy
+    ./target/release/rag-vs-v2/kl4a-rs case2   # Case 2: customer-support-policy
     ```
 
     **Why it uses a different embedding method:** the plan was `fastembed` (the same ONNX

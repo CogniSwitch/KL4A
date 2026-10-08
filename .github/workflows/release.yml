@@ -130,12 +130,8 @@ jobs:
           path: ${{ matrix.bundle_glob }}
           if-no-files-found: error
 
-  # sopkb-cli and sopkb-mcp have never been published anywhere, so the README's
-  # `claude mcp add kl4a -- sopkb-mcp <bundle>` could only be run by someone who
-  # had already built from source -- which is what the clone-to-download ratio
-  # shows people doing. Both are pure Rust with no system dependencies (only
-  # sopkb-server pulls reqwest, and that isn't shipped here), so unlike the
-  # desktop build above this needs no apt packages on Linux.
+  # Publish all standalone CLIs and the SOPKB MCP binary alongside the desktop
+  # installers. These pure Rust binaries need no apt packages on Linux.
   binaries:
     name: CLI + MCP binaries (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
@@ -168,16 +164,37 @@ jobs:
       - name: Cache Rust build artifacts
         uses: Swatinem/rust-cache@v2
         with:
-          workspaces: v2/sopkb-rust -> target
+          workspaces: |
+            v2/kl4a-rs -> target
+            v2/kl4a-rs/sopkb-rust -> target
 
-      - name: Build release binaries
+      - name: Build KL4A and CodeKB release binaries
         if: matrix.os != 'macos-latest'
-        working-directory: v2/sopkb-rust
+        working-directory: v2/kl4a-rs
+        run: cargo build --release -p kl4a -p codekb
+
+      - name: Build SOPKB CLI and MCP release binaries
+        if: matrix.os != 'macos-latest'
+        working-directory: v2/kl4a-rs/sopkb-rust
         run: cargo build --release -p sopkb-cli -p sopkb-mcp
 
-      - name: Build universal release binaries
+      - name: Build universal KL4A and CodeKB binaries
         if: matrix.os == 'macos-latest'
-        working-directory: v2/sopkb-rust
+        working-directory: v2/kl4a-rs
+        run: |
+          cargo build --release -p kl4a -p codekb --target aarch64-apple-darwin
+          cargo build --release -p kl4a -p codekb --target x86_64-apple-darwin
+          mkdir -p target/universal-release
+          for b in kl4a codekb; do
+            lipo -create -output "target/universal-release/$b" \
+              "target/aarch64-apple-darwin/release/$b" \
+              "target/x86_64-apple-darwin/release/$b"
+            lipo -info "target/universal-release/$b"
+          done
+
+      - name: Build universal SOPKB CLI and MCP binaries
+        if: matrix.os == 'macos-latest'
+        working-directory: v2/kl4a-rs/sopkb-rust
         run: |
           cargo build --release -p sopkb-cli -p sopkb-mcp --target aarch64-apple-darwin
           cargo build --release -p sopkb-cli -p sopkb-mcp --target x86_64-apple-darwin
@@ -197,15 +214,24 @@ jobs:
           set -euo pipefail
           mkdir -p staged
           if [ "${{ matrix.os }}" = "macos-latest" ]; then
-            src="v2/sopkb-rust/target/universal-release"
+            kl4a_src="v2/kl4a-rs/target/universal-release"
+            sopkb_src="v2/kl4a-rs/sopkb-rust/target/universal-release"
           else
-            src="v2/sopkb-rust/target/release"
+            kl4a_src="v2/kl4a-rs/target/release"
+            sopkb_src="v2/kl4a-rs/sopkb-rust/target/release"
           fi
-          for b in sopkb-cli sopkb-mcp; do
-            if [ -f "$src/$b.exe" ]; then
-              cp "$src/$b.exe" "staged/$b-${{ matrix.asset_suffix }}.exe"
+          for b in kl4a codekb; do
+            if [ -f "$kl4a_src/$b.exe" ]; then
+              cp "$kl4a_src/$b.exe" "staged/$b-${{ matrix.asset_suffix }}.exe"
             else
-              cp "$src/$b" "staged/$b-${{ matrix.asset_suffix }}"
+              cp "$kl4a_src/$b" "staged/$b-${{ matrix.asset_suffix }}"
+            fi
+          done
+          for b in sopkb-cli sopkb-mcp; do
+            if [ -f "$sopkb_src/$b.exe" ]; then
+              cp "$sopkb_src/$b.exe" "staged/$b-${{ matrix.asset_suffix }}.exe"
+            else
+              cp "$sopkb_src/$b" "staged/$b-${{ matrix.asset_suffix }}"
             fi
           done
           ls -l staged

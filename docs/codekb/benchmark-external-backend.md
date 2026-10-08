@@ -8,7 +8,7 @@ Date: 2026-10-06
 
 - **Type**: internal benchmark, not a published parity claim
 - **Target**: a real, previously-unseen production backend service (read-only, untouched throughout) — not a repo this tool was built or tuned against
-- **Binary under test**: `kl4a-rs/target/release/codekb.exe` (release build, built for this benchmark)
+- **Binary under test**: `v2/kl4a-rs/target/release/codekb.exe` (release build, built for this benchmark)
 - **Note on naming**: specific file names, route paths, model/schema names, and business terms from the target codebase are generalized below to avoid revealing internal details of someone else's project; the counts, structure, and findings are real
 
 **What the codebase is** — a Python web backend built on:
