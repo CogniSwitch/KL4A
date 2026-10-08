@@ -384,7 +384,7 @@ pub fn generate_target_repo(plan_dir: &Path, out_repo_dir: &Path) -> Result<Valu
         .context("failed to write README.md")?;
     fs::write(
         out_repo_dir.join("pyproject.toml"),
-        ["[project]", "name = \"okf-migrated-sample\"", "version = \"0.1.0\"", ""].join("\n"),
+        ["[project]", "name = \"okf-migrated-sample\"", "version = \"0.0.2\"", ""].join("\n"),
     )
     .context("failed to write pyproject.toml")?;
 

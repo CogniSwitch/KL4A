@@ -67,7 +67,7 @@ own PDFs, DOCX or Markdown and run it end to end.
 
 **Limitations:**
 
-- It's 0.0.1-alpha, and the desktop builds aren't code-signed yet, so macOS and Windows
+- It's 0.0.2, and the desktop builds aren't code-signed yet, so macOS and Windows
   both complain on first launch.
 - A conformance defect I'd rather flag than have you find: we write
   `generated: {actor, date}` and `verified: [{actor, date}]` where §5.2 says `{by, at}`,

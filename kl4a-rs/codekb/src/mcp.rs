@@ -218,7 +218,7 @@ pub fn handle_jsonrpc_request(bundle_dir: &Path, request: &Value) -> Result<Opti
                 };
                 Ok(json!({
                     "protocolVersion": protocol_version,
-                    "serverInfo": {"name": "codekb", "version": "0.1.0"},
+                    "serverInfo": {"name": "codekb", "version": "0.0.2"},
                     "capabilities": {"tools": {}},
                 }))
             }

@@ -37,9 +37,9 @@ KL4A's job is to turn that prose into small, sourced, checkable claims *before* 
 
 | Platform | Download |
 |---|---|
-| **Windows** | [⬇ Installer (`.exe`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.1-alpha_x64-setup.exe) |
-| **macOS** | [⬇ Disk image (`.dmg`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.1-alpha_universal.dmg) - universal, runs on Apple Silicon and Intel |
-| **Linux** | [⬇ AppImage](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.1-alpha_amd64.AppImage) |
+| **Windows** | [⬇ Installer (`.exe`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.2_x64-setup.exe) |
+| **macOS** | [⬇ Disk image (`.dmg`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.2_universal.dmg) - universal, runs on Apple Silicon and Intel |
+| **Linux** | [⬇ AppImage](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.2_amd64.AppImage) |
 
 The builds aren't code-signed yet, so your OS will warn you on first launch: on macOS right-click then **Open** to get past Gatekeeper, on Windows click **More info** then **Run anyway**, and on Linux `chmod +x` the AppImage first.
 

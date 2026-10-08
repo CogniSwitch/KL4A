@@ -10,7 +10,7 @@ tags:
 - requires
 status: stable
 generated:
-  actor: sopkb/0.1.0
+  actor: sopkb/0.0.2
   date: <TS>
 sources:
 - id: src-preamble

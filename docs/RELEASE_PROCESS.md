@@ -16,7 +16,7 @@ one build, and one publish step.
 ## 1. Versioning
 
 `kl4a` follows [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html),
-starting at `0.1.0`.
+starting at `0.0.2`.
 
 While the package is in the `0.x` series, the following should all be
 considered pre-1.0 and may still change:
@@ -58,7 +58,7 @@ Releases are triggered by pushing an annotated Git tag of the form:
 vX.Y.Z
 ```
 
-for example `v0.1.0`, `v0.2.0`, `v1.0.0`. The tag version must match the
+for example `v0.0.2`, `v0.2.0`, `v1.0.0`. The tag version must match the
 `version` field in `tools/kl4a/pyproject.toml` at the commit being tagged;
 the release pipeline enforces this (see the `verify_version` job in
 `.github/workflows/release.yml`).
@@ -95,10 +95,10 @@ Before tagging a release:
 - [ ] Confirm `CHANGELOG.md` has a heading for that version (not just
       "unreleased") summarizing what changed.
 - [ ] Add a dedicated release notes file under `docs/releases/` for the
-      version being released, e.g. `docs/releases/v0.1.0.md`. This file is
+      version being released, e.g. `docs/releases/v0.0.2.md`. This file is
       release-notes prose aimed at users (what's new, what's out of scope,
       known caveats, where to discuss) rather than a changelog diff — see
-      `docs/releases/v0.1.0.md` for the first example. Every tagged release
+      `docs/releases/v0.0.2.md` for the first example. Every tagged release
       should have a corresponding file here.
 - [ ] Ensure the working tree on the target branch is clean and CI is green.
 

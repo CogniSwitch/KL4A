@@ -680,7 +680,7 @@ mod tests {
     #[test]
     fn scalar_repr_quoting_rules() {
         assert_eq!(scalar_repr("draft"), "draft");
-        assert_eq!(scalar_repr("0.1.0"), "0.1.0");
+        assert_eq!(scalar_repr("0.0.2"), "0.0.2");
         assert_eq!(scalar_repr("0.2"), "'0.2'");
         assert_eq!(scalar_repr("2026-08-01T06:41:01Z"), "'2026-08-01T06:41:01Z'");
         assert_eq!(scalar_repr(""), "''");
@@ -691,7 +691,7 @@ mod tests {
     fn emit_manifest_shape() {
         let value = mapping(vec![
             ("id", YamlValue::Scalar("bundle".into())),
-            ("version", YamlValue::Scalar("0.1.0".into())),
+            ("version", YamlValue::Scalar("0.0.2".into())),
             ("title", YamlValue::Scalar("ASCII Markdown Case".into())),
             ("status", YamlValue::Scalar("draft".into())),
             ("created_at", YamlValue::Scalar("2026-08-01T06:41:01Z".into())),
@@ -710,7 +710,7 @@ mod tests {
         assert_eq!(
             out,
             "id: bundle\n\
-             version: 0.1.0\n\
+             version: 0.0.2\n\
              title: ASCII Markdown Case\n\
              status: draft\n\
              created_at: '2026-08-01T06:41:01Z'\n\
@@ -724,7 +724,7 @@ mod tests {
     #[test]
     fn round_trip_manifest_yaml() {
         let text = "id: bundle\n\
-                     version: 0.1.0\n\
+                     version: 0.0.2\n\
                      title: GLP-1 Healthcare Reference\n\
                      profile: sop-knowledge-bundle\n\
                      profile_version: 0.2.0\n\

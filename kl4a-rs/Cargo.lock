@@ -267,7 +267,7 @@ checksum = "1c133bc6a41be0d194c306b5506d15e6feeea7b1d6604bd3f8310dfb2ca96486"
 
 [[package]]
 name = "codekb"
-version = "0.1.0"
+version = "0.0.2"
 dependencies = [
  "anyhow",
  "clap",
@@ -802,7 +802,7 @@ dependencies = [
 
 [[package]]
 name = "kl4a"
-version = "0.1.0"
+version = "0.0.2"
 dependencies = [
  "clap",
  "codekb",
@@ -811,7 +811,7 @@ dependencies = [
 
 [[package]]
 name = "kl4a-core"
-version = "0.1.0"
+version = "0.0.2"
 dependencies = [
  "anyhow",
  "once_cell",
@@ -1472,7 +1472,7 @@ checksum = "f9395f0f0eee849a9b707b2f06bb92a6a422090e2123bb2ef8e87a0e61892a8e"
 
 [[package]]
 name = "sopkb-agent"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "serde_json",
  "sopkb-config",
@@ -1484,7 +1484,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-cli"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "clap",
  "serde_json",
@@ -1501,7 +1501,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-config"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "serde_json",
  "sopkb-core",
@@ -1510,7 +1510,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-core"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "chrono",
  "lopdf",
@@ -1524,7 +1524,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-derive"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "serde_json",
  "sopkb-core",
@@ -1533,7 +1533,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-export"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "serde_json",
  "sopkb-core",
@@ -1543,7 +1543,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-fmt"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "once_cell",
  "regex",
@@ -1552,7 +1552,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-llm"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "serde_json",
  "sopkb-config",
@@ -1563,7 +1563,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-mining"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "once_cell",
  "regex",
@@ -1576,7 +1576,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-review"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "serde_json",
  "sopkb-core",
@@ -1586,7 +1586,7 @@ dependencies = [
 
 [[package]]
 name = "sopkb-workbench"
-version = "0.0.1-alpha"
+version = "0.0.2"
 dependencies = [
  "regex",
  "serde",

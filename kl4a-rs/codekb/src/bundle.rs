@@ -346,9 +346,9 @@ pub fn write_code_index(bundle_dir: &Path, manifest: &Value) -> Result<()> {
 ///     timestamp = utc_now()
 ///     repo_name = repo_dir.resolve().name
 ///     manifest = {
-///         "id": slugify(bundle_dir.name), "version": "0.1.0",
+///         "id": slugify(bundle_dir.name), "version": "0.0.2",
 ///         "title": title or f"{repo_name} Code Knowledge Bundle",
-///         "profile": "code-knowledge-bundle", "profile_version": "0.1.0",
+///         "profile": "code-knowledge-bundle", "profile_version": "0.0.2",
 ///         "okf_version": "0.2", "status": "draft",
 ///         "created_at": timestamp, "updated_at": timestamp,
 ///         "sources": [], "exports": [],
@@ -432,10 +432,10 @@ pub fn create_code_bundle(
 
     let manifest = json!({
         "id": slugify(&bundle_name),
-        "version": "0.1.0",
+        "version": "0.0.2",
         "title": title.map(str::to_string).unwrap_or_else(|| format!("{repo_name} Code Knowledge Bundle")),
         "profile": "code-knowledge-bundle",
-        "profile_version": "0.1.0",
+        "profile_version": "0.0.2",
         "okf_version": "0.2",
         "status": "draft",
         "created_at": timestamp,

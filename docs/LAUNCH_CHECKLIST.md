@@ -222,7 +222,7 @@ optional richer-extraction path (documented further in `FAQ.md`).
   named individual triage owner (ties to §14 below).
 - **CHANGELOG.md** and **ROADMAP.md** — branch `feat/roadmap`, commit
   `2667334` ("Add CHANGELOG.md and ROADMAP.md"). `CHANGELOG.md`'s only
-  version heading is `## [0.1.0] - TBD (unreleased)` — consistent with no
+  version heading is `## [0.0.2] - TBD (unreleased)` — consistent with no
   tag having been cut yet (§16).
 
 ---
@@ -330,7 +330,7 @@ configured at all.
 
 ---
 
-## 14. v0.1.0 release process, notes, and tag
+## 14. v0.0.2 release process, notes, and tag
 
 !!! success "Drafted — branch `feat/release-process`, commit `fe55bf6`"
 
@@ -340,14 +340,14 @@ configured at all.
   verification.
 - `docs/BUNDLE_COMPATIBILITY_POLICY.md` — bundle-format compatibility
   tracked separately from software SemVer.
-- `docs/releases/v0.1.0.md` — user-facing release notes: bundle lifecycle,
+- `docs/releases/v0.0.2.md` — user-facing release notes: bundle lifecycle,
   HITL review, local web workbench, the GLP-1 reference bundle, the MCP
   server, OKF export.
 
-!!! danger "The `v0.1.0` git tag itself has not been created"
-    Consistent with `CHANGELOG.md`'s `## [0.1.0] - TBD (unreleased)` heading
+!!! danger "The `v0.0.2` git tag itself has not been created"
+    Consistent with `CHANGELOG.md`'s `## [0.0.2] - TBD (unreleased)` heading
     (§9) — the release notes and process are ready, but no one has run
-    `git tag -a v0.1.0` or pushed it, and per §12/§13 the PyPI/GitHub-side
+    `git tag -a v0.0.2` or pushed it, and per §12/§13 the PyPI/GitHub-side
     prerequisites for that tag to actually publish anything aren't in place
     yet either.
 
@@ -386,7 +386,7 @@ this document as the unit of count:
 | Status | Count | Items |
 |---|---|---|
 | ✅ Drafted | 10 of 10 branches | legal-licensing, security-hygiene, docs-set, packaging-distribution, ci-cd-quality-gates, github-repo-config, release-process, community-governance, roadmap, post-launch-ops — real, verified content matching expected scope. None merged into `dev`/`main`; none pushed to `origin`. |
-| ⚠️ Needs a human decision/action | 8 items | §2 copyright holder confirmation, §3 automated secret-scan CI job never implemented/run, §7 missing README screenshot, §10 placeholder CODEOWNERS handles, §11 CI never actually executed, §12 placeholder PyPI author email + one-time trusted-publisher registration, §13 branch protection/Security Advisories/Discussions toggles, §14 `v0.1.0` tag not yet cut |
+| ⚠️ Needs a human decision/action | 8 items | §2 copyright holder confirmation, §3 automated secret-scan CI job never implemented/run, §7 missing README screenshot, §10 placeholder CODEOWNERS handles, §11 CI never actually executed, §12 placeholder PyPI author email + one-time trusted-publisher registration, §13 branch protection/Security Advisories/Discussions toggles, §14 `v0.0.2` tag not yet cut |
 | ❌ Not started | 3 items | §1 `main`/`dev` project split (explicitly deferred by the repo owner, out of scope for this branch effort), §13 GitHub-side repo settings, §16 naming a real first-line triage owner |
 
 ---
@@ -420,7 +420,7 @@ to an actual public launch requires, roughly in this order:
    Discussions, and PyPI trusted-publisher registration for a newly-created
    `sopkb` project (§12/§13).
 6. Only once steps 1–5 are done does it make sense to **cut and push the
-   `v0.1.0` tag** (§14), which is the actual trigger for the release
+   `v0.0.2` tag** (§14), which is the actual trigger for the release
    pipeline drafted in `feat/release-process`.
 
 This document is a snapshot of real, verified branch content as of

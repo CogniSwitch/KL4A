@@ -8,7 +8,7 @@ tags:
 - pdf
 status: stable
 generated:
-  actor: sopkb/0.1.0
+  actor: sopkb/0.0.2
   date: <TS>
 sopkb:
   source_id: acme-intake-policy

@@ -188,7 +188,7 @@ resource: relative-or-local-resource
 tags: []
 status: stable
 generated:
-  actor: sopkb/0.1.0
+  actor: sopkb/0.0.2
   date: "2026-07-31"
 sources:
   - id: src-...
@@ -244,7 +244,7 @@ Example:
 
 ```yaml
 id: glp1-healthcare-sop
-version: 0.1.0
+version: 0.0.2
 title: GLP-1 Healthcare SOP Bundle
 profile: sop-knowledge-bundle
 profile_version: 0.2.0

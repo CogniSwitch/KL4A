@@ -211,7 +211,7 @@ mod tests {
     fn manifest_yaml_field_order_puts_okf_version_last() {
         let m = Manifest {
             id: "bundle".into(),
-            version: "0.1.0".into(),
+            version: "0.0.2".into(),
             title: "Demo".into(),
             profile: "sop-knowledge-bundle".into(),
             profile_version: "0.2.0".into(),

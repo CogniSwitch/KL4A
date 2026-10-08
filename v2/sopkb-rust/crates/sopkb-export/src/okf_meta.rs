@@ -30,7 +30,7 @@ use sopkb_fmt::{emit_yaml, OrderedMap, YamlValue};
 use std::path::Path;
 
 pub const OKF_VERSION: &str = "0.2";
-pub const GENERATOR_ACTOR: &str = "sopkb/0.1.0";
+pub const GENERATOR_ACTOR: &str = "sopkb/0.0.2";
 
 fn scalar(v: &serde_json::Value, key: &str) -> YamlValue {
     YamlValue::Scalar(v[key].as_str().unwrap_or("").to_string())

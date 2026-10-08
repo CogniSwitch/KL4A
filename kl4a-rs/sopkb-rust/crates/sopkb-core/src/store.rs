@@ -196,7 +196,7 @@ pub fn create_bundle(bundle_dir: &Path, title: Option<&str>) -> Result<CreateBun
     let dir_name = bundle_dir.file_name().and_then(|n| n.to_str()).unwrap_or("");
     let manifest = Manifest {
         id: sopkb_fmt_slugify_bridge(dir_name),
-        version: "0.1.0".to_string(),
+        version: "0.0.2".to_string(),
         title: bundle_title,
         profile: "sop-knowledge-bundle".to_string(),
         profile_version: "0.2.0".to_string(),
