@@ -1,0 +1,20 @@
+[
+  {
+    "heading": "Customer Refund Policy",
+    "section_id": "section-refund-policy-001",
+    "semantic_role": "policy",
+    "source_id": "refund-policy"
+  },
+  {
+    "heading": "Refund Eligibility",
+    "section_id": "section-refund-policy-002",
+    "semantic_role": "section",
+    "source_id": "refund-policy"
+  },
+  {
+    "heading": "Refund Approval",
+    "section_id": "section-refund-policy-003",
+    "semantic_role": "section",
+    "source_id": "refund-policy"
+  }
+]

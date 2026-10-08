@@ -1,0 +1,128 @@
+[
+  {
+    "id": "triple-ki-support-policy-v1-000001",
+    "knowledge_item_id": "ki-support-policy-v1-000001",
+    "object": "Customers must initiate a return within 30 days of delivery to receive a full refund.",
+    "predicate": "requires",
+    "subject": "1. General Return Window"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000002",
+    "knowledge_item_id": "ki-support-policy-v1-000002",
+    "object": "Items returned between day 31 and day 45 must be processed as store credit only.",
+    "predicate": "requires",
+    "subject": "1. General Return Window"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000003",
+    "knowledge_item_id": "ki-support-policy-v1-000003",
+    "object": "Items returned after day 45 must not receive any refund or credit.",
+    "predicate": "requires",
+    "subject": "1. General Return Window"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000004",
+    "knowledge_item_id": "ki-support-policy-v1-000004",
+    "object": "Returned items must be unused, in their original packaging, and must include all accessories and manuals.",
+    "predicate": "requires",
+    "subject": "2. Condition Requirements"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000005",
+    "knowledge_item_id": "ki-support-policy-v1-000005",
+    "object": "Staff must apply a 15% restocking fee to items missing original packaging.",
+    "predicate": "requires",
+    "subject": "2. Condition Requirements"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000006",
+    "knowledge_item_id": "ki-support-policy-v1-000006",
+    "object": "Items showing signs of use must not be accepted for return under this policy.",
+    "predicate": "requires",
+    "subject": "2. Condition Requirements"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000007",
+    "knowledge_item_id": "ki-support-policy-v1-000007",
+    "object": "Electronics must be returned within 14 days of delivery, regardless of the general return window described in Section 1.",
+    "predicate": "requires",
+    "subject": "3. Electronics Exceptions"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000008",
+    "knowledge_item_id": "ki-support-policy-v1-000008",
+    "object": "Opened software and digital license keys must be treated as final sale and must not be accepted for return under any circumstances.",
+    "predicate": "requires",
+    "subject": "3. Electronics Exceptions"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000009",
+    "knowledge_item_id": "ki-support-policy-v1-000009",
+    "object": "Clearance items marked \"Final Sale\" at checkout must not be accepted for return or exchange.",
+    "predicate": "requires",
+    "subject": "4. Final Sale Items"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000010",
+    "knowledge_item_id": "ki-support-policy-v1-000010",
+    "object": "Custom or personalized items must be treated as final sale once production has begun.",
+    "predicate": "requires",
+    "subject": "4. Final Sale Items"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000011",
+    "knowledge_item_id": "ki-support-policy-v1-000011",
+    "object": "Customers must report damaged or defective items within 48 hours of delivery to qualify for a free replacement or full refund including return shipping costs.",
+    "predicate": "requires",
+    "subject": "5. Damaged or Defective Items"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000012",
+    "knowledge_item_id": "ki-support-policy-v1-000012",
+    "object": "Reports made after 48 hours must be handled under the general return window described in Section 1, with return shipping paid by the customer.",
+    "predicate": "requires",
+    "subject": "5. Damaged or Defective Items"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000013",
+    "knowledge_item_id": "ki-support-policy-v1-000013",
+    "object": "Staff must issue approved refunds to the original payment method within 5-7 business days of the returned item being received and inspected.",
+    "predicate": "requires",
+    "subject": "6. Refund Processing"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000014",
+    "knowledge_item_id": "ki-support-policy-v1-000014",
+    "object": "Store credit issued under Section 1 must not expire and may be combined with future promotional discounts.",
+    "predicate": "requires",
+    "subject": "6. Refund Processing"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000015",
+    "knowledge_item_id": "ki-support-policy-v1-000015",
+    "object": "Staff must waive the restocking fee described in Section 2 for exchanges of the same item in a different size or color, provided the request is made within the general return window described in Section 1.",
+    "predicate": "requires",
+    "subject": "7. Exchanges"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000016",
+    "knowledge_item_id": "ki-support-policy-v1-000016",
+    "object": "Exchanges for a different product entirely must be processed as a return followed by a new purchase.",
+    "predicate": "requires",
+    "subject": "7. Exchanges"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000017",
+    "knowledge_item_id": "ki-support-policy-v1-000017",
+    "object": "Returns requested outside any window described above must receive manager approval before processing.",
+    "predicate": "requires",
+    "subject": "8. Escalation and Manager Approval"
+  },
+  {
+    "id": "triple-ki-support-policy-v1-000018",
+    "knowledge_item_id": "ki-support-policy-v1-000018",
+    "object": "Staff must record manager-approved exceptions in the order notes before a refund or credit is issued.",
+    "predicate": "records",
+    "subject": "8. Escalation and Manager Approval"
+  }
+]

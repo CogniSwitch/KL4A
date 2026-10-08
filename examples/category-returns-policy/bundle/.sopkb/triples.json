@@ -1,0 +1,170 @@
+[
+  {
+    "id": "triple-ki-category-policy-v1-000001",
+    "knowledge_item_id": "ki-category-policy-v1-000001",
+    "object": "Small Appliances must be returned within 21 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "1. Small Appliances"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000002",
+    "knowledge_item_id": "ki-category-policy-v1-000002",
+    "object": "Small Appliances must include original packaging and all accessories to avoid a 10% restocking fee.",
+    "predicate": "requires",
+    "subject": "1. Small Appliances"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000003",
+    "knowledge_item_id": "ki-category-policy-v1-000003",
+    "object": "Major Appliances must be returned within 45 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "2. Major Appliances"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000004",
+    "knowledge_item_id": "ki-category-policy-v1-000004",
+    "object": "Major Appliances must include original packaging and all accessories to avoid a 20% restocking fee.",
+    "predicate": "requires",
+    "subject": "2. Major Appliances"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000005",
+    "knowledge_item_id": "ki-category-policy-v1-000005",
+    "object": "Indoor Furniture must be returned within 30 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "3. Indoor Furniture"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000006",
+    "knowledge_item_id": "ki-category-policy-v1-000006",
+    "object": "Indoor Furniture must include original packaging and all accessories to avoid a 15% restocking fee.",
+    "predicate": "requires",
+    "subject": "3. Indoor Furniture"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000007",
+    "knowledge_item_id": "ki-category-policy-v1-000007",
+    "object": "Outdoor Furniture must be returned within 14 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "4. Outdoor Furniture"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000008",
+    "knowledge_item_id": "ki-category-policy-v1-000008",
+    "object": "Outdoor Furniture must include original packaging and all accessories to avoid a 25% restocking fee.",
+    "predicate": "requires",
+    "subject": "4. Outdoor Furniture"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000009",
+    "knowledge_item_id": "ki-category-policy-v1-000009",
+    "object": "Prescription Eyewear must be returned within 7 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "5. Prescription Eyewear"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000010",
+    "knowledge_item_id": "ki-category-policy-v1-000010",
+    "object": "Prescription Eyewear must include original packaging and all accessories to avoid a 0% restocking fee.",
+    "predicate": "requires",
+    "subject": "5. Prescription Eyewear"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000011",
+    "knowledge_item_id": "ki-category-policy-v1-000011",
+    "object": "Non-Prescription Sunglasses must be returned within 30 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "6. Non-Prescription Sunglasses"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000012",
+    "knowledge_item_id": "ki-category-policy-v1-000012",
+    "object": "Non-Prescription Sunglasses must include original packaging and all accessories to avoid a 10% restocking fee.",
+    "predicate": "requires",
+    "subject": "6. Non-Prescription Sunglasses"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000013",
+    "knowledge_item_id": "ki-category-policy-v1-000013",
+    "object": "Power Tools must be returned within 30 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "7. Power Tools"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000014",
+    "knowledge_item_id": "ki-category-policy-v1-000014",
+    "object": "Power Tools must include original packaging and all accessories to avoid a 15% restocking fee.",
+    "predicate": "requires",
+    "subject": "7. Power Tools"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000015",
+    "knowledge_item_id": "ki-category-policy-v1-000015",
+    "object": "Hand Tools must be returned within 60 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "8. Hand Tools"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000016",
+    "knowledge_item_id": "ki-category-policy-v1-000016",
+    "object": "Hand Tools must include original packaging and all accessories to avoid a 5% restocking fee.",
+    "predicate": "requires",
+    "subject": "8. Hand Tools"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000017",
+    "knowledge_item_id": "ki-category-policy-v1-000017",
+    "object": "Laptop Computers must be returned within 14 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "9. Laptop Computers"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000018",
+    "knowledge_item_id": "ki-category-policy-v1-000018",
+    "object": "Laptop Computers must include original packaging and all accessories to avoid a 15% restocking fee.",
+    "predicate": "requires",
+    "subject": "9. Laptop Computers"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000019",
+    "knowledge_item_id": "ki-category-policy-v1-000019",
+    "object": "Desktop Computers must be returned within 30 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "10. Desktop Computers"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000020",
+    "knowledge_item_id": "ki-category-policy-v1-000020",
+    "object": "Desktop Computers must include original packaging and all accessories to avoid a 15% restocking fee.",
+    "predicate": "requires",
+    "subject": "10. Desktop Computers"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000021",
+    "knowledge_item_id": "ki-category-policy-v1-000021",
+    "object": "Mobile Phones must be returned within 14 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "11. Mobile Phones"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000022",
+    "knowledge_item_id": "ki-category-policy-v1-000022",
+    "object": "Mobile Phones must include original packaging and all accessories to avoid a 20% restocking fee.",
+    "predicate": "requires",
+    "subject": "11. Mobile Phones"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000023",
+    "knowledge_item_id": "ki-category-policy-v1-000023",
+    "object": "Tablet Devices must be returned within 21 days of delivery to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "12. Tablet Devices"
+  },
+  {
+    "id": "triple-ki-category-policy-v1-000024",
+    "knowledge_item_id": "ki-category-policy-v1-000024",
+    "object": "Tablet Devices must include original packaging and all accessories to avoid a 15% restocking fee.",
+    "predicate": "requires",
+    "subject": "12. Tablet Devices"
+  }
+]

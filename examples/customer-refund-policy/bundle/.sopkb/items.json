@@ -1,0 +1,71 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 114,
+    "id": "ki-refund-policy-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Customers must submit refund requests within 30 days of purchase.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-refund-policy-002",
+    "source_id": "refund-policy",
+    "source_text": "Customers must submit refund requests within 30 days of purchase.",
+    "source_version_id": "refund-policy:v1",
+    "span_status": "exact",
+    "start_pos": 49,
+    "subject": "Refund Eligibility",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 187,
+    "id": "ki-refund-policy-v1-000002",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Digital products must not have been downloaded to qualify for a refund.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-refund-policy-002",
+    "source_id": "refund-policy",
+    "source_text": "Digital products must not have been downloaded to qualify for a refund.",
+    "source_version_id": "refund-policy:v1",
+    "span_status": "exact",
+    "start_pos": 116,
+    "subject": "Refund Eligibility",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 286,
+    "id": "ki-refund-policy-v1-000003",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Refund requests above $1,000 must receive finance approval before processing.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-refund-policy-003",
+    "source_id": "refund-policy",
+    "source_text": "Refund requests above $1,000 must receive finance approval before processing.",
+    "source_version_id": "refund-policy:v1",
+    "span_status": "exact",
+    "start_pos": 209,
+    "subject": "Refund Approval",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

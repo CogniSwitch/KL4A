@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-support-policy-20261007072802",
+    "path": "../examples/customer-support-policy/sources\\support-policy.md",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "timestamp": "2026-10-07T07:28:02Z"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "end_pos": 37,
+    "heading": "Customer Support & Returns Policy",
+    "id": "section-support-policy-001",
+    "normalized_path": "sources/normalized/support-policy__v1.md",
+    "semantic_role": "policy",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 301,
+    "heading": "1. General Return Window",
+    "id": "section-support-policy-002",
+    "normalized_path": "sources/normalized/support-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "start_pos": 37
+  },
+  {
+    "end_pos": 591,
+    "heading": "2. Condition Requirements",
+    "id": "section-support-policy-003",
+    "normalized_path": "sources/normalized/support-policy__v1.md",
+    "semantic_role": "policy",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "start_pos": 301
+  },
+  {
+    "end_pos": 875,
+    "heading": "3. Electronics Exceptions",
+    "id": "section-support-policy-004",
+    "normalized_path": "sources/normalized/support-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "start_pos": 591
+  },
+  {
+    "end_pos": 1079,
+    "heading": "4. Final Sale Items",
+    "id": "section-support-policy-005",
+    "normalized_path": "sources/normalized/support-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "start_pos": 875
+  },
+  {
+    "end_pos": 1416,
+    "heading": "5. Damaged or Defective Items",
+    "id": "section-support-policy-006",
+    "normalized_path": "sources/normalized/support-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "start_pos": 1079
+  },
+  {
+    "end_pos": 1690,
+    "heading": "6. Refund Processing",
+    "id": "section-support-policy-007",
+    "normalized_path": "sources/normalized/support-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "start_pos": 1416
+  },
+  {
+    "end_pos": 2015,
+    "heading": "7. Exchanges",
+    "id": "section-support-policy-008",
+    "normalized_path": "sources/normalized/support-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "start_pos": 1690
+  },
+  {
+    "end_pos": 2258,
+    "heading": "8. Escalation and Manager Approval",
+    "id": "section-support-policy-009",
+    "normalized_path": "sources/normalized/support-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "support-policy",
+    "source_version_id": "support-policy:v1",
+    "start_pos": 2015
+  }
+]

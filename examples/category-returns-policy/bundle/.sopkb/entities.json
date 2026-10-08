@@ -1,0 +1,50 @@
+[
+  {
+    "id": "entity-1-small-appliances",
+    "label": "1. Small Appliances"
+  },
+  {
+    "id": "entity-2-major-appliances",
+    "label": "2. Major Appliances"
+  },
+  {
+    "id": "entity-3-indoor-furniture",
+    "label": "3. Indoor Furniture"
+  },
+  {
+    "id": "entity-4-outdoor-furniture",
+    "label": "4. Outdoor Furniture"
+  },
+  {
+    "id": "entity-5-prescription-eyewear",
+    "label": "5. Prescription Eyewear"
+  },
+  {
+    "id": "entity-6-non-prescription-sunglasses",
+    "label": "6. Non-Prescription Sunglasses"
+  },
+  {
+    "id": "entity-7-power-tools",
+    "label": "7. Power Tools"
+  },
+  {
+    "id": "entity-8-hand-tools",
+    "label": "8. Hand Tools"
+  },
+  {
+    "id": "entity-9-laptop-computers",
+    "label": "9. Laptop Computers"
+  },
+  {
+    "id": "entity-10-desktop-computers",
+    "label": "10. Desktop Computers"
+  },
+  {
+    "id": "entity-11-mobile-phones",
+    "label": "11. Mobile Phones"
+  },
+  {
+    "id": "entity-12-tablet-devices",
+    "label": "12. Tablet Devices"
+  }
+]

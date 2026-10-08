@@ -1,0 +1,23 @@
+[
+  {
+    "id": "triple-ki-refund-policy-v1-000001",
+    "knowledge_item_id": "ki-refund-policy-v1-000001",
+    "object": "Customers must submit refund requests within 30 days of purchase.",
+    "predicate": "requires",
+    "subject": "Refund Eligibility"
+  },
+  {
+    "id": "triple-ki-refund-policy-v1-000002",
+    "knowledge_item_id": "ki-refund-policy-v1-000002",
+    "object": "Digital products must not have been downloaded to qualify for a refund.",
+    "predicate": "requires",
+    "subject": "Refund Eligibility"
+  },
+  {
+    "id": "triple-ki-refund-policy-v1-000003",
+    "knowledge_item_id": "ki-refund-policy-v1-000003",
+    "object": "Refund requests above $1,000 must receive finance approval before processing.",
+    "predicate": "requires",
+    "subject": "Refund Approval"
+  }
+]

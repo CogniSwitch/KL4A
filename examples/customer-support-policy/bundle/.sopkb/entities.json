@@ -1,0 +1,34 @@
+[
+  {
+    "id": "entity-1-general-return-window",
+    "label": "1. General Return Window"
+  },
+  {
+    "id": "entity-2-condition-requirements",
+    "label": "2. Condition Requirements"
+  },
+  {
+    "id": "entity-3-electronics-exceptions",
+    "label": "3. Electronics Exceptions"
+  },
+  {
+    "id": "entity-4-final-sale-items",
+    "label": "4. Final Sale Items"
+  },
+  {
+    "id": "entity-5-damaged-or-defective-items",
+    "label": "5. Damaged or Defective Items"
+  },
+  {
+    "id": "entity-6-refund-processing",
+    "label": "6. Refund Processing"
+  },
+  {
+    "id": "entity-7-exchanges",
+    "label": "7. Exchanges"
+  },
+  {
+    "id": "entity-8-escalation-and-manager-approval",
+    "label": "8. Escalation and Manager Approval"
+  }
+]
