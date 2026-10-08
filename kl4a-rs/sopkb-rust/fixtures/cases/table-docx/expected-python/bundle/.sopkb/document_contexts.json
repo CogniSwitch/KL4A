@@ -1,0 +1,14 @@
+[
+  {
+    "heading": "Quarterly Review",
+    "section_id": "section-quarterly-review-001",
+    "semantic_role": "section",
+    "source_id": "quarterly-review"
+  },
+  {
+    "heading": "Closing Notes",
+    "section_id": "section-quarterly-review-002",
+    "semantic_role": "section",
+    "source_id": "quarterly-review"
+  }
+]

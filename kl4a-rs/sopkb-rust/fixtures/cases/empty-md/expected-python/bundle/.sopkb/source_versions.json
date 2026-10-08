@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/empty__v1.md",
+      "original_path": "sources/originals/empty__v1.md",
+      "size_bytes": 0,
+      "source_id": "empty",
+      "source_version_id": "empty:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_initial_notification a sopkb:Concept ;
+  rdfs:label "Initial Notification" .
+
+sopkb:object_on_call_staff_must_confirm_receipt_of_the_alert_within a sopkb:RelationObject ;
+  rdfs:label "On-call staff must confirm receipt of the alert within" ;
+  sopkb:objectText "On-call staff must confirm receipt of the alert within 15 minutes." .
+
+sopkb:kr_ki_escalation_runbook_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_initial_notification ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_on_call_staff_must_confirm_receipt_of_the_alert_within ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000001 ;
+  dcterms:source "escalation-runbook" ;
+  sopkb:sourceVersion "escalation-runbook:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_initial_notification sopkb:predicate_requires sopkb:object_on_call_staff_must_confirm_receipt_of_the_alert_within .
+
+sopkb:rule_ki_escalation_runbook_v1_000001_requires a sopkb:DecisionRule ;
+  rdfs:label "Initial Notification" ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_escalation_runbook_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_initial_notification" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_secondary_contact a sopkb:Concept ;
+  rdfs:label "Secondary Contact" .
+
+sopkb:object_clinicians_should_route_unresolved_alerts_to_the_secondary_on_ca a sopkb:RelationObject ;
+  rdfs:label "Clinicians should route unresolved alerts to the secondary on-call" ;
+  sopkb:objectText "Clinicians should route unresolved alerts to the secondary on-call physician." .
+
+sopkb:kr_ki_escalation_runbook_v1_000002 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_secondary_contact ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_clinicians_should_route_unresolved_alerts_to_the_secondary_on_ca ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000002 ;
+  dcterms:source "escalation-runbook" ;
+  sopkb:sourceVersion "escalation-runbook:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_secondary_contact sopkb:predicate_should sopkb:object_clinicians_should_route_unresolved_alerts_to_the_secondary_on_ca .
+
+sopkb:rule_ki_escalation_runbook_v1_000002_should a sopkb:DecisionRule ;
+  rdfs:label "Secondary Contact" ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000002 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_escalation_runbook_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000002 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_secondary_contact" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_vendor_escalation a sopkb:Concept ;
+  rdfs:label "Vendor Escalation" .
+
+sopkb:object_the_vendor_liaison_must_record_every_escalation_in_the a sopkb:RelationObject ;
+  rdfs:label "The vendor liaison must record every escalation in the" ;
+  sopkb:objectText "The vendor liaison must record every escalation in the incident log." .
+
+sopkb:kr_ki_escalation_runbook_v1_000003 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_vendor_escalation ;
+  sopkb:predicate sopkb:predicate_records ;
+  sopkb:object sopkb:object_the_vendor_liaison_must_record_every_escalation_in_the ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000003 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000003 ;
+  dcterms:source "escalation-runbook" ;
+  sopkb:sourceVersion "escalation-runbook:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_vendor_escalation sopkb:predicate_records sopkb:object_the_vendor_liaison_must_record_every_escalation_in_the .
+
+sopkb:rule_ki_escalation_runbook_v1_000003_records a sopkb:DecisionRule ;
+  rdfs:label "Vendor Escalation" ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000003 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_escalation_runbook_v1_000003 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000003 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_vendor_escalation" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_legal_notification a sopkb:Concept ;
+  rdfs:label "Legal Notification" .
+
+sopkb:object_staff_should_confirm_legal_has_been_notified_for_any a sopkb:RelationObject ;
+  rdfs:label "Staff should confirm legal has been notified for any" ;
+  sopkb:objectText "Staff should confirm legal has been notified for any reportable event." .
+
+sopkb:kr_ki_escalation_runbook_v1_000004 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_legal_notification ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_staff_should_confirm_legal_has_been_notified_for_any ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000004 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000004 ;
+  dcterms:source "escalation-runbook" ;
+  sopkb:sourceVersion "escalation-runbook:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_legal_notification sopkb:predicate_should sopkb:object_staff_should_confirm_legal_has_been_notified_for_any .
+
+sopkb:rule_ki_escalation_runbook_v1_000004_should a sopkb:DecisionRule ;
+  rdfs:label "Legal Notification" ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000004 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_escalation_runbook_v1_000004 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000004 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_legal_notification" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_patient_communication a sopkb:Concept ;
+  rdfs:label "Patient Communication" .
+
+sopkb:object_care_coordinators_must_confirm_the_patient_has_been_informed a sopkb:RelationObject ;
+  rdfs:label "Care coordinators must confirm the patient has been informed" ;
+  sopkb:objectText "Care coordinators must confirm the patient has been informed of the outcome." .
+
+sopkb:kr_ki_escalation_runbook_v1_000005 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_patient_communication ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_care_coordinators_must_confirm_the_patient_has_been_informed ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000005 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000005 ;
+  dcterms:source "escalation-runbook" ;
+  sopkb:sourceVersion "escalation-runbook:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_patient_communication sopkb:predicate_requires sopkb:object_care_coordinators_must_confirm_the_patient_has_been_informed .
+
+sopkb:rule_ki_escalation_runbook_v1_000005_requires a sopkb:DecisionRule ;
+  rdfs:label "Patient Communication" ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000005 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_escalation_runbook_v1_000005 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000005 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_patient_communication" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_post_incident_review a sopkb:Concept ;
+  rdfs:label "Post-Incident Review" .
+
+sopkb:object_the_safety_committee_should_record_findings_within_five_business a sopkb:RelationObject ;
+  rdfs:label "The safety committee should record findings within five business" ;
+  sopkb:objectText "The safety committee should record findings within five business days." .
+
+sopkb:kr_ki_escalation_runbook_v1_000006 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_post_incident_review ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_the_safety_committee_should_record_findings_within_five_business ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000006 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000006 ;
+  dcterms:source "escalation-runbook" ;
+  sopkb:sourceVersion "escalation-runbook:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_post_incident_review sopkb:predicate_should sopkb:object_the_safety_committee_should_record_findings_within_five_business .
+
+sopkb:rule_ki_escalation_runbook_v1_000006_should a sopkb:DecisionRule ;
+  rdfs:label "Post-Incident Review" ;
+  sopkb:knowledgePiece sopkb:ki_escalation_runbook_v1_000006 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_escalation_runbook_v1_000006 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_runbook_v1_000006 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_post_incident_review" ;
+  sopkb:otherwiseActionRequired "true" .

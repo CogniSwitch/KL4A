@@ -1,0 +1,9 @@
+[
+  {
+    "id": "triple-ki-no-heading-v1-000001",
+    "knowledge_item_id": "ki-no-heading-v1-000001",
+    "object": "Staff must confirm patient identity before dispensing medication.",
+    "predicate": "requires",
+    "subject": "Document"
+  }
+]

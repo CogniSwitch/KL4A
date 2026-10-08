@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "preamble:v1",
+      "checksum": "sha256:b543a1506622474950e9bb7c7cc64bd78c4704bf2d8695eff4924a8bce1b3851",
+      "id": "preamble",
+      "metadata": {
+        "source_filename": "preamble.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/preamble__v1.md",
+      "original_path": "sources/originals/preamble__v1.md",
+      "parse_status": "normalized",
+      "size": 249,
+      "source_version_id": "preamble:v1",
+      "status": "active",
+      "title": "preamble",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:b543a1506622474950e9bb7c7cc64bd78c4704bf2d8695eff4924a8bce1b3851",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/preamble__v1.md",
+          "original_path": "sources/originals/preamble__v1.md",
+          "size_bytes": 249,
+          "source_id": "preamble",
+          "source_version_id": "preamble:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

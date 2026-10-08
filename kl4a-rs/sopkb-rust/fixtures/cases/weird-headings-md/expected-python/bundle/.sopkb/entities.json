@@ -1,0 +1,14 @@
+[
+  {
+    "id": "entity-purpose",
+    "label": "Purpose ##"
+  },
+  {
+    "id": "entity-not-a-real-heading-inside-a-fence",
+    "label": "not a real heading, inside a fence"
+  },
+  {
+    "id": "entity-procedure",
+    "label": "Procedure"
+  }
+]

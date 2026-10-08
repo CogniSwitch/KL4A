@@ -1,0 +1,369 @@
+=== step 1: init {bundle} --title "Reviewed Bundle Case" ===
+argv: init <WORKDIR>\bundle --title Reviewed Bundle Case
+exit: 0
+--- stdout ---
+Initialized bundle bundle
+
+--- stderr ---
+
+
+=== step 2: scan {sources} --bundle {bundle} ===
+argv: scan <WORKDIR>\sources --bundle <WORKDIR>\bundle
+exit: 0
+--- stdout ---
+Scanned 1 source(s)
+
+--- stderr ---
+
+
+=== step 3: normalize {bundle} ===
+argv: normalize <WORKDIR>\bundle
+exit: 0
+--- stdout ---
+Normalized 7 section(s)
+
+--- stderr ---
+
+
+=== step 4: mine {bundle} --provider fixture ===
+argv: mine <WORKDIR>\bundle --provider fixture
+exit: 0
+--- stdout ---
+Mined 6 proposed knowledge item(s)
+
+--- stderr ---
+[sopkb.ingest] mine_bundle called: provider='fixture' bundle=<WORKDIR>\bundle
+[sopkb.ingest] dispatching to mine_fixture_bundle - regex-based, offline, no network calls
+[sopkb.ingest] mine_fixture_bundle finished: 6 item(s) mined via fixture
+
+
+=== step 5: @pick-item {bundle} index:0 -> ITEM1 ===
+bound ITEM1 = ki-escalation-runbook-v1-000001
+
+=== step 6: @pick-item {bundle} index:1 -> ITEM2 ===
+bound ITEM2 = ki-escalation-runbook-v1-000002
+
+=== step 7: @pick-item {bundle} index:2 -> ITEM3 ===
+bound ITEM3 = ki-escalation-runbook-v1-000003
+
+=== step 8: @pick-item {bundle} index:3 -> ITEM4 ===
+bound ITEM4 = ki-escalation-runbook-v1-000004
+
+=== step 9: @pick-item {bundle} index:4 -> ITEM5 ===
+bound ITEM5 = ki-escalation-runbook-v1-000005
+
+=== step 10: @pick-item {bundle} index:5 -> ITEM6 ===
+bound ITEM6 = ki-escalation-runbook-v1-000006
+
+=== step 11: review approve {bundle} {ITEM1} --reviewer local:reviewer-a --rationale "meets policy" ===
+argv: review approve <WORKDIR>\bundle ki-escalation-runbook-v1-000001 --reviewer local:reviewer-a --rationale meets policy
+exit: 0
+--- stdout ---
+{
+  "action": "approved",
+  "id": "review-000001",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000001",
+  "new_value": {
+    "review_status": "approved"
+  },
+  "previous_value": {
+    "review_status": "proposed"
+  },
+  "rationale": "meets policy",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 12: review reject {bundle} {ITEM2} --reviewer local:reviewer-a --rationale "does not apply here" ===
+argv: review reject <WORKDIR>\bundle ki-escalation-runbook-v1-000002 --reviewer local:reviewer-a --rationale does not apply here
+exit: 0
+--- stdout ---
+{
+  "action": "rejected",
+  "id": "review-000002",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000002",
+  "new_value": {
+    "review_status": "rejected"
+  },
+  "previous_value": {
+    "review_status": "proposed"
+  },
+  "rationale": "does not apply here",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 13: review defer {bundle} {ITEM3} --reviewer local:reviewer-a --rationale "needs clinical sign-off" ===
+argv: review defer <WORKDIR>\bundle ki-escalation-runbook-v1-000003 --reviewer local:reviewer-a --rationale needs clinical sign-off
+exit: 0
+--- stdout ---
+{
+  "action": "deferred",
+  "id": "review-000003",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000003",
+  "new_value": {
+    "review_status": "deferred"
+  },
+  "previous_value": {
+    "review_status": "proposed"
+  },
+  "rationale": "needs clinical sign-off",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 14: review approve {bundle} {ITEM4} --reviewer local:reviewer-a --rationale "terminal before comment" ===
+argv: review approve <WORKDIR>\bundle ki-escalation-runbook-v1-000004 --reviewer local:reviewer-a --rationale terminal before comment
+exit: 0
+--- stdout ---
+{
+  "action": "approved",
+  "id": "review-000004",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000004",
+  "new_value": {
+    "review_status": "approved"
+  },
+  "previous_value": {
+    "review_status": "proposed"
+  },
+  "rationale": "terminal before comment",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 15: review comment {bundle} {ITEM4} --reviewer local:reviewer-b --rationale "confirmed with legal, no change needed" ===
+argv: review comment <WORKDIR>\bundle ki-escalation-runbook-v1-000004 --reviewer local:reviewer-b --rationale confirmed with legal, no change needed
+exit: 0
+--- stdout ---
+{
+  "action": "commented",
+  "id": "review-000005",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000004",
+  "new_value": null,
+  "previous_value": null,
+  "rationale": "confirmed with legal, no change needed",
+  "reviewer": "local:reviewer-b",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 16: review edit {bundle} {ITEM5} --field subject --value "Escalation Staff" --reviewer local:reviewer-a --rationale "clarify subject" ===
+argv: review edit <WORKDIR>\bundle ki-escalation-runbook-v1-000005 --field subject --value Escalation Staff --reviewer local:reviewer-a --rationale clarify subject
+exit: 0
+--- stdout ---
+{
+  "action": "edited",
+  "id": "review-000006",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000005",
+  "new_value": {
+    "subject": "Escalation Staff"
+  },
+  "previous_value": {
+    "subject": "Patient Communication"
+  },
+  "rationale": "clarify subject",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 17: review edit {bundle} {ITEM5} --field predicate --value "confirms" --reviewer local:reviewer-a --rationale "clarify predicate" ===
+argv: review edit <WORKDIR>\bundle ki-escalation-runbook-v1-000005 --field predicate --value confirms --reviewer local:reviewer-a --rationale clarify predicate
+exit: 0
+--- stdout ---
+{
+  "action": "edited",
+  "id": "review-000007",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000005",
+  "new_value": {
+    "predicate": "confirms"
+  },
+  "previous_value": {
+    "predicate": "requires"
+  },
+  "rationale": "clarify predicate",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 18: review edit {bundle} {ITEM5} --field object --value "Escalate within one hour,\tper policy,\rwith injected control characters." --reviewer local:reviewer-a --rationale "inject CR/TAB for P-G7 Turtle-escaping coverage" ===
+argv: review edit <WORKDIR>\bundle ki-escalation-runbook-v1-000005 --field object --value Escalate within one hour,	per policy,with injected control characters. --reviewer local:reviewer-a --rationale inject CR/TAB for P-G7 Turtle-escaping coverage
+exit: 0
+--- stdout ---
+{
+  "action": "edited",
+  "id": "review-000008",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000005",
+  "new_value": {
+    "object": "Escalate within one hour,\tper policy,\rwith injected control characters."
+  },
+  "previous_value": {
+    "object": "Care coordinators must confirm the patient has been informed of the outcome."
+  },
+  "rationale": "inject CR/TAB for P-G7 Turtle-escaping coverage",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 19: review edit {bundle} {ITEM5} --field source_text --value "Escalate within one hour, per policy." --reviewer local:reviewer-a --rationale "align source text" ===
+argv: review edit <WORKDIR>\bundle ki-escalation-runbook-v1-000005 --field source_text --value Escalate within one hour, per policy. --reviewer local:reviewer-a --rationale align source text
+exit: 0
+--- stdout ---
+{
+  "action": "edited",
+  "id": "review-000009",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000005",
+  "new_value": {
+    "source_text": "Escalate within one hour, per policy."
+  },
+  "previous_value": {
+    "source_text": "Care coordinators must confirm the patient has been informed of the outcome."
+  },
+  "rationale": "align source text",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 20: review edit {bundle} {ITEM5} --field confidence --value "0.95" --reviewer local:reviewer-a --rationale "reviewer confident" ===
+argv: review edit <WORKDIR>\bundle ki-escalation-runbook-v1-000005 --field confidence --value 0.95 --reviewer local:reviewer-a --rationale reviewer confident
+exit: 0
+--- stdout ---
+{
+  "action": "edited",
+  "id": "review-000010",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000005",
+  "new_value": {
+    "confidence": 0.95
+  },
+  "previous_value": {
+    "confidence": 0.82
+  },
+  "rationale": "reviewer confident",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 21: review edit {bundle} {ITEM6} --field review_status --value approved --reviewer local:reviewer-a --rationale "attempt an invalid field name" ===
+argv: review edit <WORKDIR>\bundle ki-escalation-runbook-v1-000006 --field review_status --value approved --reviewer local:reviewer-a --rationale attempt an invalid field name
+exit: 1
+--- stdout ---
+
+--- stderr ---
+error: field is not editable: review_status
+
+
+=== step 22: review edit {bundle} {ITEM6} --field confidence --value 1.5 --reviewer local:reviewer-a --rationale "attempt an out-of-range confidence" ===
+argv: review edit <WORKDIR>\bundle ki-escalation-runbook-v1-000006 --field confidence --value 1.5 --reviewer local:reviewer-a --rationale attempt an out-of-range confidence
+exit: 1
+--- stdout ---
+
+--- stderr ---
+error: confidence must be between 0 and 1
+
+
+=== step 23: review approve {bundle} {ITEM6} --reviewer local:reviewer-a --rationale "approve before terminal-action test" ===
+argv: review approve <WORKDIR>\bundle ki-escalation-runbook-v1-000006 --reviewer local:reviewer-a --rationale approve before terminal-action test
+exit: 0
+--- stdout ---
+{
+  "action": "approved",
+  "id": "review-000011",
+  "knowledge_item_id": "ki-escalation-runbook-v1-000006",
+  "new_value": {
+    "review_status": "approved"
+  },
+  "previous_value": {
+    "review_status": "proposed"
+  },
+  "rationale": "approve before terminal-action test",
+  "reviewer": "local:reviewer-a",
+  "timestamp": "<TS>"
+}
+
+--- stderr ---
+
+
+=== step 24: review edit {bundle} {ITEM6} --field subject --value "Should not apply" --reviewer local:reviewer-a --rationale "attempt an edit on a terminal item" ===
+argv: review edit <WORKDIR>\bundle ki-escalation-runbook-v1-000006 --field subject --value Should not apply --reviewer local:reviewer-a --rationale attempt an edit on a terminal item
+exit: 1
+--- stdout ---
+
+--- stderr ---
+error: cannot change terminal review status: approved
+
+
+=== step 25: validate {bundle} ===
+argv: validate <WORKDIR>\bundle
+exit: 0
+--- stdout ---
+Validation completed with 0 error(s), 0 warning(s)
+
+--- stderr ---
+
+
+=== step 26: export {bundle} --format graph-json,rdf ===
+argv: export <WORKDIR>\bundle --format graph-json,rdf
+exit: 0
+--- stdout ---
+Generated 2 export(s)
+
+--- stderr ---
+
+
+=== step 27: mine {bundle} --provider fixture ===
+argv: mine <WORKDIR>\bundle --provider fixture
+exit: 0
+--- stdout ---
+Mined 6 proposed knowledge item(s)
+
+--- stderr ---
+[sopkb.ingest] mine_bundle called: provider='fixture' bundle=<WORKDIR>\bundle
+[sopkb.ingest] dispatching to mine_fixture_bundle - regex-based, offline, no network calls
+[sopkb.ingest] mine_fixture_bundle finished: 6 item(s) mined via fixture
+
+
+=== step 28: validate {bundle} ===
+argv: validate <WORKDIR>\bundle
+exit: 0
+--- stdout ---
+Validation completed with 0 error(s), 0 warning(s)
+
+--- stderr ---
+
+
+=== step 29: export {bundle} --format graph-json,rdf ===
+argv: export <WORKDIR>\bundle --format graph-json,rdf
+exit: 0
+--- stdout ---
+Generated 2 export(s)
+
+--- stderr ---
+

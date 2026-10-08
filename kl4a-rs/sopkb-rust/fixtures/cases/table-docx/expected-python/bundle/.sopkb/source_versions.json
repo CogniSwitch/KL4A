@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:e3ca244afc4d497be26ba2ea5e9074be8d18cb4a615db57763fb5b1a1bc32918",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/quarterly-review__v1.md",
+      "original_path": "sources/originals/quarterly-review__v1.docx",
+      "size_bytes": 35608,
+      "source_id": "quarterly-review",
+      "source_version_id": "quarterly-review:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

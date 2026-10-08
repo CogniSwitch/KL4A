@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:1111111111111111111111111111111111111111111111111111111111aa",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/escalation-policy-legacy01.md",
+      "original_path": "sources/originals/escalation-policy-legacy01.md",
+      "size_bytes": 99,
+      "source_id": "escalation-policy-legacy01",
+      "source_version_id": "escalation-policy-legacy01:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 ---
-title: KL4A OKF Bundle Spec
+title: OKF Bundle Spec
+description: >-
+  The normative OKF bundle specification both KL4A options implement: documents,
+  manifest, evidence, relations and implementation state.
 ---
 
 # KL4A OKF Bundle Spec
@@ -149,23 +152,24 @@ workbench/
 ## 4. Export Semantics
 
 !!! note "Export is not what makes a bundle OKF"
-    `sopkb-cli export` MUST NOT be required to create an OKF bundle. The bundle is already OKF.
+    `sopkb export` MUST NOT be required to create an OKF bundle. The bundle is already OKF.
 
-`sopkb-cli export` is reserved for derivative or packaged representations. Implemented today:
+`sopkb export` is reserved for derivative or packaged representations, for example:
 
 ```text
-sopkb-cli export <bundle_dir> --format graph-json
-sopkb-cli export <bundle_dir> --format rdf
+sopkb export <bundle_dir> --format graph-json
+sopkb export <bundle_dir> --format rdf
+sopkb export <bundle_dir> --format zip
+sopkb export <bundle_dir> --format mcp-snapshot
 ```
 
-(`zip`/package and other downstream-specific formats are anticipated by this spec's design but not yet implemented — passing an unrecognized format token is silently ignored rather than erroring.)
-
-Export lands in a sibling `exports/` directory next to the bundle, not inside it — `<bundle_dir>`'s parent gets an `exports/<bundle_id>/` subdirectory (or, if the bundle sits under a `knowledge-bundles/` folder, the export lands under that folder's own parent instead, keeping `exports/` and `knowledge-bundles/` as siblings):
+Allowed export outputs include:
 
 ```text
-exports/<bundle_id>/graph/graph.json
-exports/<bundle_id>/graph/triples.ttl
-exports/<bundle_id>/export_summary.md
+workbench/exports/<bundle_id>/graph/graph.json
+workbench/exports/<bundle_id>/graph/triples.ttl
+workbench/exports/<bundle_id>/packages/<bundle_id>.zip
+workbench/exports/<bundle_id>/downstream/<format_name>/
 ```
 
 An `okf` export MAY exist only as a packaging/copy operation, not as the step that creates OKF compliance.
@@ -184,7 +188,7 @@ resource: relative-or-local-resource
 tags: []
 status: stable
 generated:
-  actor: sopkb/0.0.1
+  actor: sopkb/0.1.0
   date: "2026-07-31"
 sources:
   - id: src-...
@@ -240,7 +244,7 @@ Example:
 
 ```yaml
 id: glp1-healthcare-sop
-version: 0.0.1
+version: 0.1.0
 title: GLP-1 Healthcare SOP Bundle
 profile: sop-knowledge-bundle
 profile_version: 0.2.0
@@ -649,7 +653,7 @@ Implementation rules:
 3. Keep `sources/originals/` and `sources/normalized/` as provenance assets.
 4. Make CLI, web, MCP, and agent APIs read canonical OKF documents or `.sopkb` indexes derived from them.
 5. Keep derived JSON indexes as caches that can be rebuilt from OKF.
-6. Reserve `sopkb-cli export` for `graph-json`, `rdf`, archive/package, and downstream-specific formats.
+6. Reserve `sopkb export` for `graph-json`, `rdf`, archive/package, and downstream-specific formats.
 
 ## 20. Implementation Mapping
 
@@ -657,8 +661,8 @@ Target implementation entry points:
 
 | Component | Path | Notes |
 |---|---|---|
-| Bundle creation | `v2/sopkb-rust/crates/sopkb-workbench/src/bundles.rs`, `.../ingest.rs` | |
-| OKF document writer | `v2/sopkb-rust/crates/sopkb-export/src/sync.rs` | `sync_okf_bundle()` writes the canonical OKF tree directly at the bundle root (`export_dir = bundle_dir`) — this is done, not pending. |
-| Agent consumption layer | `v2/sopkb-rust/crates/sopkb-derive/src/context.rs` | |
-| MCP read-only layer | `v2/sopkb-rust/bin/sopkb-mcp/src/` (`jsonrpc.rs`, `tools.rs`) | |
-| Structural tests | `v2/sopkb-rust/crates/sopkb-export/tests/phase5_v1_diff.rs`, `.../sopkb-derive/tests/phase4_v1_diff.rs` | Byte-level differential tests against the frozen reference output checked into the fixtures tree. |
+| Bundle creation | `tools/kl4a/kl4a/bundle_store.py` | |
+| OKF document writer | `tools/kl4a/sopkb/export.py` | `sync_okf_bundle()` writes the canonical OKF tree directly at the bundle root (`export_dir = bundle_dir`) — this is done, not pending. |
+| Agent consumption layer | `tools/kl4a/sopkb/agent_consumption.py` | |
+| MCP read-only layer | `tools/kl4a/sopkb/mcp_server.py` | |
+| Structural tests | `tools/kl4a/tests/sopkb/test_gate_m12_okf_agent_consumption.py` | |

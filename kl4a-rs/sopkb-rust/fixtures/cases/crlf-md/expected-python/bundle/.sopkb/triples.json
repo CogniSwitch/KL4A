@@ -1,0 +1,16 @@
+[
+  {
+    "id": "triple-ki-safety-crlf-v1-000001",
+    "knowledge_item_id": "ki-safety-crlf-v1-000001",
+    "object": "Staff must record all adverse events within 24 hours.",
+    "predicate": "records",
+    "subject": "Reporting Requirements"
+  },
+  {
+    "id": "triple-ki-safety-crlf-v1-000002",
+    "knowledge_item_id": "ki-safety-crlf-v1-000002",
+    "object": "Clinicians should route urgent cases to the on-call physician immediately.",
+    "predicate": "should",
+    "subject": "Escalation Procedure"
+  }
+]

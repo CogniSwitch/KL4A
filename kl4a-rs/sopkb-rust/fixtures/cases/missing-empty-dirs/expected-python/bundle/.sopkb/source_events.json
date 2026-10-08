@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-missing-dirs-<TS>",
+    "path": "<ABS>",
+    "source_id": "missing-dirs",
+    "source_version_id": "missing-dirs:v1",
+    "timestamp": "<TS>"
+  }
+]

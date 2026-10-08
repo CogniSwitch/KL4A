@@ -1,0 +1,641 @@
+{
+  "edges": [
+    {
+      "source": "escalation-runbook",
+      "target": "section-escalation-runbook-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-escalation-runbook-001",
+      "target": "concept-escalation-runbook",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "escalation-runbook",
+      "target": "section-escalation-runbook-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-escalation-runbook-002",
+      "target": "concept-initial-notification",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "escalation-runbook",
+      "target": "section-escalation-runbook-003",
+      "type": "has_section"
+    },
+    {
+      "source": "section-escalation-runbook-003",
+      "target": "concept-secondary-contact",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "escalation-runbook",
+      "target": "section-escalation-runbook-004",
+      "type": "has_section"
+    },
+    {
+      "source": "section-escalation-runbook-004",
+      "target": "concept-vendor-escalation",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "escalation-runbook",
+      "target": "section-escalation-runbook-005",
+      "type": "has_section"
+    },
+    {
+      "source": "section-escalation-runbook-005",
+      "target": "concept-legal-notification",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "escalation-runbook",
+      "target": "section-escalation-runbook-006",
+      "type": "has_section"
+    },
+    {
+      "source": "section-escalation-runbook-006",
+      "target": "concept-patient-communication",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "escalation-runbook",
+      "target": "section-escalation-runbook-007",
+      "type": "has_section"
+    },
+    {
+      "source": "section-escalation-runbook-007",
+      "target": "concept-post-incident-review",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-escalation-runbook-002",
+      "target": "ki-escalation-runbook-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000001",
+      "target": "evidence-ki-escalation-runbook-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000001",
+      "target": "kr-ki-escalation-runbook-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-initial-notification",
+      "target": "kr-ki-escalation-runbook-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000001",
+      "target": "evidence-ki-escalation-runbook-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000001",
+      "target": "rule-ki-escalation-runbook-v1-000001-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000001",
+      "target": "rule-ki-escalation-runbook-v1-000001-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-escalation-runbook-v1-000001-requires",
+      "target": "evidence-ki-escalation-runbook-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-escalation-runbook-003",
+      "target": "ki-escalation-runbook-v1-000002",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000002",
+      "target": "evidence-ki-escalation-runbook-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000002",
+      "target": "kr-ki-escalation-runbook-v1-000002",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-secondary-contact",
+      "target": "kr-ki-escalation-runbook-v1-000002",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000002",
+      "target": "evidence-ki-escalation-runbook-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000002",
+      "target": "rule-ki-escalation-runbook-v1-000002-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000002",
+      "target": "rule-ki-escalation-runbook-v1-000002-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-escalation-runbook-v1-000002-should",
+      "target": "evidence-ki-escalation-runbook-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-escalation-runbook-004",
+      "target": "ki-escalation-runbook-v1-000003",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000003",
+      "target": "evidence-ki-escalation-runbook-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000003",
+      "target": "kr-ki-escalation-runbook-v1-000003",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-vendor-escalation",
+      "target": "kr-ki-escalation-runbook-v1-000003",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000003",
+      "target": "evidence-ki-escalation-runbook-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000003",
+      "target": "rule-ki-escalation-runbook-v1-000003-records",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000003",
+      "target": "rule-ki-escalation-runbook-v1-000003-records",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-escalation-runbook-v1-000003-records",
+      "target": "evidence-ki-escalation-runbook-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-escalation-runbook-005",
+      "target": "ki-escalation-runbook-v1-000004",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000004",
+      "target": "evidence-ki-escalation-runbook-v1-000004",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000004",
+      "target": "kr-ki-escalation-runbook-v1-000004",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-legal-notification",
+      "target": "kr-ki-escalation-runbook-v1-000004",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000004",
+      "target": "evidence-ki-escalation-runbook-v1-000004",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000004",
+      "target": "rule-ki-escalation-runbook-v1-000004-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000004",
+      "target": "rule-ki-escalation-runbook-v1-000004-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-escalation-runbook-v1-000004-should",
+      "target": "evidence-ki-escalation-runbook-v1-000004",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-escalation-runbook-006",
+      "target": "ki-escalation-runbook-v1-000005",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000005",
+      "target": "evidence-ki-escalation-runbook-v1-000005",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000005",
+      "target": "kr-ki-escalation-runbook-v1-000005",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-patient-communication",
+      "target": "kr-ki-escalation-runbook-v1-000005",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000005",
+      "target": "evidence-ki-escalation-runbook-v1-000005",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000005",
+      "target": "rule-ki-escalation-runbook-v1-000005-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000005",
+      "target": "rule-ki-escalation-runbook-v1-000005-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-escalation-runbook-v1-000005-requires",
+      "target": "evidence-ki-escalation-runbook-v1-000005",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-escalation-runbook-007",
+      "target": "ki-escalation-runbook-v1-000006",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000006",
+      "target": "evidence-ki-escalation-runbook-v1-000006",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000006",
+      "target": "kr-ki-escalation-runbook-v1-000006",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-post-incident-review",
+      "target": "kr-ki-escalation-runbook-v1-000006",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000006",
+      "target": "evidence-ki-escalation-runbook-v1-000006",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000006",
+      "target": "rule-ki-escalation-runbook-v1-000006-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-escalation-runbook-v1-000006",
+      "target": "rule-ki-escalation-runbook-v1-000006-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-escalation-runbook-v1-000006-should",
+      "target": "evidence-ki-escalation-runbook-v1-000006",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000001",
+      "target": "review-000001",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000002",
+      "target": "review-000002",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000003",
+      "target": "review-000003",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000004",
+      "target": "review-000004",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000004",
+      "target": "review-000005",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000005",
+      "target": "review-000006",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000005",
+      "target": "review-000007",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000005",
+      "target": "review-000008",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000005",
+      "target": "review-000009",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000005",
+      "target": "review-000010",
+      "type": "has_review"
+    },
+    {
+      "source": "ki-escalation-runbook-v1-000006",
+      "target": "review-000011",
+      "type": "has_review"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "escalation-runbook",
+      "label": "escalation runbook",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-escalation-runbook-001",
+      "label": "Escalation Runbook",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-escalation-runbook",
+      "label": "Escalation Runbook",
+      "type": "concept"
+    },
+    {
+      "id": "section-escalation-runbook-002",
+      "label": "Initial Notification",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-initial-notification",
+      "label": "Initial Notification",
+      "type": "concept"
+    },
+    {
+      "id": "section-escalation-runbook-003",
+      "label": "Secondary Contact",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-secondary-contact",
+      "label": "Secondary Contact",
+      "type": "concept"
+    },
+    {
+      "id": "section-escalation-runbook-004",
+      "label": "Vendor Escalation",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-vendor-escalation",
+      "label": "Vendor Escalation",
+      "type": "concept"
+    },
+    {
+      "id": "section-escalation-runbook-005",
+      "label": "Legal Notification",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-legal-notification",
+      "label": "Legal Notification",
+      "type": "concept"
+    },
+    {
+      "id": "section-escalation-runbook-006",
+      "label": "Patient Communication",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-patient-communication",
+      "label": "Patient Communication",
+      "type": "concept"
+    },
+    {
+      "id": "section-escalation-runbook-007",
+      "label": "Post-Incident Review",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-post-incident-review",
+      "label": "Post-Incident Review",
+      "type": "concept"
+    },
+    {
+      "id": "ki-escalation-runbook-v1-000001",
+      "label": "Initial Notification",
+      "lifecycle_status": "active",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-escalation-runbook-v1-000001",
+      "label": "On-call staff must confirm receipt of the alert within 15 minutes.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-escalation-runbook-v1-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-escalation-runbook-v1-000001-requires",
+      "label": "Initial Notification",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-escalation-runbook-v1-000002",
+      "label": "Secondary Contact",
+      "lifecycle_status": "active",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-escalation-runbook-v1-000002",
+      "label": "Clinicians should route unresolved alerts to the secondary on-call physician.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-escalation-runbook-v1-000002",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-escalation-runbook-v1-000002-should",
+      "label": "Secondary Contact",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-escalation-runbook-v1-000003",
+      "label": "Vendor Escalation",
+      "lifecycle_status": "active",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-escalation-runbook-v1-000003",
+      "label": "The vendor liaison must record every escalation in the incident log.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-escalation-runbook-v1-000003",
+      "label": "records",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-escalation-runbook-v1-000003-records",
+      "label": "Vendor Escalation",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-escalation-runbook-v1-000004",
+      "label": "Legal Notification",
+      "lifecycle_status": "active",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-escalation-runbook-v1-000004",
+      "label": "Staff should confirm legal has been notified for any reportable event.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-escalation-runbook-v1-000004",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-escalation-runbook-v1-000004-should",
+      "label": "Legal Notification",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-escalation-runbook-v1-000005",
+      "label": "Patient Communication",
+      "lifecycle_status": "active",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-escalation-runbook-v1-000005",
+      "label": "Care coordinators must confirm the patient has been informed of the outcome.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-escalation-runbook-v1-000005",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-escalation-runbook-v1-000005-requires",
+      "label": "Patient Communication",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-escalation-runbook-v1-000006",
+      "label": "Post-Incident Review",
+      "lifecycle_status": "active",
+      "source_version_id": "escalation-runbook:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-escalation-runbook-v1-000006",
+      "label": "The safety committee should record findings within five business days.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-escalation-runbook-v1-000006",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-escalation-runbook-v1-000006-should",
+      "label": "Post-Incident Review",
+      "type": "decision_rule"
+    },
+    {
+      "id": "review-000001",
+      "label": "approved",
+      "type": "review"
+    },
+    {
+      "id": "review-000002",
+      "label": "rejected",
+      "type": "review"
+    },
+    {
+      "id": "review-000003",
+      "label": "deferred",
+      "type": "review"
+    },
+    {
+      "id": "review-000004",
+      "label": "approved",
+      "type": "review"
+    },
+    {
+      "id": "review-000005",
+      "label": "commented",
+      "type": "review"
+    },
+    {
+      "id": "review-000006",
+      "label": "edited",
+      "type": "review"
+    },
+    {
+      "id": "review-000007",
+      "label": "edited",
+      "type": "review"
+    },
+    {
+      "id": "review-000008",
+      "label": "edited",
+      "type": "review"
+    },
+    {
+      "id": "review-000009",
+      "label": "edited",
+      "type": "review"
+    },
+    {
+      "id": "review-000010",
+      "label": "edited",
+      "type": "review"
+    },
+    {
+      "id": "review-000011",
+      "label": "approved",
+      "type": "review"
+    }
+  ]
+}

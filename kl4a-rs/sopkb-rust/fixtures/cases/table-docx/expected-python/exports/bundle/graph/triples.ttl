@@ -1,0 +1,31 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_closing_notes a sopkb:Concept ;
+  rdfs:label "Closing Notes" .
+
+sopkb:object_this_paragraph_appears_after_the_table_in_the_visual a sopkb:RelationObject ;
+  rdfs:label "This paragraph appears after the table in the visual" ;
+  sopkb:objectText "This paragraph appears after the table in the visual document, but the table must be relocated to the very end of the normalized output, after this paragraph." .
+
+sopkb:kr_ki_quarterly_review_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_closing_notes ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_this_paragraph_appears_after_the_table_in_the_visual ;
+  sopkb:knowledgePiece sopkb:ki_quarterly_review_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_quarterly_review_v1_000001 ;
+  dcterms:source "quarterly-review" ;
+  sopkb:sourceVersion "quarterly-review:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_closing_notes sopkb:predicate_requires sopkb:object_this_paragraph_appears_after_the_table_in_the_visual .
+
+sopkb:rule_ki_quarterly_review_v1_000001_requires a sopkb:DecisionRule ;
+  rdfs:label "Closing Notes" ;
+  sopkb:knowledgePiece sopkb:ki_quarterly_review_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_quarterly_review_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_quarterly_review_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_closing_notes" ;
+  sopkb:otherwiseActionRequired "true" .

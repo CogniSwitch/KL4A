@@ -1,0 +1,33 @@
+{
+  "edges": [
+    {
+      "source": "coverage-matrix",
+      "target": "section-coverage-matrix-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-coverage-matrix-001",
+      "target": "concept-coverage-matrix",
+      "type": "mentions_concept"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "coverage-matrix",
+      "label": "coverage matrix",
+      "source_version_id": "coverage-matrix:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-coverage-matrix-001",
+      "label": "Coverage Matrix",
+      "source_version_id": "coverage-matrix:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-coverage-matrix",
+      "label": "Coverage Matrix",
+      "type": "concept"
+    }
+  ]
+}

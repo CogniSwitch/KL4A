@@ -1,0 +1,87 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_ligibilit a sopkb:Concept ;
+  rdfs:label "Éligibilité" .
+
+sopkb:object_le_clinicien_doit_confirmer_l_identit_du_patient a sopkb:RelationObject ;
+  rdfs:label "Le clinicien doit confirmer l'identité du patient." ;
+  sopkb:objectText "Le clinicien doit confirmer l'identité du patient." .
+
+sopkb:kr_ki_caf_checklist_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_ligibilit ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_le_clinicien_doit_confirmer_l_identit_du_patient ;
+  sopkb:knowledgePiece sopkb:ki_caf_checklist_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_caf_checklist_v1_000001 ;
+  dcterms:source "caf-checklist" ;
+  sopkb:sourceVersion "caf-checklist:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_ligibilit sopkb:predicate_requires sopkb:object_le_clinicien_doit_confirmer_l_identit_du_patient .
+
+sopkb:rule_ki_caf_checklist_v1_000001_requires a sopkb:DecisionRule ;
+  rdfs:label "Éligibilité" ;
+  sopkb:knowledgePiece sopkb:ki_caf_checklist_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_caf_checklist_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_caf_checklist_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_ligibilit" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_proc_dure a sopkb:Concept ;
+  rdfs:label "Procédure" .
+
+sopkb:object_le_personnel_doit_record_les_contre_indications_et_route_les a sopkb:RelationObject ;
+  rdfs:label "Le personnel doit record les contre-indications et route les" ;
+  sopkb:objectText "Le personnel doit record les contre-indications et route les cas incertains." .
+
+sopkb:kr_ki_caf_checklist_v1_000002 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_proc_dure ;
+  sopkb:predicate sopkb:predicate_routes ;
+  sopkb:object sopkb:object_le_personnel_doit_record_les_contre_indications_et_route_les ;
+  sopkb:knowledgePiece sopkb:ki_caf_checklist_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_caf_checklist_v1_000002 ;
+  dcterms:source "caf-checklist" ;
+  sopkb:sourceVersion "caf-checklist:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_proc_dure sopkb:predicate_routes sopkb:object_le_personnel_doit_record_les_contre_indications_et_route_les .
+
+sopkb:rule_ki_caf_checklist_v1_000002_routes a sopkb:DecisionRule ;
+  rdfs:label "Procédure" ;
+  sopkb:knowledgePiece sopkb:ki_caf_checklist_v1_000002 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_caf_checklist_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_caf_checklist_v1_000002 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_proc_dure" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_item a sopkb:Concept ;
+  rdfs:label "概述" .
+
+sopkb:object_staff_must_confirm_patient_identity a sopkb:RelationObject ;
+  rdfs:label "Staff must confirm patient identity." ;
+  sopkb:objectText "Staff must confirm patient identity." .
+
+sopkb:kr_ki_item_v1_000003 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_item ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_staff_must_confirm_patient_identity ;
+  sopkb:knowledgePiece sopkb:ki_item_v1_000003 ;
+  sopkb:evidence sopkb:evidence_ki_item_v1_000003 ;
+  dcterms:source "item" ;
+  sopkb:sourceVersion "item:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_item sopkb:predicate_requires sopkb:object_staff_must_confirm_patient_identity .
+
+sopkb:rule_ki_item_v1_000003_confirm_patient_identity a sopkb:DecisionRule ;
+  rdfs:label "Confirm patient identity" ;
+  sopkb:knowledgePiece sopkb:ki_item_v1_000003 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_item_v1_000003 ;
+  sopkb:evidence sopkb:evidence_ki_item_v1_000003 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "patient_identity_confirmed" ;
+  sopkb:otherwiseActionRequired "true" .

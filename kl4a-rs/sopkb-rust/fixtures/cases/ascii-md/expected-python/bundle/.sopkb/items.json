@@ -1,0 +1,48 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 199,
+    "id": "ki-glp1-intake-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians must confirm patient identity before reviewing therapy eligibility.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-glp1-intake-003",
+    "source_id": "glp1-intake",
+    "source_text": "Clinicians must confirm patient identity before reviewing therapy eligibility.",
+    "source_version_id": "glp1-intake:v1",
+    "span_status": "exact",
+    "start_pos": 121,
+    "subject": "Eligibility Requirements",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 299,
+    "id": "ki-glp1-intake-v1-000002",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff should record contraindications and route uncertain cases for clinical review.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-glp1-intake-004",
+    "source_id": "glp1-intake",
+    "source_text": "Staff should record contraindications and route uncertain cases for clinical review.",
+    "source_version_id": "glp1-intake:v1",
+    "span_status": "exact",
+    "start_pos": 215,
+    "subject": "Procedure",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

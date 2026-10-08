@@ -1,0 +1,25 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 220,
+    "id": "ki-vendor-onboarding-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "A vendor must hold a valid tax identification number and a signed NDA on file.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-vendor-onboarding-002",
+    "source_id": "vendor-onboarding",
+    "source_text": "A vendor must hold a valid tax identification number and a signed NDA on file.",
+    "source_version_id": "vendor-onboarding:v1",
+    "span_status": "exact",
+    "start_pos": 142,
+    "subject": "Eligibility Requirements",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

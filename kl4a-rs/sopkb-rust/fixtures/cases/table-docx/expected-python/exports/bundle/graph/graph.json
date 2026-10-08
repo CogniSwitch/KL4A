@@ -1,0 +1,116 @@
+{
+  "edges": [
+    {
+      "source": "quarterly-review",
+      "target": "section-quarterly-review-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-quarterly-review-001",
+      "target": "concept-quarterly-review",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "quarterly-review",
+      "target": "section-quarterly-review-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-quarterly-review-002",
+      "target": "concept-closing-notes",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-quarterly-review-002",
+      "target": "ki-quarterly-review-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-quarterly-review-v1-000001",
+      "target": "evidence-ki-quarterly-review-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-quarterly-review-v1-000001",
+      "target": "kr-ki-quarterly-review-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-closing-notes",
+      "target": "kr-ki-quarterly-review-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-quarterly-review-v1-000001",
+      "target": "evidence-ki-quarterly-review-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-quarterly-review-v1-000001",
+      "target": "rule-ki-quarterly-review-v1-000001-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-quarterly-review-v1-000001",
+      "target": "rule-ki-quarterly-review-v1-000001-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-quarterly-review-v1-000001-requires",
+      "target": "evidence-ki-quarterly-review-v1-000001",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "quarterly-review",
+      "label": "quarterly review",
+      "source_version_id": "quarterly-review:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-quarterly-review-001",
+      "label": "Quarterly Review",
+      "source_version_id": "quarterly-review:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-quarterly-review",
+      "label": "Quarterly Review",
+      "type": "concept"
+    },
+    {
+      "id": "section-quarterly-review-002",
+      "label": "Closing Notes",
+      "source_version_id": "quarterly-review:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-closing-notes",
+      "label": "Closing Notes",
+      "type": "concept"
+    },
+    {
+      "id": "ki-quarterly-review-v1-000001",
+      "label": "Closing Notes",
+      "lifecycle_status": "active",
+      "source_version_id": "quarterly-review:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-quarterly-review-v1-000001",
+      "label": "This paragraph appears after the table in the visual document, but the table must be relocated to the very end of the normalized output, after this paragraph.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-quarterly-review-v1-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-quarterly-review-v1-000001-requires",
+      "label": "Closing Notes",
+      "type": "decision_rule"
+    }
+  ]
+}

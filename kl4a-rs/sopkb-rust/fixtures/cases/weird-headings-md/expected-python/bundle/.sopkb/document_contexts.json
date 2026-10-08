@@ -1,0 +1,26 @@
+[
+  {
+    "heading": "Lone Hash Adopts This Line As Heading Text",
+    "section_id": "section-weird-headings-001",
+    "semantic_role": "section",
+    "source_id": "weird-headings"
+  },
+  {
+    "heading": "Purpose ##",
+    "section_id": "section-weird-headings-002",
+    "semantic_role": "section",
+    "source_id": "weird-headings"
+  },
+  {
+    "heading": "not a real heading, inside a fence",
+    "section_id": "section-weird-headings-003",
+    "semantic_role": "section",
+    "source_id": "weird-headings"
+  },
+  {
+    "heading": "Procedure",
+    "section_id": "section-weird-headings-004",
+    "semantic_role": "procedure",
+    "source_id": "weird-headings"
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "triple-ki-missing-dirs-v1-000001",
+    "knowledge_item_id": "ki-missing-dirs-v1-000001",
+    "object": "Staff must confirm the checklist before closing the case.",
+    "predicate": "requires",
+    "subject": "Requirements"
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-no-heading-<TS>",
+    "path": "<ABS>",
+    "source_id": "no-heading",
+    "source_version_id": "no-heading:v1",
+    "timestamp": "<TS>"
+  }
+]

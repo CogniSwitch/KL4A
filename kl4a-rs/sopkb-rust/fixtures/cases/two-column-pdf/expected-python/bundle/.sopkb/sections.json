@@ -1,0 +1,12 @@
+[
+  {
+    "end_pos": 214,
+    "heading": "Left column opens here",
+    "id": "section-two-column-notice-001",
+    "normalized_path": "sources/normalized/two-column-notice__v1.md",
+    "semantic_role": "section",
+    "source_id": "two-column-notice",
+    "source_version_id": "two-column-notice:v1",
+    "start_pos": 0
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "confidence": null,
+    "derivation": "direct_text",
+    "end_pos": 75,
+    "id": "ki-intake-checklist-malformed01-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must confirm patient identity before proceeding.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-intake-checklist-malformed01-001",
+    "source_id": "intake-checklist-malformed01",
+    "source_text": "Staff must confirm patient identity before proceeding.",
+    "source_version_id": "intake-checklist-malformed01:v1",
+    "span_status": "exact",
+    "start_pos": 21,
+    "subject": "Intake Checklist",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

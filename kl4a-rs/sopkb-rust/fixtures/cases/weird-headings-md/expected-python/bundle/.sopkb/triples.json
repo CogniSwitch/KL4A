@@ -1,0 +1,23 @@
+[
+  {
+    "id": "triple-ki-weird-headings-v1-000001",
+    "knowledge_item_id": "ki-weird-headings-v1-000001",
+    "object": "Staff must confirm the escalation procedure described below.",
+    "predicate": "requires",
+    "subject": "Purpose ##"
+  },
+  {
+    "id": "triple-ki-weird-headings-v1-000002",
+    "knowledge_item_id": "ki-weird-headings-v1-000002",
+    "object": "Clinicians should route uncertain cases for review.",
+    "predicate": "should",
+    "subject": "not a real heading, inside a fence"
+  },
+  {
+    "id": "triple-ki-weird-headings-v1-000003",
+    "knowledge_item_id": "ki-weird-headings-v1-000003",
+    "object": "Staff should record contraindications and route cases per policy.",
+    "predicate": "should",
+    "subject": "Procedure"
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-quarterly-review-<TS>",
+    "path": "<ABS>",
+    "source_id": "quarterly-review",
+    "source_version_id": "quarterly-review:v1",
+    "timestamp": "<TS>"
+  }
+]

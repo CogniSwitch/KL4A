@@ -1,0 +1,240 @@
+{
+  "edges": [
+    {
+      "source": "glp1-intake",
+      "target": "section-glp1-intake-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-glp1-intake-001",
+      "target": "concept-glp-1-intake-sop",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "glp1-intake",
+      "target": "section-glp1-intake-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-glp1-intake-002",
+      "target": "concept-purpose",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "glp1-intake",
+      "target": "section-glp1-intake-003",
+      "type": "has_section"
+    },
+    {
+      "source": "section-glp1-intake-003",
+      "target": "concept-eligibility-requirements",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "glp1-intake",
+      "target": "section-glp1-intake-004",
+      "type": "has_section"
+    },
+    {
+      "source": "section-glp1-intake-004",
+      "target": "concept-procedure",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-glp1-intake-003",
+      "target": "ki-glp1-intake-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-glp1-intake-v1-000001",
+      "target": "evidence-ki-glp1-intake-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-glp1-intake-v1-000001",
+      "target": "kr-ki-glp1-intake-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-eligibility-requirements",
+      "target": "kr-ki-glp1-intake-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-glp1-intake-v1-000001",
+      "target": "evidence-ki-glp1-intake-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-glp1-intake-v1-000001",
+      "target": "rule-ki-glp1-intake-v1-000001-confirm-patient-identity",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-glp1-intake-v1-000001",
+      "target": "rule-ki-glp1-intake-v1-000001-confirm-patient-identity",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-glp1-intake-v1-000001-confirm-patient-identity",
+      "target": "evidence-ki-glp1-intake-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-glp1-intake-004",
+      "target": "ki-glp1-intake-v1-000002",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-glp1-intake-v1-000002",
+      "target": "evidence-ki-glp1-intake-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-glp1-intake-v1-000002",
+      "target": "kr-ki-glp1-intake-v1-000002",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-procedure",
+      "target": "kr-ki-glp1-intake-v1-000002",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-glp1-intake-v1-000002",
+      "target": "evidence-ki-glp1-intake-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-glp1-intake-v1-000002",
+      "target": "rule-ki-glp1-intake-v1-000002-record-contraindications",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-glp1-intake-v1-000002",
+      "target": "rule-ki-glp1-intake-v1-000002-record-contraindications",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-glp1-intake-v1-000002-record-contraindications",
+      "target": "evidence-ki-glp1-intake-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-glp1-intake-v1-000002",
+      "target": "rule-ki-glp1-intake-v1-000002-route-uncertain-case",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-glp1-intake-v1-000002",
+      "target": "rule-ki-glp1-intake-v1-000002-route-uncertain-case",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-glp1-intake-v1-000002-route-uncertain-case",
+      "target": "evidence-ki-glp1-intake-v1-000002",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "glp1-intake",
+      "label": "glp1 intake",
+      "source_version_id": "glp1-intake:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-glp1-intake-001",
+      "label": "GLP-1 Intake SOP",
+      "source_version_id": "glp1-intake:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-glp-1-intake-sop",
+      "label": "GLP-1 Intake SOP",
+      "type": "concept"
+    },
+    {
+      "id": "section-glp1-intake-002",
+      "label": "Purpose",
+      "source_version_id": "glp1-intake:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-purpose",
+      "label": "Purpose",
+      "type": "concept"
+    },
+    {
+      "id": "section-glp1-intake-003",
+      "label": "Eligibility Requirements",
+      "source_version_id": "glp1-intake:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-eligibility-requirements",
+      "label": "Eligibility Requirements",
+      "type": "concept"
+    },
+    {
+      "id": "section-glp1-intake-004",
+      "label": "Procedure",
+      "source_version_id": "glp1-intake:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-procedure",
+      "label": "Procedure",
+      "type": "concept"
+    },
+    {
+      "id": "ki-glp1-intake-v1-000001",
+      "label": "Eligibility Requirements",
+      "lifecycle_status": "active",
+      "source_version_id": "glp1-intake:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-glp1-intake-v1-000001",
+      "label": "Clinicians must confirm patient identity before reviewing therapy eligibility.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-glp1-intake-v1-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-glp1-intake-v1-000001-confirm-patient-identity",
+      "label": "Confirm patient identity",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-glp1-intake-v1-000002",
+      "label": "Procedure",
+      "lifecycle_status": "active",
+      "source_version_id": "glp1-intake:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-glp1-intake-v1-000002",
+      "label": "Staff should record contraindications and route uncertain cases for clinical review.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-glp1-intake-v1-000002",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-glp1-intake-v1-000002-record-contraindications",
+      "label": "Record contraindications",
+      "type": "decision_rule"
+    },
+    {
+      "id": "rule-ki-glp1-intake-v1-000002-route-uncertain-case",
+      "label": "Route uncertain cases for clinical review",
+      "type": "decision_rule"
+    }
+  ]
+}

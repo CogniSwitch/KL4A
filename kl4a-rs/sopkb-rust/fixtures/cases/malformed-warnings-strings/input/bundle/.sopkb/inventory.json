@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "id": "intake-checklist-malformed01",
+      "title": "Intake Checklist",
+      "type": "markdown",
+      "original_path": "sources/originals/intake-checklist-malformed01.md",
+      "normalized_path": "sources/normalized/intake-checklist-malformed01.md",
+      "checksum": "sha256:2222222222222222222222222222222222222222222222222222222222cc",
+      "size": 76,
+      "modified_time": "2026-01-01T00:00:00Z",
+      "parse_status": "normalized",
+      "warnings": [],
+      "metadata": { "source_filename": "intake-checklist-malformed01.md" }
+    }
+  ],
+  "warnings": ["disk read error on some/path"]
+}

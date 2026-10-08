@@ -1,0 +1,31 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_eligibility_requirements a sopkb:Concept ;
+  rdfs:label "Eligibility Requirements" .
+
+sopkb:object_clinicians_must_confirm_patient_identity_before_reviewing_therap a sopkb:RelationObject ;
+  rdfs:label "Clinicians must confirm patient identity before reviewing therapy eligibility." ;
+  sopkb:objectText "Clinicians must confirm patient identity before reviewing therapy eligibility." .
+
+sopkb:kr_ki_preamble_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_eligibility_requirements ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_clinicians_must_confirm_patient_identity_before_reviewing_therap ;
+  sopkb:knowledgePiece sopkb:ki_preamble_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_preamble_v1_000001 ;
+  dcterms:source "preamble" ;
+  sopkb:sourceVersion "preamble:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_eligibility_requirements sopkb:predicate_requires sopkb:object_clinicians_must_confirm_patient_identity_before_reviewing_therap .
+
+sopkb:rule_ki_preamble_v1_000001_confirm_patient_identity a sopkb:DecisionRule ;
+  rdfs:label "Confirm patient identity" ;
+  sopkb:knowledgePiece sopkb:ki_preamble_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_preamble_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_preamble_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "patient_identity_confirmed" ;
+  sopkb:otherwiseActionRequired "true" .

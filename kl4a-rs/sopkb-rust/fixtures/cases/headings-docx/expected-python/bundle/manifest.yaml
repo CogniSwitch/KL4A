@@ -1,0 +1,20 @@
+id: bundle
+version: 0.1.0
+title: DOCX Headings Case
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: <TS>
+updated_at: <TS>
+sources:
+- id: vendor-onboarding
+  type: docx
+  path: sources/originals/vendor-onboarding__v1.docx
+  source_version_id: vendor-onboarding:v1
+  status: active
+exports:
+- type: graph_json
+  path: ../exports/bundle/graph/graph.json
+- type: rdf
+  path: ../exports/bundle/graph/triples.ttl
+okf_version: '0.2'

@@ -1,0 +1,20 @@
+[
+  {
+    "heading": "Vendor Onboarding Procedure",
+    "section_id": "section-vendor-onboarding-001",
+    "semantic_role": "procedure",
+    "source_id": "vendor-onboarding"
+  },
+  {
+    "heading": "Eligibility Requirements",
+    "section_id": "section-vendor-onboarding-002",
+    "semantic_role": "policy",
+    "source_id": "vendor-onboarding"
+  },
+  {
+    "heading": "Approval Steps",
+    "section_id": "section-vendor-onboarding-003",
+    "semantic_role": "procedure",
+    "source_id": "vendor-onboarding"
+  }
+]

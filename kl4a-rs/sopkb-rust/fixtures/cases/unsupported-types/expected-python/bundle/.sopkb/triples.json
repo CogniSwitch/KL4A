@@ -1,0 +1,9 @@
+[
+  {
+    "id": "triple-ki-policy-v1-000001",
+    "knowledge_item_id": "ki-policy-v1-000001",
+    "object": "Staff must confirm badge access before entering the restricted area.",
+    "predicate": "requires",
+    "subject": "Controls"
+  }
+]

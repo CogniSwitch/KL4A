@@ -1,0 +1,16 @@
+[
+  {
+    "id": "triple-ki-glp1-intake-v1-000001",
+    "knowledge_item_id": "ki-glp1-intake-v1-000001",
+    "object": "Clinicians must confirm patient identity before reviewing therapy eligibility.",
+    "predicate": "requires",
+    "subject": "Eligibility Requirements"
+  },
+  {
+    "id": "triple-ki-glp1-intake-v1-000002",
+    "knowledge_item_id": "ki-glp1-intake-v1-000002",
+    "object": "Staff should record contraindications and route uncertain cases for clinical review.",
+    "predicate": "should",
+    "subject": "Procedure"
+  }
+]

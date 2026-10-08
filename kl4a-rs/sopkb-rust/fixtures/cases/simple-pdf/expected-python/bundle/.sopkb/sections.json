@@ -1,0 +1,12 @@
+[
+  {
+    "end_pos": 197,
+    "heading": "Acme Clinical Intake Policy",
+    "id": "section-acme-intake-policy-001",
+    "normalized_path": "sources/normalized/acme-intake-policy__v1.md",
+    "semantic_role": "policy",
+    "source_id": "acme-intake-policy",
+    "source_version_id": "acme-intake-policy:v1",
+    "start_pos": 0
+  }
+]

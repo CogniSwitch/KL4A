@@ -1,0 +1,31 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_document a sopkb:Concept ;
+  rdfs:label "Document" .
+
+sopkb:object_staff_must_confirm_patient_identity_before_dispensing_medication a sopkb:RelationObject ;
+  rdfs:label "Staff must confirm patient identity before dispensing medication." ;
+  sopkb:objectText "Staff must confirm patient identity before dispensing medication." .
+
+sopkb:kr_ki_no_heading_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_document ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_staff_must_confirm_patient_identity_before_dispensing_medication ;
+  sopkb:knowledgePiece sopkb:ki_no_heading_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_no_heading_v1_000001 ;
+  dcterms:source "no-heading" ;
+  sopkb:sourceVersion "no-heading:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_document sopkb:predicate_requires sopkb:object_staff_must_confirm_patient_identity_before_dispensing_medication .
+
+sopkb:rule_ki_no_heading_v1_000001_confirm_patient_identity a sopkb:DecisionRule ;
+  rdfs:label "Confirm patient identity" ;
+  sopkb:knowledgePiece sopkb:ki_no_heading_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_no_heading_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_no_heading_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "patient_identity_confirmed" ;
+  sopkb:otherwiseActionRequired "true" .

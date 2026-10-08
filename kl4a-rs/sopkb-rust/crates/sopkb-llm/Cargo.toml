@@ -1,0 +1,16 @@
+[package]
+name = "sopkb-llm"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+sopkb-fmt = { path = "../sopkb-fmt" }
+sopkb-config = { path = "../sopkb-config" }
+sopkb-core = { path = "../sopkb-core" }
+serde_json = "1"
+ureq = "2"
+
+[dev-dependencies]
+tempfile = "3"
+serial_test = "3"

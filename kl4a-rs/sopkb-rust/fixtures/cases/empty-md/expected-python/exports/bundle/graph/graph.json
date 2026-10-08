@@ -1,0 +1,33 @@
+{
+  "edges": [
+    {
+      "source": "empty",
+      "target": "section-empty-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-empty-001",
+      "target": "concept-document",
+      "type": "mentions_concept"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "empty",
+      "label": "empty",
+      "source_version_id": "empty:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-empty-001",
+      "label": "Document",
+      "source_version_id": "empty:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-document",
+      "label": "Document",
+      "type": "concept"
+    }
+  ]
+}

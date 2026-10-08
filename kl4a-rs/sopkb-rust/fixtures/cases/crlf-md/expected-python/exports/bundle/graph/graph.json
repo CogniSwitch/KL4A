@@ -1,0 +1,199 @@
+{
+  "edges": [
+    {
+      "source": "safety-crlf",
+      "target": "section-safety-crlf-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-safety-crlf-001",
+      "target": "concept-safety-policy",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "safety-crlf",
+      "target": "section-safety-crlf-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-safety-crlf-002",
+      "target": "concept-reporting-requirements",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "safety-crlf",
+      "target": "section-safety-crlf-003",
+      "type": "has_section"
+    },
+    {
+      "source": "section-safety-crlf-003",
+      "target": "concept-escalation-procedure",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-safety-crlf-002",
+      "target": "ki-safety-crlf-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-safety-crlf-v1-000001",
+      "target": "evidence-ki-safety-crlf-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-crlf-v1-000001",
+      "target": "kr-ki-safety-crlf-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-reporting-requirements",
+      "target": "kr-ki-safety-crlf-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-safety-crlf-v1-000001",
+      "target": "evidence-ki-safety-crlf-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-crlf-v1-000001",
+      "target": "rule-ki-safety-crlf-v1-000001-records",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-safety-crlf-v1-000001",
+      "target": "rule-ki-safety-crlf-v1-000001-records",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-safety-crlf-v1-000001-records",
+      "target": "evidence-ki-safety-crlf-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-safety-crlf-003",
+      "target": "ki-safety-crlf-v1-000002",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-safety-crlf-v1-000002",
+      "target": "evidence-ki-safety-crlf-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-crlf-v1-000002",
+      "target": "kr-ki-safety-crlf-v1-000002",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-escalation-procedure",
+      "target": "kr-ki-safety-crlf-v1-000002",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-safety-crlf-v1-000002",
+      "target": "evidence-ki-safety-crlf-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-crlf-v1-000002",
+      "target": "rule-ki-safety-crlf-v1-000002-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-safety-crlf-v1-000002",
+      "target": "rule-ki-safety-crlf-v1-000002-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-safety-crlf-v1-000002-should",
+      "target": "evidence-ki-safety-crlf-v1-000002",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "safety-crlf",
+      "label": "safety crlf",
+      "source_version_id": "safety-crlf:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-safety-crlf-001",
+      "label": "Safety Policy",
+      "source_version_id": "safety-crlf:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-safety-policy",
+      "label": "Safety Policy",
+      "type": "concept"
+    },
+    {
+      "id": "section-safety-crlf-002",
+      "label": "Reporting Requirements",
+      "source_version_id": "safety-crlf:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-reporting-requirements",
+      "label": "Reporting Requirements",
+      "type": "concept"
+    },
+    {
+      "id": "section-safety-crlf-003",
+      "label": "Escalation Procedure",
+      "source_version_id": "safety-crlf:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-escalation-procedure",
+      "label": "Escalation Procedure",
+      "type": "concept"
+    },
+    {
+      "id": "ki-safety-crlf-v1-000001",
+      "label": "Reporting Requirements",
+      "lifecycle_status": "active",
+      "source_version_id": "safety-crlf:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-safety-crlf-v1-000001",
+      "label": "Staff must record all adverse events within 24 hours.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-safety-crlf-v1-000001",
+      "label": "records",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-safety-crlf-v1-000001-records",
+      "label": "Reporting Requirements",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-safety-crlf-v1-000002",
+      "label": "Escalation Procedure",
+      "lifecycle_status": "active",
+      "source_version_id": "safety-crlf:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-safety-crlf-v1-000002",
+      "label": "Clinicians should route urgent cases to the on-call physician immediately.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-safety-crlf-v1-000002",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-safety-crlf-v1-000002-should",
+      "label": "Escalation Procedure",
+      "type": "decision_rule"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-politique-<TS>",
+    "path": "<ABS>",
+    "source_id": "politique",
+    "source_version_id": "politique:v1",
+    "timestamp": "<TS>"
+  }
+]

@@ -1,0 +1,31 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_escalation_policy a sopkb:Concept ;
+  rdfs:label "Escalation Policy" .
+
+sopkb:object_on_call_staff_must_confirm_receipt_of_every_critical_alert a sopkb:RelationObject ;
+  rdfs:label "On-call staff must confirm receipt of every critical alert" ;
+  sopkb:objectText "On-call staff must confirm receipt of every critical alert within 15 minutes." .
+
+sopkb:kr_ki_escalation_policy_legacy01_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_escalation_policy ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_on_call_staff_must_confirm_receipt_of_every_critical_alert ;
+  sopkb:knowledgePiece sopkb:ki_escalation_policy_legacy01_000001 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_policy_legacy01_000001 ;
+  dcterms:source "escalation-policy-legacy01" ;
+  sopkb:sourceVersion "escalation-policy-legacy01:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_escalation_policy sopkb:predicate_requires sopkb:object_on_call_staff_must_confirm_receipt_of_every_critical_alert .
+
+sopkb:rule_ki_escalation_policy_legacy01_000001_requires a sopkb:DecisionRule ;
+  rdfs:label "Escalation Policy" ;
+  sopkb:knowledgePiece sopkb:ki_escalation_policy_legacy01_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_escalation_policy_legacy01_000001 ;
+  sopkb:evidence sopkb:evidence_ki_escalation_policy_legacy01_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "scenario_mentions_escalation_policy" ;
+  sopkb:otherwiseActionRequired "true" .

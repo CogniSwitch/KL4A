@@ -1,0 +1,9 @@
+[
+  {
+    "id": "triple-ki-authored-okf-source-v1-000001",
+    "knowledge_item_id": "ki-authored-okf-source-v1-000001",
+    "object": "Staff must confirm the manual override policy before deviating from the standard SOP.",
+    "predicate": "requires",
+    "subject": "Requirements"
+  }
+]

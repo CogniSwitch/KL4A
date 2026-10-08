@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:39cc8a0068b57222ff54e0733b2d413e6029971c6219565bbed57b187069b3fc",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/benefits-handbook__v1.md",
+      "original_path": "sources/originals/benefits-handbook__v1.pdf",
+      "size_bytes": 1260,
+      "source_id": "benefits-handbook",
+      "source_version_id": "benefits-handbook:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

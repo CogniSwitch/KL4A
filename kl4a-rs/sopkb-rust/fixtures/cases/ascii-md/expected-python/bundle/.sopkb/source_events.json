@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-glp1-intake-<TS>",
+    "path": "<ABS>",
+    "source_id": "glp1-intake",
+    "source_version_id": "glp1-intake:v1",
+    "timestamp": "<TS>"
+  }
+]

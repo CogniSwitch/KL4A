@@ -1,0 +1,9 @@
+[
+  {
+    "id": "triple-ki-vendor-onboarding-v1-000001",
+    "knowledge_item_id": "ki-vendor-onboarding-v1-000001",
+    "object": "A vendor must hold a valid tax identification number and a signed NDA on file.",
+    "predicate": "requires",
+    "subject": "Eligibility Requirements"
+  }
+]

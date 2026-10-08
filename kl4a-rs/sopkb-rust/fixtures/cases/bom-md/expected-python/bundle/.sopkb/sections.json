@@ -1,0 +1,12 @@
+[
+  {
+    "end_pos": 66,
+    "heading": "Document",
+    "id": "section-bom-doc-001",
+    "normalized_path": "sources/normalized/bom-doc__v1.md",
+    "semantic_role": "section",
+    "source_id": "bom-doc",
+    "source_version_id": "bom-doc:v1",
+    "start_pos": 0
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 123,
+    "id": "ki-authored-okf-source-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must confirm the manual override policy before deviating from the standard SOP.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-authored-okf-source-002",
+    "source_id": "authored-okf-source",
+    "source_text": "Staff must confirm the manual override policy before deviating from the standard SOP.",
+    "source_version_id": "authored-okf-source:v1",
+    "span_status": "exact",
+    "start_pos": 38,
+    "subject": "Requirements",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

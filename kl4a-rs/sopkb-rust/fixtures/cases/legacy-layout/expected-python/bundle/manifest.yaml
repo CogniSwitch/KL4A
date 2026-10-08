@@ -1,0 +1,18 @@
+id: legacy-layout
+version: 0.1.0
+title: Legacy Layout Bundle
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: <TS>
+updated_at: <TS>
+sources:
+- id: escalation-policy-legacy01
+  type: markdown
+  path: sources/originals/escalation-policy-legacy01.md
+exports:
+- type: graph_json
+  path: ../exports/legacy-layout/graph/graph.json
+- type: rdf
+  path: ../exports/legacy-layout/graph/triples.ttl
+okf_version: '0.2'

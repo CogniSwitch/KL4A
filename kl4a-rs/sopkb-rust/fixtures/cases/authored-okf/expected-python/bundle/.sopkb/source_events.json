@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-authored-okf-source-<TS>",
+    "path": "<ABS>",
+    "source_id": "authored-okf-source",
+    "source_version_id": "authored-okf-source:v1",
+    "timestamp": "<TS>"
+  }
+]

@@ -1,0 +1,37 @@
+[package]
+name = "sopkb-server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "sopkb-server"
+path = "src/main.rs"
+
+[lib]
+name = "sopkb_server"
+path = "src/lib.rs"
+
+[dependencies]
+sopkb-core = { path = "../../crates/sopkb-core" }
+sopkb-config = { path = "../../crates/sopkb-config" }
+sopkb-derive = { path = "../../crates/sopkb-derive" }
+sopkb-mining = { path = "../../crates/sopkb-mining" }
+sopkb-export = { path = "../../crates/sopkb-export" }
+sopkb-review = { path = "../../crates/sopkb-review" }
+sopkb-agent = { path = "../../crates/sopkb-agent" }
+sopkb-workbench = { path = "../../crates/sopkb-workbench" }
+sopkb-fmt = { path = "../../crates/sopkb-fmt" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "fs"] }
+tokio-stream = { version = "0.1", features = ["sync"] }
+futures-util = "0.3"
+axum = { version = "0.7", features = ["macros", "multipart"] }
+tower-http = { version = "0.5", features = ["fs", "trace"] }
+subtle = "2"
+rand = "0.8"
+
+[dev-dependencies]
+tempfile = "3"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "stream"] }

@@ -1,0 +1,29 @@
+init {bundle} --title "Reviewed Bundle Case"
+scan {sources} --bundle {bundle}
+normalize {bundle}
+mine {bundle} --provider fixture
+@pick-item {bundle} index:0 -> ITEM1
+@pick-item {bundle} index:1 -> ITEM2
+@pick-item {bundle} index:2 -> ITEM3
+@pick-item {bundle} index:3 -> ITEM4
+@pick-item {bundle} index:4 -> ITEM5
+@pick-item {bundle} index:5 -> ITEM6
+review approve {bundle} {ITEM1} --reviewer local:reviewer-a --rationale "meets policy"
+review reject {bundle} {ITEM2} --reviewer local:reviewer-a --rationale "does not apply here"
+review defer {bundle} {ITEM3} --reviewer local:reviewer-a --rationale "needs clinical sign-off"
+review approve {bundle} {ITEM4} --reviewer local:reviewer-a --rationale "terminal before comment"
+review comment {bundle} {ITEM4} --reviewer local:reviewer-b --rationale "confirmed with legal, no change needed"
+review edit {bundle} {ITEM5} --field subject --value "Escalation Staff" --reviewer local:reviewer-a --rationale "clarify subject"
+review edit {bundle} {ITEM5} --field predicate --value "confirms" --reviewer local:reviewer-a --rationale "clarify predicate"
+review edit {bundle} {ITEM5} --field object --value "Escalate within one hour,\tper policy,\rwith injected control characters." --reviewer local:reviewer-a --rationale "inject CR/TAB for P-G7 Turtle-escaping coverage"
+review edit {bundle} {ITEM5} --field source_text --value "Escalate within one hour, per policy." --reviewer local:reviewer-a --rationale "align source text"
+review edit {bundle} {ITEM5} --field confidence --value "0.95" --reviewer local:reviewer-a --rationale "reviewer confident"
+review edit {bundle} {ITEM6} --field review_status --value approved --reviewer local:reviewer-a --rationale "attempt an invalid field name"
+review edit {bundle} {ITEM6} --field confidence --value 1.5 --reviewer local:reviewer-a --rationale "attempt an out-of-range confidence"
+review approve {bundle} {ITEM6} --reviewer local:reviewer-a --rationale "approve before terminal-action test"
+review edit {bundle} {ITEM6} --field subject --value "Should not apply" --reviewer local:reviewer-a --rationale "attempt an edit on a terminal item"
+validate {bundle}
+export {bundle} --format graph-json,rdf
+mine {bundle} --provider fixture
+validate {bundle}
+export {bundle} --format graph-json,rdf

@@ -1,0 +1,140 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 113,
+    "id": "ki-escalation-runbook-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "On-call staff must confirm receipt of the alert within 15 minutes.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-escalation-runbook-002",
+    "source_id": "escalation-runbook",
+    "source_text": "On-call staff must confirm receipt of the alert within 15 minutes.",
+    "source_version_id": "escalation-runbook:v1",
+    "span_status": "exact",
+    "start_pos": 47,
+    "subject": "Initial Notification",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 214,
+    "id": "ki-escalation-runbook-v1-000002",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Clinicians should route unresolved alerts to the secondary on-call physician.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-escalation-runbook-003",
+    "source_id": "escalation-runbook",
+    "source_text": "Clinicians should route unresolved alerts to the secondary on-call physician.",
+    "source_version_id": "escalation-runbook:v1",
+    "span_status": "exact",
+    "start_pos": 137,
+    "subject": "Secondary Contact",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 306,
+    "id": "ki-escalation-runbook-v1-000003",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "The vendor liaison must record every escalation in the incident log.",
+    "predicate": "records",
+    "review_status": "proposed",
+    "section_id": "section-escalation-runbook-004",
+    "source_id": "escalation-runbook",
+    "source_text": "The vendor liaison must record every escalation in the incident log.",
+    "source_version_id": "escalation-runbook:v1",
+    "span_status": "exact",
+    "start_pos": 238,
+    "subject": "Vendor Escalation",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 401,
+    "id": "ki-escalation-runbook-v1-000004",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff should confirm legal has been notified for any reportable event.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-escalation-runbook-005",
+    "source_id": "escalation-runbook",
+    "source_text": "Staff should confirm legal has been notified for any reportable event.",
+    "source_version_id": "escalation-runbook:v1",
+    "span_status": "exact",
+    "start_pos": 331,
+    "subject": "Legal Notification",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 505,
+    "id": "ki-escalation-runbook-v1-000005",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Care coordinators must confirm the patient has been informed of the outcome.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-escalation-runbook-006",
+    "source_id": "escalation-runbook",
+    "source_text": "Care coordinators must confirm the patient has been informed of the outcome.",
+    "source_version_id": "escalation-runbook:v1",
+    "span_status": "exact",
+    "start_pos": 429,
+    "subject": "Patient Communication",
+    "superseded_by": [],
+    "supersedes": []
+  },
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 602,
+    "id": "ki-escalation-runbook-v1-000006",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "The safety committee should record findings within five business days.",
+    "predicate": "should",
+    "review_status": "proposed",
+    "section_id": "section-escalation-runbook-007",
+    "source_id": "escalation-runbook",
+    "source_text": "The safety committee should record findings within five business days.",
+    "source_version_id": "escalation-runbook:v1",
+    "span_status": "exact",
+    "start_pos": 532,
+    "subject": "Post-Incident Review",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

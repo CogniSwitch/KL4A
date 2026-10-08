@@ -1,0 +1,15 @@
+[package]
+name = "sopkb-mcp"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+sopkb-core = { path = "../../crates/sopkb-core" }
+sopkb-derive = { path = "../../crates/sopkb-derive" }
+sopkb-review = { path = "../../crates/sopkb-review" }
+sopkb-fmt = { path = "../../crates/sopkb-fmt" }
+serde_json = "1"
+
+[dev-dependencies]
+tempfile = "3"

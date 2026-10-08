@@ -1,0 +1,14 @@
+[
+  {
+    "heading": "Access Policy",
+    "section_id": "section-policy-001",
+    "semantic_role": "policy",
+    "source_id": "policy"
+  },
+  {
+    "heading": "Controls",
+    "section_id": "section-policy-002",
+    "semantic_role": "policy",
+    "source_id": "policy"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-follow-up-monitoring-procedure-<TS>",
+    "path": "<ABS>",
+    "source_id": "follow-up-monitoring-procedure",
+    "source_version_id": "follow-up-monitoring-procedure:v1",
+    "timestamp": "<TS>"
+  },
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-primary-care-glp1-sop-<TS>",
+    "path": "<ABS>",
+    "source_id": "primary-care-glp1-sop",
+    "source_version_id": "primary-care-glp1-sop:v1",
+    "timestamp": "<TS>"
+  },
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-prior-authorization-workflow-<TS>",
+    "path": "<ABS>",
+    "source_id": "prior-authorization-workflow",
+    "source_version_id": "prior-authorization-workflow:v1",
+    "timestamp": "<TS>"
+  },
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-safety-policy-<TS>",
+    "path": "<ABS>",
+    "source_id": "safety-policy",
+    "source_version_id": "safety-policy:v1",
+    "timestamp": "<TS>"
+  }
+]

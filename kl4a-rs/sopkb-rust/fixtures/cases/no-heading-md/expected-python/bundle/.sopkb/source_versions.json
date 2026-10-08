@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:996893b741f64815370b03bc5c463a02ddc85da76f528532b005adc78008b826",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/no-heading__v1.md",
+      "original_path": "sources/originals/no-heading__v1.md",
+      "size_bytes": 120,
+      "source_id": "no-heading",
+      "source_version_id": "no-heading:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

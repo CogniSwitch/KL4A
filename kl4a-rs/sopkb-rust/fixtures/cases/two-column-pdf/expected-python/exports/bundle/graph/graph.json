@@ -1,0 +1,33 @@
+{
+  "edges": [
+    {
+      "source": "two-column-notice",
+      "target": "section-two-column-notice-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-two-column-notice-001",
+      "target": "concept-left-column-opens-here",
+      "type": "mentions_concept"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "two-column-notice",
+      "label": "two column notice",
+      "source_version_id": "two-column-notice:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-two-column-notice-001",
+      "label": "Left column opens here",
+      "source_version_id": "two-column-notice:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-left-column-opens-here",
+      "label": "Left column opens here",
+      "type": "concept"
+    }
+  ]
+}

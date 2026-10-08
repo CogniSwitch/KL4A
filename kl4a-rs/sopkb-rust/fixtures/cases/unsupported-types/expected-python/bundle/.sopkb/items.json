@@ -1,0 +1,25 @@
+[
+  {
+    "confidence": 0.82,
+    "derivation": "direct_text",
+    "end_pos": 98,
+    "id": "ki-policy-v1-000001",
+    "item_type": "claim",
+    "lifecycle_status": "active",
+    "metadata": {
+      "provider": "fixture"
+    },
+    "object": "Staff must confirm badge access before entering the restricted area.",
+    "predicate": "requires",
+    "review_status": "proposed",
+    "section_id": "section-policy-002",
+    "source_id": "policy",
+    "source_text": "Staff must confirm badge access before entering the restricted area.",
+    "source_version_id": "policy:v1",
+    "span_status": "exact",
+    "start_pos": 30,
+    "subject": "Controls",
+    "superseded_by": [],
+    "supersedes": []
+  }
+]

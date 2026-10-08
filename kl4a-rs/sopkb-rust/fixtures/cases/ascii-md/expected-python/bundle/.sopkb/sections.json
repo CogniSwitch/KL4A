@@ -1,0 +1,42 @@
+[
+  {
+    "end_pos": 20,
+    "heading": "GLP-1 Intake SOP",
+    "id": "section-glp1-intake-001",
+    "normalized_path": "sources/normalized/glp1-intake__v1.md",
+    "semantic_role": "section",
+    "source_id": "glp1-intake",
+    "source_version_id": "glp1-intake:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 92,
+    "heading": "Purpose",
+    "id": "section-glp1-intake-002",
+    "normalized_path": "sources/normalized/glp1-intake__v1.md",
+    "semantic_role": "section",
+    "source_id": "glp1-intake",
+    "source_version_id": "glp1-intake:v1",
+    "start_pos": 20
+  },
+  {
+    "end_pos": 201,
+    "heading": "Eligibility Requirements",
+    "id": "section-glp1-intake-003",
+    "normalized_path": "sources/normalized/glp1-intake__v1.md",
+    "semantic_role": "policy",
+    "source_id": "glp1-intake",
+    "source_version_id": "glp1-intake:v1",
+    "start_pos": 92
+  },
+  {
+    "end_pos": 300,
+    "heading": "Procedure",
+    "id": "section-glp1-intake-004",
+    "normalized_path": "sources/normalized/glp1-intake__v1.md",
+    "semantic_role": "procedure",
+    "source_id": "glp1-intake",
+    "source_version_id": "glp1-intake:v1",
+    "start_pos": 201
+  }
+]

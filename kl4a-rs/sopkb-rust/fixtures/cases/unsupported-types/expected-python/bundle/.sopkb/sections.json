@@ -1,0 +1,22 @@
+[
+  {
+    "end_pos": 17,
+    "heading": "Access Policy",
+    "id": "section-policy-001",
+    "normalized_path": "sources/normalized/policy__v1.md",
+    "semantic_role": "policy",
+    "source_id": "policy",
+    "source_version_id": "policy:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 99,
+    "heading": "Controls",
+    "id": "section-policy-002",
+    "normalized_path": "sources/normalized/policy__v1.md",
+    "semantic_role": "policy",
+    "source_id": "policy",
+    "source_version_id": "policy:v1",
+    "start_pos": 17
+  }
+]

@@ -1,0 +1,68 @@
+@prefix sopkb: <https://example.org/sopkb/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sopkb:concept_eligibility_requirements a sopkb:Concept ;
+  rdfs:label "Eligibility Requirements" .
+
+sopkb:object_clinicians_must_confirm_patient_identity_before_reviewing_therap a sopkb:RelationObject ;
+  rdfs:label "Clinicians must confirm patient identity before reviewing therapy eligibility." ;
+  sopkb:objectText "Clinicians must confirm patient identity before reviewing therapy eligibility." .
+
+sopkb:kr_ki_glp1_intake_v1_000001 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_eligibility_requirements ;
+  sopkb:predicate sopkb:predicate_requires ;
+  sopkb:object sopkb:object_clinicians_must_confirm_patient_identity_before_reviewing_therap ;
+  sopkb:knowledgePiece sopkb:ki_glp1_intake_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_glp1_intake_v1_000001 ;
+  dcterms:source "glp1-intake" ;
+  sopkb:sourceVersion "glp1-intake:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_eligibility_requirements sopkb:predicate_requires sopkb:object_clinicians_must_confirm_patient_identity_before_reviewing_therap .
+
+sopkb:rule_ki_glp1_intake_v1_000001_confirm_patient_identity a sopkb:DecisionRule ;
+  rdfs:label "Confirm patient identity" ;
+  sopkb:knowledgePiece sopkb:ki_glp1_intake_v1_000001 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_glp1_intake_v1_000001 ;
+  sopkb:evidence sopkb:evidence_ki_glp1_intake_v1_000001 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "patient_identity_confirmed" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:concept_procedure a sopkb:Concept ;
+  rdfs:label "Procedure" .
+
+sopkb:object_staff_should_record_contraindications_and_route_uncertain_cases a sopkb:RelationObject ;
+  rdfs:label "Staff should record contraindications and route uncertain cases for" ;
+  sopkb:objectText "Staff should record contraindications and route uncertain cases for clinical review." .
+
+sopkb:kr_ki_glp1_intake_v1_000002 a sopkb:KnowledgeRelation ;
+  sopkb:subject sopkb:concept_procedure ;
+  sopkb:predicate sopkb:predicate_should ;
+  sopkb:object sopkb:object_staff_should_record_contraindications_and_route_uncertain_cases ;
+  sopkb:knowledgePiece sopkb:ki_glp1_intake_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_glp1_intake_v1_000002 ;
+  dcterms:source "glp1-intake" ;
+  sopkb:sourceVersion "glp1-intake:v1" ;
+  sopkb:reviewStatus "proposed" .
+
+sopkb:concept_procedure sopkb:predicate_should sopkb:object_staff_should_record_contraindications_and_route_uncertain_cases .
+
+sopkb:rule_ki_glp1_intake_v1_000002_record_contraindications a sopkb:DecisionRule ;
+  rdfs:label "Record contraindications" ;
+  sopkb:knowledgePiece sopkb:ki_glp1_intake_v1_000002 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_glp1_intake_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_glp1_intake_v1_000002 ;
+  sopkb:conditionFact "always" ;
+  sopkb:obligationFact "contraindications_recorded" ;
+  sopkb:otherwiseActionRequired "true" .
+
+sopkb:rule_ki_glp1_intake_v1_000002_route_uncertain_case a sopkb:DecisionRule ;
+  rdfs:label "Route uncertain cases for clinical review" ;
+  sopkb:knowledgePiece sopkb:ki_glp1_intake_v1_000002 ;
+  sopkb:knowledgeRelation sopkb:kr_ki_glp1_intake_v1_000002 ;
+  sopkb:evidence sopkb:evidence_ki_glp1_intake_v1_000002 ;
+  sopkb:conditionFact "case_uncertainty" ;
+  sopkb:obligationFact "route_clinical_review" ;
+  sopkb:otherwiseActionRequired "false" .

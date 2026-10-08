@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "active_version_id": "policy:v1",
+      "checksum": "sha256:6f3740475b70f1b4f387c32075c3f12d5d487fadde2f03d5bb3845f485781163",
+      "id": "policy",
+      "metadata": {
+        "source_filename": "policy.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/policy__v1.md",
+      "original_path": "sources/originals/policy__v1.md",
+      "parse_status": "normalized",
+      "size": 99,
+      "source_version_id": "policy:v1",
+      "status": "active",
+      "title": "policy",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:6f3740475b70f1b4f387c32075c3f12d5d487fadde2f03d5bb3845f485781163",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/policy__v1.md",
+          "original_path": "sources/originals/policy__v1.md",
+          "size_bytes": 99,
+          "source_id": "policy",
+          "source_version_id": "policy:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": [
+    {
+      "path": "<ABS>",
+      "warning": "unsupported file type"
+    },
+    {
+      "path": "<ABS>",
+      "warning": "unsupported file type"
+    }
+  ]
+}

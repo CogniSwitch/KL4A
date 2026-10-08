@@ -1,0 +1,69 @@
+{
+  "sources": [
+    {
+      "active_version_id": "caf-checklist:v1",
+      "checksum": "sha256:c6d5360e9278614e88d9524974e4cf10524fb880125045a93c0d8ddbffe96854",
+      "id": "caf-checklist",
+      "metadata": {
+        "source_filename": "caf\u00e9-checklist.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/caf-checklist__v1.md",
+      "original_path": "sources/originals/caf-checklist__v1.md",
+      "parse_status": "normalized",
+      "size": 186,
+      "source_version_id": "caf-checklist:v1",
+      "status": "active",
+      "title": "caf\u00e9 checklist",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:c6d5360e9278614e88d9524974e4cf10524fb880125045a93c0d8ddbffe96854",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/caf-checklist__v1.md",
+          "original_path": "sources/originals/caf-checklist__v1.md",
+          "size_bytes": 186,
+          "source_id": "caf-checklist",
+          "source_version_id": "caf-checklist:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "active_version_id": "item:v1",
+      "checksum": "sha256:3923e691e0670b8e1eeed8f69a7eca51410b894c0c36ae9c888435a7b78e93b7",
+      "id": "item",
+      "metadata": {
+        "source_filename": "\u5317\u4eac.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/item__v1.md",
+      "original_path": "sources/originals/item__v1.md",
+      "parse_status": "normalized",
+      "size": 67,
+      "source_version_id": "item:v1",
+      "status": "active",
+      "title": "\u5317\u4eac",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:3923e691e0670b8e1eeed8f69a7eca51410b894c0c36ae9c888435a7b78e93b7",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/item__v1.md",
+          "original_path": "sources/originals/item__v1.md",
+          "size_bytes": 67,
+          "source_id": "item",
+          "source_version_id": "item:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

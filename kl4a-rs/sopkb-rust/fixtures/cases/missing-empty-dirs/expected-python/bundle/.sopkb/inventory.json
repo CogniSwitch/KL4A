@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "missing-dirs:v1",
+      "checksum": "sha256:32412830719858f214f661a3a65664660a61f9ca1c909a276579985dc39381ef",
+      "id": "missing-dirs",
+      "metadata": {
+        "source_filename": "missing-dirs.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/missing-dirs__v1.md",
+      "original_path": "sources/originals/missing-dirs__v1.md",
+      "parse_status": "normalized",
+      "size": 95,
+      "source_version_id": "missing-dirs:v1",
+      "status": "active",
+      "title": "missing dirs",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:32412830719858f214f661a3a65664660a61f9ca1c909a276579985dc39381ef",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/missing-dirs__v1.md",
+          "original_path": "sources/originals/missing-dirs__v1.md",
+          "size_bytes": 95,
+          "source_id": "missing-dirs",
+          "source_version_id": "missing-dirs:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

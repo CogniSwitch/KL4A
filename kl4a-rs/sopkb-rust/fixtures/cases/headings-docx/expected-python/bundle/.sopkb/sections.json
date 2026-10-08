@@ -1,0 +1,32 @@
+[
+  {
+    "end_pos": 113,
+    "heading": "Vendor Onboarding Procedure",
+    "id": "section-vendor-onboarding-001",
+    "normalized_path": "sources/normalized/vendor-onboarding__v1.md",
+    "semantic_role": "procedure",
+    "source_id": "vendor-onboarding",
+    "source_version_id": "vendor-onboarding:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 222,
+    "heading": "Eligibility Requirements",
+    "id": "section-vendor-onboarding-002",
+    "normalized_path": "sources/normalized/vendor-onboarding__v1.md",
+    "semantic_role": "policy",
+    "source_id": "vendor-onboarding",
+    "source_version_id": "vendor-onboarding:v1",
+    "start_pos": 113
+  },
+  {
+    "end_pos": 394,
+    "heading": "Approval Steps",
+    "id": "section-vendor-onboarding-003",
+    "normalized_path": "sources/normalized/vendor-onboarding__v1.md",
+    "semantic_role": "procedure",
+    "source_id": "vendor-onboarding",
+    "source_version_id": "vendor-onboarding:v1",
+    "start_pos": 222
+  }
+]

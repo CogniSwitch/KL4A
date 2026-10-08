@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "escalation-policy-legacy01:v1",
+      "checksum": "sha256:1111111111111111111111111111111111111111111111111111111111aa",
+      "id": "escalation-policy-legacy01",
+      "metadata": {
+        "source_filename": "escalation-policy-legacy01.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/escalation-policy-legacy01.md",
+      "original_path": "sources/originals/escalation-policy-legacy01.md",
+      "parse_status": "normalized",
+      "size": 99,
+      "source_version_id": "escalation-policy-legacy01:v1",
+      "status": "active",
+      "title": "Escalation Policy",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:1111111111111111111111111111111111111111111111111111111111aa",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/escalation-policy-legacy01.md",
+          "original_path": "sources/originals/escalation-policy-legacy01.md",
+          "size_bytes": 99,
+          "source_id": "escalation-policy-legacy01",
+          "source_version_id": "escalation-policy-legacy01:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "heading": "Safety Policy",
+    "section_id": "section-safety-crlf-001",
+    "semantic_role": "policy",
+    "source_id": "safety-crlf"
+  },
+  {
+    "heading": "Reporting Requirements",
+    "section_id": "section-safety-crlf-002",
+    "semantic_role": "policy",
+    "source_id": "safety-crlf"
+  },
+  {
+    "heading": "Escalation Procedure",
+    "section_id": "section-safety-crlf-003",
+    "semantic_role": "procedure",
+    "source_id": "safety-crlf"
+  }
+]

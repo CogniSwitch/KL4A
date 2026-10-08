@@ -9,3 +9,12 @@ dist-web/
 
 # MkDocs build output (mkdocs.yml site_dir)
 site/
+
+# Internal working notes — analysis, growth plans, unpublished post drafts.
+# Not for the public repo; keep local.
+OKF-ISSUE-ANALYSIS.md
+VISIBILITY-PLAN.md
+kl4a-announcement.md
+kl4a-announcement-DRAFT.md
+kl4a-intro-comment.md
+okf13-producer-report-DRAFT.md

@@ -1,0 +1,12 @@
+[
+  {
+    "end_pos": 64,
+    "heading": "Report",
+    "id": "section-report-001",
+    "normalized_path": "sources/normalized/report__v1.md",
+    "semantic_role": "section",
+    "source_id": "report",
+    "source_version_id": "report:v1",
+    "start_pos": 0
+  }
+]

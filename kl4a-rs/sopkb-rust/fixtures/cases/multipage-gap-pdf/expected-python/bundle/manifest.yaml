@@ -1,0 +1,20 @@
+id: bundle
+version: 0.1.0
+title: Multipage PDF With Empty Page Case
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: <TS>
+updated_at: <TS>
+sources:
+- id: benefits-handbook
+  type: pdf
+  path: sources/originals/benefits-handbook__v1.pdf
+  source_version_id: benefits-handbook:v1
+  status: active
+exports:
+- type: graph_json
+  path: ../exports/bundle/graph/graph.json
+- type: rdf
+  path: ../exports/bundle/graph/triples.ttl
+okf_version: '0.2'

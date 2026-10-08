@@ -1,0 +1,1285 @@
+{
+  "edges": [
+    {
+      "source": "follow-up-monitoring-procedure",
+      "target": "section-follow-up-monitoring-procedure-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-follow-up-monitoring-procedure-001",
+      "target": "concept-glp-1-follow-up-monitoring-procedure",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "follow-up-monitoring-procedure",
+      "target": "section-follow-up-monitoring-procedure-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-follow-up-monitoring-procedure-002",
+      "target": "concept-follow-up-monitoring",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "follow-up-monitoring-procedure",
+      "target": "section-follow-up-monitoring-procedure-003",
+      "type": "has_section"
+    },
+    {
+      "source": "section-follow-up-monitoring-procedure-003",
+      "target": "concept-dose-titration",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "primary-care-glp1-sop",
+      "target": "section-primary-care-glp1-sop-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-primary-care-glp1-sop-001",
+      "target": "concept-primary-care-glp-1-prescribing-sop",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "primary-care-glp1-sop",
+      "target": "section-primary-care-glp1-sop-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-primary-care-glp1-sop-002",
+      "target": "concept-intake-requirements",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "primary-care-glp1-sop",
+      "target": "section-primary-care-glp1-sop-003",
+      "type": "has_section"
+    },
+    {
+      "source": "section-primary-care-glp1-sop-003",
+      "target": "concept-contraindication-screening",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "primary-care-glp1-sop",
+      "target": "section-primary-care-glp1-sop-004",
+      "type": "has_section"
+    },
+    {
+      "source": "section-primary-care-glp1-sop-004",
+      "target": "concept-follow-up-monitoring",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "prior-authorization-workflow",
+      "target": "section-prior-authorization-workflow-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-prior-authorization-workflow-001",
+      "target": "concept-glp-1-prior-authorization-workflow",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "prior-authorization-workflow",
+      "target": "section-prior-authorization-workflow-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-prior-authorization-workflow-002",
+      "target": "concept-prior-authorization-requirements",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "prior-authorization-workflow",
+      "target": "section-prior-authorization-workflow-003",
+      "type": "has_section"
+    },
+    {
+      "source": "section-prior-authorization-workflow-003",
+      "target": "concept-denial-routing",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "safety-policy",
+      "target": "section-safety-policy-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-safety-policy-001",
+      "target": "concept-glp-1-safety-policy",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "safety-policy",
+      "target": "section-safety-policy-002",
+      "type": "has_section"
+    },
+    {
+      "source": "section-safety-policy-002",
+      "target": "concept-contraindication-screening",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "safety-policy",
+      "target": "section-safety-policy-003",
+      "type": "has_section"
+    },
+    {
+      "source": "section-safety-policy-003",
+      "target": "concept-adverse-event-monitoring",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-follow-up-monitoring-procedure-002",
+      "target": "ki-follow-up-monitoring-procedure-v1-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000001",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000001",
+      "target": "kr-ki-follow-up-monitoring-procedure-v1-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-follow-up-monitoring",
+      "target": "kr-ki-follow-up-monitoring-procedure-v1-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-follow-up-monitoring-procedure-v1-000001",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000001",
+      "target": "rule-ki-follow-up-monitoring-procedure-v1-000001-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-follow-up-monitoring-procedure-v1-000001",
+      "target": "rule-ki-follow-up-monitoring-procedure-v1-000001-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-follow-up-monitoring-procedure-v1-000001-should",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-follow-up-monitoring-procedure-002",
+      "target": "ki-follow-up-monitoring-procedure-v1-000002",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000002",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000002",
+      "target": "kr-ki-follow-up-monitoring-procedure-v1-000002",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-follow-up-monitoring",
+      "target": "kr-ki-follow-up-monitoring-procedure-v1-000002",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-follow-up-monitoring-procedure-v1-000002",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000002",
+      "target": "rule-ki-follow-up-monitoring-procedure-v1-000002-records",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-follow-up-monitoring-procedure-v1-000002",
+      "target": "rule-ki-follow-up-monitoring-procedure-v1-000002-records",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-follow-up-monitoring-procedure-v1-000002-records",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000002",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-follow-up-monitoring-procedure-003",
+      "target": "ki-follow-up-monitoring-procedure-v1-000003",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000003",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000003",
+      "target": "kr-ki-follow-up-monitoring-procedure-v1-000003",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-dose-titration",
+      "target": "kr-ki-follow-up-monitoring-procedure-v1-000003",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-follow-up-monitoring-procedure-v1-000003",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000003",
+      "target": "rule-ki-follow-up-monitoring-procedure-v1-000003-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-follow-up-monitoring-procedure-v1-000003",
+      "target": "rule-ki-follow-up-monitoring-procedure-v1-000003-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-follow-up-monitoring-procedure-v1-000003-requires",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000003",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-follow-up-monitoring-procedure-003",
+      "target": "ki-follow-up-monitoring-procedure-v1-000004",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000004",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000004",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000004",
+      "target": "kr-ki-follow-up-monitoring-procedure-v1-000004",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-dose-titration",
+      "target": "kr-ki-follow-up-monitoring-procedure-v1-000004",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-follow-up-monitoring-procedure-v1-000004",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000004",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-follow-up-monitoring-procedure-v1-000004",
+      "target": "rule-ki-follow-up-monitoring-procedure-v1-000004-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-follow-up-monitoring-procedure-v1-000004",
+      "target": "rule-ki-follow-up-monitoring-procedure-v1-000004-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-follow-up-monitoring-procedure-v1-000004-should",
+      "target": "evidence-ki-follow-up-monitoring-procedure-v1-000004",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-primary-care-glp1-sop-002",
+      "target": "ki-primary-care-glp1-sop-v1-000005",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000005",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000005",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000005",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000005",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-intake-requirements",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000005",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000005",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000005",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000005",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000005-confirm-patient-identity",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000005",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000005-confirm-patient-identity",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-primary-care-glp1-sop-v1-000005-confirm-patient-identity",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000005",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-primary-care-glp1-sop-002",
+      "target": "ki-primary-care-glp1-sop-v1-000006",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000006",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000006",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000006",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000006",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-intake-requirements",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000006",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000006",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000006",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000006",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000006-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000006",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000006-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-primary-care-glp1-sop-v1-000006-requires",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000006",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-primary-care-glp1-sop-003",
+      "target": "ki-primary-care-glp1-sop-v1-000007",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000007",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000007",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000007",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000007",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-contraindication-screening",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000007",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000007",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000007",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000007",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000007-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000007",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000007-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-primary-care-glp1-sop-v1-000007-requires",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000007",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-primary-care-glp1-sop-003",
+      "target": "ki-primary-care-glp1-sop-v1-000008",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000008",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000008",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000008",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000008",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-contraindication-screening",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000008",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000008",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000008",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000008",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000008-route-uncertain-case",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000008",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000008-route-uncertain-case",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-primary-care-glp1-sop-v1-000008-route-uncertain-case",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000008",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-primary-care-glp1-sop-004",
+      "target": "ki-primary-care-glp1-sop-v1-000009",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000009",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000009",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000009",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000009",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-follow-up-monitoring",
+      "target": "kr-ki-primary-care-glp1-sop-v1-000009",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000009",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000009",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-primary-care-glp1-sop-v1-000009",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000009-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-primary-care-glp1-sop-v1-000009",
+      "target": "rule-ki-primary-care-glp1-sop-v1-000009-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-primary-care-glp1-sop-v1-000009-should",
+      "target": "evidence-ki-primary-care-glp1-sop-v1-000009",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-prior-authorization-workflow-002",
+      "target": "ki-prior-authorization-workflow-v1-000010",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000010",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000010",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000010",
+      "target": "kr-ki-prior-authorization-workflow-v1-000010",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-prior-authorization-requirements",
+      "target": "kr-ki-prior-authorization-workflow-v1-000010",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-prior-authorization-workflow-v1-000010",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000010",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000010",
+      "target": "rule-ki-prior-authorization-workflow-v1-000010-records",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-prior-authorization-workflow-v1-000010",
+      "target": "rule-ki-prior-authorization-workflow-v1-000010-records",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-prior-authorization-workflow-v1-000010-records",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000010",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-prior-authorization-workflow-002",
+      "target": "ki-prior-authorization-workflow-v1-000011",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000011",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000011",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000011",
+      "target": "kr-ki-prior-authorization-workflow-v1-000011",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-prior-authorization-requirements",
+      "target": "kr-ki-prior-authorization-workflow-v1-000011",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-prior-authorization-workflow-v1-000011",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000011",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000011",
+      "target": "rule-ki-prior-authorization-workflow-v1-000011-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-prior-authorization-workflow-v1-000011",
+      "target": "rule-ki-prior-authorization-workflow-v1-000011-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-prior-authorization-workflow-v1-000011-requires",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000011",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-prior-authorization-workflow-003",
+      "target": "ki-prior-authorization-workflow-v1-000012",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000012",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000012",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000012",
+      "target": "kr-ki-prior-authorization-workflow-v1-000012",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-denial-routing",
+      "target": "kr-ki-prior-authorization-workflow-v1-000012",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-prior-authorization-workflow-v1-000012",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000012",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000012",
+      "target": "rule-ki-prior-authorization-workflow-v1-000012-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-prior-authorization-workflow-v1-000012",
+      "target": "rule-ki-prior-authorization-workflow-v1-000012-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-prior-authorization-workflow-v1-000012-should",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000012",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-prior-authorization-workflow-003",
+      "target": "ki-prior-authorization-workflow-v1-000013",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000013",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000013",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000013",
+      "target": "kr-ki-prior-authorization-workflow-v1-000013",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-denial-routing",
+      "target": "kr-ki-prior-authorization-workflow-v1-000013",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-prior-authorization-workflow-v1-000013",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000013",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-prior-authorization-workflow-v1-000013",
+      "target": "rule-ki-prior-authorization-workflow-v1-000013-records",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-prior-authorization-workflow-v1-000013",
+      "target": "rule-ki-prior-authorization-workflow-v1-000013-records",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-prior-authorization-workflow-v1-000013-records",
+      "target": "evidence-ki-prior-authorization-workflow-v1-000013",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-safety-policy-002",
+      "target": "ki-safety-policy-v1-000014",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-safety-policy-v1-000014",
+      "target": "evidence-ki-safety-policy-v1-000014",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-policy-v1-000014",
+      "target": "kr-ki-safety-policy-v1-000014",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-contraindication-screening",
+      "target": "kr-ki-safety-policy-v1-000014",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-safety-policy-v1-000014",
+      "target": "evidence-ki-safety-policy-v1-000014",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-policy-v1-000014",
+      "target": "rule-ki-safety-policy-v1-000014-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-safety-policy-v1-000014",
+      "target": "rule-ki-safety-policy-v1-000014-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-safety-policy-v1-000014-requires",
+      "target": "evidence-ki-safety-policy-v1-000014",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-safety-policy-002",
+      "target": "ki-safety-policy-v1-000015",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-safety-policy-v1-000015",
+      "target": "evidence-ki-safety-policy-v1-000015",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-policy-v1-000015",
+      "target": "kr-ki-safety-policy-v1-000015",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-contraindication-screening",
+      "target": "kr-ki-safety-policy-v1-000015",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-safety-policy-v1-000015",
+      "target": "evidence-ki-safety-policy-v1-000015",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-policy-v1-000015",
+      "target": "rule-ki-safety-policy-v1-000015-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-safety-policy-v1-000015",
+      "target": "rule-ki-safety-policy-v1-000015-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-safety-policy-v1-000015-requires",
+      "target": "evidence-ki-safety-policy-v1-000015",
+      "type": "supported_by"
+    },
+    {
+      "source": "section-safety-policy-003",
+      "target": "ki-safety-policy-v1-000016",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-safety-policy-v1-000016",
+      "target": "evidence-ki-safety-policy-v1-000016",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-policy-v1-000016",
+      "target": "kr-ki-safety-policy-v1-000016",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-adverse-event-monitoring",
+      "target": "kr-ki-safety-policy-v1-000016",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-safety-policy-v1-000016",
+      "target": "evidence-ki-safety-policy-v1-000016",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-safety-policy-v1-000016",
+      "target": "rule-ki-safety-policy-v1-000016-should",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-safety-policy-v1-000016",
+      "target": "rule-ki-safety-policy-v1-000016-should",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-safety-policy-v1-000016-should",
+      "target": "evidence-ki-safety-policy-v1-000016",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "follow-up-monitoring-procedure",
+      "label": "follow up monitoring procedure",
+      "source_version_id": "follow-up-monitoring-procedure:v1",
+      "type": "source"
+    },
+    {
+      "id": "primary-care-glp1-sop",
+      "label": "primary care glp1 sop",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "source"
+    },
+    {
+      "id": "prior-authorization-workflow",
+      "label": "prior authorization workflow",
+      "source_version_id": "prior-authorization-workflow:v1",
+      "type": "source"
+    },
+    {
+      "id": "safety-policy",
+      "label": "safety policy",
+      "source_version_id": "safety-policy:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-follow-up-monitoring-procedure-001",
+      "label": "GLP-1 Follow-up Monitoring Procedure",
+      "source_version_id": "follow-up-monitoring-procedure:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-glp-1-follow-up-monitoring-procedure",
+      "label": "GLP-1 Follow-up Monitoring Procedure",
+      "type": "concept"
+    },
+    {
+      "id": "section-follow-up-monitoring-procedure-002",
+      "label": "Follow-up Monitoring",
+      "source_version_id": "follow-up-monitoring-procedure:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-follow-up-monitoring",
+      "label": "Follow-up Monitoring",
+      "type": "concept"
+    },
+    {
+      "id": "section-follow-up-monitoring-procedure-003",
+      "label": "Dose Titration",
+      "source_version_id": "follow-up-monitoring-procedure:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-dose-titration",
+      "label": "Dose Titration",
+      "type": "concept"
+    },
+    {
+      "id": "section-primary-care-glp1-sop-001",
+      "label": "Primary Care GLP-1 Prescribing SOP",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-primary-care-glp-1-prescribing-sop",
+      "label": "Primary Care GLP-1 Prescribing SOP",
+      "type": "concept"
+    },
+    {
+      "id": "section-primary-care-glp1-sop-002",
+      "label": "Intake Requirements",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-intake-requirements",
+      "label": "Intake Requirements",
+      "type": "concept"
+    },
+    {
+      "id": "section-primary-care-glp1-sop-003",
+      "label": "Contraindication Screening",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-contraindication-screening",
+      "label": "Contraindication Screening",
+      "type": "concept"
+    },
+    {
+      "id": "section-primary-care-glp1-sop-004",
+      "label": "Follow-up Monitoring",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "section"
+    },
+    {
+      "id": "section-prior-authorization-workflow-001",
+      "label": "GLP-1 Prior Authorization Workflow",
+      "source_version_id": "prior-authorization-workflow:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-glp-1-prior-authorization-workflow",
+      "label": "GLP-1 Prior Authorization Workflow",
+      "type": "concept"
+    },
+    {
+      "id": "section-prior-authorization-workflow-002",
+      "label": "Prior Authorization Requirements",
+      "source_version_id": "prior-authorization-workflow:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-prior-authorization-requirements",
+      "label": "Prior Authorization Requirements",
+      "type": "concept"
+    },
+    {
+      "id": "section-prior-authorization-workflow-003",
+      "label": "Denial Routing",
+      "source_version_id": "prior-authorization-workflow:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-denial-routing",
+      "label": "Denial Routing",
+      "type": "concept"
+    },
+    {
+      "id": "section-safety-policy-001",
+      "label": "GLP-1 Safety Policy",
+      "source_version_id": "safety-policy:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-glp-1-safety-policy",
+      "label": "GLP-1 Safety Policy",
+      "type": "concept"
+    },
+    {
+      "id": "section-safety-policy-002",
+      "label": "Contraindication Screening",
+      "source_version_id": "safety-policy:v1",
+      "type": "section"
+    },
+    {
+      "id": "section-safety-policy-003",
+      "label": "Adverse Event Monitoring",
+      "source_version_id": "safety-policy:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-adverse-event-monitoring",
+      "label": "Adverse Event Monitoring",
+      "type": "concept"
+    },
+    {
+      "id": "ki-follow-up-monitoring-procedure-v1-000001",
+      "label": "Follow-up Monitoring",
+      "lifecycle_status": "active",
+      "source_version_id": "follow-up-monitoring-procedure:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-follow-up-monitoring-procedure-v1-000001",
+      "label": "Patients should receive follow-up contact within 14 days after GLP-1 therapy initiation.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-follow-up-monitoring-procedure-v1-000001",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-follow-up-monitoring-procedure-v1-000001-should",
+      "label": "Follow-up Monitoring",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-follow-up-monitoring-procedure-v1-000002",
+      "label": "Follow-up Monitoring",
+      "lifecycle_status": "active",
+      "source_version_id": "follow-up-monitoring-procedure:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-follow-up-monitoring-procedure-v1-000002",
+      "label": "Staff must record dose tolerance and adverse event symptoms during follow-up.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-follow-up-monitoring-procedure-v1-000002",
+      "label": "records",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-follow-up-monitoring-procedure-v1-000002-records",
+      "label": "Follow-up Monitoring",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-follow-up-monitoring-procedure-v1-000003",
+      "label": "Dose Titration",
+      "lifecycle_status": "active",
+      "source_version_id": "follow-up-monitoring-procedure:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-follow-up-monitoring-procedure-v1-000003",
+      "label": "Clinicians must confirm patient tolerance before dose escalation.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-follow-up-monitoring-procedure-v1-000003",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-follow-up-monitoring-procedure-v1-000003-requires",
+      "label": "Dose Titration",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-follow-up-monitoring-procedure-v1-000004",
+      "label": "Dose Titration",
+      "lifecycle_status": "active",
+      "source_version_id": "follow-up-monitoring-procedure:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-follow-up-monitoring-procedure-v1-000004",
+      "label": "Clinicians should defer dose escalation when severe gastrointestinal symptoms are reported.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-follow-up-monitoring-procedure-v1-000004",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-follow-up-monitoring-procedure-v1-000004-should",
+      "label": "Dose Titration",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-primary-care-glp1-sop-v1-000005",
+      "label": "Intake Requirements",
+      "lifecycle_status": "active",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-primary-care-glp1-sop-v1-000005",
+      "label": "Clinicians must confirm patient identity before reviewing GLP-1 therapy eligibility.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-primary-care-glp1-sop-v1-000005",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-primary-care-glp1-sop-v1-000005-confirm-patient-identity",
+      "label": "Confirm patient identity",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-primary-care-glp1-sop-v1-000006",
+      "label": "Intake Requirements",
+      "lifecycle_status": "active",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-primary-care-glp1-sop-v1-000006",
+      "label": "Clinicians must document current medications, diabetes history, weight history, and relevant comorbidities.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-primary-care-glp1-sop-v1-000006",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-primary-care-glp1-sop-v1-000006-requires",
+      "label": "Intake Requirements",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-primary-care-glp1-sop-v1-000007",
+      "label": "Contraindication Screening",
+      "lifecycle_status": "active",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-primary-care-glp1-sop-v1-000007",
+      "label": "Clinicians must screen for pregnancy, pancreatitis history, medullary thyroid carcinoma history, and multiple endocrine neoplasia type 2 history.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-primary-care-glp1-sop-v1-000007",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-primary-care-glp1-sop-v1-000007-requires",
+      "label": "Contraindication Screening",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-primary-care-glp1-sop-v1-000008",
+      "label": "Contraindication Screening",
+      "lifecycle_status": "active",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-primary-care-glp1-sop-v1-000008",
+      "label": "Patients with uncertain contraindication history should be routed for clinical review before therapy is prescribed.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-primary-care-glp1-sop-v1-000008",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-primary-care-glp1-sop-v1-000008-route-uncertain-case",
+      "label": "Route uncertain cases for clinical review",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-primary-care-glp1-sop-v1-000009",
+      "label": "Follow-up Monitoring",
+      "lifecycle_status": "active",
+      "source_version_id": "primary-care-glp1-sop:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-primary-care-glp1-sop-v1-000009",
+      "label": "Patients should receive follow-up contact within 30 days after GLP-1 therapy initiation.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-primary-care-glp1-sop-v1-000009",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-primary-care-glp1-sop-v1-000009-should",
+      "label": "Follow-up Monitoring",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-prior-authorization-workflow-v1-000010",
+      "label": "Prior Authorization Requirements",
+      "lifecycle_status": "active",
+      "source_version_id": "prior-authorization-workflow:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-prior-authorization-workflow-v1-000010",
+      "label": "Staff must record payer requirements before submitting a GLP-1 prior authorization request.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-prior-authorization-workflow-v1-000010",
+      "label": "records",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-prior-authorization-workflow-v1-000010-records",
+      "label": "Prior Authorization Requirements",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-prior-authorization-workflow-v1-000011",
+      "label": "Prior Authorization Requirements",
+      "lifecycle_status": "active",
+      "source_version_id": "prior-authorization-workflow:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-prior-authorization-workflow-v1-000011",
+      "label": "Staff must attach diagnosis evidence and prior therapy documentation when required by the payer.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-prior-authorization-workflow-v1-000011",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-prior-authorization-workflow-v1-000011-requires",
+      "label": "Prior Authorization Requirements",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-prior-authorization-workflow-v1-000012",
+      "label": "Denial Routing",
+      "lifecycle_status": "active",
+      "source_version_id": "prior-authorization-workflow:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-prior-authorization-workflow-v1-000012",
+      "label": "Staff should route prior authorization denials to the prescribing clinician for clinical review.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-prior-authorization-workflow-v1-000012",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-prior-authorization-workflow-v1-000012-should",
+      "label": "Denial Routing",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-prior-authorization-workflow-v1-000013",
+      "label": "Denial Routing",
+      "lifecycle_status": "active",
+      "source_version_id": "prior-authorization-workflow:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-prior-authorization-workflow-v1-000013",
+      "label": "Staff must record appeal deadlines in the case note.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-prior-authorization-workflow-v1-000013",
+      "label": "records",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-prior-authorization-workflow-v1-000013-records",
+      "label": "Denial Routing",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-safety-policy-v1-000014",
+      "label": "Contraindication Screening",
+      "lifecycle_status": "active",
+      "source_version_id": "safety-policy:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-safety-policy-v1-000014",
+      "label": "Clinicians must confirm contraindication screening before prescribing GLP-1 therapy.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-safety-policy-v1-000014",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-safety-policy-v1-000014-requires",
+      "label": "Contraindication Screening",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-safety-policy-v1-000015",
+      "label": "Contraindication Screening",
+      "lifecycle_status": "active",
+      "source_version_id": "safety-policy:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-safety-policy-v1-000015",
+      "label": "Patients with confirmed contraindications must not start GLP-1 therapy without specialist review.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-safety-policy-v1-000015",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-safety-policy-v1-000015-requires",
+      "label": "Contraindication Screening",
+      "type": "decision_rule"
+    },
+    {
+      "id": "ki-safety-policy-v1-000016",
+      "label": "Adverse Event Monitoring",
+      "lifecycle_status": "active",
+      "source_version_id": "safety-policy:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-safety-policy-v1-000016",
+      "label": "Clinicians should record severe gastrointestinal symptoms, dehydration risk, and suspected pancreatitis symptoms.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-safety-policy-v1-000016",
+      "label": "should",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-safety-policy-v1-000016-should",
+      "label": "Adverse Event Monitoring",
+      "type": "decision_rule"
+    }
+  ]
+}

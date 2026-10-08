@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:a7619745bf0fa3aea448ab118ae76f428353738d489d8e33c0a45d1f988c71c9",
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/bom-doc__v1.md",
+      "original_path": "sources/originals/bom-doc__v1.md",
+      "size_bytes": 68,
+      "source_id": "bom-doc",
+      "source_version_id": "bom-doc:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

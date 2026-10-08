@@ -1,0 +1,95 @@
+{
+  "edges": [
+    {
+      "source": "escalation-policy-legacy01",
+      "target": "section-escalation-policy-legacy01-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-escalation-policy-legacy01-001",
+      "target": "concept-escalation-policy",
+      "type": "mentions_concept"
+    },
+    {
+      "source": "section-escalation-policy-legacy01-001",
+      "target": "ki-escalation-policy-legacy01-000001",
+      "type": "has_knowledge"
+    },
+    {
+      "source": "ki-escalation-policy-legacy01-000001",
+      "target": "evidence-ki-escalation-policy-legacy01-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-policy-legacy01-000001",
+      "target": "kr-ki-escalation-policy-legacy01-000001",
+      "type": "expressed_as"
+    },
+    {
+      "source": "concept-escalation-policy",
+      "target": "kr-ki-escalation-policy-legacy01-000001",
+      "type": "relation_subject"
+    },
+    {
+      "source": "kr-ki-escalation-policy-legacy01-000001",
+      "target": "evidence-ki-escalation-policy-legacy01-000001",
+      "type": "supported_by"
+    },
+    {
+      "source": "ki-escalation-policy-legacy01-000001",
+      "target": "rule-ki-escalation-policy-legacy01-000001-requires",
+      "type": "has_decision_rule"
+    },
+    {
+      "source": "kr-ki-escalation-policy-legacy01-000001",
+      "target": "rule-ki-escalation-policy-legacy01-000001-requires",
+      "type": "operationalized_by"
+    },
+    {
+      "source": "rule-ki-escalation-policy-legacy01-000001-requires",
+      "target": "evidence-ki-escalation-policy-legacy01-000001",
+      "type": "supported_by"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "escalation-policy-legacy01",
+      "label": "Escalation Policy",
+      "source_version_id": "escalation-policy-legacy01:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-escalation-policy-legacy01-001",
+      "label": "Escalation Policy",
+      "source_version_id": "escalation-policy-legacy01:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-escalation-policy",
+      "label": "Escalation Policy",
+      "type": "concept"
+    },
+    {
+      "id": "ki-escalation-policy-legacy01-000001",
+      "label": "Escalation Policy",
+      "lifecycle_status": "active",
+      "source_version_id": "escalation-policy-legacy01:v1",
+      "type": "knowledge_item"
+    },
+    {
+      "id": "evidence-ki-escalation-policy-legacy01-000001",
+      "label": "On-call staff must confirm receipt of every critical alert within 15 minutes.",
+      "type": "evidence"
+    },
+    {
+      "id": "kr-ki-escalation-policy-legacy01-000001",
+      "label": "requires",
+      "type": "knowledge_relation"
+    },
+    {
+      "id": "rule-ki-escalation-policy-legacy01-000001-requires",
+      "label": "Escalation Policy",
+      "type": "decision_rule"
+    }
+  ]
+}

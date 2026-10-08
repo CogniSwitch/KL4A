@@ -1,0 +1,12 @@
+[
+  {
+    "end_pos": 99,
+    "heading": "Escalation Policy",
+    "id": "section-escalation-policy-legacy01-001",
+    "normalized_path": "sources/normalized/escalation-policy-legacy01.md",
+    "semantic_role": "policy",
+    "source_id": "escalation-policy-legacy01",
+    "source_version_id": "escalation-policy-legacy01:v1",
+    "start_pos": 0
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "edges": [
+    {
+      "source": "acme-intake-policy",
+      "target": "section-acme-intake-policy-001",
+      "type": "has_section"
+    },
+    {
+      "source": "section-acme-intake-policy-001",
+      "target": "concept-acme-clinical-intake-policy",
+      "type": "mentions_concept"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "acme-intake-policy",
+      "label": "acme intake policy",
+      "source_version_id": "acme-intake-policy:v1",
+      "type": "source"
+    },
+    {
+      "id": "section-acme-intake-policy-001",
+      "label": "Acme Clinical Intake Policy",
+      "source_version_id": "acme-intake-policy:v1",
+      "type": "section"
+    },
+    {
+      "id": "concept-acme-clinical-intake-policy",
+      "label": "Acme Clinical Intake Policy",
+      "type": "concept"
+    }
+  ]
+}

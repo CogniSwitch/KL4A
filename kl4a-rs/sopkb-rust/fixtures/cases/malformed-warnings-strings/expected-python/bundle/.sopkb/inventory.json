@@ -1,0 +1,39 @@
+{
+  "sources": [
+    {
+      "active_version_id": "intake-checklist-malformed01:v1",
+      "checksum": "sha256:2222222222222222222222222222222222222222222222222222222222cc",
+      "id": "intake-checklist-malformed01",
+      "metadata": {
+        "source_filename": "intake-checklist-malformed01.md"
+      },
+      "modified_time": "<TS>",
+      "normalized_path": "sources/normalized/intake-checklist-malformed01.md",
+      "original_path": "sources/originals/intake-checklist-malformed01.md",
+      "parse_status": "normalized",
+      "size": 76,
+      "source_version_id": "intake-checklist-malformed01:v1",
+      "status": "active",
+      "title": "Intake Checklist",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:2222222222222222222222222222222222222222222222222222222222cc",
+          "modified_time": "<TS>",
+          "normalized_path": "sources/normalized/intake-checklist-malformed01.md",
+          "original_path": "sources/originals/intake-checklist-malformed01.md",
+          "size_bytes": 76,
+          "source_id": "intake-checklist-malformed01",
+          "source_version_id": "intake-checklist-malformed01:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": [
+    "disk read error on some/path"
+  ]
+}

@@ -1,0 +1,13 @@
+[package]
+name = "sopkb-derive"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+sopkb-fmt = { path = "../sopkb-fmt" }
+sopkb-core = { path = "../sopkb-core" }
+serde_json = "1"
+
+[dev-dependencies]
+tempfile = "3"
