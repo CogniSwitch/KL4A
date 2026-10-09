@@ -40,7 +40,7 @@ Refund requests above $1,000 must receive finance approval before processing.
 ```
 
 This is the kind of thing an organization already has — a policy document nobody has
-turned into something an agent can query safely. ([Full source](../examples/customer-refund-policy))
+turned into something an agent can query safely. ([Explore the complete example](examples/customer-refund-policy.md))
 
 ## 2. Run KL4A
 

@@ -90,7 +90,7 @@ to break it.
 
 ### Setup
 
-**Source:** [`examples/customer-refund-policy/sources/refund-policy.md`](../../examples/customer-refund-policy)
+**Source:** [Customer Refund Policy example](../examples/customer-refund-policy.md)
 — a real, three-sentence, two-section policy document.
 
 **Question:** *"Can a customer request a refund after 20 days?"*
@@ -101,7 +101,7 @@ The source was chunked by `##` section (2 chunks: "Refund Eligibility", "Refund
 Approval"), embedded, and queried for the top matches.
 
 **`sopkb`:** the same source, already built into a real bundle at
-[`examples/customer-refund-policy/bundle`](../../examples/customer-refund-policy), queried
+[the Customer Refund Policy bundle](../examples/customer-refund-policy.md), queried
 with `kl4a --use sopkb knowledge search`.
 
 ### What each side actually returned
@@ -159,7 +159,7 @@ if it does.
 
 ### Setup
 
-**Source:** [`examples/customer-support-policy/sources/support-policy.md`](../../examples/customer-support-policy)
+**Source:** [Customer Support & Returns Policy example](../examples/customer-support-policy.md)
 — a real, 8-section returns policy with cross-references between sections and exceptions
 that override the general rule (electronics get a shorter return window; exchanges get a
 restocking-fee waiver that the base condition rule doesn't mention).
@@ -173,7 +173,7 @@ it correctly means combining the damaged-item rule (Section 5), the restocking f
 chunked by `##` section (8 chunks this time), top-4 retrieved.
 
 **`sopkb`:** the same source, built into a real bundle at
-[`examples/customer-support-policy/bundle`](../../examples/customer-support-policy)
+[the Customer Support & Returns Policy bundle](../examples/customer-support-policy.md)
 (18 proposed knowledge items, 0 errors, 0 warnings), queried with
 `kl4a --use sopkb knowledge search` for the terms a person would actually search:
 "restocking", "exchange", "damaged".
@@ -279,7 +279,7 @@ answer, or to know whether that sentence has been reviewed.** That holds on both
 
 ### Setup
 
-**Source:** [`examples/category-returns-policy/sources/category-policy.md`](../../examples/category-returns-policy)
+**Source:** [Category Returns Policy example](../examples/category-returns-policy.md)
 — a real, 12-section document.
 
 - Every section uses the same sentence template (return window, restocking fee, warranty
@@ -299,7 +299,7 @@ without original packaging?"*
 1–2), chunked by `##` section (12 chunks), top-4 retrieved.
 
 **`sopkb`:** the same source, built into a real bundle at
-[`examples/category-returns-policy/bundle`](../../examples/category-returns-policy)
+[the Category Returns Policy bundle](../examples/category-returns-policy.md)
 (24 proposed knowledge items, 0 errors, 0 warnings), queried with `kl4a --use sopkb
 knowledge search`.
 
