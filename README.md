@@ -1,4 +1,4 @@
-<img src="docs/images/cogniswitch-logo.png" alt="CogniSwitch" width="220">
+<img src="docs/images/kl4a-logo-light.svg" alt="KL4A" width="96">
 
 # Knowledge Layer For Agents (KL4A)
 
