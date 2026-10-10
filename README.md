@@ -21,7 +21,7 @@ source of truth.
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-**Latest release: [v0.0.2](https://github.com/CogniSwitch/KL4A/releases/latest).**
+**Latest release: [v0.0.2-alpha](https://github.com/CogniSwitch/KL4A/releases/latest).**
 
 The native desktop app (Windows/macOS/Linux, built on Tauri) is the easiest way to use the **SOP Knowledge Bundle** workflow — one application to install, not a server to stand up or a runtime to provision. **CodeKB does not currently have a desktop app; use its CLI or MCP server instead.**
 
