@@ -21,7 +21,7 @@ source of truth.
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-**Latest release: [v0.0.2](https://github.com/CogniSwitch/KL4A/releases/latest).**
+**Latest release: [v0.0.2-alpha](https://github.com/CogniSwitch/KL4A/releases/tag/0.0.2-alpha).**
 
 The native desktop app (Windows/macOS/Linux, built on Tauri) is the easiest way to use the **SOP Knowledge Bundle** workflow — one application to install, not a server to stand up or a runtime to provision. **CodeKB does not currently have a desktop app; use its CLI or MCP server instead.**
 
@@ -77,9 +77,9 @@ Start with a policy, a procedure, or a codebase. KL4A produces a bundle that a p
 
 | Platform | Download |
 |---|---|
-| **Windows** | [⬇ Installer (`.exe`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.2_x64-setup.exe) |
-| **macOS** | [⬇ Disk image (`.dmg`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.2_universal.dmg) - universal, runs on Apple Silicon and Intel |
-| **Linux** | [⬇ AppImage](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.2_amd64.AppImage) |
+| **Windows** | [⬇ Installer (`.exe`)](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/KL4A.Workbench_0.0.2_x64-setup.exe) |
+| **macOS** | [⬇ Disk image (`.dmg`)](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/KL4A.Workbench_0.0.2_universal.dmg) - universal, runs on Apple Silicon and Intel |
+| **Linux** | [⬇ AppImage](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/KL4A.Workbench_0.0.2_amd64.AppImage) |
 
 The builds aren't code-signed yet, so your OS will warn you on first launch: on macOS right-click then **Open** to get past Gatekeeper, on Windows click **More info** then **Run anyway**, and on Linux `chmod +x` the AppImage first.
 
@@ -91,9 +91,9 @@ If you'd rather not install the desktop app, or want an agent to read a bundle, 
 
 | Platform | `kl4a` | `sopkb-cli` | `sopkb-mcp` |
 |---|---|---|---|
-| **Windows** | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-windows-x86_64.exe) |
-| **macOS** | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-macos-universal) |
-| **Linux** | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-linux-x86_64) |
+| **Windows** | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/kl4a-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/sopkb-cli-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/sopkb-mcp-windows-x86_64.exe) |
+| **macOS** | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/kl4a-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/sopkb-cli-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/sopkb-mcp-macos-universal) |
+| **Linux** | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/kl4a-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/sopkb-cli-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/download/0.0.2-alpha/sopkb-mcp-linux-x86_64) |
 
 `sopkb-cli` runs the SOP pipeline: `scan`, `normalize`, `mine`, `review`, `validate`, `export`. `sopkb-mcp` serves finished SOP bundles over read-only stdio MCP. `kl4a` is the shipped entry point for both workflows: use `kl4a --use codekb ...` for CodeKB, including `kl4a --use codekb mcp serve <bundle_dir>`.
 
