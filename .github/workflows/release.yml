@@ -168,24 +168,24 @@ jobs:
             v2/kl4a-rs -> target
             v2/kl4a-rs/sopkb-rust -> target
 
-      - name: Build KL4A and CodeKB release binaries
+      - name: Build KL4A release binary
         if: matrix.os != 'macos-latest'
         working-directory: v2/kl4a-rs
-        run: cargo build --release -p kl4a -p codekb
+        run: cargo build --release -p kl4a
 
       - name: Build SOPKB CLI and MCP release binaries
         if: matrix.os != 'macos-latest'
         working-directory: v2/kl4a-rs/sopkb-rust
         run: cargo build --release -p sopkb-cli -p sopkb-mcp
 
-      - name: Build universal KL4A and CodeKB binaries
+      - name: Build universal KL4A binary
         if: matrix.os == 'macos-latest'
         working-directory: v2/kl4a-rs
         run: |
-          cargo build --release -p kl4a -p codekb --target aarch64-apple-darwin
-          cargo build --release -p kl4a -p codekb --target x86_64-apple-darwin
+          cargo build --release -p kl4a --target aarch64-apple-darwin
+          cargo build --release -p kl4a --target x86_64-apple-darwin
           mkdir -p target/universal-release
-          for b in kl4a codekb; do
+          for b in kl4a; do
             lipo -create -output "target/universal-release/$b" \
               "target/aarch64-apple-darwin/release/$b" \
               "target/x86_64-apple-darwin/release/$b"
@@ -220,7 +220,7 @@ jobs:
             kl4a_src="v2/kl4a-rs/target/release"
             sopkb_src="v2/kl4a-rs/sopkb-rust/target/release"
           fi
-          for b in kl4a codekb; do
+          for b in kl4a; do
             if [ -f "$kl4a_src/$b.exe" ]; then
               cp "$kl4a_src/$b.exe" "staged/$b-${{ matrix.asset_suffix }}.exe"
             else
@@ -236,11 +236,25 @@ jobs:
           done
           ls -l staged
 
-      - name: Upload binaries artifact
+      - name: Upload KL4A artifact
         uses: actions/upload-artifact@v4
         with:
-          name: kl4a-binaries-${{ matrix.os }}
-          path: staged/*
+          name: kl4a-${{ matrix.asset_suffix }}
+          path: staged/kl4a-${{ matrix.asset_suffix }}*
+          if-no-files-found: error
+
+      - name: Upload SOPKB CLI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sopkb-cli-${{ matrix.asset_suffix }}
+          path: staged/sopkb-cli-${{ matrix.asset_suffix }}*
+          if-no-files-found: error
+
+      - name: Upload SOPKB MCP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sopkb-mcp-${{ matrix.asset_suffix }}
+          path: staged/sopkb-mcp-${{ matrix.asset_suffix }}*
           if-no-files-found: error
 
   release:

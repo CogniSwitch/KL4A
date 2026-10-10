@@ -158,7 +158,7 @@ jobs:
       - name: Build Windows and Linux release binaries
         if: matrix.os != 'macos-latest'
         run: |
-          cargo build --release -p kl4a -p codekb --manifest-path v2/kl4a-rs/Cargo.toml
+          cargo build --release -p kl4a --manifest-path v2/kl4a-rs/Cargo.toml
           cargo build --release -p sopkb-cli -p sopkb-mcp --manifest-path v2/kl4a-rs/sopkb-rust/Cargo.toml
 
       - name: Build universal macOS release binaries
@@ -167,11 +167,11 @@ jobs:
         run: |
           set -euo pipefail
           for target in aarch64-apple-darwin x86_64-apple-darwin; do
-            cargo build --release -p kl4a -p codekb --manifest-path v2/kl4a-rs/Cargo.toml --target "$target"
+            cargo build --release -p kl4a --manifest-path v2/kl4a-rs/Cargo.toml --target "$target"
             cargo build --release -p sopkb-cli -p sopkb-mcp --manifest-path v2/kl4a-rs/sopkb-rust/Cargo.toml --target "$target"
           done
           mkdir -p staged
-          for b in kl4a codekb; do
+          for b in kl4a; do
             lipo -create -output "staged/$b-macos-universal" \
               "v2/kl4a-rs/target/aarch64-apple-darwin/release/$b" \
               "v2/kl4a-rs/target/x86_64-apple-darwin/release/$b"
@@ -188,7 +188,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p staged
-          for b in kl4a codekb; do
+          for b in kl4a; do
             if [ -f "v2/kl4a-rs/target/release/$b.exe" ]; then
               cp "v2/kl4a-rs/target/release/$b.exe" "staged/$b-${{ matrix.asset_suffix }}.exe"
             else
@@ -203,9 +203,23 @@ jobs:
             fi
           done
 
-      - name: Upload release binaries
+      - name: Upload KL4A release artifact
         uses: actions/upload-artifact@v4
         with:
-          name: kl4a-binaries-${{ matrix.os }}
-          path: staged/*
+          name: kl4a-${{ matrix.asset_suffix }}
+          path: staged/kl4a-${{ matrix.asset_suffix }}*
+          if-no-files-found: error
+
+      - name: Upload SOPKB CLI release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sopkb-cli-${{ matrix.asset_suffix }}
+          path: staged/sopkb-cli-${{ matrix.asset_suffix }}*
+          if-no-files-found: error
+
+      - name: Upload SOPKB MCP release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sopkb-mcp-${{ matrix.asset_suffix }}
+          path: staged/sopkb-mcp-${{ matrix.asset_suffix }}*
           if-no-files-found: error

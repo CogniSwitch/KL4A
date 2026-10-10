@@ -1,4 +1,4 @@
-<img src="docs/images/cogniswitch-logo.png" alt="CogniSwitch" width="220">
+<img src="docs/images/kl4a-logo-light.svg" alt="KL4A" width="96">
 
 # Knowledge Layer For Agents (KL4A)
 
@@ -87,15 +87,15 @@ Install it, open it, and everything else - creating an SOP bundle, ingesting sou
 
 ### Download CLIs and MCP servers
 
-If you'd rather not install the desktop app, or want an agent to read a bundle, the release ships four standalone binaries. No toolchain or source build is required.
+If you'd rather not install the desktop app, or want an agent to read a bundle, the release ships three standalone binaries. No toolchain or source build is required.
 
-| Platform | `kl4a` | `codekb` | `sopkb-cli` | `sopkb-mcp` |
-|---|---|---|---|---|
-| **Windows** | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/codekb-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-windows-x86_64.exe) |
-| **macOS** | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/codekb-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-macos-universal) |
-| **Linux** | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/codekb-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-linux-x86_64) |
+| Platform | `kl4a` | `sopkb-cli` | `sopkb-mcp` |
+|---|---|---|---|
+| **Windows** | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-windows-x86_64.exe) |
+| **macOS** | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-macos-universal) |
+| **Linux** | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-linux-x86_64) |
 
-`sopkb-cli` runs the SOP pipeline: `scan`, `normalize`, `mine`, `review`, `validate`, `export`. `sopkb-mcp` serves finished SOP bundles over read-only stdio MCP. `codekb` builds and queries Code Knowledge Bundles and includes its own MCP server through `codekb mcp serve <bundle_dir>`. `kl4a` dispatches to either workflow.
+`sopkb-cli` runs the SOP pipeline: `scan`, `normalize`, `mine`, `review`, `validate`, `export`. `sopkb-mcp` serves finished SOP bundles over read-only stdio MCP. `kl4a` is the shipped entry point for both workflows: use `kl4a --use codekb ...` for CodeKB, including `kl4a --use codekb mcp serve <bundle_dir>`.
 
 On macOS and Linux, make the file executable and put it somewhere on your `PATH` so a client can resolve it by name:
 
@@ -111,9 +111,9 @@ The macOS binaries are universal, so one file covers Apple Silicon and Intel.
 Build a bundle from a repository in one command. Static mining is deterministic and does not require an LLM provider:
 
 ```bash
-codekb build /path/to/repository --bundle ./my-code-bundle --mining static
-codekb validate ./my-code-bundle
-codekb context ./my-code-bundle --task explain --query "authentication flow"
+kl4a --use codekb build /path/to/repository --bundle ./my-code-bundle --mining static
+kl4a --use codekb validate ./my-code-bundle
+kl4a --use codekb context ./my-code-bundle --task explain --query "authentication flow"
 ```
 
 To expose the bundle to an MCP-capable agent, configure `codekb` as a stdio server:
@@ -122,8 +122,8 @@ To expose the bundle to an MCP-capable agent, configure `codekb` as a stdio serv
 {
   "mcpServers": {
     "codekb": {
-      "command": "codekb",
-      "args": ["mcp", "serve", "/absolute/path/to/my-code-bundle"]
+      "command": "kl4a",
+      "args": ["--use", "codekb", "mcp", "serve", "/absolute/path/to/my-code-bundle"]
     }
   }
 }
@@ -261,9 +261,9 @@ All MCP tools are read-only by default (`knowledge.search`, `knowledge.get`, `se
 | `sopkb-cli knowledge search <bundle_dir> <query>` | Free-text search over knowledge items |
 | `sopkb-cli agent context <bundle_dir> --task TASK` | Task-scoped context: usable knowledge, rules, evidence, relations |
 | `sopkb-mcp <bundle_dir>` | Expose the same read-only tools over MCP for any MCP-capable agent |
-| `codekb build <repository> --bundle <bundle_dir> --mining static` | Build a Code Knowledge Bundle from a repository |
-| `codekb context <bundle_dir> --task TASK --query <text>` | Retrieve task-ready code context |
-| `codekb mcp serve <bundle_dir>` | Expose read-only CodeKB tools over stdio MCP |
+| `kl4a --use codekb build <repository> --bundle <bundle_dir> --mining static` | Build a Code Knowledge Bundle from a repository |
+| `kl4a --use codekb context <bundle_dir> --task TASK --query <text>` | Retrieve task-ready code context |
+| `kl4a --use codekb mcp serve <bundle_dir>` | Expose read-only CodeKB tools over stdio MCP |
 | `kl4a --use sopkb\|codekb <command>` | Dispatch to either workflow from one CLI |
 
 The desktop app wraps this same pipeline behind a GUI — see the [Desktop UI Guide](docs/sopkb/DESKTOP_UI_GUIDE.md).
