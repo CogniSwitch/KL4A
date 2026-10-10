@@ -1,0 +1,16 @@
+id: bundle
+version: 0.1.0
+title: Customer Support & Returns Policy
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: '2026-10-07T07:28:01Z'
+updated_at: '2026-10-07T07:28:02Z'
+sources:
+- id: support-policy
+  type: markdown
+  path: sources/originals/support-policy__v1.md
+  source_version_id: support-policy:v1
+  status: active
+exports: []
+okf_version: '0.2'

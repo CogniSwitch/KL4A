@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-category-policy-20261007073904",
+    "path": "../examples/category-returns-policy/sources\\category-policy.md",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "timestamp": "2026-10-07T07:39:04Z"
+  }
+]

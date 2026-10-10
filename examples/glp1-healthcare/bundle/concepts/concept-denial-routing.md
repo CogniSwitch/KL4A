@@ -7,7 +7,7 @@ tags:
 - concept
 status: stable
 generated:
-  actor: sopkb/0.1.0
+  actor: sopkb/0.0.2
   date: '2026-09-09'
 sopkb:
   concept_id: concept-denial-routing

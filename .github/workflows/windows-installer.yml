@@ -1,7 +1,7 @@
 name: Windows installer (v2 desktop)
 
 # On-demand build only (workflow_dispatch), mirroring macos-dmg.yml -- this repo's
-# always-on CI (ci.yml, lint.yml) only exercises the v2/sopkb-rust library
+# always-on CI (ci.yml, lint.yml) only exercises the v2/kl4a-rs/sopkb-rust library
 # workspace, not v2/desktop-tauri or v2/frontend, so nothing else verifies this
 # app actually builds on Windows. This job does: build frontend + backend fresh
 # from the checked-out ref, package both an NSIS installer and a portable

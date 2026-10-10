@@ -1,3 +1,10 @@
+---
+title: Why This Exists
+description: >-
+  Why KL4A exists, the problem it addresses in grounding agents against
+  organisational knowledge, and why it is open source.
+---
+
 # Why We Built This
 
 ## Agents need somewhere to get the rules from
@@ -50,8 +57,8 @@ what an agent is being told. A claim about provenance that you cannot verify
 yourself is not much of a claim.
 
 Keeping bundle creation and review open also keeps us honest about where the
-commercial line sits — see [Governance](GOVERNANCE.md) for exactly where that boundary is
-drawn and why.
+commercial line sits. [Why Open Core](WHY_OPEN_CORE.md) sets out exactly where
+that boundary is drawn and why.
 
 ---
 

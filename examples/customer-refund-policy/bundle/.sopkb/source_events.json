@@ -1,0 +1,11 @@
+[
+  {
+    "action": "source_added",
+    "actor": "sopkb/inventory",
+    "id": "source_added-refund-policy-20261007061107",
+    "path": "examples/customer-refund-policy/sources\\refund-policy.md",
+    "source_id": "refund-policy",
+    "source_version_id": "refund-policy:v1",
+    "timestamp": "2026-10-07T06:11:07Z"
+  }
+]

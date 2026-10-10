@@ -1,7 +1,7 @@
 site_name: KL4A
 site_description: >-
-  KL4A (Knowledge Layer For Agents) — the local-first, open-source workbench
-  that turns SOPs, policies, and procedures into grounded, human-reviewed Knowledge Bundles.
+  KL4A (Knowledge Layer For Agents) — a local-first, open-source workbench that turns
+  SOPs and source code into grounded, human-reviewed OKF Knowledge Bundles.
 site_url: https://cogniswitch.github.io/KL4A/
 repo_name: CogniSwitch/KL4A
 repo_url: https://github.com/CogniSwitch/KL4A
@@ -19,22 +19,6 @@ exclude_docs: |
   # the public docs site.
   LAUNCH_CHECKLIST.md
   SECURITY_SCAN_NOTES.md
-  # Internal engineering-planning documents (milestone/implementation schedules,
-  # release mechanics, post-launch maintainer playbook) - not product
-  # documentation, not meant for external users of the docs site.
-  KL4A_IMPLEMENTATION_PLAN.md
-  SOURCE_VERSIONING_IMPLEMENTATION_SCHEDULE.md
-  RELEASE_PROCESS.md
-  POST_LAUNCH_OPERATIONS.md
-  # Internal planning/design docs (PRD, engineering design rationale, an
-  # LLM-extraction scoping note written for people reading the mining code,
-  # and an MCP design preview) - not needed to use the product, not meant
-  # for external users of the docs site.
-  KL4A_REQUIREMENTS.md
-  KL4A_IMPLEMENTATION_DESIGN.md
-  SOURCE_VERSIONING_AND_BUNDLE_EVOLUTION_DESIGN.md
-  LLM_EXTRACTION_SCOPE.md
-  KL4A_MCP_PREVIEW.md
 
 validation:
   links:
@@ -53,7 +37,6 @@ plugins:
 theme:
   name: material
   favicon: images/favicon.png
-  logo: images/kl4a-logo.svg
   font: false
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -71,6 +54,10 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
+    # Top-level nav entries become tabs: the SOP half and the code half are
+    # separate products sharing one core, so they get a tab each rather than
+    # competing for room in a single sidebar.
+    - navigation.tabs
     - navigation.sections
     - navigation.indexes
     - navigation.top
@@ -99,19 +86,44 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-  - Home: index.md
-  - Why This Exists: WHY.md
-  - Quickstart: quickstart.md
-  - Guides:
-      - Desktop UI Guide: DESKTOP_UI_GUIDE.md
-      - MCP Server: MCP_SERVER.md
-      - Architecture Overview: ARCHITECTURE.md
-      - FAQ: FAQ.md
+  - Home:
+      - index.md
+      - See KL4A in Action: see-kl4a-in-action.md
+      - Why This Exists: WHY.md
+      - Use Cases: use-cases.md
+      - kl4a - Unified CLI & Library: kl4a.md
+  - sopkb — SOP:
+      - Quickstart: sopkb/quickstart.md
+      - Guides:
+          - Desktop UI Guide: sopkb/DESKTOP_UI_GUIDE.md
+          - MCP Server: sopkb/MCP_SERVER.md
+          - Architecture Overview: sopkb/ARCHITECTURE.md
+          - FAQ: sopkb/FAQ.md
+          - Beyond Retrieval (RAG Comparison): sopkb/rag-comparison.md
+  - codekb — Code:
+      - Overview: codekb/index.md
+      - Getting Started: codekb/getting-started.md
+      - Guides:
+          - Pipeline & Mining: codekb/pipeline.md
+          - Knowledge & Review: codekb/knowledge-and-review.md
+          - Architecture Detection: codekb/architecture-detection.md
+      - Consuming a bundle:
+          - Agent Consumption: codekb/agent-consumption.md
+          - MCP Server: codekb/mcp.md
+      - Reference:
+          - codekb CLI: codekb/cli.md
+          - Architecture: codekb/architecture.md
+          - Bundle State: codekb/bundle-state.md
+          - Rust Port Parity: codekb/rust-port-parity.md
+          - Quality Benchmark: codekb/benchmark-external-backend.md
   - Reference:
       - OKF Bundle Spec: OKF_BUNDLE_SPEC.md
       - Bundle Compatibility Policy: BUNDLE_COMPATIBILITY_POLICY.md
-  - Release Notes:
-      - v0.0.1: releases/v0.0.1.md
   - Project:
-      - Contributing: CONTRIBUTING.md
-      - Governance: GOVERNANCE.md
+      - Roadmap: ROADMAP.md
+      - Why Open Core: WHY_OPEN_CORE.md
+      - Release Process: RELEASE_PROCESS.md
+      - Post-Launch Operations: POST_LAUNCH_OPERATIONS.md
+      - Release Notes:
+          - v0.0.1: releases/v0.0.1.md
+          - v0.0.2: releases/v0.0.2.md

@@ -21,7 +21,7 @@ loadable by the tools that produced it, largely independent of how fast the
 `sopkb` software itself is moving.
 
 If bundle-format compatibility were tied to the software's SemVer number,
-a routine `0.0.1 -> 0.1.0` software release (which, pre-1.0, carries no
+a routine `0.0.1 -> 0.0.2` software release (which, pre-1.0, carries no
 strong compatibility guarantee at all per `docs/RELEASE_PROCESS.md`) could
 silently invalidate every bundle a user has already built. That is the
 outcome this policy exists to prevent:

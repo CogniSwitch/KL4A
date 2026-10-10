@@ -22,7 +22,7 @@ import tailwindcss from '@tailwindcss/vite'
 // base would resolve against the wrong origin).
 //
 // A THIRD mode, `web` (`npm run build:web`, i.e. `vite build --mode web`),
-// builds instead for `sopkb-server` (`v2/sopkb-rust/bin/sopkb-server`) to
+// builds instead for `sopkb-server` (`v2/kl4a-rs/sopkb-rust/bin/sopkb-server`) to
 // serve as a normal HTTP static site -- separate `outDir` (`dist-web/`, never
 // mixed with the Tauri-specific `../desktop-tauri/dist`) and an absolute `/`
 // base (correct for a real HTTP server root, unlike Tauri's custom origin).

@@ -1,0 +1,15 @@
+[package]
+name = "kl4a-core"
+version = "0.0.2"
+edition.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+sha2 = { workspace = true }
+once_cell = { workspace = true }
+regex = { workspace = true }
+ureq = { workspace = true }

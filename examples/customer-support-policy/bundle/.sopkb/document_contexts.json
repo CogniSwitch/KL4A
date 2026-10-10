@@ -1,0 +1,56 @@
+[
+  {
+    "heading": "Customer Support & Returns Policy",
+    "section_id": "section-support-policy-001",
+    "semantic_role": "policy",
+    "source_id": "support-policy"
+  },
+  {
+    "heading": "1. General Return Window",
+    "section_id": "section-support-policy-002",
+    "semantic_role": "section",
+    "source_id": "support-policy"
+  },
+  {
+    "heading": "2. Condition Requirements",
+    "section_id": "section-support-policy-003",
+    "semantic_role": "policy",
+    "source_id": "support-policy"
+  },
+  {
+    "heading": "3. Electronics Exceptions",
+    "section_id": "section-support-policy-004",
+    "semantic_role": "section",
+    "source_id": "support-policy"
+  },
+  {
+    "heading": "4. Final Sale Items",
+    "section_id": "section-support-policy-005",
+    "semantic_role": "section",
+    "source_id": "support-policy"
+  },
+  {
+    "heading": "5. Damaged or Defective Items",
+    "section_id": "section-support-policy-006",
+    "semantic_role": "section",
+    "source_id": "support-policy"
+  },
+  {
+    "heading": "6. Refund Processing",
+    "section_id": "section-support-policy-007",
+    "semantic_role": "section",
+    "source_id": "support-policy"
+  },
+  {
+    "heading": "7. Exchanges",
+    "section_id": "section-support-policy-008",
+    "semantic_role": "section",
+    "source_id": "support-policy"
+  },
+  {
+    "heading": "8. Escalation and Manager Approval",
+    "section_id": "section-support-policy-009",
+    "semantic_role": "section",
+    "source_id": "support-policy"
+  }
+]

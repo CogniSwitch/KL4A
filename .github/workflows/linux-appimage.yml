@@ -2,7 +2,7 @@ name: Linux AppImage (v2 desktop)
 
 # On-demand build only (workflow_dispatch), mirroring macos-dmg.yml and
 # windows-installer.yml -- this repo's always-on CI (ci.yml, lint.yml) only
-# exercises the v2/sopkb-rust library workspace, not v2/desktop-tauri or
+# exercises the v2/kl4a-rs/sopkb-rust library workspace, not v2/desktop-tauri or
 # v2/frontend, so nothing else verifies this app actually builds on Linux.
 # This job does: build frontend + backend fresh from the checked-out ref,
 # package an AppImage, upload it as a run artifact. Trigger manually from the

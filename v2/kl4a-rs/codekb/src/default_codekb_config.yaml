@@ -1,0 +1,104 @@
+bundle:
+  standard_root: knowledge-bundles
+  default_name_template: "{repo_slug}-code"
+
+language_detection:
+  mode: auto
+  unsupported_policy: warn
+
+inventory:
+  skip_dirs:
+    - .git
+    - .hg
+    - .svn
+    - .sopkb
+    - .codekb
+    - .test_runs
+    - .mypy_cache
+    - .pytest_cache
+    - .pytest_tmp
+    - .pytest_tmp_current
+    - .ruff_cache
+    - .tox
+    - .venv
+    - venv
+    - __pycache__
+    - node_modules
+    - dist
+    - build
+    - bundles
+    - knowledge-bundles
+  extra_skip_dirs: []
+  context_filenames:
+    - pyproject.toml
+    - requirements.txt
+    - requirements-dev.txt
+    - setup.py
+    - setup.cfg
+    - tox.ini
+    - pytest.ini
+
+mining:
+  # static  = deterministic extraction only (reproducible, offline, no LLM calls)
+  # hybrid  = static claims first, then an LLM enrichment pass over the static graph
+  # llm     = alias for hybrid; the static baseline is never skipped
+  mode: static
+  # No default provider here on purpose: when mode is hybrid and a bundle (or
+  # repo .codekb.yaml) does not pin one explicitly, codekb resolves the LLM
+  # backend live from kl4a's shared llm_settings (saved setting, then
+  # environment variable, then .env) - see configured_mining_provider() in
+  # pipeline.py. Baking a vendor name in here would silently override
+  # whatever the user actually has configured.
+  selection:
+    # Which symbols are worth an LLM call. Interpretation is expensive and only
+    # pays off where there is enough static signal to ground it.
+    min_relations: 2
+    kinds:
+      - class
+      - function
+      - method
+    include_endpoints: true
+    include_tests: false
+    max_symbols: 250
+  grounding:
+    # Claims whose quoted code cannot be found inside the symbol's line range are
+    # kept but demoted, never silently trusted.
+    require_quoted_code: true
+    demote_unanchored_to_tier: 4
+  cache:
+    enabled: true
+  procedures:
+    # Deterministic clustering of an entry function/method with the same-file
+    # helpers it resolves calls to, plus a mechanical "procedure" claim - this
+    # runs (and produces claims) even in static mode, no LLM required. In hybrid
+    # mode each cluster also gets one LLM call for a numbered-step narrative,
+    # cached and parallelized the same way per-symbol authoring is.
+    enabled: true
+    min_calls: 2
+
+languages:
+  python:
+    enabled: true
+    adapter: python-ast
+    file_extensions:
+      - .py
+    semantics:
+      imports: true
+      calls: true
+      inheritance: true
+      decorators: true
+      tests: heuristic
+  cobol:
+    enabled: true
+    adapter: cobol-line-structured
+    dialect: sample
+    file_extensions:
+      - .cbl
+      - .cob
+      - .cpy
+    semantics:
+      copybooks: true
+      perform: true
+      calls: true
+      file_io: true
+      data_updates: heuristic

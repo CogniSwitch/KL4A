@@ -1,20 +1,18 @@
-<img src="docs/images/kl4a-logo-light.svg" alt="KL4A" width="96">
+<img src="https://raw.githubusercontent.com/CogniSwitch/KL4A/main/docs/images/kl4a-logo-light.svg" alt="KL4A" width="96">
 
 # Knowledge Layer For Agents (KL4A)
 
-**Create OKF-compliant knowledge bundles from your SOP docs, and enable your agents to use them.** Every claim carries the exact source span it came from, and nothing is marked `verified` until a human approves it.
+**Create grounded, portable knowledge bundles from SOP documents and source code, then let people and agents use them with evidence.** KL4A includes two workflows: SOP Knowledge Bundles for policies and procedures, and Code Knowledge Bundles for software repositories.
 
-Feed it a PDF, a DOCX, or a plain-text SOP — real, unstructured prose, not a
-website's DOM or a codebase's AST. It then:
+> **For teams that run on SOPs and developers that build with code.** Turn policies into evidence-backed, OKF-compatible knowledge; turn repositories into structure-aware context. Give agents something they can cite, inspect, and reuse — not another opaque chat response.
 
-- Normalizes the document into clean Markdown.
-- Extracts obligation-shaped claims (`must`, `shall`, `should record`, ...) and
-  attaches each one to the exact byte range of the source sentence it came from.
-- Records every approve, reject, and edit as its own event, with a reviewer, a
-  rationale, and a before/after diff, directly in the bundle.
-- Populates the claim's OKF v0.2 trust fields (`provenance`, `verified`,
-  `lifecycle_status`) on approval with who verified it and when, rather than
-  leaving them blank for someone downstream to fill in by hand.
+For SOPs, feed it a PDF, DOCX, or plain-text procedure. For code, point it at a
+repository. KL4A then:
+
+- Normalizes SOPs into clean Markdown, sections, evidence-linked claims, and reviewable decisions.
+- Parses repositories into files, symbols, relationships, architecture signals, and task-ready context.
+- Keeps the resulting bundle as plain files that can be reviewed, diffed, versioned, and queried.
+- Exposes both bundle types through a CLI and a read-only MCP interface for agents.
 
 **The result is a plain-file artifact.** Markdown with YAML frontmatter:
 readable in a text editor, diffable with `git`, and queryable by an agent over
@@ -23,39 +21,81 @@ source of truth.
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-A native desktop app (Windows/macOS/Linux, built on Tauri) — one application to install, not a server to stand up or a runtime to provision.
+**Latest release: [v0.0.2](https://github.com/CogniSwitch/KL4A/releases/latest).**
+
+The native desktop app (Windows/macOS/Linux, built on Tauri) is the easiest way to use the **SOP Knowledge Bundle** workflow — one application to install, not a server to stand up or a runtime to provision. **CodeKB does not currently have a desktop app; use its CLI or MCP server instead.**
+
+## Two knowledge bundle workflows
+
+| Workflow | Input | What it produces | Main command |
+|---|---|---|---|
+| **SOP Knowledge Bundle** | Policies, procedures, PDFs, DOCX, Markdown | Evidence-linked, human-reviewed operational knowledge | `sopkb-cli` |
+| **Code Knowledge Bundle** | A software repository | Files, symbols, relations, architecture, and task-ready code context | `codekb` (CLI/MCP only; no desktop app yet) |
+
+`kl4a` is the unified dispatcher: use `kl4a --use sopkb ...` or `kl4a --use codekb ...` when you prefer one entry point.
+
+```text
+ SOPs, policies, PDFs                 Source repositories
+          │                                    │
+          ▼                                    ▼
+       sopkb                                codekb
+          │                                    │
+          └───────────────┬────────────────────┘
+                          ▼
+                        KL4A
+                          │
+                          ▼
+        Grounded, reviewable knowledge bundles
+                          │
+                          ▼
+                    Agents and apps
+```
+
+Create the knowledge once. Let people, agents, and applications reuse it with its evidence and review history intact.
 
 ## Why KL4A exists
 
-Your SOPs, policies, and regulations live in prose written for a human reader, not an agent. Pasting that prose straight into a prompt means the agent is trusting a wall of text with no accountability trail — if it gets a clause wrong, nothing tells you which sentence it misread or who signed off on it.
+SOPs and codebases are both difficult for an agent to consume safely. Prose has no built-in accountability trail; code has structure, but not a concise explanation of intent, relationships, and impact. Asking an agent to infer either directly from raw input produces answers that are hard to inspect or trust.
 
-KL4A's job is to turn that prose into small, sourced, checkable claims *before* an agent ever sees them: extract, attach evidence, put a person in front of each one, and only then hand it to an agent — with the review trail attached, not thrown away.
+KL4A turns both into small, sourced, checkable knowledge artifacts *before* an agent uses them. It preserves evidence, structure, and review state instead of hiding those decisions behind a chat response.
+
+### Why not just RAG?
+
+RAG retrieves relevant source material. KL4A turns source material into individually addressable, evidence-backed, reviewable knowledge that can be reused across tasks and agents. RAG finds context; KL4A creates a durable knowledge layer. See the [RAG comparison](docs/sopkb/rag-comparison.md) for the detailed distinction.
+
+## See it in action
+
+Start with a policy, a procedure, or a codebase. KL4A produces a bundle that a person can inspect and an agent can query without losing the connection to the original source. The SOP flow demonstrates the full lifecycle — ingest, evidence, review, validation, and agent context — while CodeKB maps repository structure, symbols, relationships, and architecture into the same reusable form.
+
+- [See KL4A in action](docs/see-kl4a-in-action.md) — a product walkthrough and examples.
+- [SOP quickstart](docs/sopkb/quickstart.md) — build a first SOP Knowledge Bundle.
+- [Getting started with CodeKB](docs/codekb/getting-started.md) — build a first Code Knowledge Bundle.
 
 ## Quickstart
 
-### Download Desktop
+### Download SOPKB Desktop
 
 | Platform | Download |
 |---|---|
-| **Windows** | [⬇ Installer (`.exe`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.1-alpha_x64-setup.exe) |
-| **macOS** | [⬇ Disk image (`.dmg`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.1-alpha_universal.dmg) - universal, runs on Apple Silicon and Intel |
-| **Linux** | [⬇ AppImage](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.1-alpha_amd64.AppImage) |
+| **Windows** | [⬇ Installer (`.exe`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.2_x64-setup.exe) |
+| **macOS** | [⬇ Disk image (`.dmg`)](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.2_universal.dmg) - universal, runs on Apple Silicon and Intel |
+| **Linux** | [⬇ AppImage](https://github.com/CogniSwitch/KL4A/releases/latest/download/KL4A.Workbench_0.0.2_amd64.AppImage) |
 
 The builds aren't code-signed yet, so your OS will warn you on first launch: on macOS right-click then **Open** to get past Gatekeeper, on Windows click **More info** then **Run anyway**, and on Linux `chmod +x` the AppImage first.
 
-Install it, open it, and everything else - creating a bundle, ingesting sources, reviewing mined knowledge, exporting, talking to the agent - happens inside the app. See [docs/quickstart.md](docs/quickstart.md) and the [Desktop UI Guide](docs/DESKTOP_UI_GUIDE.md) for the full walkthrough.
+Install it, open it, and everything else - creating an SOP bundle, ingesting sources, reviewing mined knowledge, exporting, talking to the agent - happens inside the app. This desktop application does not support CodeKB; use the `codekb` CLI or its MCP server for repository knowledge bundles. See the [SOP quickstart](docs/sopkb/quickstart.md) and [Desktop UI Guide](docs/sopkb/DESKTOP_UI_GUIDE.md) for the full walkthrough.
 
-### Download CLI and MCP server
+### Download CLIs and MCP servers
 
-If you'd rather not install the desktop app, or you want an agent to read a bundle, both binaries ship with every release. No toolchain, no build.
+If you'd rather not install the desktop app, or want an agent to read a bundle, the release ships four standalone binaries. No toolchain or source build is required.
 
-| Platform | `sopkb-cli` | `sopkb-mcp` |
-|---|---|---|
-| **Windows** | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-windows-x86_64.exe) |
-| **macOS** | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-macos-universal) |
-| **Linux** | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-linux-x86_64) |
+| Platform | `kl4a` | `codekb` | `sopkb-cli` | `sopkb-mcp` |
+|---|---|---|---|---|
+| **Windows** | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/codekb-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-windows-x86_64.exe) | [⬇ `.exe`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-windows-x86_64.exe) |
+| **macOS** | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/codekb-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-macos-universal) | [⬇ universal](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-macos-universal) |
+| **Linux** | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/kl4a-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/codekb-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-cli-linux-x86_64) | [⬇ `x86_64`](https://github.com/CogniSwitch/KL4A/releases/latest/download/sopkb-mcp-linux-x86_64) |
 
-`sopkb-cli` runs the whole pipeline: `scan`, `normalize`, `mine`, `review`, `validate`, `export`. `sopkb-mcp` is a read-only stdio MCP server that serves a finished bundle to any MCP-capable agent.
+`sopkb-cli` runs the SOP pipeline: `scan`, `normalize`, `mine`, `review`, `validate`, `export`. `sopkb-mcp` serves finished SOP bundles over read-only stdio MCP. `codekb` builds and queries Code Knowledge Bundles and includes its own MCP server through `codekb mcp serve <bundle_dir>`. `kl4a` dispatches to either workflow.
 
 On macOS and Linux, make the file executable and put it somewhere on your `PATH` so a client can resolve it by name:
 
@@ -65,6 +105,31 @@ sudo mv sopkb-mcp-linux-x86_64 /usr/local/bin/sopkb-mcp
 ```
 
 The macOS binaries are universal, so one file covers Apple Silicon and Intel.
+
+### Build a Code Knowledge Bundle
+
+Build a bundle from a repository in one command. Static mining is deterministic and does not require an LLM provider:
+
+```bash
+codekb build /path/to/repository --bundle ./my-code-bundle --mining static
+codekb validate ./my-code-bundle
+codekb context ./my-code-bundle --task explain --query "authentication flow"
+```
+
+To expose the bundle to an MCP-capable agent, configure `codekb` as a stdio server:
+
+```json
+{
+  "mcpServers": {
+    "codekb": {
+      "command": "codekb",
+      "args": ["mcp", "serve", "/absolute/path/to/my-code-bundle"]
+    }
+  }
+}
+```
+
+See [Getting started with CodeKB](docs/codekb/getting-started.md) for the full workflow.
 
 ## An empty result is not a bug
 
@@ -173,13 +238,13 @@ $ printf '%s\n%s\n' \
 ```
 
 ```json
-{"id": 1, "jsonrpc": "2.0", "result": {"capabilities": {"tools": {}}, "instructions": "Ground every answer only in what these tools return — never in general/internet/training-data knowledge, even when labeled as such. Call knowledge.search (or agent.context) first; if nothing relevant comes back, say explicitly that this knowledge base has no grounded answer for that part instead of filling the gap. (...)", "protocolVersion": "2024-11-05", "serverInfo": {"name": "sopkb", "version": "0.0.1"}}}
+{"id": 1, "jsonrpc": "2.0", "result": {"capabilities": {"tools": {}}, "instructions": "Ground every answer only in what these tools return — never in general/internet/training-data knowledge, even when labeled as such. Call knowledge.search (or agent.context) first; if nothing relevant comes back, say explicitly that this knowledge base has no grounded answer for that part instead of filling the gap. (...)", "protocolVersion": "2024-11-05", "serverInfo": {"name": "sopkb", "version": "0.0.2"}}}
 {"id": 2, "jsonrpc": "2.0", "result": {"content": [{"text": "{\n  \"id\": \"demo-bundle\",\n  \"knowledge_item_count\": 1,\n  \"profile\": \"sop-knowledge-bundle\",\n  \"source_count\": 1,\n  \"status\": \"draft\",\n  \"title\": \"Demo Bundle\"\n}", "type": "text"}]}}
 ```
 
 *(the `instructions` string is truncated above with `(...)` — it's several sentences longer in the real response, laying out the full grounding contract for the connecting agent.)*
 
-All MCP tools are read-only by default (`knowledge.search`, `knowledge.get`, `sections.get`, `evidence.get`, `agent.context`, ...); the one mutating tool, `review.note`, is disabled unless the server is started with `--enable-review-notes`. See the [Desktop UI Guide](docs/DESKTOP_UI_GUIDE.md) for the in-app agent chat that consumes the same context.
+All MCP tools are read-only by default (`knowledge.search`, `knowledge.get`, `sections.get`, `evidence.get`, `agent.context`, ...); the one mutating tool, `review.note`, is disabled unless the server is started with `--enable-review-notes`. See the [Desktop UI Guide](docs/sopkb/DESKTOP_UI_GUIDE.md) for the in-app agent chat that consumes the same context.
 
 ## Commands
 
@@ -196,8 +261,12 @@ All MCP tools are read-only by default (`knowledge.search`, `knowledge.get`, `se
 | `sopkb-cli knowledge search <bundle_dir> <query>` | Free-text search over knowledge items |
 | `sopkb-cli agent context <bundle_dir> --task TASK` | Task-scoped context: usable knowledge, rules, evidence, relations |
 | `sopkb-mcp <bundle_dir>` | Expose the same read-only tools over MCP for any MCP-capable agent |
+| `codekb build <repository> --bundle <bundle_dir> --mining static` | Build a Code Knowledge Bundle from a repository |
+| `codekb context <bundle_dir> --task TASK --query <text>` | Retrieve task-ready code context |
+| `codekb mcp serve <bundle_dir>` | Expose read-only CodeKB tools over stdio MCP |
+| `kl4a --use sopkb\|codekb <command>` | Dispatch to either workflow from one CLI |
 
-The desktop app wraps this same pipeline behind a GUI — see the [Desktop UI Guide](docs/DESKTOP_UI_GUIDE.md).
+The desktop app wraps this same pipeline behind a GUI — see the [Desktop UI Guide](docs/sopkb/DESKTOP_UI_GUIDE.md).
 
 ## The schema layer: OKF v0.2
 
@@ -218,11 +287,12 @@ Because it's plain OKF, the bundle is readable and diffable without KL4A at all 
 
 ## Learn more
 
-- [docs/quickstart.md](docs/quickstart.md) — get the app, first bundle.
-- [Desktop UI Guide](docs/DESKTOP_UI_GUIDE.md) — the app, screen by screen.
-- [MCP Server](docs/MCP_SERVER.md) — connecting an agent to a bundle you've built.
-- [Architecture](docs/ARCHITECTURE.md) — how the pieces fit together, with links to the deeper design docs.
-- [FAQ](docs/FAQ.md) — common setup and ingestion problems.
+- [SOP quickstart](docs/sopkb/quickstart.md) — get the app and build a first SOP bundle.
+- [Getting started with CodeKB](docs/codekb/getting-started.md) — build and query a first Code Knowledge Bundle.
+- [Desktop UI Guide](docs/sopkb/DESKTOP_UI_GUIDE.md) — the app, screen by screen.
+- [MCP Server](docs/sopkb/MCP_SERVER.md) — connecting an agent to an SOP bundle.
+- [SOP architecture](docs/sopkb/ARCHITECTURE.md) — how the SOP pipeline fits together.
+- [CodeKB overview](docs/codekb/index.md) — CodeKB architecture and operations.
 
 ## License
 

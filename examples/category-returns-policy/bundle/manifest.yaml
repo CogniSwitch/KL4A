@@ -1,0 +1,16 @@
+id: bundle
+version: 0.1.0
+title: Product Category Returns & Warranty Policy
+profile: sop-knowledge-bundle
+profile_version: 0.2.0
+status: draft
+created_at: '2026-10-07T07:39:03Z'
+updated_at: '2026-10-07T07:39:04Z'
+sources:
+- id: category-policy
+  type: markdown
+  path: sources/originals/category-policy__v1.md
+  source_version_id: category-policy:v1
+  status: active
+exports: []
+okf_version: '0.2'

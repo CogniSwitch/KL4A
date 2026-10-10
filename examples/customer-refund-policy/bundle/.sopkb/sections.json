@@ -1,0 +1,32 @@
+[
+  {
+    "end_pos": 26,
+    "heading": "Customer Refund Policy",
+    "id": "section-refund-policy-001",
+    "normalized_path": "sources/normalized/refund-policy__v1.md",
+    "semantic_role": "policy",
+    "source_id": "refund-policy",
+    "source_version_id": "refund-policy:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 189,
+    "heading": "Refund Eligibility",
+    "id": "section-refund-policy-002",
+    "normalized_path": "sources/normalized/refund-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "refund-policy",
+    "source_version_id": "refund-policy:v1",
+    "start_pos": 26
+  },
+  {
+    "end_pos": 287,
+    "heading": "Refund Approval",
+    "id": "section-refund-policy-003",
+    "normalized_path": "sources/normalized/refund-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "refund-policy",
+    "source_version_id": "refund-policy:v1",
+    "start_pos": 189
+  }
+]

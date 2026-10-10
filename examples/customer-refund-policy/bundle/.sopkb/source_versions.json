@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:49b9a07b4af9fc8d4b7d8171df50f111bb01a9fc8f90096013021d532f51b66b",
+      "modified_time": "2026-10-07T06:11:07Z",
+      "normalized_path": "sources/normalized/refund-policy__v1.md",
+      "original_path": "sources/originals/refund-policy__v1.md",
+      "size_bytes": 287,
+      "source_id": "refund-policy",
+      "source_version_id": "refund-policy:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

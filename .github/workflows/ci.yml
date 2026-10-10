@@ -1,6 +1,6 @@
 name: CI
 
-# Rust-adapted CI for this branch's v2/sopkb-rust workspace, replacing the
+# Rust-adapted CI for this branch's v2/kl4a-rs/sopkb-rust workspace, replacing the
 # pytest-based job that runs on main/dev against the Python tools/sopkb
 # package. This branch has no Python package at all.
 #
@@ -65,10 +65,10 @@ jobs:
       - name: Cache Rust build artifacts
         uses: Swatinem/rust-cache@v2
         with:
-          workspaces: v2/sopkb-rust -> target
+          workspaces: v2/kl4a-rs/sopkb-rust -> target
 
       - name: cargo build --workspace
-        working-directory: v2/sopkb-rust
+        working-directory: v2/kl4a-rs/sopkb-rust
         run: cargo build --workspace --all-targets
 
       # Includes the phaseN_*_diff differential tests, which byte-compare
@@ -111,7 +111,7 @@ jobs:
       # Tracked as separate follow-up work, not masked silently -- remove
       # from this --skip list once addressed.
       - name: cargo test --workspace
-        working-directory: v2/sopkb-rust
+        working-directory: v2/kl4a-rs/sopkb-rust
         run: >
           cargo test --workspace --
           --skip v1_authored_okf_full_okf_tree_and_md_only_filter
@@ -121,3 +121,91 @@ jobs:
           --skip azure_llm_provider_selection_skips_every_section_cleanly_without_configured_profile_not_a_panic
           --skip every_fixture_case_manifest_and_state_json_round_trips
           ${{ matrix.os_skips }}
+
+  binaries:
+    name: Release binaries (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            rust_targets: ""
+            asset_suffix: windows-x86_64
+          - os: macos-latest
+            rust_targets: aarch64-apple-darwin,x86_64-apple-darwin
+            asset_suffix: macos-universal
+          - os: ubuntu-latest
+            rust_targets: ""
+            asset_suffix: linux-x86_64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust_targets }}
+
+      - name: Cache Rust build artifacts
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            v2/kl4a-rs -> target
+            v2/kl4a-rs/sopkb-rust -> target
+
+      - name: Build Windows and Linux release binaries
+        if: matrix.os != 'macos-latest'
+        run: |
+          cargo build --release -p kl4a -p codekb --manifest-path v2/kl4a-rs/Cargo.toml
+          cargo build --release -p sopkb-cli -p sopkb-mcp --manifest-path v2/kl4a-rs/sopkb-rust/Cargo.toml
+
+      - name: Build universal macOS release binaries
+        if: matrix.os == 'macos-latest'
+        shell: bash
+        run: |
+          set -euo pipefail
+          for target in aarch64-apple-darwin x86_64-apple-darwin; do
+            cargo build --release -p kl4a -p codekb --manifest-path v2/kl4a-rs/Cargo.toml --target "$target"
+            cargo build --release -p sopkb-cli -p sopkb-mcp --manifest-path v2/kl4a-rs/sopkb-rust/Cargo.toml --target "$target"
+          done
+          mkdir -p staged
+          for b in kl4a codekb; do
+            lipo -create -output "staged/$b-macos-universal" \
+              "v2/kl4a-rs/target/aarch64-apple-darwin/release/$b" \
+              "v2/kl4a-rs/target/x86_64-apple-darwin/release/$b"
+          done
+          for b in sopkb-cli sopkb-mcp; do
+            lipo -create -output "staged/$b-macos-universal" \
+              "v2/kl4a-rs/sopkb-rust/target/aarch64-apple-darwin/release/$b" \
+              "v2/kl4a-rs/sopkb-rust/target/x86_64-apple-darwin/release/$b"
+          done
+
+      - name: Stage Windows and Linux assets
+        if: matrix.os != 'macos-latest'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p staged
+          for b in kl4a codekb; do
+            if [ -f "v2/kl4a-rs/target/release/$b.exe" ]; then
+              cp "v2/kl4a-rs/target/release/$b.exe" "staged/$b-${{ matrix.asset_suffix }}.exe"
+            else
+              cp "v2/kl4a-rs/target/release/$b" "staged/$b-${{ matrix.asset_suffix }}"
+            fi
+          done
+          for b in sopkb-cli sopkb-mcp; do
+            if [ -f "v2/kl4a-rs/sopkb-rust/target/release/$b.exe" ]; then
+              cp "v2/kl4a-rs/sopkb-rust/target/release/$b.exe" "staged/$b-${{ matrix.asset_suffix }}.exe"
+            else
+              cp "v2/kl4a-rs/sopkb-rust/target/release/$b" "staged/$b-${{ matrix.asset_suffix }}"
+            fi
+          done
+
+      - name: Upload release binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: kl4a-binaries-${{ matrix.os }}
+          path: staged/*
+          if-no-files-found: error

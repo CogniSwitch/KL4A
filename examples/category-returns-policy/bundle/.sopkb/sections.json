@@ -1,0 +1,132 @@
+[
+  {
+    "end_pos": 46,
+    "heading": "Product Category Returns & Warranty Policy",
+    "id": "section-category-policy-001",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "policy",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 0
+  },
+  {
+    "end_pos": 356,
+    "heading": "1. Small Appliances",
+    "id": "section-category-policy-002",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 46
+  },
+  {
+    "end_pos": 666,
+    "heading": "2. Major Appliances",
+    "id": "section-category-policy-003",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 356
+  },
+  {
+    "end_pos": 978,
+    "heading": "3. Indoor Furniture",
+    "id": "section-category-policy-004",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 666
+  },
+  {
+    "end_pos": 1293,
+    "heading": "4. Outdoor Furniture",
+    "id": "section-category-policy-005",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 978
+  },
+  {
+    "end_pos": 1619,
+    "heading": "5. Prescription Eyewear",
+    "id": "section-category-policy-006",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 1293
+  },
+  {
+    "end_pos": 1973,
+    "heading": "6. Non-Prescription Sunglasses",
+    "id": "section-category-policy-007",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 1619
+  },
+  {
+    "end_pos": 2263,
+    "heading": "7. Power Tools",
+    "id": "section-category-policy-008",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 1973
+  },
+  {
+    "end_pos": 2548,
+    "heading": "8. Hand Tools",
+    "id": "section-category-policy-009",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 2263
+  },
+  {
+    "end_pos": 2858,
+    "heading": "9. Laptop Computers",
+    "id": "section-category-policy-010",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 2548
+  },
+  {
+    "end_pos": 3173,
+    "heading": "10. Desktop Computers",
+    "id": "section-category-policy-011",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 2858
+  },
+  {
+    "end_pos": 3472,
+    "heading": "11. Mobile Phones",
+    "id": "section-category-policy-012",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 3173
+  },
+  {
+    "end_pos": 3774,
+    "heading": "12. Tablet Devices",
+    "id": "section-category-policy-013",
+    "normalized_path": "sources/normalized/category-policy__v1.md",
+    "semantic_role": "section",
+    "source_id": "category-policy",
+    "source_version_id": "category-policy:v1",
+    "start_pos": 3472
+  }
+]

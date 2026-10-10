@@ -1,0 +1,80 @@
+[
+  {
+    "heading": "Product Category Returns & Warranty Policy",
+    "section_id": "section-category-policy-001",
+    "semantic_role": "policy",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "1. Small Appliances",
+    "section_id": "section-category-policy-002",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "2. Major Appliances",
+    "section_id": "section-category-policy-003",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "3. Indoor Furniture",
+    "section_id": "section-category-policy-004",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "4. Outdoor Furniture",
+    "section_id": "section-category-policy-005",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "5. Prescription Eyewear",
+    "section_id": "section-category-policy-006",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "6. Non-Prescription Sunglasses",
+    "section_id": "section-category-policy-007",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "7. Power Tools",
+    "section_id": "section-category-policy-008",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "8. Hand Tools",
+    "section_id": "section-category-policy-009",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "9. Laptop Computers",
+    "section_id": "section-category-policy-010",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "10. Desktop Computers",
+    "section_id": "section-category-policy-011",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "11. Mobile Phones",
+    "section_id": "section-category-policy-012",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  },
+  {
+    "heading": "12. Tablet Devices",
+    "section_id": "section-category-policy-013",
+    "semantic_role": "section",
+    "source_id": "category-policy"
+  }
+]

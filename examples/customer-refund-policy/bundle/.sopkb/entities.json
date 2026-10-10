@@ -1,0 +1,10 @@
+[
+  {
+    "id": "entity-refund-eligibility",
+    "label": "Refund Eligibility"
+  },
+  {
+    "id": "entity-refund-approval",
+    "label": "Refund Approval"
+  }
+]

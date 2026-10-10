@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "active_version_id": "support-policy:v1",
+      "checksum": "sha256:8f2e42d1aeb89fc80d6c484733ba694be71975b429785365045f3ea45290569e",
+      "id": "support-policy",
+      "metadata": {
+        "source_filename": "support-policy.md"
+      },
+      "modified_time": "2026-10-07T07:27:39Z",
+      "normalized_path": "sources/normalized/support-policy__v1.md",
+      "original_path": "sources/originals/support-policy__v1.md",
+      "parse_status": "normalized",
+      "size": 2258,
+      "source_version_id": "support-policy:v1",
+      "status": "active",
+      "title": "support policy",
+      "type": "markdown",
+      "version_number": 1,
+      "versions": [
+        {
+          "checksum": "sha256:8f2e42d1aeb89fc80d6c484733ba694be71975b429785365045f3ea45290569e",
+          "modified_time": "2026-10-07T07:27:39Z",
+          "normalized_path": "sources/normalized/support-policy__v1.md",
+          "original_path": "sources/originals/support-policy__v1.md",
+          "size_bytes": 2258,
+          "source_id": "support-policy",
+          "source_version_id": "support-policy:v1",
+          "status": "active",
+          "version_number": 1
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "warnings": []
+}

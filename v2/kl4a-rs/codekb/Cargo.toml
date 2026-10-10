@@ -1,0 +1,19 @@
+[package]
+name = "codekb"
+version = "0.0.2"
+edition.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+clap = { workspace = true }
+regex = { workspace = true }
+sha2 = { workspace = true }
+walkdir = { workspace = true }
+tempfile = { workspace = true }
+once_cell = { workspace = true }
+rustpython-parser = { workspace = true }
+kl4a-core = { workspace = true }

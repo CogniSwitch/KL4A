@@ -1,0 +1,15 @@
+{
+  "versions": [
+    {
+      "checksum": "sha256:996fbf1201a740557f17cda9734f8c501d2f73c6b10c0706881260edecefc31f",
+      "modified_time": "2026-10-07T07:38:57Z",
+      "normalized_path": "sources/normalized/category-policy__v1.md",
+      "original_path": "sources/originals/category-policy__v1.md",
+      "size_bytes": 3774,
+      "source_id": "category-policy",
+      "source_version_id": "category-policy:v1",
+      "status": "active",
+      "version_number": 1
+    }
+  ]
+}

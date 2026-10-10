@@ -1,0 +1,26 @@
+# SOP Decision Rules
+
+- [1. Small Appliances](rule-ki-category-policy-v1-000001-requires.md) - proposed
+- [1. Small Appliances](rule-ki-category-policy-v1-000002-requires.md) - proposed
+- [10. Desktop Computers](rule-ki-category-policy-v1-000019-requires.md) - proposed
+- [10. Desktop Computers](rule-ki-category-policy-v1-000020-requires.md) - proposed
+- [11. Mobile Phones](rule-ki-category-policy-v1-000021-requires.md) - proposed
+- [11. Mobile Phones](rule-ki-category-policy-v1-000022-requires.md) - proposed
+- [12. Tablet Devices](rule-ki-category-policy-v1-000023-requires.md) - proposed
+- [12. Tablet Devices](rule-ki-category-policy-v1-000024-requires.md) - proposed
+- [2. Major Appliances](rule-ki-category-policy-v1-000003-requires.md) - proposed
+- [2. Major Appliances](rule-ki-category-policy-v1-000004-requires.md) - proposed
+- [3. Indoor Furniture](rule-ki-category-policy-v1-000005-requires.md) - proposed
+- [3. Indoor Furniture](rule-ki-category-policy-v1-000006-requires.md) - proposed
+- [4. Outdoor Furniture](rule-ki-category-policy-v1-000007-requires.md) - proposed
+- [4. Outdoor Furniture](rule-ki-category-policy-v1-000008-requires.md) - proposed
+- [5. Prescription Eyewear](rule-ki-category-policy-v1-000009-requires.md) - proposed
+- [5. Prescription Eyewear](rule-ki-category-policy-v1-000010-requires.md) - proposed
+- [6. Non-Prescription Sunglasses](rule-ki-category-policy-v1-000011-requires.md) - proposed
+- [6. Non-Prescription Sunglasses](rule-ki-category-policy-v1-000012-requires.md) - proposed
+- [7. Power Tools](rule-ki-category-policy-v1-000013-requires.md) - proposed
+- [7. Power Tools](rule-ki-category-policy-v1-000014-requires.md) - proposed
+- [8. Hand Tools](rule-ki-category-policy-v1-000015-requires.md) - proposed
+- [8. Hand Tools](rule-ki-category-policy-v1-000016-requires.md) - proposed
+- [9. Laptop Computers](rule-ki-category-policy-v1-000017-requires.md) - proposed
+- [9. Laptop Computers](rule-ki-category-policy-v1-000018-requires.md) - proposed

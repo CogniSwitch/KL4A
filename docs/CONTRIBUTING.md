@@ -13,7 +13,7 @@ Everything shippable lives under `v2/`:
 
 | Path | What it is |
 |---|---|
-| `v2/sopkb-rust` | The Cargo workspace: the `sopkb-*` library crates plus the `sopkb-cli`, `sopkb-mcp`, and `sopkb-server` binaries. |
+| `v2/kl4a-rs/sopkb-rust` | The Cargo workspace: the `sopkb-*` library crates plus the `sopkb-cli`, `sopkb-mcp`, and `sopkb-server` binaries. |
 | `v2/desktop-tauri` | The Tauri v2 desktop shell (KL4A Workbench). A **standalone** Cargo project with its own `Cargo.lock` and release profile — deliberately not a member of the workspace above. |
 | `v2/frontend` | The React + Vite UI, built into `v2/desktop-tauri/dist` and embedded in the app. |
 
@@ -23,7 +23,7 @@ You need a stable Rust toolchain (edition 2021, `rust-version` 1.77) and Node 20
 
 ```bash
 # Rust workspace: CLI, MCP server, web server, and all library crates
-cd v2/sopkb-rust
+cd v2/kl4a-rs/sopkb-rust
 cargo build --workspace --all-targets
 
 # Frontend
@@ -44,7 +44,7 @@ exact package list CI installs.
 ## Running tests
 
 ```bash
-cd v2/sopkb-rust
+cd v2/kl4a-rs/sopkb-rust
 cargo test --workspace
 
 cd ../frontend
@@ -57,7 +57,7 @@ passes locally before opening a PR.
 Two things worth knowing about the current state of CI, so a red or green run
 doesn't mislead you:
 
-- **CI covers `v2/sopkb-rust` only** (`ci.yml` runs `cargo build` + `cargo test`
+- **CI covers `v2/kl4a-rs/sopkb-rust` only** (`ci.yml` runs `cargo build` + `cargo test`
   across a Linux/macOS/Windows matrix). The frontend's vitest suite and the
   desktop crate's tests are not wired into CI yet — run them locally.
 - **`cargo test --workspace` in CI carries a `--skip` list** of known-failing
@@ -81,7 +81,7 @@ Feature-scoped tests use plain descriptive names instead
 ## Coding style
 
 ```bash
-cd v2/sopkb-rust
+cd v2/kl4a-rs/sopkb-rust
 cargo fmt --all              # format
 cargo clippy --workspace --all-targets -- -D warnings
 
