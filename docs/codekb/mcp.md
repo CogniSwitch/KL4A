@@ -16,7 +16,7 @@ kl4a --use codekb mcp serve ./my-code-bundle
 
 The surface is **read-only**. There is no tool that writes to the bundle, so an
 agent cannot approve a claim, change review state, or alter the repository
-record. Review stays a human action in the [workbench](workbench-ui.md).
+record. Review remains a human-controlled workflow.
 
 ## Wiring it up
 
@@ -67,7 +67,7 @@ agent unless:
 - it is **tier 4 or above and flagged for review** — those open only on an
   explicit approval. Deferring or commenting on such a claim leaves it closed.
 
-This is the same rule the workbench applies; the MCP surface has no more
+The MCP surface has no more
 permissive path into the data.
 
 The practical consequence is that a freshly built bundle answers thinly. That is

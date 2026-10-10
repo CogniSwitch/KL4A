@@ -86,7 +86,7 @@ only an explicit approval widens retrieval.
     Approving a claim does not rewrite it. The decision is recorded in
     `.codekb/code_reviews.json` and applied when the claim is read, which is what
     lets a re-mine preserve your review. Retrieval applies the same overlay the
-    workbench does, so both agree on a claim's status.
+    code context does, so both agree on a claim's status.
 
 This filter is the reason unreviewed enrichment is wasted spend: hybrid mining
 that is paid for and never reviewed produces claims that retrieval will not use.
@@ -99,8 +99,8 @@ kl4a --use codekb mine ./b            # (re)generate claims
 kl4a --use codekb validate ./b        # includes review-required counts
 ```
 
-Review itself is a workbench action; there is no `codekb review` command. The
-overlay file is plain JSON if you need to inspect what was decided:
+There is no `codekb review` command in this release. The overlay file is plain
+JSON if you need to inspect recorded decisions:
 
 ```bash
 cat ./b/.codekb/code_reviews.json

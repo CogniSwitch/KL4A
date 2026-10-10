@@ -80,16 +80,14 @@ What `codekb` takes from the substrate:
 | `canonical.py`, `trace.py`, `trace_validate.py`, `transform.py` | Cross-bundle migration |
 | `pipeline.py`, `run_state.py` | End-to-end build, foreground and background |
 | `adapters/` | Per-language adapters (COBOL today) |
-| `web.py`, `layout.py`, `server.py` | The workbench |
 | `mcp.py` | The read-only `code.*` MCP surface |
 | `cli.py` | `codekb` |
 
 ## Concurrency: why codekb writes state itself
 
-The pipeline runs on a worker thread while the workbench serves reads of the same
-`.codekb/code_*.json` files and of `manifest.yaml`. A plain truncate-then-write
-lets a reader observe an empty or partial document, and a page that polls run
-state hits that routinely.
+The pipeline can write state while other consumers read the same
+`.codekb/code_*.json` files and `manifest.yaml`. A plain truncate-then-write
+lets a reader observe an empty or partial document.
 
 `state.py` writes to a sibling temp file and `os.replace`s it, so a reader sees
 either the previous version or the new one, never a torn one. On Windows the
@@ -127,8 +125,5 @@ everything the earlier stages produced. See [Bundle State](bundle-state.md).
   `profile: code-knowledge-bundle`. The bundle model — sources, sections,
   knowledge items, evidence, relations — is shared with document bundles and
   specified in the [OKF Bundle Spec](../OKF_BUNDLE_SPEC.md).
-- `codekb serve` serves exactly one code bundle. It carries none of the SOP
-  workbench's ingest, multi-bundle listing or settings editing, because a code
-  bundle never used them.
 - LLM provider settings are read from the same saved settings as `sopkb`, so
   configuring a provider once covers both.

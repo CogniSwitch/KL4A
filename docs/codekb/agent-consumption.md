@@ -8,7 +8,7 @@ description: >-
 # Agent Consumption
 
 A bundle exists to be read by an agent. The read path is `code.context`, available
-as a CLI command, an MCP tool, and a page in the workbench.
+as a CLI command and an MCP tool.
 
 ## code.context
 
@@ -77,7 +77,7 @@ Serves the bundle over stdio as read-only MCP tools. The code surface:
 
 That is the whole surface, and all of it is read-only. There is no tool that
 writes to the bundle, so an agent cannot approve a claim, change review state, or
-alter the repository record — review stays a human action in the workbench.
+alter the repository record — review remains human-controlled.
 
 (`sopkb`'s MCP server has an optional `review.note` writer, off unless explicitly
 enabled. `codekb` has no equivalent.)
@@ -94,12 +94,3 @@ kl4a --use codekb tests for-symbol ./my-code-bundle symbol-app-answer-function
 Impact is direct — callers and the relations touching the symbol — not a
 transitive closure. It is a starting point for a blast radius, not the whole one.
 
-## Trying It Without An Agent
-
-The **Agent** section of the workbench runs the same retrieval and renders the
-result: matched symbols, claims with tier and review status, relations, tests,
-warnings, context rules, and the raw JSON.
-
-Use it to answer "is this bundle useful yet?" before wiring anything up. If the
-Agent page returns nothing helpful for a query you care about, an agent will do no
-better.

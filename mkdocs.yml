@@ -104,7 +104,6 @@ nav:
       - Overview: codekb/index.md
       - Getting Started: codekb/getting-started.md
       - Guides:
-          - Workbench UI: codekb/workbench-ui.md
           - Pipeline & Mining: codekb/pipeline.md
           - Knowledge & Review: codekb/knowledge-and-review.md
           - Architecture Detection: codekb/architecture-detection.md

@@ -1,13 +1,12 @@
 ---
 title: Getting Started with Code Bundles
 description: >-
-  Install codekb and build your first Code Knowledge Bundle from a repository, then
-  browse and review it in the local workbench.
+  Install codekb and build your first Code Knowledge Bundle from a repository.
 ---
 
 # Getting Started
 
-Build a bundle from a repository, then look at it in the workbench.
+Build a bundle from a repository, then inspect and query it from the CLI or MCP.
 
 ## Install
 
@@ -56,22 +55,6 @@ my-code-bundle/
   overview.md            the human entry point
 ```
 
-## Look At It
-
-Start the workbench against the bundle:
-
-```bash
-kl4a --use codekb serve ./my-code-bundle
-```
-
-Open `http://127.0.0.1:8765/`. The bundle lands on **Overview**, which opens with
-the single thing the bundle needs next.
-
-!!! note "One bundle per server"
-    `codekb serve` serves exactly one code bundle, and refuses a path that is not
-    one rather than starting and showing an empty page. Run a second server on
-    another `--port` for a second bundle.
-
 ## Build It Step By Step Instead
 
 `codekb build` is the composition of commands you can also run individually — useful
@@ -96,7 +79,7 @@ kl4a --use codekb repo describe ./my-code-bundle
 ```
 
 `validate` reports errors and warnings; the full report is written to
-`reports/validation.md` and is readable in the workbench under **Docs**.
+`reports/validation.md`.
 
 Unresolved relations are warnings, not errors. A call to something outside the
 parsed repository is a fact about the repository, not a defect —
@@ -110,12 +93,10 @@ The point of a bundle is what an agent gets back from it:
 kl4a --use codekb context ./my-code-bundle --task explain --query "batch processing"
 ```
 
-The same retrieval is visible in the workbench under **Agent**, which is the
-quickest way to see whether a bundle is actually useful yet.
+Use the result to verify that the bundle returns relevant, grounded context.
 
 ## Next
 
-- [Workbench UI](workbench-ui.md) — what each section shows
 - [Pipeline & Mining](pipeline.md) — static versus hybrid, and what hybrid adds
 - [Knowledge & Review](knowledge-and-review.md) — why some claims need a decision
 - [MCP Server](mcp.md) — handing the bundle to an agent

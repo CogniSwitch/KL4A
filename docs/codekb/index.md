@@ -26,7 +26,6 @@ The result is a folder you can commit, diff, and hand to an agent:
 | If you want to | Read |
 | --- | --- |
 | Build your first bundle | [Getting Started](getting-started.md) |
-| Understand what the workbench shows you | [Workbench UI](workbench-ui.md) |
 | Choose between static and hybrid mining | [Pipeline & Mining](pipeline.md) |
 | Know what a claim is and when it counts | [Knowledge & Review](knowledge-and-review.md) |
 | See what is detected for your stack | [Architecture Detection](architecture-detection.md) |
@@ -60,7 +59,7 @@ leaves everything the earlier stages produced. See
 SOP option — Word docs, PDFs and Markdown in — and has its own tab.
 
 Both write OKF bundles over one shared core, gate retrieval behind human review,
-and expose the result over a CLI, a local workbench and an MCP server. They differ
+and expose the result over a CLI and an MCP server. They differ
 in what goes in and what gets extracted.
 
 They are separate installable packages. See [Architecture](architecture.md).

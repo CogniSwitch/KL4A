@@ -19,7 +19,7 @@ shared state file, `code_architecture.json`. Each adapter owns:
 - its **keys** in that file, namespaced so they cannot collide, and
 - its **summary counts**, merged into the shared `summary` block.
 
-The workbench builds the **Architecture** section from whichever keys came back
+CodeKB derives architecture results from whichever keys came back
 populated. Nothing in the nav layer knows what a copybook or a router is — it only
 knows which keys have data.
 
@@ -102,7 +102,7 @@ To contribute views for another language:
 1. Write a detector that takes sources, modules, symbols and relations, and
    returns namespaced keys plus a `summary` block.
 2. Merge it in `code_architecture.py`, beside the existing adapters.
-3. Register `(mode, label, state key)` entries so the workbench can offer them.
+3. Register the `(mode, label, state key)` entries used by the architecture model.
 
 Nothing else needs to change — the nav, the search bar, paging and the empty
 states are all driven from the registry and the data.

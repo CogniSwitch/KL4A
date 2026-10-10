@@ -100,16 +100,13 @@ instance. See [Knowledge & Review](knowledge-and-review.md).
 Only hybrid mining uses the cache. Clearing it forces every selected symbol to be
 re-sent on the next hybrid run.
 
-## Serve
+## MCP server
 
 | Command | Purpose |
 | --- | --- |
-| `codekb serve <bundle_dir> [--host] [--port]` | Local web workbench. Defaults to `127.0.0.1:8765`. |
 | `codekb mcp serve <bundle_dir>` | Serve the read-only `code.*` tools over JSON-RPC stdio |
 
-`codekb serve` takes **one bundle directory**. It refuses a path that is not a
-code bundle rather than starting and showing an empty page. See
-[Workbench UI](workbench-ui.md) and [MCP Server](mcp.md).
+See [MCP Server](mcp.md) for client configuration and tool details.
 
 ## Exit behaviour
 

@@ -4,6 +4,8 @@
 
 **Create grounded, portable knowledge bundles from SOP documents and source code, then let people and agents use them with evidence.** KL4A includes two workflows: SOP Knowledge Bundles for policies and procedures, and Code Knowledge Bundles for software repositories.
 
+> **For teams that run on SOPs and developers that build with code.** Turn policies into evidence-backed, OKF-compatible knowledge; turn repositories into structure-aware context. Give agents something they can cite, inspect, and reuse — not another opaque chat response.
+
 For SOPs, feed it a PDF, DOCX, or plain-text procedure. For code, point it at a
 repository. KL4A then:
 
@@ -18,6 +20,8 @@ MCP or the CLI — with no database, and no server standing between them and the
 source of truth.
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
+**Latest release: [v0.0.2](https://github.com/CogniSwitch/KL4A/releases/latest).**
 
 The native desktop app (Windows/macOS/Linux, built on Tauri) is the easiest way to use the **SOP Knowledge Bundle** workflow — one application to install, not a server to stand up or a runtime to provision. **CodeKB does not currently have a desktop app; use its CLI or MCP server instead.**
 
@@ -234,7 +238,7 @@ $ printf '%s\n%s\n' \
 ```
 
 ```json
-{"id": 1, "jsonrpc": "2.0", "result": {"capabilities": {"tools": {}}, "instructions": "Ground every answer only in what these tools return — never in general/internet/training-data knowledge, even when labeled as such. Call knowledge.search (or agent.context) first; if nothing relevant comes back, say explicitly that this knowledge base has no grounded answer for that part instead of filling the gap. (...)", "protocolVersion": "2024-11-05", "serverInfo": {"name": "sopkb", "version": "0.0.1"}}}
+{"id": 1, "jsonrpc": "2.0", "result": {"capabilities": {"tools": {}}, "instructions": "Ground every answer only in what these tools return — never in general/internet/training-data knowledge, even when labeled as such. Call knowledge.search (or agent.context) first; if nothing relevant comes back, say explicitly that this knowledge base has no grounded answer for that part instead of filling the gap. (...)", "protocolVersion": "2024-11-05", "serverInfo": {"name": "sopkb", "version": "0.0.2"}}}
 {"id": 2, "jsonrpc": "2.0", "result": {"content": [{"text": "{\n  \"id\": \"demo-bundle\",\n  \"knowledge_item_count\": 1,\n  \"profile\": \"sop-knowledge-bundle\",\n  \"source_count\": 1,\n  \"status\": \"draft\",\n  \"title\": \"Demo Bundle\"\n}", "type": "text"}]}}
 ```
 

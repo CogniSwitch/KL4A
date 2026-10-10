@@ -23,14 +23,9 @@ failure partway leaves everything already produced.
 | Render human layer | Module and symbol pages, indexes, overview | `code/`, `overview.md` |
 | Validate bundle | Checks the result against the bundle rules | `reports/validation.*` |
 
-Architecture and render are optional. The workbench exposes both as checkboxes
-(**Detect architecture**, **Render human layer**). The CLI only exposes one of the
-two: `codekb build --skip-render` skips rendering; there is no CLI flag to skip
-architecture detection, which a CLI-driven `build` always runs.
-
-Runs start in the background. The request returns as soon as the run is queued, so
-closing the page does not stop it — a large repository in hybrid mode takes
-minutes. The **Build** page polls only while something is actually running.
+Architecture and render are optional. `codekb build --skip-render` skips
+rendering; there is no CLI flag to skip architecture detection, which a
+CLI-driven `build` always runs.
 
 ### What the scan ignores
 
@@ -65,7 +60,7 @@ so what a scan actually ignored is always readable after the fact.
 ## Static Versus Hybrid
 
 Set per bundle, recorded in `manifest.yaml` under `codekb.mining`, so CLI runs use
-the same mode as the workbench.
+the same mode across CLI operations.
 
 === "static"
 
@@ -133,9 +128,8 @@ Re-running against the **same** repository re-derives claims in place; review
 decisions are preserved.
 
 Re-running against a **different** repository retires every existing claim and
-replaces it. The workbench names both repositories and requires an explicit
-confirmation before it will do this, because the review decisions on retired
-claims are kept but no longer describe the bundle.
+replaces it. Review decisions on retired claims are kept but no longer describe
+the bundle.
 
 ## Commands
 
