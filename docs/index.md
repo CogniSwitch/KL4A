@@ -58,39 +58,37 @@ engineer in the room:
 
 ## One product, two options
 
-**KL4A** is the product. It offers two options over one shared OKF core — pick the
-one that matches what you are grounding. Each runs independently — `sopkb`,
-and `codekb` are each their own command and their own import — and both
-ship together in the one `pip install kl4a`.
+**KL4A** is the product. It offers two options over one shared OKF core — pick
+the one that matches what you are grounding. The published `kl4a` binary is
+the entry point for CodeKB; the release also includes `sopkb-cli` and
+`sopkb-mcp` for the SOP workflow.
 
 | | **sopkb** | **codekb** |
 | --- | --- | --- |
 | For | SOPs, policies, procedures, regulations | Source code |
-| Input | Word docs, PDFs, Markdown | A source repository |
+| Input | Word docs, PDFs, Markdown | A Python or COBOL repository |
 | Scope | — | Python and COBOL parsed; other languages inventoried, not parsed |
 | Produces | Claims grounded in source text | Claims grounded in source spans, plus modules, symbols and relations |
 | Uses an LLM | Optionally | Optionally, for hybrid mining |
 | Start here | [Quickstart](sopkb/quickstart.md) | [Getting Started](codekb/getting-started.md) |
 
 Both write OKF bundles and expose the result over a CLI and an MCP server.
-They differ in what goes in and what gets extracted.
+They differ in what goes in and what gets extracted. SOPKB has the released
+desktop workflow; CodeKB is available through CLI and MCP.
 
-`sopkb` and `codekb` both gate retrieval behind human review, and each has a local
-workbench.
+## One CLI entry point: `kl4a`
 
-## One package: `kl4a`
+Download [`kl4a`](kl4a.md) from the
+[latest release](https://github.com/CogniSwitch/KL4A/releases/latest), put it
+on your `PATH`, then select the workflow on the command line:
 
-[`kl4a`](kl4a.md) is the one PyPI project this whole product publishes to —
-`pip install kl4a` gets you the shared OKF core both options build on,
-*and* `sopkb` and `codekb` themselves, in one install. Each keeps
-its own console script and its own import root, so `sopkb ...` still works
-exactly as before.
+```bash
+kl4a --use sopkb <command>
+kl4a --use codekb <command>
+```
 
-`kl4a` also adds an optional dispatcher over the two, so you don't have
-to remember two command names or two import roots: `kl4a --use sopkb ...`
-/ `kl4a --use codekb ...` on the command line,
-`import kl4a.sopkb` / `kl4a.codekb` in code — each forwarding
-to, or aliasing, the real installed package unchanged.
+For backward-compatible SOPKB integrations, the same release also provides
+the standalone `sopkb-cli` and `sopkb-mcp` binaries.
 
 The dispatcher isn't a fourth option. It has no behavior beyond deciding which
 of the two to call: same subcommands, same flags, same `--help`, same exit
