@@ -121,6 +121,7 @@ nav:
       - Bundle Compatibility Policy: BUNDLE_COMPATIBILITY_POLICY.md
   - Project:
       - Roadmap: ROADMAP.md
+      - Release Validation Checklist: release-validation.md
       - Why Open Core: WHY_OPEN_CORE.md
       - Release Process: RELEASE_PROCESS.md
       - Post-Launch Operations: POST_LAUNCH_OPERATIONS.md

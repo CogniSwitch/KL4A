@@ -30,7 +30,7 @@ The native desktop app (Windows/macOS/Linux, built on Tauri) is the easiest way 
 | Workflow | Input | What it produces | Main command |
 |---|---|---|---|
 | **SOP Knowledge Bundle** | Policies, procedures, PDFs, DOCX, Markdown | Evidence-linked, human-reviewed operational knowledge | `sopkb-cli` |
-| **Code Knowledge Bundle** | A software repository | Files, symbols, relations, architecture, and task-ready code context | `codekb` (CLI/MCP only; no desktop app yet) |
+| **Code Knowledge Bundle** | A Python or COBOL repository | Files, symbols, relations, architecture, and task-ready code context | `codekb` (CLI/MCP only; no desktop app yet) |
 
 `kl4a` is the unified dispatcher: use `kl4a --use sopkb ...` or `kl4a --use codekb ...` when you prefer one entry point.
 

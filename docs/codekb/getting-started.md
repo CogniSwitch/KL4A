@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Code Bundles
 description: >-
-  Install codekb and build your first Code Knowledge Bundle from a repository.
+  Download KL4A and build your first Code Knowledge Bundle from a supported repository.
 ---
 
 # Getting Started
@@ -10,20 +10,14 @@ Build a bundle from a repository, then inspect and query it from the CLI or MCP.
 
 ## Install
 
-```bash
-pip install kl4a
-```
-
-`kl4a` is the one PyPI project this product publishes — `codekb` isn't a
-separate package to install; it ships inside `kl4a` together with `sopkb`,
-and `pip install kl4a` gets you both plus the shared
-substrate they build on. There's no extra to remember and nothing partial
-about it.
-
-From a checkout of this repository instead:
+Download the platform-specific `kl4a` binary from the
+[latest release](https://github.com/CogniSwitch/KL4A/releases/latest). It is
+the supported entry point for CodeKB in this release; there is no separate
+`codekb` download. Put the binary on your `PATH`; on macOS or Linux, make it
+executable first:
 
 ```bash
-pip install -e tools/kl4a
+chmod +x kl4a-<platform>
 ```
 
 Verify the CLI resolves:
@@ -31,6 +25,10 @@ Verify the CLI resolves:
 ```bash
 kl4a --use codekb --help
 ```
+
+CodeKB currently parses Python and COBOL source. Other languages are
+inventoried and reported as unsupported, but do not yet produce parsed modules
+or symbols.
 
 ## Build A Bundle In One Command
 
