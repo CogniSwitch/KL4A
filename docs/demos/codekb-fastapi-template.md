@@ -14,7 +14,6 @@ change. It is not a claim that CodeKB analyzes every language in the repository.
 - Repository: [fastapi/full-stack-fastapi-template](https://github.com/fastapi/full-stack-fastapi-template)
 - Release: `0.9.0`
 - Commit: `e4022a9502a6b61c857e3cbdaddc69e7219c9d53`
-- GitHub source archive SHA-256: `F7AB9220D25C804623677877D621D7C945CA7A78AAAC31D66631B6EA759DB23B`
 
 Clone the exact tag, then verify the resolved commit before building:
 
@@ -40,10 +39,14 @@ current CodeKB parser supports Python and COBOL.
 
 ## Run
 
-Build deterministically and offline first:
+This evaluation uses hybrid mining. It first builds the deterministic static
+baseline, then sends selected source-backed symbols to the configured LLM
+provider for enrichment. Use only a repository that the evaluator is
+authorized to send to that provider. Set the provider name to one configured
+in the evaluator's environment; this verified run uses `anthropic`.
 
 ```powershell
-& $kl4a --use codekb build demo-code\repo --bundle demo-code\bundle --mining static
+& $kl4a --use codekb build demo-code\repo --bundle demo-code\bundle --mining hybrid --provider anthropic
 & $kl4a --use codekb validate demo-code\bundle
 & $kl4a --use codekb repo describe demo-code\bundle
 & $kl4a --use codekb context demo-code\bundle --task plan-change --query "user creation"
@@ -53,6 +56,13 @@ Save the JSON returned by `repo describe` and `context`. The context response
 should identify matched symbols, evidence excerpts, relations, tests, and any
 warnings. Do not judge success by an assumed symbol count; use the bundle's
 actual output.
+
+The pinned input was verified on Windows with the published `kl4a` binary on
+12 October 2026: hybrid mining produced 46 sources, 45 modules, 181 symbols,
+1,312 relations, and 387 knowledge items. It accepted 283 enriched claims
+from 85 selected symbols; 6 proposed claims were rejected by grounding checks.
+`validate` completed with 0 errors. Warnings remain evaluation evidence and
+must be recorded rather than suppressed.
 
 ## Agent task and evidence requirements
 
@@ -96,8 +106,9 @@ them with the plan.
 
 - The repository also contains non-Python material. CodeKB currently parses
   Python and COBOL, so TypeScript/frontend behavior is outside this evaluation.
-- `--mining static` is intentional: it is repeatable and offline, but can yield
-  thinner claims than a reviewed hybrid-mining run.
+- Hybrid mining sends selected source-backed symbols to the configured provider.
+  It creates richer candidate claims, but those claims must still be reviewed
+  and source-checked; the static baseline remains part of the bundle.
 - Unresolved external relations are warnings, not validation errors. They mark
   a boundary of the repository evidence rather than a defect to conceal.
 - The MCP server is read-only; it cannot approve claims or alter the repository.
