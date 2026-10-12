@@ -121,6 +121,10 @@ nav:
       - Bundle Compatibility Policy: BUNDLE_COMPATIBILITY_POLICY.md
   - Project:
       - Roadmap: ROADMAP.md
+      - Evaluation Demos:
+          - Overview: demos/index.md
+          - "SOPKB: CISA Incident Response": demos/sopkb-cisa-incident-response.md
+          - "CodeKB: FastAPI Application": demos/codekb-fastapi-template.md
       - Why Open Core: WHY_OPEN_CORE.md
       - Release Process: RELEASE_PROCESS.md
       - Post-Launch Operations: POST_LAUNCH_OPERATIONS.md
